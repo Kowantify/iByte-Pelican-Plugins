@@ -1,0 +1,51 @@
+{
+    "case": "forge1201",
+    "provider": "mcjars",
+    "project": "FORGE",
+    "release": "1.20.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "ecd4a6eb-217d-4806-afd8-9eb6536a03ca",
+    "started_at": "2026-10-17T18:34:43+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 104,
+    "runtime": {
+        "software": "FORGE",
+        "version": "1.20.1",
+        "java": 17,
+        "launcher": "server.jar",
+        "loader": "forge",
+        "build": "b13be397-1c09-42c1-adcc-06c35585ea9d",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "e91769a80dfdb367bba8bfc86dca6f978817b539929c0c552666fae906bf3251",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_17",
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 3184,
+            "GET files/pull": 6,
+            "POST files/pull": 1,
+            "GET files/contents": 419,
+            "POST files/create-directory": 226,
+            "POST files/decompress": 1,
+            "PUT files/rename": 208,
+            "POST sync": 1,
+            "POST files/delete": 1
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 1,
+        "progress_samples": 6,
+        "fractional_progress_observed": true,
+        "download_directories": [
+            "."
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-17T18:34:54+00:00"
+}

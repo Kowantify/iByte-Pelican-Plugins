@@ -1,0 +1,29 @@
+{
+    "case": "quilt1201",
+    "provider": "mcjars",
+    "project": "QUILT",
+    "release": "1.20.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "0bb1255d-477c-4234-ae02-8a3eb272d7a7",
+    "started_at": "2026-10-17T16:17:20+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 14,
+    "runtime": {
+        "software": "QUILT",
+        "version": "1.20.1",
+        "java": 17,
+        "launcher": "server.jar",
+        "loader": "quilt",
+        "build": "af7d7b17-e228-4fec-a7c8-194a5646038d",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "5e512e2ffc162428b35a28d2b929dffa7863f1855f148423d6c7f3994aff77e8",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_17",
+    "finished_at": "2026-10-17T16:17:26+00:00"
+}

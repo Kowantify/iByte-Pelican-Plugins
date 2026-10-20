@@ -1,0 +1,11 @@
+{
+    "panel_version_reported":  "1.0.0-rc.1",
+    "plugin_version_reported":  "0.1.0-preview.5",
+    "supplied_error_timestamp":  "2026-10-17 02:35:49",
+    "supplied_error_timezone_confirmed":  false,
+    "official_panel_timezone":  "UTC",
+    "artifact_creation_utc":  "2026-10-17 03:05:32",
+    "artifact_sha256":  "a2afa2f6a46b1aa62877158176eb37424fcc67850c305b29961cbcddee0e7a4c",
+    "fresh_post_update_failure_supplied":  false,
+    "interpretation":  "With the official UTC timezone, the supplied log entry predates the delivered preview.5 ZIP by 29m43s. This is a conditional timeline comparison, not production-host verification."
+}

@@ -1,0 +1,23 @@
+{
+    "case": "fabric1211",
+    "provider": "modrinth",
+    "type": "mod",
+    "minecraft": "1.21.1",
+    "loader": "fabric",
+    "started_at": "2026-10-17T16:17:33+00:00",
+    "projects": [
+        {
+            "title": "FerriteCore",
+            "project": "uXXizFIs",
+            "release": "sOzRw3CG"
+        }
+    ],
+    "operation": "c354fcfc-2afb-44d6-933f-8f055a8c4637",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 1,
+    "world_unchanged": true,
+    "readback_verified": true,
+    "finished_at": "2026-10-17T16:17:34+00:00"
+}

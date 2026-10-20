@@ -1,0 +1,150 @@
+{
+    "date":  "2026-10-17",
+    "plugin":  "0.1.0-preview.15",
+    "release_status":  "Verified direct Install and session queue: exact-ZIP native UI/build, 32 browser checks and action-to-executor tests; preview.14 backend identity preserved",
+    "panel":  {
+                  "repository":  "https://github.com/pelican/panel",
+                  "sha":  "46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00",
+                  "version":  "1.0.0-rc.1",
+                  "license":  "AGPL-3.0-only",
+                  "source_baseline":  "46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00",
+                  "tests":  "Published RC.1 core: actual native UI upload/install and pre-existing failed-migration worker with real Yarn build; lifecycle/tenant/Livewire/browser tests on Windows. Actual background queue/Wings tests on isolated Debian 13. Audited dependency set retained.",
+                  "inspected_symbols":  [
+                                            "PluginService::loadPlugins",
+                                            "PluginService::downloadPluginFromFile",
+                                            "PluginService::installPlugin",
+                                            "PluginService::uninstallPlugin",
+                                            "Subuser::registerCustomPermissions",
+                                            "User::can",
+                                            "User::checkPermission",
+                                            "User::canAccessTenant",
+                                            "DaemonFileRepository::getDirectory",
+                                            "DaemonFileRepository::pull",
+                                            "ServerPanelProvider::panel"
+                                        ],
+                  "release_archive_sha256":  "e65d871d51e93efff11d1d0fd9d7daf9ffee741f41c60d9dd36668e0d2239975",
+                  "earlier_canary_sha":  "a3b415fe4cdb8670ecad782f1d54020f166ab725"
+              },
+    "wings":  {
+                  "repository":  "https://github.com/pelican/wings",
+                  "license":  "MIT",
+                  "source_only":  false,
+                  "runtime_tested":  true,
+                  "inspected_symbols":  [
+                                            "postServerPullRemoteFile",
+                                            "postServerWriteFile",
+                                            "postServerPower",
+                                            "sftp.Handler.can",
+                                            "sftp.Handler.Filewrite",
+                                            "Configure router file/power routes"
+                                        ],
+                  "inspected_source_sha":  "7b489da7b8196d0b4baef3e2db062c06d743e2f9",
+                  "version":  "v1.0.0-rc.1",
+                  "binary_sha256":  "19dda386e02041da1f1fbcc73f34e4bb01c1fbc2d499aac79a6be3a51ba7f0e8",
+                  "modified":  false
+              },
+    "eggs":  {
+                 "repository":  "https://github.com/pelican-eggs/minecraft",
+                 "sha":  "c6f2262eb351054d1be44d3f6a3a605ae163d682",
+                 "license":  "MIT",
+                 "source_only":  true,
+                 "imported_into_panel":  false,
+                 "runtime_tested":  false
+             },
+    "mcjars":  {
+                   "repository":  "https://github.com/mcjars/www",
+                   "sha":  "2e96a20a398988706daf0dc7fd97ce7bb24b9280",
+                   "license":  "MIT",
+                   "contracts":  [
+                                     "GET /api/v2/types",
+                                     "GET /api/v3/builds/types/{type}/versions",
+                                     "GET /api/v3/builds/types/{type}/versions/{version}",
+                                     "GET /api/v3/builds/{uuid}"
+                                 ],
+                   "live_metadata_tested":  true,
+                   "discovered_types":  28
+               },
+    "providers":  {
+                      "modrinth":  {
+                                       "api":  "v2",
+                                       "live_search_tested":  true,
+                                       "runtime_installs":  true
+                                   },
+                      "curseforge":  {
+                                         "api":  "v1",
+                                         "live_authorized_search_and_classes_tested":  true,
+                                         "runtime_installs":  true
+                                     },
+                      "hangar":  {
+                                     "status":  "adapter not implemented; no support claim"
+                                 },
+                      "github":  {
+                                     "status":  "approved-repository adapter not implemented; no arbitrary URL feature"
+                                 },
+                      "ftb":  {
+                                  "status":  "current distribution authorization not verified; adapter gated"
+                              },
+                      "atlauncher":  {
+                                         "status":  "current distribution authorization not verified; adapter gated"
+                                     }
+                  },
+    "tested_environment":  {
+                               "os":  "Windows and isolated Debian 13 / WSL2",
+                               "php":  "8.5.11 NTS x64",
+                               "composer":  "2.10.3",
+                               "laravel":  "13.35.0",
+                               "filament":  "5.10.1",
+                               "livewire":  "4.4.7",
+                               "guzzle":  "8.2.0",
+                               "database":  "SQLite 3.53.4",
+                               "symfony_http_foundation":  "8.1.9 (disposable fixture dependency update; upstream lockfile had vulnerable 8.0.15)",
+                               "browser_tooling":  "Node 22.23.3 and local Edge via CDP; native Panel Vite assets built from locked dependencies",
+                               "queue":  "Actual native database queue and scheduled background worker on Windows and Linux",
+                               "java":  "Pelican Java 17, 21 and 25 Docker images; actual game readiness and clean shutdown",
+                               "linux_wings_docker":  "Independent iByteMinecraftAcceptance distribution, private Docker socket/data root, official unmodified Wings RC.1, Docker 26.1.5",
+                               "linux_php":  "8.4.26"
+                           },
+    "production_supported_handlers":  "No blanket production guarantee; verified cases above, supported recipes/hosts and bounded file formats only",
+    "dependency_policy":  "No extra composer packages or frontend packages required by the plugin. Native locked dependencies remain Panel-owned.",
+    "verified_runtime_cases":  [
+                                   "VANILLA 1.20.1",
+                                   "VANILLA 26.3",
+                                   "PAPER 1.21.4",
+                                   "FABRIC 1.21.1",
+                                   "FORGE 1.20.1",
+                                   "NEOFORGE 1.21.1",
+                                   "QUILT 1.20.1"
+                               ],
+    "verified_modpack_cases":  [
+                                   "Modrinth 5FFgwNNP / BpTjgzL8 (Cobblemon Fabric 1.8.2)",
+                                   "CurseForge 454095 / 6765239 (iByte Nexus V1.6)",
+                                   "CurseForge 434113 / 6709034 (iByte Odyssey V1.4)"
+                               ],
+    "evidence":  "docs/evidence/release.json",
+    "transfer":  {
+                     "mode":  "stock Wings remote pull",
+                     "concurrency":  3,
+                     "panel_payload_uploads":  false,
+                     "checksum_readback":  true,
+                     "progress":  "independent inline Livewire status, two-second polling",
+                     "provider_connections":  "reused per provider, fresh metadata responses"
+                 },
+    "server_workspace":  "No generated manager directory; temporary sibling downloads, native archive extraction, private Panel recovery copies",
+    "runtime_selection":  {
+                              "pack_manifest":  "exact Minecraft and loader",
+                              "startup_variables":  "existing server-local type/version/build/JAR values; native validation",
+                              "custom_values":  "Java startup, JVM_ARGS and memory settings preserved",
+                              "default_filters":  "removable runtime version/platform filters, retained across providers/sorts/tabs",
+                              "plugin_compatibility":  "directional; Folia and proxy APIs separate",
+                              "plugin_java":  "declared entry points inspected before promotion; no full API compatibility claim"
+                          },
+    "live_runtime_evidence_version":  "0.1.0-preview.14",
+    "live_runtime_evidence":  "docs/evidence/live-runtime-context/matrix.json",
+    "user_flow":  {
+                      "install":  "one action; no review or confirmation",
+                      "multiple_mods_plugins":  "Add to queue, then Install",
+                      "pending_queue":  "native login session; actor/server isolated",
+                      "theme":  "native Filament light/dark controls",
+                      "live_node_retested_for_ui_release":  false
+                  }
+}

@@ -1,0 +1,31 @@
+{
+    "version": "0.1.0-preview.24",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.24.zip",
+    "sha256": "c01052218d173ef919e28effe03e8ec14c7a0d1e3a600121ecafd8102be9a81f",
+    "files": 55,
+    "cleanup_metrics": {
+        "old": {
+            "src_php_files": 46,
+            "src_bytes": 222319
+        },
+        "new": {
+            "src_php_files": 38,
+            "src_bytes": 185859
+        }
+    },
+    "smoke": {
+        "passed": 9,
+        "native_pulls": 6,
+        "panel_reads": [
+            ".download-0f60ae37-5111-4a0d-88cc-2d2daf2a0a06-2.part/modrinth.index.json"
+        ],
+        "scope": "Small deterministic native Panel/Livewire/HTTP-contract smoke only; no real Wings, provider throughput, concurrency benchmark, browser or game boot"
+    },
+    "native_import": true,
+    "asset_build_stubbed": true,
+    "full_regression_suite": false,
+    "browser_test": false,
+    "real_wings": false,
+    "game_boot": false,
+    "user_requested_small_test": true
+}

@@ -1,0 +1,12 @@
+PASS 51 manifest entries resolve in two bounded project/file batches without individual lookups
+PASS resource packs and proven client-only mods remain excluded
+PASS hash-size mismatch is not treated as client-only and unordered batch responses preserve exact identities/order
+PASS CurseForge project name is retained alongside the release
+PASS Modrinth environment checks use batched exact hashes and projects
+PASS missing bulk files fail without selecting another version
+PASS cross-project bulk files are rejected
+PASS provider failure is not converted into a partial successful pack
+PASS optional environment lookup outages never silently omit required mods
+PASS optional manifest entries do not trigger provider requests
+PASS cancellation is checked before requesting the next provider batch
+RESULT 11 provider batch checks passed.

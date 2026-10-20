@@ -1,0 +1,31 @@
+{
+    "case": "neoforge263",
+    "started_at": "2026-10-18T03:23:50+00:00",
+    "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+    "game_status": {
+        "version": {
+            "name": "26.3",
+            "protocol": 777
+        },
+        "players": {
+            "max": 2,
+            "online": 0
+        }
+    },
+    "expected_protocol_verified": true,
+    "fresh_done_log": true,
+    "runtime_variables_in_container_verified": true,
+    "container_runtime_environment": {
+        "BUILDS": "26.3.0.88",
+        "JVM_ARGS": "-Dimm.fixture=true",
+        "MAXIMUM_MEMORY": "85",
+        "SERVER_JARFILE": "server.jar",
+        "SERVER_TYPE": "neoforge",
+        "VERSION": "26.3"
+    },
+    "ready": true,
+    "ready_at": "2026-10-18T03:24:06+00:00",
+    "world_created": true,
+    "stopped": true,
+    "finished_at": "2026-10-18T03:24:08+00:00"
+}

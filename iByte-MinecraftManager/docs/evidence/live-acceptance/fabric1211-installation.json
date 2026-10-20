@@ -1,0 +1,29 @@
+{
+    "case": "fabric1211",
+    "provider": "mcjars",
+    "project": "FABRIC",
+    "release": "1.21.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "810ae08b-a882-442e-aacf-9b1775f054a9",
+    "started_at": "2026-10-17T16:15:39+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 1,
+    "runtime": {
+        "software": "FABRIC",
+        "version": "1.21.1",
+        "java": 21,
+        "launcher": "server.jar",
+        "loader": "fabric",
+        "build": "1595450e-3136-40ab-8f17-23b7811e4e99",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "426abc85c12b3e6d304b95c50fb2958efc6bb84c6731950a4f97c6ffd3f44592",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_21",
+    "finished_at": "2026-10-17T16:15:41+00:00"
+}

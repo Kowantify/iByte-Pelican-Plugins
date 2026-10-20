@@ -1,0 +1,41 @@
+{
+    "case": "neoforge1211",
+    "provider": "curseforge",
+    "type": "mod",
+    "minecraft": "1.21.1",
+    "loader": "neoforge",
+    "started_at": "2026-10-17T21:49:07+00:00",
+    "projects": [
+        {
+            "title": "ModernFix",
+            "project": "790626",
+            "release": "9101836"
+        }
+    ],
+    "operation": "0cd62b77-b385-4aec-97f4-5c63b1a97211",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 1,
+    "world_unchanged": true,
+    "readback_verified": true,
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 7,
+            "GET files/contents": 9,
+            "GET files/pull": 3,
+            "POST files/pull": 1,
+            "PUT files/rename": 1
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 3,
+        "fractional_progress_observed": false,
+        "download_directories": [
+            "mods"
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-17T21:49:09+00:00"
+}

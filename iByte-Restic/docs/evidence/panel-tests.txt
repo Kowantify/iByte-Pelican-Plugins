@@ -1,0 +1,46 @@
+PASS: actual container registers third schema and preserves Wings/S3
+PASS: native restore dependency resolves plugin bridge
+PASS: real Filament Restic form fields
+PASS: official plugin ZIP import accepts package root and derives correct ID
+PASS: official plugin discovery finds provider and exact version
+PASS: official install lifecycle enables plugin and runs plugin migration (asset commands mocked)
+PASS: Panel-to-node TLS verification forced even in testing/local environment
+PASS: native InitiateBackupService queues Restic after quota and host selection
+PASS: durable operation stored
+PASS: native backup completion fields reflect verified node result
+PASS: duplicate completion does not duplicate native completion event
+PASS: actual native schedule task dispatches the same Restic provider
+PASS: native creation throttle remains effective
+PASS: native quota rejects all-locked scheduled replacement
+PASS: native deletion rejects locked backup
+PASS: cross-tenant native permission denied
+PASS: wrong user cannot restore
+PASS: host configuration cannot move existing repositories
+PASS: restore requires native destructive confirmation
+PASS: native restore fails closed without explicit isolated fixture opt-in
+PASS: actual native restore controller queues plugin restore and protects server
+PASS: verified restore success clears native protection
+PASS: failed native restore retains protection and is not reported healthy
+PASS: wrong daemon response identity rejected
+PASS: native framework validates generated short-lived download signature
+PASS: tampered download URL signature rejected
+PASS: native download proxy streams authenticated node body
+PASS: download authorization is one-use
+PASS: cross-tenant direct download rejected
+PASS: repository health rejected for non-admin
+PASS: late lock rejected after ambiguous daemon delete request
+PASS: synchronous queue refused before node work
+PASS: queue preflight failure rolls back native backup record
+PASS: forged completion never succeeds
+PASS: network ambiguity remains durable and pending
+PASS: new queue job instance reconciles persisted request after outage
+PASS: moved server cannot access original node repository
+PASS: native unlocked deletion removes one record and preserves other backups
+PASS: unlinked node rejected
+PASS: plugin migration blocks destructive uninstall with existing hosts/history
+PASS: official uninstall service preserves active Restic history
+PASS: failed uninstall preserves native and plugin tables
+PASS: Wings restore delegates to original repository
+PASS: S3 restore delegates to original repository
+Panel source + SQLite tests passed: 44
+EXIT: 0

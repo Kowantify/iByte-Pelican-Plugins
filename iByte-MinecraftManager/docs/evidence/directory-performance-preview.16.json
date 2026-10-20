@@ -1,0 +1,10 @@
+{
+    "scope": "Identical 102-file Maven-shaped directory preparation and two cleanup passes through native DaemonFileRepository and raw HTTP fixture; excludes downloads, promotion and game startup",
+    "baseline_zip_sha256": "39056c4ccd05086de7e31b15ca8a625ae960963a965bd56f7290cab491926620",
+    "directory_list_requests": {
+        "preview.15": 1758,
+        "preview.16": 314
+    },
+    "reduction_percent": 82.1,
+    "network_timing_measured": false
+}

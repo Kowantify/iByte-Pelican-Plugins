@@ -1,0 +1,46 @@
+{
+    "case": "fabric1211",
+    "provider": "mcjars",
+    "project": "FABRIC",
+    "release": "1.21.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "f5f2b3f1-de02-442d-a3fc-9c092ff96133",
+    "started_at": "2026-10-17T17:36:47+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 1,
+    "runtime": {
+        "software": "FABRIC",
+        "version": "1.21.1",
+        "java": 21,
+        "launcher": "server.jar",
+        "loader": "fabric",
+        "build": "1595450e-3136-40ab-8f17-23b7811e4e99",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "426abc85c12b3e6d304b95c50fb2958efc6bb84c6731950a4f97c6ffd3f44592",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_21",
+    "transfer": {
+        "requests": {
+            "GET files/pull": 2,
+            "GET files/list-directory": 9,
+            "POST files/create-directory": 6,
+            "POST files/pull": 1,
+            "GET files/contents": 5,
+            "PUT files/rename": 2,
+            "POST sync": 1,
+            "POST files/delete": 1
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 2,
+        "fractional_progress_observed": false
+    },
+    "finished_at": "2026-10-17T17:36:49+00:00"
+}

@@ -1,0 +1,71 @@
+{
+    "case": "vanilla263",
+    "provider": "mcjars",
+    "project": "VANILLA",
+    "release": "26.3",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "22e3d195-5228-44d8-b86e-d85072108e12",
+    "started_at": "2026-10-17T21:47:40+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 1,
+    "runtime": {
+        "software": "VANILLA",
+        "version": "26.3",
+        "java": 25,
+        "launcher": "server.jar",
+        "loader": "vanilla",
+        "build": "e88b5870-9f4d-4623-91a7-8c4717e7b375",
+        "build_version": "1",
+        "environment": {
+            "BUILDS": "1",
+            "SERVER_JARFILE": "server.jar",
+            "SERVER_TYPE": "vanilla",
+            "VERSION": "26.3"
+        },
+        "source": "installed",
+        "content_type": "none"
+    },
+    "server_jar_sha256": "d052f14d7a173734fba553711e5b570162e2f2a313267ee31a21b975a679be64",
+    "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_25",
+    "runtime_variables_match": true,
+    "runtime_environment": {
+        "BUILDS": "1",
+        "SERVER_JARFILE": "server.jar",
+        "SERVER_TYPE": "vanilla",
+        "VERSION": "26.3"
+    },
+    "custom_variables_preserved": true,
+    "startup_preserved": true,
+    "previous_runtime_environment": {
+        "BUILDS": "21.1.244",
+        "SERVER_JARFILE": "old.jar",
+        "SERVER_TYPE": "neoforge",
+        "VERSION": "1.21.1"
+    },
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 5,
+            "GET files/contents": 9,
+            "GET files/pull": 4,
+            "POST files/pull": 1,
+            "PUT files/rename": 1,
+            "POST sync": 1
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 4,
+        "fractional_progress_observed": true,
+        "download_directories": [
+            "."
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-17T21:47:42+00:00"
+}

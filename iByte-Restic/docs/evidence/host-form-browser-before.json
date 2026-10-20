@@ -1,0 +1,18 @@
+{
+    "text":  "Create Backup Host\nName*\nSchema*\nRestic\nLinked Nodes\nSelect an option\nConfiguration\nBackend*\nLocal filesystem\n\nThe backend field is required.\n\nNode credential profile reference*\nProfile is provisioned by the node installer. Passwords and storage credentials stay in mode 0600 node files.\n Enable preview on disposable staging servers\nProduction gate blocked: internal restore bridge and Linux/UI acceptance tests require validation. Explicit node links are mandatory.\n Allow restore tests in an isolated disposable fixture\nDisabled by default: native Wings does not fence all uploads/file writers. Enable only before creating test backups with no other writers. Production restore remains blocked.",
+    "errors":  [
+                   "Livewire Entangle Error: Livewire property [\u0027data.configuration.staging_enabled\u0027] cannot be found on component: [\u0027App\\Filament\\Admin\\Resources\\BackupHosts\\Pages\\CreateBackupHost\u0027]",
+                   "Livewire Entangle Error: Livewire property [\u0027data.configuration.restore_fixture_enabled\u0027] cannot be found on component: [\u0027App\\Filament\\Admin\\Resources\\BackupHosts\\Pages\\CreateBackupHost\u0027]",
+                   "Livewire Entangle Error: Livewire property [\u0027data.configuration.backend\u0027] cannot be found on component: [\u0027App\\Filament\\Admin\\Resources\\BackupHosts\\Pages\\CreateBackupHost\u0027]"
+               ],
+    "state":  {
+                  "name":  "Browser repro",
+                  "schema":  "restic",
+                  "node_ids":  [
+
+                               ],
+                  "configuration":  {
+                                        "profile":  "default"
+                                    }
+              }
+}

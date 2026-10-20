@@ -1,0 +1,8 @@
+PASS mod replaces its target using foreground native pulls with zero Panel payload reads
+PASS inventory distinguishes expected provider hashes from measured checksums
+PASS small pack installs exact runtime, preserves config/world and reads only manifest JSON on Panel: succeeded
+PASS download failure releases the slot without invoking rollback
+PASS cancellation settles current pulls, keeps applied files and releases the slot
+PASS native Panel backup reminder opens without starting an installation
+PASS operation temporary files and extraction folders are cleaned up
+RESULT 7 direct-install smoke checks passed.

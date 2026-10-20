@@ -1,0 +1,16 @@
+PASS: plain-text bootstrap verifies files and preserves literal arguments
+PASS: GitHub bootstrap downloads tested pair and runs only verified installer
+PASS: newer untested official Wings is refused before installation
+PASS: newer upstream cannot prevent verified rollback of the original daemon
+PASS: changed remote manifest is refused before execution
+PASS: modified installer rejected before execution
+PASS: repository traversal rejected before network access
+PASS: copied folder discovers payload from an unrelated working directory with network unavailable
+Installer, manifest and selected binaries verified; no node changes.
+Installer, manifest and selected binaries verified; no node changes.
+PASS: copied payload verifies both supported architecture selections
+PASS: verify-only rejects a modified bundled binary without running the installer
+PASS: missing copied payload gives an actionable error and never silently downloads
+Installer, manifest and selected binaries verified; no node changes.
+Installer, manifest and selected binaries verified; no node changes.
+PASS: public installer is small readable text and verifies actual staged release

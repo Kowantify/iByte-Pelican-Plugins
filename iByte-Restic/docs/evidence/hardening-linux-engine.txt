@@ -1,0 +1,100 @@
+=== RUN   TestDeleteExternallyForgottenSnapshot
+--- PASS: TestDeleteExternallyForgottenSnapshot (16.00s)
+=== RUN   TestDeleteDoesNotInferAbsenceFromMappingOrRepositoryErrors
+=== RUN   TestDeleteDoesNotInferAbsenceFromMappingOrRepositoryErrors/missing-mapping
+=== RUN   TestDeleteDoesNotInferAbsenceFromMappingOrRepositoryErrors/wrong-password
+=== RUN   TestDeleteDoesNotInferAbsenceFromMappingOrRepositoryErrors/wrong-root
+--- PASS: TestDeleteDoesNotInferAbsenceFromMappingOrRepositoryErrors (25.69s)
+    --- PASS: TestDeleteDoesNotInferAbsenceFromMappingOrRepositoryErrors/missing-mapping (7.37s)
+    --- PASS: TestDeleteDoesNotInferAbsenceFromMappingOrRepositoryErrors/wrong-password (9.02s)
+    --- PASS: TestDeleteDoesNotInferAbsenceFromMappingOrRepositoryErrors/wrong-root (9.30s)
+=== RUN   TestRealResticLifecycle
+--- PASS: TestRealResticLifecycle (19.72s)
+=== RUN   TestMidRestoreFailureRollsBack
+--- PASS: TestMidRestoreFailureRollsBack (8.36s)
+=== RUN   TestRestartUnknownBlocksMutations
+--- PASS: TestRestartUnknownBlocksMutations (0.03s)
+=== RUN   TestIdentityAndInjectionRejected
+--- PASS: TestIdentityAndInjectionRejected (0.02s)
+=== RUN   TestExistingRepositoryNotAdoptedOrWiped
+--- PASS: TestExistingRepositoryNotAdoptedOrWiped (0.04s)
+=== RUN   TestCancellationNeverCreatesSuccessMapping
+--- PASS: TestCancellationNeverCreatesSuccessMapping (0.03s)
+=== RUN   TestCorruptDurableStateFailsClosed
+--- PASS: TestCorruptDurableStateFailsClosed (0.02s)
+=== RUN   TestCompletionPersistenceFailureQuarantinesServer
+--- PASS: TestCompletionPersistenceFailureQuarantinesServer (0.02s)
+=== RUN   TestSymlinkRejected
+--- PASS: TestSymlinkRejected (0.00s)
+=== RUN   TestArchiveLimit
+--- PASS: TestArchiveLimit (0.00s)
+=== RUN   TestWrongPasswordNoSecretLeak
+--- PASS: TestWrongPasswordNoSecretLeak (8.08s)
+=== RUN   TestConcurrentWorkRejected
+--- PASS: TestConcurrentWorkRejected (0.02s)
+=== RUN   TestRetainedCompressedExport
+--- PASS: TestRetainedCompressedExport (8.90s)
+=== RUN   TestArchiveOutputLimitIncludesHeaders
+--- PASS: TestArchiveOutputLimitIncludesHeaders (0.00s)
+=== RUN   TestRetainedMaintenanceAfterGameDirectoryRemoval
+--- PASS: TestRetainedMaintenanceAfterGameDirectoryRemoval (13.26s)
+=== RUN   TestRealPrunePreservesRetainedSnapshotsAndReclaimsStorage
+--- PASS: TestRealPrunePreservesRetainedSnapshotsAndReclaimsStorage (23.66s)
+=== RUN   TestPruneRefusesUnprovisionedRepoAndInterruptedWork
+--- PASS: TestPruneRefusesUnprovisionedRepoAndInterruptedWork (9.77s)
+=== RUN   TestRecoveryEscrowRestoresAfterServerAndNodeStateRemoval
+--- PASS: TestRecoveryEscrowRestoresAfterServerAndNodeStateRemoval (7.32s)
+=== RUN   TestRecoveryDescriptorRejectsUnapprovedIdentity
+--- PASS: TestRecoveryDescriptorRejectsUnapprovedIdentity (0.02s)
+=== RUN   TestRecoveryEscrowsApprovedS3CredentialFilesWithoutNetwork
+--- PASS: TestRecoveryEscrowsApprovedS3CredentialFilesWithoutNetwork (0.02s)
+=== RUN   TestRetainedRepositoryCannotOverlapNativeDeletionRoots
+--- PASS: TestRetainedRepositoryCannotOverlapNativeDeletionRoots (0.00s)
+=== RUN   TestExplicitEmptyRepositoryDeletionAndRetirement
+--- PASS: TestExplicitEmptyRepositoryDeletionAndRetirement (11.13s)
+=== RUN   TestRepositoryDeletionRefusesUnrecognizedState
+=== RUN   TestRepositoryDeletionRefusesUnrecognizedState/unknown-snapshot
+=== RUN   TestRepositoryDeletionRefusesUnrecognizedState/missing-marker
+=== RUN   TestRepositoryDeletionRefusesUnrecognizedState/wrong-password
+=== RUN   TestRepositoryDeletionRefusesUnrecognizedState/symlink
+=== RUN   TestRepositoryDeletionRefusesUnrecognizedState/lock
+=== RUN   TestRepositoryDeletionRefusesUnrecognizedState/location-change
+--- PASS: TestRepositoryDeletionRefusesUnrecognizedState (50.09s)
+    --- PASS: TestRepositoryDeletionRefusesUnrecognizedState/unknown-snapshot (7.91s)
+    --- PASS: TestRepositoryDeletionRefusesUnrecognizedState/missing-marker (8.57s)
+    --- PASS: TestRepositoryDeletionRefusesUnrecognizedState/wrong-password (8.69s)
+    --- PASS: TestRepositoryDeletionRefusesUnrecognizedState/symlink (7.97s)
+    --- PASS: TestRepositoryDeletionRefusesUnrecognizedState/lock (8.86s)
+    --- PASS: TestRepositoryDeletionRefusesUnrecognizedState/location-change (8.08s)
+=== RUN   TestForceDeletesEntireRepositoryWithoutMappingsOrPassword
+--- PASS: TestForceDeletesEntireRepositoryWithoutMappingsOrPassword (7.07s)
+=== RUN   TestForceMissingRepositoryAndInterruptedWorkRetainsProtection
+--- PASS: TestForceMissingRepositoryAndInterruptedWorkRetainsProtection (0.04s)
+=== RUN   TestForceDeletionPathIsolationAndActiveWork
+=== RUN   TestForceDeletionPathIsolationAndActiveWork/fingerprint
+=== RUN   TestForceDeletionPathIsolationAndActiveWork/busy
+=== RUN   TestForceDeletionPathIsolationAndActiveWork/wrong-node
+=== RUN   TestForceDeletionPathIsolationAndActiveWork/bad-server
+=== RUN   TestForceDeletionPathIsolationAndActiveWork/symlink
+=== RUN   TestForceDeletionPathIsolationAndActiveWork/protected-root
+--- PASS: TestForceDeletionPathIsolationAndActiveWork (0.18s)
+    --- PASS: TestForceDeletionPathIsolationAndActiveWork/fingerprint (0.04s)
+    --- PASS: TestForceDeletionPathIsolationAndActiveWork/busy (0.02s)
+    --- PASS: TestForceDeletionPathIsolationAndActiveWork/wrong-node (0.02s)
+    --- PASS: TestForceDeletionPathIsolationAndActiveWork/bad-server (0.02s)
+    --- PASS: TestForceDeletionPathIsolationAndActiveWork/symlink (0.04s)
+    --- PASS: TestForceDeletionPathIsolationAndActiveWork/protected-root (0.04s)
+=== RUN   TestDeletedRepositoryFreshGenerationKeyHistoryAndRestore
+--- PASS: TestDeletedRepositoryFreshGenerationKeyHistoryAndRestore (24.25s)
+=== RUN   TestManualRepositoryRemovalRenewsWithoutWipingExistingData
+--- PASS: TestManualRepositoryRemovalRenewsWithoutWipingExistingData (12.92s)
+=== RUN   TestUniqueServerKeysAndIsolation
+--- PASS: TestUniqueServerKeysAndIsolation (7.33s)
+=== RUN   TestLegacyServerKeyUpgradeRequiresEscrowReceipt
+--- PASS: TestLegacyServerKeyUpgradeRequiresEscrowReceipt (21.78s)
+=== RUN   TestRetainedSnapshotProofRequiresExistingOwnedMapping
+--- PASS: TestRetainedSnapshotProofRequiresExistingOwnedMapping (10.53s)
+=== RUN   TestRealStorageAccountingAndRecovery
+--- PASS: TestRealStorageAccountingAndRecovery (24.46s)
+PASS
+ok  	github.com/pelican/wings/ibyte/ibyte/restic/engine	311.791s

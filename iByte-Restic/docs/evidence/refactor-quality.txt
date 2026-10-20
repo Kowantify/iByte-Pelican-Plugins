@@ -1,0 +1,4 @@
+﻿PASS: PHP syntax, 48 files
+PASS: Bash syntax, 13 files
+PASS: isolated Go sources formatted
+PASS: source secret scan (gitleaks8.24.2), no leaks

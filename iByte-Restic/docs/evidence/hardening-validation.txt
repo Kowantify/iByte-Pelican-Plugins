@@ -1,0 +1,25 @@
+CHANGELOG.md: OK
+LICENSE: OK
+NODE-SHA256SUMS: OK
+PELICAN-WINGS-LICENSE.txt: OK
+README.md: OK
+RECOVERY.md: OK
+RESTIC-LICENSE.txt: OK
+ibyte-node-tool-v3.0.0-preview.2-linux-amd64: OK
+ibyte-node-tool-v3.0.0-preview.2-linux-arm64: OK
+ibyte-pelican-wings-restic-v1.0.0-rc.1-v3.0.0-preview.2-linux-amd64: OK
+ibyte-pelican-wings-restic-v1.0.0-rc.1-v3.0.0-preview.2-linux-arm64: OK
+ibyte-restic-install-v3.0.0-preview.2.zip: OK
+ibyte-restic-pelican-plugin-v3.0.0-preview.2.zip: OK
+ibyte-restic-pelican-v3.0.0-preview.2-source.zip: OK
+ibyte-restic-wings-v3.0.0-preview.2.zip: OK
+install-wings-restic.sh: OK
+panel-packages.json: OK
+restic-0.19.1-linux-amd64: OK
+restic-0.19.1-linux-arm64: OK
+restic-modules.json: OK
+uninstall-wings-restic.sh: OK
+wings-modules.json: OK
+Two-folder distribution, plugin/source contents, manifest pins, and all six ELF architectures verified.
+Installer, manifest and selected binaries verified; no node changes.
+Two-folder release, readable installer, audit files and checksums validated; production gates are separate.

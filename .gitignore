@@ -1,0 +1,44 @@
+# One repository: iByte Pelican Plugins (the five plugin folders are the repo content)
+
+# Everything outside the five plugin folders is local tooling/session state
+/*
+!/.gitignore
+!/README.md
+!/iByte-PrometheusExporter/
+!/iByte-PrometheusExporterAddon-Restic/
+!/iByte-Restic/
+!/iByte-MinecraftManager/
+!/iByte-EggChanger/
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+
+# AI/agent working files (never published)
+**/AGENTS.md
+**/CLAUDE.md
+**/GEMINI.md
+**/AGENTS.local.md
+**/FIRST_MESSAGE.md
+**/.claude/
+**/.cursor/
+**/.codex/
+**/.aider*
+**/.windsurfrules
+**/.clinerules
+**/copilot-instructions.md
+
+# Per-plugin junk that must not ship even if re-created locally
+**/.tools/
+**/.build/
+**/.research/
+**/.upstream/
+**/.acceptance/
+**/.validation/
+**/vendor/
+**/node_modules/
+
+# Local env + logs
+**/.env
+**/.env.*
+**/*.log

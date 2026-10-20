@@ -1,0 +1,29 @@
+{
+    "case": "neoforge1211",
+    "provider": "mcjars",
+    "project": "NEOFORGE",
+    "release": "1.21.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "32aecf99-558a-4151-a47d-58e98f357fff",
+    "started_at": "2026-10-17T16:16:49+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 102,
+    "runtime": {
+        "software": "NEOFORGE",
+        "version": "1.21.1",
+        "java": 21,
+        "launcher": "server.jar",
+        "loader": "neoforge",
+        "build": "31f56a9f-c090-48dc-a4a3-b3ad74621b91",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "ca5611220cbf3fd182c1a09664c987b7495509894814dcc67b34c79bab777184",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_21",
+    "finished_at": "2026-10-17T16:16:58+00:00"
+}

@@ -1,0 +1,6 @@
+{
+    "passed": 2,
+    "versions": 100,
+    "platforms": 5,
+    "scope": "Native rendered Livewire modal with synthetic large support lists; no browser visual or install-engine rerun"
+}

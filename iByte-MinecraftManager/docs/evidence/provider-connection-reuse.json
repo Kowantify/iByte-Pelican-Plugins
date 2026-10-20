@@ -1,0 +1,19 @@
+{
+    "provider": "Live public Modrinth API",
+    "requests": [
+        {
+            "elapsed_ms": 233,
+            "new_connections": 1
+        },
+        {
+            "elapsed_ms": 21,
+            "new_connections": 0
+        },
+        {
+            "elapsed_ms": 21,
+            "new_connections": 0
+        }
+    ],
+    "passed": true,
+    "scope": "Three actual metadata requests, no response cache; first TLS connection reused by following two requests"
+}

@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-17",
+  "browser": "local Edge via CDP; native Panel HTTP and Livewire",
+  "tests": [
+    {
+      "name": "owner native page and honest unknown-runtime overview",
+      "status": "pass"
+    },
+    {
+      "name": "exactly one client navigation entry",
+      "status": "pass"
+    },
+    {
+      "name": "Minecraft Manager is below native server tools in the sidebar",
+      "status": "pass"
+    },
+    {
+      "name": "native Livewire internal navigation",
+      "status": "pass"
+    },
+    {
+      "name": "egg-only mapping exposes sidebar and automatically loads full mod catalog with empty filters",
+      "status": "pass"
+    },
+    {
+      "name": "project thumbnails render in native Panel sections with the active theme",
+      "status": "pass"
+    },
+    {
+      "name": "native catalog exposes popularity downloads and last-updated sorting",
+      "status": "pass"
+    },
+    {
+      "name": "dropdown updates preserve document and control identity without scrolling or layout jumps",
+      "status": "pass"
+    },
+    {
+      "name": "plugin catalog remains available on a mapping with no loader or content type",
+      "status": "pass"
+    },
+    {
+      "name": "native searchable software version and build dropdowns select exact provider results",
+      "status": "pass"
+    },
+    {
+      "name": "Modrinth and CurseForge pack catalogs remain available independent of egg loader",
+      "status": "pass"
+    },
+    {
+      "name": "fixture browse, exact release, durable review and escaped provider description",
+      "status": "pass"
+    },
+    {
+      "name": "release dropdowns add two mods to the selection tray without leaving the catalog",
+      "status": "pass"
+    },
+    {
+      "name": "confirmed install queues a durable operation with inline progress and preserves the browsing tab; no node execution",
+      "status": "pass"
+    },
+    {
+      "name": "Activity polling updates only its child component and preserves the page controls",
+      "status": "pass"
+    },
+    {
+      "name": "inline bar shows actual transfer fraction and file-apply counts without rerendering the catalog",
+      "status": "pass"
+    },
+    {
+      "name": "completion is visible in place and clears the active progress bar",
+      "status": "pass"
+    },
+    {
+      "name": "390px mobile layout without horizontal overflow",
+      "status": "pass"
+    },
+    {
+      "name": "mobile catalog and focus-trapped release drawer fit at 390px and close with Escape",
+      "status": "pass"
+    },
+    {
+      "name": "keyboard Tab reaches a focusable control",
+      "status": "pass"
+    },
+    {
+      "name": "root admin settings and empty private credential input",
+      "status": "pass"
+    },
+    {
+      "name": "native admin UI saves egg access using only the egg selector and enabled checkbox",
+      "status": "pass"
+    },
+    {
+      "name": "saved mapping identifies the egg and affected server with a direct manager link",
+      "status": "pass"
+    },
+    {
+      "name": "light and dark native pages captured",
+      "status": "pass"
+    },
+    {
+      "name": "Minecraft Manager sidebar entry appears on the native server Console after mapping",
+      "status": "pass"
+    },
+    {
+      "name": "unauthenticated direct page requires native login",
+      "status": "pass"
+    }
+  ]
+}

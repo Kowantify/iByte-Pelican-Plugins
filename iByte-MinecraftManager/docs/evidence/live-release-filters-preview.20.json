@@ -1,0 +1,135 @@
+{
+    "provider": "modrinth",
+    "project": "1bokaNcj",
+    "title": "Xaero's Minimap",
+    "results": [
+        {
+            "version": "1.12.2",
+            "loader": "forge",
+            "matching_count": 47,
+            "examples": [
+                {
+                    "id": "5RQMTvSN",
+                    "title": "Xaero's Minimap 26.6.0",
+                    "channel": "release",
+                    "loaders": [
+                        "forge"
+                    ],
+                    "game_versions": [
+                        "1.12.2"
+                    ]
+                },
+                {
+                    "id": "Sg74174z",
+                    "title": "Xaero's Minimap 26.5.1",
+                    "channel": "release",
+                    "loaders": [
+                        "forge"
+                    ],
+                    "game_versions": [
+                        "1.12.2"
+                    ]
+                },
+                {
+                    "id": "E0vFwbpC",
+                    "title": "Xaero's Minimap 26.5.0",
+                    "channel": "release",
+                    "loaders": [
+                        "forge"
+                    ],
+                    "game_versions": [
+                        "1.12.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "version": "1.21.1",
+            "loader": "neoforge",
+            "matching_count": 26,
+            "examples": [
+                {
+                    "id": "irjR7dHk",
+                    "title": "Xaero's Minimap 26.6.0",
+                    "channel": "release",
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "game_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ]
+                },
+                {
+                    "id": "Q1tuMQBB",
+                    "title": "Xaero's Minimap 26.5.0",
+                    "channel": "release",
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "game_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ]
+                },
+                {
+                    "id": "JXvcT1hp",
+                    "title": "Xaero's Minimap 26.4.2",
+                    "channel": "release",
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "game_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "version": "1.21.1",
+            "loader": "fabric",
+            "matching_count": 23,
+            "examples": [
+                {
+                    "id": "W4dcLcUs",
+                    "title": "Xaero's Minimap 26.6.0",
+                    "channel": "release",
+                    "loaders": [
+                        "fabric",
+                        "quilt"
+                    ],
+                    "game_versions": [
+                        "1.21.1"
+                    ]
+                },
+                {
+                    "id": "ZD6hK4GV",
+                    "title": "Xaero's Minimap 26.5.0",
+                    "channel": "release",
+                    "loaders": [
+                        "fabric",
+                        "quilt"
+                    ],
+                    "game_versions": [
+                        "1.21.1"
+                    ]
+                },
+                {
+                    "id": "Tx54V6kI",
+                    "title": "Xaero's Minimap 26.4.2",
+                    "channel": "release",
+                    "loaders": [
+                        "fabric",
+                        "quilt"
+                    ],
+                    "game_versions": [
+                        "1.21.1"
+                    ]
+                }
+            ]
+        }
+    ],
+    "verified": true,
+    "recorded_at": "2026-10-18T15:47:39+00:00"
+}

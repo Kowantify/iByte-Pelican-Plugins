@@ -1,0 +1,21 @@
+diff --git a/router/router.go b/router/router.go
+index a696a37..91a9d19 100644
+--- a/router/router.go
++++ b/router/router.go
+@@ -7,6 +7,7 @@ import (
+ 	"github.com/apex/log"
+ 	"github.com/gin-gonic/gin"
+ 	"github.com/pelican/wings/config"
++	ibyterestic "github.com/pelican/wings/ibyte/restic"
+ 	"github.com/pelican/wings/remote"
+ 	"github.com/pelican/wings/router/middleware"
+ 	wserver "github.com/pelican/wings/server"
+@@ -118,6 +119,8 @@ func Configure(m *wserver.Manager, client remote.Client) *gin.Engine {
+ 			files.DELETE("/pull/:download", middleware.RemoteDownloadEnabled(), deleteServerPullRemoteFile)
+ 		}
+ 
++		ibyterestic.Register(server.Group("/restic"), m, router.Group("/api/restic", middleware.RequireAuthorization()))
++
+ 		backup := server.Group("/backup")
+ 		{
+ 			backup.POST("", postServerBackup)

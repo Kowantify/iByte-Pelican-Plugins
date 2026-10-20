@@ -1,0 +1,94 @@
+{
+    "version": "0.1.0-preview.22",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.22.zip",
+    "sha256": "7e2b20345d42064f4b075dd270ef89278129db5479c285cb46c150e212dc91c9",
+    "files": 66,
+    "changed": [
+        "README.md",
+        "config/ibyte-minecraft-manager.php",
+        "plugin.json",
+        "resources/views/install-progress.blade.php",
+        "src/Operations/InstallExecutor.php",
+        "src/Operations/InstallWorkspace.php",
+        "src/Operations/NodeFiles.php",
+        "src/Operations/NodePreparation.php",
+        "src/Operations/ProgressClock.php",
+        "src/Support/ArtifactDownloader.php",
+        "src/Support/SafeHttp.php"
+    ],
+    "initial_verification": {
+        "passed": 19,
+        "scope": "Production NodeFiles against real concurrent authenticated loopback HTTP, 100 ms response delay; not Wings or a game boot",
+        "serial_seconds": 11.552,
+        "parallel_seconds": 2.716,
+        "speedup": 4.25,
+        "serial": {
+            "active": 0,
+            "maximum": 1,
+            "requests": 100,
+            "completed": 100
+        },
+        "parallel": {
+            "active": 0,
+            "maximum": 4,
+            "requests": 100,
+            "completed": 100
+        },
+        "scale_files": 1000,
+        "scale_seconds": 26.564,
+        "scale": {
+            "active": 0,
+            "maximum": 4,
+            "requests": 1000,
+            "completed": 1000
+        },
+        "failures": {
+            "checksum": {
+                "requests": 4,
+                "active": 0,
+                "completed": 3
+            },
+            "missing": {
+                "requests": 4,
+                "active": 0,
+                "completed": 3
+            },
+            "truncated": {
+                "requests": 4,
+                "active": 0,
+                "completed": 3
+            },
+            "oversized": {
+                "requests": 4,
+                "active": 0,
+                "completed": 3
+            },
+            "chunked": {
+                "requests": 4,
+                "active": 0,
+                "completed": 3
+            },
+            "disconnect": {
+                "requests": 4,
+                "active": 0,
+                "completed": 3
+            },
+            "callback": {
+                "requests": 4,
+                "active": 0,
+                "completed": 4
+            },
+            "heartbeat": {
+                "requests": 0,
+                "active": 0,
+                "completed": 0
+            }
+        }
+    },
+    "installer_checks": 65,
+    "browser_checks": 41,
+    "native_ui_install": 6,
+    "fresh_linux_wings": false,
+    "fresh_game_boot": false,
+    "production_access": false
+}

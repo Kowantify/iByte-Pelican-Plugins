@@ -1,0 +1,32 @@
+{
+    "scope": "Actual WorldEdit 7.4.6 artifact, native Paper 1.21.4 Java 21 fixture and production remote-download preflight; no provider/node mocks",
+    "status": "failed",
+    "error": "plugin_java_incompatible",
+    "failure": {
+        "file": "plugins/worldedit-bukkit-7.4.6.jar",
+        "requirement": "Requires Java 25; the server image uses Java 21."
+    },
+    "files_unchanged": true,
+    "world_unchanged": true,
+    "reservation_released": true,
+    "transfer": {
+        "requests": {
+            "GET files/contents": 10,
+            "GET files/list-directory": 8,
+            "GET files/pull": 2,
+            "POST files/pull": 1,
+            "POST files/delete": 1
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 2,
+        "fractional_progress_observed": false,
+        "download_directories": [
+            "plugins"
+        ],
+        "recovery_uploads": 0
+    },
+    "recorded_at": "2026-10-17T22:09:11+00:00",
+    "passed": true
+}

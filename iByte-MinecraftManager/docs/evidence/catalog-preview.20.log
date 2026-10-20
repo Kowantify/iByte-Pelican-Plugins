@@ -1,0 +1,46 @@
+PASS egg-only mapping needs no software, image, loader or provider discovery
+PASS mod catalog auto-loads with no hidden image, loader or version filter
+PASS plugins and modpacks browse independently of the mapped egg type
+PASS sorting resets pagination and sends the selected order to the provider
+PASS CurseForge class catalogs have no implicit loader or game version
+PASS all software families auto-load without mapping to one family
+PASS native searchable software fields query the provider and retain exact selection validation
+PASS mods and plugins both reach executable review on a visibility-only mapping
+PASS ambiguous release can be browsed and becomes installable after user chooses target
+PASS direct Install creates one durable install without a review dialog
+PASS Add to queue deduplicates a project and survives a fresh page mount
+PASS forged release selections cannot install or replace a queued item
+PASS pending queue is isolated by actor and server within the same session
+PASS failed dispatch retains the pending queue while another install owns the slot
+PASS queue Install refreshes expired internal metadata without asking for review
+PASS modpacks also dispatch through one Install action without a review screen
+PASS tracked runtime supplies removable catalog defaults while review still checks compatibility
+PASS disabling the egg hides access regardless of server image
+PASS experimental browsing is separate from administrator install policy
+PASS native admin form enables an egg with only egg id and checkbox
+PASS saved egg feedback shows matching server links and warns when global policy hides them
+PASS Forge runtime opens mods with visible exact Minecraft and loader defaults
+PASS cleared runtime filters stay cleared across provider changes sorting and tab navigation
+PASS mod and plugin filter choices are remembered independently without applying Forge to plugins
+PASS a newly installed runtime replaces old defaults when the package page is reopened
+PASS Paper opens Plugins with Bukkit and Spigot releases included and consistent install targets
+PASS Spigot and Folia reviews refuse unsupported platform releases
+PASS untracked servers derive default filters from the selected server-local egg variables
+PASS external runtime variable changes supersede stale tracking and invalid latest values remain unknown
+PASS runtime variable defaults stay isolated between two servers sharing one egg
+PASS Folia filtering fails visibly on CurseForge and clearing it restores browsing
+PASS proxy software versions never become Minecraft-version filters or block matching proxy plugins
+PASS main actions resolve latest for installed runtime even after browsing other filters
+PASS explicit release Search applies both filters resets pagination and clearing means all
+PASS forged main project IDs cannot start an install or modify pending queue
+PASS isolated row displays compatible release metadata and rechecks server access
+PASS CurseForge release pagination and latest selection reach stable files beyond a beta-only page
+PASS rendered row branches never leak Blade source translation keys or unknown exception details
+PASS unsaved release filters cannot install or queue a stale selection
+PASS Load more releases appends options preserves selection and removes confusing release pages
+PASS numbered catalog pages dispatch scroll only after a successful provider response
+PASS client-only release details keep browsing available and disable both installation buttons
+PASS Search applies explicit browser values even when the deferred model still holds old filters
+PASS release options prefer Release then Beta then Alpha with newest order retained inside each channel
+PASS CurseForge release filters reject mismatched provider rows and order channels
+RESULT 45 catalog access checks passed.

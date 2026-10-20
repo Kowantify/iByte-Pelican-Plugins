@@ -1,0 +1,80 @@
+{
+    "passed": 10,
+    "serial_seconds": 0.845,
+    "parallel_seconds": 0.372,
+    "speedup": 2.27,
+    "serial": {
+        "active": 0,
+        "maximum": 1,
+        "requests": 12,
+        "paths": [
+            "config/d0",
+            "config/d1",
+            "config/d2",
+            "config/d3",
+            "config/d4",
+            "config/d5",
+            "config/d6",
+            "config/d7",
+            "config/d8",
+            "config/d9",
+            "config/d10",
+            "config/d11"
+        ]
+    },
+    "parallel": {
+        "active": 0,
+        "maximum": 4,
+        "requests": 14,
+        "paths": [
+            "",
+            "config",
+            "config/d0",
+            "config/d1",
+            "config/d2",
+            "config/d3",
+            "config/d4",
+            "config/d5",
+            "config/d6",
+            "config/d7",
+            "config/d8",
+            "config/d9",
+            "config/d10",
+            "config/d11"
+        ]
+    },
+    "tree": {
+        "active": 0,
+        "maximum": 4,
+        "requests": 13,
+        "paths": [
+            "archive",
+            "archive/d0",
+            "archive/d1",
+            "archive/d2",
+            "archive/d3",
+            "archive/d4",
+            "archive/d5",
+            "archive/d6",
+            "archive/d7",
+            "archive/d8",
+            "archive/d9",
+            "archive/d10",
+            "archive/d11"
+        ]
+    },
+    "failure": {
+        "active": 0,
+        "maximum": 4,
+        "requests": 6,
+        "paths": [
+            "",
+            "config",
+            "config/d0",
+            "config/d1",
+            "config/d2",
+            "config/d3"
+        ]
+    },
+    "scope": "Small production NodeFiles check against authenticated concurrent loopback HTTP with 60ms delay; not real Wings or a modpack benchmark"
+}

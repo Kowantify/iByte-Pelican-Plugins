@@ -1,0 +1,118 @@
+diff --git a/app/Extensions/BackupAdapter/RestoresBackupsInterface.php b/app/Extensions/BackupAdapter/RestoresBackupsInterface.php
+new file mode 100644
+index 0000000..e429530
+--- /dev/null
++++ b/app/Extensions/BackupAdapter/RestoresBackupsInterface.php
+@@ -0,0 +1,11 @@
++<?php
++
++namespace App\Extensions\BackupAdapter;
++
++use App\Models\Backup;
++
++/** Optional backup-provider restore dispatch; callers retain native RBAC and status protection. */
++interface RestoresBackupsInterface
++{
++    public function restoreBackup(Backup $backup, bool $truncate): void;
++}
+diff --git a/app/Filament/Server/Resources/Backups/BackupResource.php b/app/Filament/Server/Resources/Backups/BackupResource.php
+index e82e8b4..5f89f62 100644
+--- a/app/Filament/Server/Resources/Backups/BackupResource.php
++++ b/app/Filament/Server/Resources/Backups/BackupResource.php
+@@ -13,7 +13,7 @@ use App\Filament\Server\Resources\Backups\Pages\ListBackups;
+ use App\Http\Controllers\Api\Client\Servers\BackupController;
+ use App\Models\Backup;
+ use App\Models\Server;
+-use App\Repositories\Daemon\DaemonBackupRepository;
++use App\Services\Backups\RestoreBackupService;
+ use App\Services\Backups\DeleteBackupService;
+ use App\Services\Backups\DownloadLinkService;
+ use App\Services\Backups\InitiateBackupService;
+@@ -185,7 +185,7 @@ class BackupResource extends Resource
+                             Checkbox::make('truncate')
+                                 ->label(trans('server/backup.actions.restore.delete_all')),
+                         ])
+-                        ->action(function (Backup $backup, $data, DaemonBackupRepository $daemonRepository, DownloadLinkService $downloadLinkService) use ($server) {
++                        ->action(function (Backup $backup, $data, RestoreBackupService $restoreBackupService, DownloadLinkService $downloadLinkService) use ($server) {
+                             if (!is_null($server->status)) {
+                                 return Notification::make()
+                                     ->title(trans('server/backup.actions.restore.notification_fail'))
+@@ -206,14 +206,14 @@ class BackupResource extends Resource
+                                 ->subject($backup)
+                                 ->property(['name' => $backup->name, 'truncate' => $data['truncate']]);
+ 
+-                            $log->transaction(function () use ($downloadLinkService, $daemonRepository, $backup, $server, $data) {
++                            $log->transaction(function () use ($downloadLinkService, $restoreBackupService, $backup, $server, $data) {
+                                 $url = $downloadLinkService->handle($backup, user());
+ 
+                                 // Update the status right away for the server so that we know not to allow certain
+                                 // actions against it via the Panel API.
+                                 $server->update(['status' => ServerState::RestoringBackup]);
+ 
+-                                $daemonRepository->setServer($server)->restore($backup, $url, $data['truncate']);
++                                $restoreBackupService->restore($backup, $url, $data['truncate']);
+                             });
+ 
+                             return Notification::make()
+diff --git a/app/Http/Controllers/Api/Client/Servers/BackupController.php b/app/Http/Controllers/Api/Client/Servers/BackupController.php
+index 8912eac..4dab259 100644
+--- a/app/Http/Controllers/Api/Client/Servers/BackupController.php
++++ b/app/Http/Controllers/Api/Client/Servers/BackupController.php
+@@ -13,7 +13,7 @@ use App\Http\Requests\Api\Client\Servers\Backups\RestoreBackupRequest;
+ use App\Http\Requests\Api\Client\Servers\Backups\StoreBackupRequest;
+ use App\Models\Backup;
+ use App\Models\Server;
+-use App\Repositories\Daemon\DaemonBackupRepository;
++use App\Services\Backups\RestoreBackupService;
+ use App\Services\Backups\DeleteBackupService;
+ use App\Services\Backups\DownloadLinkService;
+ use App\Services\Backups\InitiateBackupService;
+@@ -28,7 +28,7 @@ use Throwable;
+ class BackupController extends ClientApiController
+ {
+     public function __construct(
+-        private readonly DaemonBackupRepository $daemonRepository,
++        private readonly RestoreBackupService $restoreBackupService,
+         private readonly DeleteBackupService $deleteBackupService,
+         private readonly InitiateBackupService $initiateBackupService,
+         private readonly DownloadLinkService $downloadLinkService,
+@@ -257,7 +257,7 @@ class BackupController extends ClientApiController
+             // actions against it via the Panel API.
+             $server->update(['status' => ServerState::RestoringBackup]);
+ 
+-            $this->daemonRepository->setServer($server)->restore($backup, $url, $request->input('truncate'));
++            $this->restoreBackupService->restore($backup, $url, $request->input('truncate'));
+         });
+ 
+         return new JsonResponse([], JsonResponse::HTTP_NO_CONTENT);
+diff --git a/app/Services/Backups/RestoreBackupService.php b/app/Services/Backups/RestoreBackupService.php
+new file mode 100644
+index 0000000..396940a
+--- /dev/null
++++ b/app/Services/Backups/RestoreBackupService.php
+@@ -0,0 +1,25 @@
++<?php
++
++namespace App\Services\Backups;
++
++use App\Extensions\BackupAdapter\BackupAdapterService;
++use App\Extensions\BackupAdapter\RestoresBackupsInterface;
++use App\Models\Backup;
++use App\Repositories\Daemon\DaemonBackupRepository;
++use RuntimeException;
++
++final class RestoreBackupService
++{
++    public function __construct(private BackupAdapterService $schemas, private DaemonBackupRepository $daemon) {}
++
++    public function restore(Backup $backup, ?string $url = null, bool $truncate = false): void
++    {
++        $schema = $this->schemas->get($backup->backupHost->schema);
++        if (!$schema) { throw new RuntimeException('Unknown backup adapter.'); }
++        if ($schema instanceof RestoresBackupsInterface) {
++            $schema->restoreBackup($backup, $truncate);
++            return;
++        }
++        $this->daemon->setServer($backup->server)->restore($backup, $url, $truncate);
++    }
++}

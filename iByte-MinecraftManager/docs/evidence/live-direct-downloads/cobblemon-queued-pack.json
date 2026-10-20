@@ -1,0 +1,15 @@
+{
+    "case": "cobblemon",
+    "scope": "Exact preview.12 ZIP imported by published Panel RC.1; actual native background queue, direct Wings pulls, live providers, official Wings RC.1; reinstall onto an existing world",
+    "operation": "44f765c6-c942-4e12-af3f-60ec31118107",
+    "started_at": "2026-10-17T17:58:24+00:00",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 37,
+    "source_resolutions": [],
+    "fractional_download_progress_observed": true,
+    "world_unchanged": true,
+    "reservation_released": true,
+    "finished_at": "2026-10-17T18:00:08+00:00"
+}

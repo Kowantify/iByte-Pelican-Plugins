@@ -1,0 +1,24 @@
+["busybox@sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e"]
+Disposable container exists and is stopped; no game process was started.
+configuration and private credential files valid
+daemon and authenticated addon healthy
+Already installed and healthy: 3.0.0-preview.2
+PASS: fresh disposable native database uses expected node identity
+PASS: real Wings owns the disposable game root
+{"system_http":200,"actual_agent":"Pelican Wings\/v1.0.0-rc.1+ibyte.3.0.0-preview.2 (id:redacted)","identity_header_matches":true}
+PASS: live server-key preflight HTTP status 200
+PASS: live recovery preflight HTTP status 200
+{"credential_mode":"server","key_finalized_type":"bool","retention_safe":true,"identity_matches":[true,true,true,true,true]}
+PASS: native queued backup completes against real HTTPS Wings and Restic
+PASS: real backup automatically persists encrypted recovery key and measured storage
+PASS: native signed download streams a real archive with byte-identical game content
+PASS: native lock refuses deletion of a real snapshot
+PASS: real-node schedule does not dispatch before its due time
+PASS: timed native schedule and serialized queue create a real Restic snapshot
+PASS: isolated native restore selects the older snapshot and verifies real bytes (no competing writers)
+PASS: real final-backup preparation queues a new locked backup and preserves the server
+PASS: real recent locked final snapshot permits second confirmation
+PASS: real native server deletion forgets older snapshots and preserves only the verified final mapping and keys
+PASS: retained repository statistics complete through real queue after native server deletion
+PASS: password-confirmed retained gzip export recovers real bytes after native server deletion
+Live local native integration passed; control-plane bootstrap inventory and completion broadcast were mocked, not daemon/Restic traffic. Production writer fencing remains blocked.

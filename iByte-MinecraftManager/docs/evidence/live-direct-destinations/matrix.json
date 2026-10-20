@@ -1,0 +1,1678 @@
+{
+    "scope": "Native Panel and official Wings RC.1 on isolated Debian 13, real Docker Java runtime, provider downloads and node readback. CLI invokes the production queued handler; automatic scheduler and UI are tested separately.",
+    "cases": {
+        "cobblemon": {
+            "installation": {
+                "case": "cobblemon",
+                "provider": "modrinth",
+                "project": "5FFgwNNP",
+                "release": "BpTjgzL8",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "2728b31b-07e1-4469-b53d-2fd618485ce0",
+                "started_at": "2026-10-17T20:48:30+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 2471,
+                "runtime": {
+                    "software": "FABRIC",
+                    "version": "1.21.1",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "fabric",
+                    "build": "f262fa83-a46f-4377-9812-2b7139f0ae3b",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "809d99b16dd4d4b57384d128724ab0d6560f859aaba989dc6750d8437a447ed0",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 1019,
+                        "GET files/contents": 22212,
+                        "GET files/pull": 33,
+                        "POST files/pull": 38,
+                        "POST files/create-directory": 112,
+                        "POST files/decompress": 1,
+                        "POST files/delete": 59,
+                        "PUT files/rename": 4905,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 38,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 33,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        ".",
+                        "mods",
+                        "resourcepacks",
+                        "shaderpacks"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T20:50:44+00:00"
+            },
+            "startup": {
+                "case": "cobblemon",
+                "started_at": "2026-10-17T20:52:37+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T20:52:57+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T20:52:59+00:00"
+            },
+            "queued-pack": {
+                "case": "cobblemon",
+                "scope": "Exact preview.13 ZIP imported by published Panel RC.1; actual native background queue, direct Wings pulls, live providers, official Wings RC.1; reinstall onto an existing world",
+                "operation": "c9dc1628-1167-4ef9-a944-e1c88925c943",
+                "started_at": "2026-10-17T20:51:32+00:00",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 37,
+                "source_resolutions": [],
+                "fractional_download_progress_observed": true,
+                "world_unchanged": true,
+                "reservation_released": true,
+                "finished_at": "2026-10-17T20:52:37+00:00"
+            },
+            "queued-pack-startup": {
+                "case": "cobblemon",
+                "started_at": "2026-10-17T20:52:37+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T20:52:57+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T20:52:59+00:00"
+            }
+        },
+        "nexus": {
+            "installation": {
+                "case": "nexus",
+                "provider": "curseforge",
+                "project": "454095",
+                "release": "6765239",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "5101d59a-856e-48d7-ae9d-e3bb7c83091d",
+                "started_at": "2026-10-17T18:53:18+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [
+                    {
+                        "skip": "client_mod",
+                        "title": "Entity Culling Fabric/Forge",
+                        "project": "448233",
+                        "id": "6734976"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "BetterF3",
+                        "project": "401648",
+                        "id": "4863626"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "[EMF] Entity Model Features [Fabric & Forge]",
+                        "project": "844662",
+                        "id": "6001134"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Chat Heads",
+                        "project": "407206",
+                        "id": "6483021"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "UniLib",
+                        "project": "1056812",
+                        "id": "6509566"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Faithful 32x",
+                        "project": "436482",
+                        "id": "6691971"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Embeddium",
+                        "project": "908741",
+                        "id": "5681725"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Constant Music",
+                        "project": "949032",
+                        "id": "5748142"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Create Better FPS",
+                        "project": "1217518",
+                        "id": "6716449"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Mouse Tweaks",
+                        "project": "60089",
+                        "id": "5338457"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Oculus",
+                        "project": "581495",
+                        "id": "6020952"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Overflowing Bars",
+                        "project": "852662",
+                        "id": "5763974"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "BSL Shaders - Classic",
+                        "project": "1085570",
+                        "id": "5905132"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Advancement Plaques [Neo/Forge]",
+                        "project": "499826",
+                        "id": "6186385"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Better Ping Display",
+                        "project": "292038",
+                        "id": "4594106"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Not Enough Animations",
+                        "project": "433760",
+                        "id": "6738627"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Drippy Loading Screen",
+                        "project": "511770",
+                        "id": "6412211"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Light Overlay (Rift/Forge/Fabric)",
+                        "project": "325492",
+                        "id": "4573178"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Camera Overhaul Reforged",
+                        "project": "1011593",
+                        "id": "5359800"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "ImmediatelyFast",
+                        "project": "686911",
+                        "id": "6745706"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Complementary Shaders - Reimagined",
+                        "project": "627557",
+                        "id": "6515577"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "[ETF] Entity Texture Features - [Fabric & Forge]",
+                        "project": "568563",
+                        "id": "5982136"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "[ESF] Entity Sound Features",
+                        "project": "1060324",
+                        "id": "5516016"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Traveler's Titles (Forge/NeoForge)",
+                        "project": "504908",
+                        "id": "5065825"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Complementary Shaders - Unbound",
+                        "project": "385587",
+                        "id": "6515579"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Iris/Oculus & GeckoLib Compat (Deprecated)",
+                        "project": "959388",
+                        "id": "5018199"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sodium/Embeddium Dynamic Lights",
+                        "project": "551736",
+                        "id": "6044481"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Immersive UI",
+                        "project": "1021685",
+                        "id": "6023593"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Embeddium (Rubidium) Extra",
+                        "project": "654373",
+                        "id": "6101745"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sodium/Embeddium Options Mod Compat",
+                        "project": "1146393",
+                        "id": "6041603"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Just Enough Mekanism Multiblocks",
+                        "project": "898746",
+                        "id": "6170219"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Game Menu Mod Option [Forge]",
+                        "project": "353051",
+                        "id": "4658132"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sodium/Embeddium Options API",
+                        "project": "1103431",
+                        "id": "6100812"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Sildur's Enhanced Default Shaders",
+                        "project": "544140",
+                        "id": "4688998"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Sildur's Vibrant shaders",
+                        "project": "544096",
+                        "id": "4688989"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "MakeUp - Ultra Fast | Shaders",
+                        "project": "431203",
+                        "id": "6706215"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Spyglass Improvements: Zoom, Quick Access... [Fabric/NeoForge]",
+                        "project": "571264",
+                        "id": "5071983"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "AmbientSounds 6",
+                        "project": "254284",
+                        "id": "6570130"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Current Game Music Track",
+                        "project": "933960",
+                        "id": "6225091"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sound\u200bs",
+                        "project": "925889",
+                        "id": "5940443"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sodium/Embeddium Extras",
+                        "project": "558905",
+                        "id": "6041697"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Visuality: Reforged",
+                        "project": "704256",
+                        "id": "4684840"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Golden Days Base",
+                        "project": "384081",
+                        "id": "6753646"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Falling Leaves (NeoForge/Forge)",
+                        "project": "463155",
+                        "id": "6241090"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "CraftPresence",
+                        "project": "297038",
+                        "id": "6511328"
+                    }
+                ],
+                "source_resolutions": [
+                    "quark_delight_1.0.0_forge_1.20.1.jar",
+                    "Compat_AlexsMobs-Naturalist.jar",
+                    "VibrativeVoice-forge-1.20.1-1.2.0.jar",
+                    "tetraextras-0.1.4-1.20.1.jar",
+                    "aether_delight_1.0.0_forge_1.20.1.jar",
+                    "aquaculturedelight-1.1.1-forge-1.20.1.jar",
+                    "SilentCompat-forge-1.20.1-1.4.0.jar",
+                    "fish_of_thieves-mc1.20.1-v3.1.2-forge.jar"
+                ],
+                "files": 1611,
+                "runtime": {
+                    "software": "FORGE",
+                    "version": "1.20.1",
+                    "java": 17,
+                    "launcher": "server.jar",
+                    "loader": "forge",
+                    "build": "5684f606-c931-4d30-a013-11238ac59ff3",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "fb940841eaa9431886e22143f69462043647a1a9929d44780709344065f93702",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_17",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 23120,
+                        "GET files/pull": 176,
+                        "POST files/pull": 344,
+                        "GET files/contents": 6451,
+                        "POST files/create-directory": 422,
+                        "POST files/decompress": 2,
+                        "POST files/delete": 102,
+                        "PUT files/rename": 2880,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 344,
+                    "panel_uploads": 0,
+                    "wings_extractions": 2,
+                    "progress_samples": 176,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        ".",
+                        "mods"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:59:14+00:00"
+            },
+            "startup": {
+                "case": "nexus",
+                "started_at": "2026-10-17T20:57:39+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "rejected_status_response": {
+                    "text": "Server is still starting! Please wait before reconnecting."
+                },
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T20:58:49+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T21:00:21+00:00"
+            },
+            "queued-pack": {
+                "case": "nexus",
+                "scope": "Exact preview.13 ZIP imported by published Panel RC.1; actual native background queue, direct Wings pulls, live providers, official Wings RC.1; reinstall onto an existing world",
+                "operation": "7be248ba-6c01-4265-925f-2a95e3dd6769",
+                "started_at": "2026-10-17T20:53:00+00:00",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 458,
+                "source_resolutions": [
+                    "quark_delight_1.0.0_forge_1.20.1.jar",
+                    "Compat_AlexsMobs-Naturalist.jar",
+                    "VibrativeVoice-forge-1.20.1-1.2.0.jar",
+                    "tetraextras-0.1.4-1.20.1.jar",
+                    "aether_delight_1.0.0_forge_1.20.1.jar",
+                    "aquaculturedelight-1.1.1-forge-1.20.1.jar",
+                    "SilentCompat-forge-1.20.1-1.4.0.jar",
+                    "fish_of_thieves-mc1.20.1-v3.1.2-forge.jar"
+                ],
+                "fractional_download_progress_observed": true,
+                "world_unchanged": true,
+                "reservation_released": true,
+                "finished_at": "2026-10-17T20:57:39+00:00"
+            },
+            "queued-pack-startup": {
+                "case": "nexus",
+                "started_at": "2026-10-17T20:57:39+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "rejected_status_response": {
+                    "text": "Server is still starting! Please wait before reconnecting."
+                },
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T20:58:49+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T21:00:21+00:00"
+            }
+        },
+        "odyssey": {
+            "installation": {
+                "case": "odyssey",
+                "provider": "curseforge",
+                "project": "434113",
+                "release": "6709034",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "51682f89-e6e3-4337-8d42-4b6fadb05186",
+                "started_at": "2026-10-17T18:59:15+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [
+                    {
+                        "skip": "client_mod",
+                        "title": "Light Overlay (Rift/Forge/Fabric)",
+                        "project": "325492",
+                        "id": "4573178"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Complementary Shaders - Unbound",
+                        "project": "385587",
+                        "id": "6515579"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Create Better FPS",
+                        "project": "1217518",
+                        "id": "6671045"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Constant Music",
+                        "project": "949032",
+                        "id": "5748142"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Entity Culling Fabric/Forge",
+                        "project": "448233",
+                        "id": "6675248"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "UniLib",
+                        "project": "1056812",
+                        "id": "6509566"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Faithful 32x",
+                        "project": "436482",
+                        "id": "6691971"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Embeddium (Rubidium) Extra",
+                        "project": "654373",
+                        "id": "6101745"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Immersive UI",
+                        "project": "1021685",
+                        "id": "6023593"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Game Menu Mod Option [Forge]",
+                        "project": "353051",
+                        "id": "4658132"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sodium/Embeddium Extras",
+                        "project": "558905",
+                        "id": "6041697"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Falling Leaves (NeoForge/Forge)",
+                        "project": "463155",
+                        "id": "6241090"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Drippy Loading Screen",
+                        "project": "511770",
+                        "id": "6412211"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "BetterF3",
+                        "project": "401648",
+                        "id": "4863626"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sound\u200bs",
+                        "project": "925889",
+                        "id": "5940443"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Sildur's Enhanced Default Shaders",
+                        "project": "544140",
+                        "id": "4688998"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Embeddium",
+                        "project": "908741",
+                        "id": "5681725"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "[ESF] Entity Sound Features",
+                        "project": "1060324",
+                        "id": "5516016"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Traveler's Titles (Forge/NeoForge)",
+                        "project": "504908",
+                        "id": "5065825"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Overflowing Bars",
+                        "project": "852662",
+                        "id": "5763974"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "[ETF] Entity Texture Features - [Fabric & Forge]",
+                        "project": "568563",
+                        "id": "5982136"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Complementary Shaders - Reimagined",
+                        "project": "627557",
+                        "id": "6515577"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sodium/Embeddium Dynamic Lights",
+                        "project": "551736",
+                        "id": "6044481"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "CraftPresence",
+                        "project": "297038",
+                        "id": "6511328"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "BSL Shaders - Classic",
+                        "project": "1085570",
+                        "id": "5905132"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Not Enough Animations",
+                        "project": "433760",
+                        "id": "6688512"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Oculus",
+                        "project": "581495",
+                        "id": "6020952"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "AmbientSounds 6",
+                        "project": "254284",
+                        "id": "6570130"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Camera Overhaul Reforged",
+                        "project": "1011593",
+                        "id": "5359800"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Iris/Oculus & GeckoLib Compat (Deprecated)",
+                        "project": "959388",
+                        "id": "5018199"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Advancement Plaques [Neo/Forge]",
+                        "project": "499826",
+                        "id": "6186385"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "[EMF] Entity Model Features [Fabric & Forge]",
+                        "project": "844662",
+                        "id": "6001134"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "MakeUp - Ultra Fast | Shaders",
+                        "project": "431203",
+                        "id": "6441661"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Spyglass Improvements: Zoom, Quick Access... [Fabric/NeoForge]",
+                        "project": "571264",
+                        "id": "5071983"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "ImmediatelyFast",
+                        "project": "686911",
+                        "id": "6312293"
+                    },
+                    {
+                        "skip": "client_asset",
+                        "title": "Sildur's Vibrant shaders",
+                        "project": "544096",
+                        "id": "4688989"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Current Game Music Track",
+                        "project": "933960",
+                        "id": "6225091"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sodium/Embeddium Options API",
+                        "project": "1103431",
+                        "id": "6100812"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Sodium/Embeddium Options Mod Compat",
+                        "project": "1146393",
+                        "id": "6041603"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Better Ping Display",
+                        "project": "292038",
+                        "id": "4594106"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Visuality: Reforged",
+                        "project": "704256",
+                        "id": "4684840"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Mouse Tweaks",
+                        "project": "60089",
+                        "id": "5338457"
+                    },
+                    {
+                        "skip": "client_mod",
+                        "title": "Chat Heads",
+                        "project": "407206",
+                        "id": "6483021"
+                    }
+                ],
+                "source_resolutions": [
+                    "VibrativeVoice-forge-1.20.1-1.2.0.jar",
+                    "tetraextras-0.1.4-1.20.1.jar"
+                ],
+                "files": 1464,
+                "runtime": {
+                    "software": "FORGE",
+                    "version": "1.20.1",
+                    "java": 17,
+                    "launcher": "server.jar",
+                    "loader": "forge",
+                    "build": "8592fd00-8f52-4d10-8687-2a1e3ea70b53",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "71d321013ea31e378e8ae52a6f3ec7336a0770d18e1b2374fc63700876e5f06b",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_17",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 21393,
+                        "GET files/pull": 132,
+                        "POST files/pull": 264,
+                        "GET files/contents": 5863,
+                        "POST files/create-directory": 414,
+                        "POST files/decompress": 2,
+                        "POST files/delete": 98,
+                        "PUT files/rename": 2666,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 264,
+                    "panel_uploads": 0,
+                    "wings_extractions": 2,
+                    "progress_samples": 132,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        ".",
+                        "mods"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T19:03:59+00:00"
+            },
+            "startup": {
+                "case": "odyssey",
+                "started_at": "2026-10-17T21:04:01+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T21:04:42+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T21:04:50+00:00"
+            },
+            "queued-pack": {
+                "case": "odyssey",
+                "scope": "Exact preview.13 ZIP imported by published Panel RC.1; actual native background queue, direct Wings pulls, live providers, official Wings RC.1; reinstall onto an existing world",
+                "operation": "327e25f3-3e73-4303-82bb-8a262bf96350",
+                "started_at": "2026-10-17T21:00:21+00:00",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 378,
+                "source_resolutions": [
+                    "VibrativeVoice-forge-1.20.1-1.2.0.jar",
+                    "tetraextras-0.1.4-1.20.1.jar"
+                ],
+                "fractional_download_progress_observed": true,
+                "world_unchanged": true,
+                "reservation_released": true,
+                "finished_at": "2026-10-17T21:04:01+00:00"
+            },
+            "queued-pack-startup": {
+                "case": "odyssey",
+                "started_at": "2026-10-17T21:04:01+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T21:04:42+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T21:04:50+00:00"
+            }
+        },
+        "fabric1211": {
+            "installation": {
+                "case": "fabric1211",
+                "provider": "mcjars",
+                "project": "FABRIC",
+                "release": "1.21.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "b21dbec1-6fb1-48df-960a-84914f76cd22",
+                "started_at": "2026-10-17T18:32:11+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 1,
+                "runtime": {
+                    "software": "FABRIC",
+                    "version": "1.21.1",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "fabric",
+                    "build": "1595450e-3136-40ab-8f17-23b7811e4e99",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "426abc85c12b3e6d304b95c50fb2958efc6bb84c6731950a4f97c6ffd3f44592",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 11,
+                        "GET files/pull": 5,
+                        "POST files/pull": 1,
+                        "GET files/contents": 5,
+                        "PUT files/rename": 1,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 5,
+                    "fractional_progress_observed": false,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:32:13+00:00"
+            },
+            "startup": {
+                "case": "fabric1211",
+                "started_at": "2026-10-17T18:37:08+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:37:18+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:37:20+00:00"
+            },
+            "packages": {
+                "case": "fabric1211",
+                "provider": "modrinth",
+                "type": "mod",
+                "minecraft": "1.21.1",
+                "loader": "fabric",
+                "started_at": "2026-10-17T18:37:06+00:00",
+                "projects": [
+                    {
+                        "title": "FerriteCore",
+                        "project": "uXXizFIs",
+                        "release": "sOzRw3CG"
+                    }
+                ],
+                "operation": "9b5575cf-f1e4-4aa2-8e80-baa4aacde4dd",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 1,
+                "world_unchanged": true,
+                "readback_verified": true,
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 13,
+                        "GET files/pull": 2,
+                        "POST files/pull": 1,
+                        "GET files/contents": 5,
+                        "PUT files/rename": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 2,
+                    "fractional_progress_observed": false,
+                    "download_directories": [
+                        "mods"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:37:07+00:00"
+            },
+            "packages-startup": {
+                "case": "fabric1211",
+                "started_at": "2026-10-17T18:37:08+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:37:18+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:37:20+00:00"
+            }
+        },
+        "vanilla1201": {
+            "installation": {
+                "case": "vanilla1201",
+                "provider": "mcjars",
+                "project": "VANILLA",
+                "release": "1.20.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "73d9ead8-a028-4c81-a08f-134325f5c38b",
+                "started_at": "2026-10-17T18:33:36+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 1,
+                "runtime": {
+                    "software": "VANILLA",
+                    "version": "1.20.1",
+                    "java": 17,
+                    "launcher": "server.jar",
+                    "loader": "vanilla",
+                    "build": "45ff7f7d-f630-4b57-b8cf-bc622cd6235e",
+                    "content_type": "none"
+                },
+                "server_jar_sha256": "3af73a9dc5a102e38147946360dd27d4d70bae7055bf91cf2151cd5d121b79e0",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_17",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 11,
+                        "GET files/pull": 4,
+                        "POST files/pull": 1,
+                        "GET files/contents": 5,
+                        "PUT files/rename": 1,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 4,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:33:39+00:00"
+            },
+            "startup": {
+                "case": "vanilla1201",
+                "started_at": "2026-10-17T18:33:39+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:34:09+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:34:17+00:00"
+            }
+        },
+        "paper1214": {
+            "installation": {
+                "case": "paper1214",
+                "provider": "mcjars",
+                "project": "PAPER",
+                "release": "1.21.4",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "01c132a7-f462-494e-bf8c-47c050bf85f6",
+                "started_at": "2026-10-17T18:34:18+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 1,
+                "runtime": {
+                    "software": "PAPER",
+                    "version": "1.21.4",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "paper",
+                    "build": "e60f6fa0-ae4d-480b-b4dd-56af5afd48bf",
+                    "content_type": "plugin"
+                },
+                "server_jar_sha256": "5ee4f542f628a14c644410b08c94ea42e772ef4d29fe92973636b6813d4eaffc",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 11,
+                        "GET files/pull": 4,
+                        "POST files/pull": 1,
+                        "GET files/contents": 5,
+                        "PUT files/rename": 1,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 4,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:34:20+00:00"
+            },
+            "startup": {
+                "case": "paper1214",
+                "started_at": "2026-10-17T18:37:44+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "Paper 1.21.4",
+                        "protocol": 769
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:37:59+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:38:01+00:00"
+            },
+            "packages": {
+                "case": "paper1214",
+                "provider": "modrinth",
+                "type": "plugin",
+                "minecraft": "1.21.4",
+                "loader": "paper",
+                "started_at": "2026-10-17T18:37:42+00:00",
+                "projects": [
+                    {
+                        "title": "LuckPerms",
+                        "project": "Vebnzrzj",
+                        "release": "b0mk8uS6"
+                    }
+                ],
+                "operation": "dd6214c3-80cf-44de-9a8b-4ca4e06069fc",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 1,
+                "world_unchanged": true,
+                "readback_verified": true,
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 13,
+                        "GET files/pull": 2,
+                        "POST files/pull": 1,
+                        "GET files/contents": 5,
+                        "PUT files/rename": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 2,
+                    "fractional_progress_observed": false,
+                    "download_directories": [
+                        "plugins"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:37:44+00:00"
+            },
+            "packages-startup": {
+                "case": "paper1214",
+                "started_at": "2026-10-17T18:37:44+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "Paper 1.21.4",
+                        "protocol": 769
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:37:59+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:38:01+00:00"
+            }
+        },
+        "forge1201": {
+            "installation": {
+                "case": "forge1201",
+                "provider": "mcjars",
+                "project": "FORGE",
+                "release": "1.20.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "ecd4a6eb-217d-4806-afd8-9eb6536a03ca",
+                "started_at": "2026-10-17T18:34:43+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 104,
+                "runtime": {
+                    "software": "FORGE",
+                    "version": "1.20.1",
+                    "java": 17,
+                    "launcher": "server.jar",
+                    "loader": "forge",
+                    "build": "b13be397-1c09-42c1-adcc-06c35585ea9d",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "e91769a80dfdb367bba8bfc86dca6f978817b539929c0c552666fae906bf3251",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_17",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 3184,
+                        "GET files/pull": 6,
+                        "POST files/pull": 1,
+                        "GET files/contents": 419,
+                        "POST files/create-directory": 226,
+                        "POST files/decompress": 1,
+                        "PUT files/rename": 208,
+                        "POST sync": 1,
+                        "POST files/delete": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 6,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:34:54+00:00"
+            },
+            "startup": {
+                "case": "forge1201",
+                "started_at": "2026-10-17T18:37:23+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:37:38+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:37:42+00:00"
+            },
+            "packages": {
+                "case": "forge1201",
+                "provider": "modrinth",
+                "type": "mod",
+                "minecraft": "1.20.1",
+                "loader": "forge",
+                "started_at": "2026-10-17T18:37:20+00:00",
+                "projects": [
+                    {
+                        "title": "FerriteCore",
+                        "project": "uXXizFIs",
+                        "release": "DG5Fn9Sz"
+                    },
+                    {
+                        "title": "ModernFix",
+                        "project": "nmDcB62a",
+                        "release": "bDP3S7Vh"
+                    }
+                ],
+                "operation": "f53e236f-4ca8-47a1-9a72-d0064f70d672",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 2,
+                "world_unchanged": true,
+                "readback_verified": true,
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 23,
+                        "GET files/pull": 2,
+                        "POST files/pull": 2,
+                        "GET files/contents": 10,
+                        "PUT files/rename": 2
+                    },
+                    "wings_pulls": 2,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 2,
+                    "fractional_progress_observed": false,
+                    "download_directories": [
+                        "mods"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:37:23+00:00"
+            },
+            "packages-startup": {
+                "case": "forge1201",
+                "started_at": "2026-10-17T18:37:23+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:37:38+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:37:42+00:00"
+            }
+        },
+        "neoforge1211": {
+            "installation": {
+                "case": "neoforge1211",
+                "provider": "mcjars",
+                "project": "NEOFORGE",
+                "release": "1.21.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "4fb145bb-a4d9-409b-979d-b62d05617e65",
+                "started_at": "2026-10-17T18:35:28+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 102,
+                "runtime": {
+                    "software": "NEOFORGE",
+                    "version": "1.21.1",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "neoforge",
+                    "build": "31f56a9f-c090-48dc-a4a3-b3ad74621b91",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "ca5611220cbf3fd182c1a09664c987b7495509894814dcc67b34c79bab777184",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 3234,
+                        "GET files/pull": 6,
+                        "POST files/pull": 1,
+                        "GET files/contents": 411,
+                        "POST files/create-directory": 234,
+                        "POST files/decompress": 1,
+                        "PUT files/rename": 204,
+                        "POST sync": 1,
+                        "POST files/delete": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 6,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:35:39+00:00"
+            },
+            "startup": {
+                "case": "neoforge1211",
+                "started_at": "2026-10-17T18:38:03+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:38:18+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:38:20+00:00"
+            },
+            "packages": {
+                "case": "neoforge1211",
+                "provider": "curseforge",
+                "type": "mod",
+                "minecraft": "1.21.1",
+                "loader": "neoforge",
+                "started_at": "2026-10-17T18:38:01+00:00",
+                "projects": [
+                    {
+                        "title": "ModernFix",
+                        "project": "790626",
+                        "release": "9101836"
+                    }
+                ],
+                "operation": "4d08d57c-c36c-45cb-b703-d1e43fe23122",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 1,
+                "world_unchanged": true,
+                "readback_verified": true,
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 13,
+                        "GET files/pull": 3,
+                        "POST files/pull": 1,
+                        "GET files/contents": 5,
+                        "PUT files/rename": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 3,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "mods"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:38:03+00:00"
+            },
+            "packages-startup": {
+                "case": "neoforge1211",
+                "started_at": "2026-10-17T18:38:03+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:38:18+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:38:20+00:00"
+            }
+        },
+        "quilt1201": {
+            "installation": {
+                "case": "quilt1201",
+                "provider": "mcjars",
+                "project": "QUILT",
+                "release": "1.20.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "8f19d50b-ccff-48aa-b1a1-f81faec8e887",
+                "started_at": "2026-10-17T18:36:02+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 14,
+                "runtime": {
+                    "software": "QUILT",
+                    "version": "1.20.1",
+                    "java": 17,
+                    "launcher": "server.jar",
+                    "loader": "quilt",
+                    "build": "af7d7b17-e228-4fec-a7c8-194a5646038d",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "5e512e2ffc162428b35a28d2b929dffa7863f1855f148423d6c7f3994aff77e8",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_17",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 420,
+                        "GET files/pull": 6,
+                        "POST files/pull": 2,
+                        "GET files/contents": 59,
+                        "POST files/create-directory": 29,
+                        "POST files/decompress": 1,
+                        "PUT files/rename": 27,
+                        "POST sync": 1,
+                        "POST files/delete": 1
+                    },
+                    "wings_pulls": 2,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 6,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:36:05+00:00"
+            },
+            "startup": {
+                "case": "quilt1201",
+                "started_at": "2026-10-17T18:36:05+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:36:30+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:36:40+00:00"
+            }
+        },
+        "vanilla263": {
+            "installation": {
+                "case": "vanilla263",
+                "provider": "mcjars",
+                "project": "VANILLA",
+                "release": "26.3",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "8dfe5cc0-3b70-40c0-a36a-cb896623b077",
+                "started_at": "2026-10-17T18:36:41+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 1,
+                "runtime": {
+                    "software": "VANILLA",
+                    "version": "26.3",
+                    "java": 25,
+                    "launcher": "server.jar",
+                    "loader": "vanilla",
+                    "build": "e88b5870-9f4d-4623-91a7-8c4717e7b375",
+                    "content_type": "none"
+                },
+                "server_jar_sha256": "d052f14d7a173734fba553711e5b570162e2f2a313267ee31a21b975a679be64",
+                "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_25",
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 11,
+                        "GET files/pull": 4,
+                        "POST files/pull": 1,
+                        "GET files/contents": 5,
+                        "PUT files/rename": 1,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 4,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-17T18:36:43+00:00"
+            },
+            "startup": {
+                "case": "vanilla263",
+                "started_at": "2026-10-17T18:36:44+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "26.3",
+                        "protocol": 777
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "ready": true,
+                "ready_at": "2026-10-17T18:37:04+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-17T18:37:06+00:00"
+            }
+        }
+    },
+    "startup_report_scope": "startup is the latest recorded boot on each server, including subsequent mod or pack installs. packages-startup and queued-pack-startup retain their phase-specific probes. case logs retain initial runtime command output where available.",
+    "recorded_at": "2026-10-17T21:05:21+00:00"
+}

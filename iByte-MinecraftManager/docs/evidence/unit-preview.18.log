@@ -1,0 +1,53 @@
+PASS generated operation prefixes preserve valid deep content paths without relaxing provider paths
+PASS future and snapshot version identifiers retained
+PASS URL identifiers and traversal rejected
+PASS unsafe path 0
+PASS unsafe path 1
+PASS unsafe path 2
+PASS unsafe path 3
+PASS unsafe path 4
+PASS unsafe path 5
+PASS unsafe path 6
+PASS unsafe path 7
+PASS unsafe path 8
+PASS unsafe path 9
+PASS unsafe path 10
+PASS exact HTTPS host allowlist
+PASS private reserved metadata and transition IPs rejected
+PASS mixed DNS answers cannot rebind transport
+PASS integrity checks strongest supplied checksum and exact size
+PASS full MCJars discovery retains new unknown types
+PASS MCJars pagination and provider order retained
+PASS exact build mismatch and latest aliases cannot fall back
+PASS unknown MCJars recipe stays gated
+PASS modrinth exact IDs bind project and release
+PASS Modrinth legacy mod project can publish plugin releases
+PASS Modrinth release pages preserve access to later exact versions
+PASS CurseForge missing API URL resolves only the exact public CDN file with publisher integrity
+PASS provider outages and permission errors retain distinct codes
+PASS nested dependencies ordered before parents and optional excluded
+PASS dependency cycle rejected
+PASS dependency versions conflict
+PASS case colliding dependency filenames rejected
+PASS incompatible and client-only dependencies rejected
+PASS unresolved required dependency never silently skipped
+PASS mrpack server environment and exact runtime
+PASS mrpack unknown loader and collision rejected
+PASS mrpack server overrides supersede common and exclude client overrides
+PASS managed diff preserves edits additions and arbitrary world folder
+PASS supported runtime plans can install without a Wings addon
+PASS safe archive inspected without extraction
+PASS archive traversal 0
+PASS archive traversal 1
+PASS archive traversal 2
+PASS archive traversal 3
+PASS archive symlinks bombs case duplicates and path collisions rejected
+PASS catalog sorting maps to provider popularity downloads and update indices
+PASS unknown catalog sort values cannot reach provider query parameters
+PASS provider thumbnails accept only known HTTPS image CDNs
+PASS release digests ignore JSON object order and retain list order and changed checksums
+PASS plugin platform compatibility is directional and excludes unmarked Folia and separate proxies
+PASS Paper plugin search uses OR platforms and exact version filters through release pagination
+PASS CurseForge Bukkit filtering uses game version without a mod-loader enum and refuses unverified Folia filtering
+PASS review compatibility permits Bukkit on Paper while rejecting reverse and cross-version installs
+RESULT 52 passed; 0 failed. Deterministic unit/contract fixtures; no node execution.

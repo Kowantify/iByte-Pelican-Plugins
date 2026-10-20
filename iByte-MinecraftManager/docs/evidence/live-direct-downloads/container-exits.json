@@ -1,0 +1,106 @@
+{
+    "passed": true,
+    "states": {
+        "cobblemon": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T18:00:09.984166246Z",
+            "FinishedAt": "2026-10-17T18:00:34.684232887Z"
+        },
+        "nexus": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T18:04:55.846230456Z",
+            "FinishedAt": "2026-10-17T18:07:44.710595448Z"
+        },
+        "odyssey": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T18:11:09.871869733Z",
+            "FinishedAt": "2026-10-17T18:12:00.124504409Z"
+        },
+        "fabric1211": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T17:41:12.902425104Z",
+            "FinishedAt": "2026-10-17T17:41:22.512736492Z"
+        },
+        "vanilla1201": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T17:37:45.295276297Z",
+            "FinishedAt": "2026-10-17T17:38:11.165758988Z"
+        },
+        "paper1214": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T17:41:47.832801405Z",
+            "FinishedAt": "2026-10-17T17:42:02.659838095Z"
+        },
+        "forge1201": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T17:41:28.248094921Z",
+            "FinishedAt": "2026-10-17T17:41:43.905336058Z"
+        },
+        "neoforge1211": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T17:42:08.05873068Z",
+            "FinishedAt": "2026-10-17T17:42:21.957014139Z"
+        },
+        "quilt1201": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T17:39:57.247802696Z",
+            "FinishedAt": "2026-10-17T17:40:28.475330908Z"
+        },
+        "vanilla263": {
+            "Status": "exited",
+            "Running": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-17T17:40:57.682005247Z",
+            "FinishedAt": "2026-10-17T17:41:08.171730861Z"
+        }
+    },
+    "recorded_at": "2026-10-17T18:12:29+00:00"
+}

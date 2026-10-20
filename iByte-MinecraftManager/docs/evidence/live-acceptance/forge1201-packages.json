@@ -1,0 +1,28 @@
+{
+    "case": "forge1201",
+    "provider": "modrinth",
+    "type": "mod",
+    "minecraft": "1.20.1",
+    "loader": "forge",
+    "started_at": "2026-10-17T16:19:10+00:00",
+    "projects": [
+        {
+            "title": "FerriteCore",
+            "project": "uXXizFIs",
+            "release": "DG5Fn9Sz"
+        },
+        {
+            "title": "ModernFix",
+            "project": "nmDcB62a",
+            "release": "bDP3S7Vh"
+        }
+    ],
+    "operation": "a07d7681-bdd9-44f1-b82b-019ca03d3417",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 2,
+    "world_unchanged": true,
+    "readback_verified": true,
+    "finished_at": "2026-10-17T16:19:14+00:00"
+}

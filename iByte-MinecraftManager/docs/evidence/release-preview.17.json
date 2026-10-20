@@ -1,0 +1,89 @@
+{
+    "version": "0.1.0-preview.17",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.17.zip",
+    "sha256": "2506d18a8ef3b81f716b9d76d9b86d8d4badec90da04645ebc41015677ac5458",
+    "bytes": 104219,
+    "packaged_files": 65,
+    "unit_contract_tests": 52,
+    "native_tests": 29,
+    "installer_and_action_tests": 53,
+    "catalog_tests": 42,
+    "raw_node_checks": 15,
+    "remote_download_checks": 9,
+    "scheduler_checks": 12,
+    "browser_checks": 38,
+    "native_ui_install_checks": 6,
+    "native_ui_post_install_checks": 5,
+    "browser_javascript_exceptions": 0,
+    "live_provider_project_cases": 33,
+    "live_version_loader_contexts": 99,
+    "real_metadata_dialog_checks": 33,
+    "publisher_verified_artifacts": 6,
+    "live_runtime_cases": [
+        {
+            "case": "neoforge263",
+            "minecraft": "26.3",
+            "files": 73,
+            "runtime_install_seconds": 8,
+            "mods": [
+                "Lithium",
+                "FerriteCore"
+            ],
+            "game_started_and_stopped": true
+        },
+        {
+            "case": "fabric1211",
+            "minecraft": "1.21.1",
+            "files": 1,
+            "runtime_install_seconds": 2,
+            "mods": [
+                "FerriteCore",
+                "Lithium"
+            ],
+            "game_started_and_stopped": true
+        },
+        {
+            "case": "forge1201",
+            "minecraft": "1.20.1",
+            "files": 104,
+            "runtime_install_seconds": 10,
+            "mods": [
+                "FerriteCore",
+                "ModernFix"
+            ],
+            "game_started_and_stopped": true
+        }
+    ],
+    "normal_provider_wings_pulls": 11,
+    "normal_provider_panel_uploads": 0,
+    "actual_ui_queue_worker_delivery": true,
+    "actual_failure_rollback_verified": true,
+    "no_wings_changes": true,
+    "unchanged_packaged_files": 54,
+    "changed_files": [
+        "README.md",
+        "config/ibyte-minecraft-manager.php",
+        "lang/en/messages.php",
+        "plugin.json",
+        "resources/views/project-install.blade.php",
+        "resources/views/server.blade.php",
+        "resources/views/styles.blade.php",
+        "src/Filament/Server/MinecraftManager.php",
+        "src/Livewire/ProjectInstall.php",
+        "src/Support/ArtifactDownloader.php",
+        "src/Support/SafeHttp.php"
+    ],
+    "baseline_version": "0.1.0-preview.16",
+    "baseline_sha256": "f7469cedb2d24a4b7daf785b85e399b94b058a3e8fe116b6835e172a8a302b83",
+    "owned_helpers_removed": true,
+    "php_linux": "8.4.26",
+    "debian": "13.7",
+    "remaining_limits": [
+        "Production host was not accessed or deployed; provider availability and arbitrary releases/gameplay cannot be guaranteed",
+        "Fresh live game tests cover these three runtimes/mod batches; previous broader pack/software runs remain historical",
+        "SQLite executed; other database engines were not live-tested in this release",
+        "Stock Wings cannot exclude every native Files/SFTP/power writer; concurrent operator changes can require reconciliation",
+        "Pending install queue is scoped to the login session, actor and server"
+    ],
+    "recorded_at": "2026-10-18T03:37:15+00:00"
+}

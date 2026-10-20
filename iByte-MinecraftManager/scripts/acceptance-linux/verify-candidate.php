@@ -1,0 +1,6 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__.'/evidence.php';
+$root='/mnt/c/Users/kakow/OneDrive/Desktop/Production/Code/Pelican Extensions/iByte-MinecraftManager';$version=json_decode(file_get_contents($root.'/plugin/plugin.json'),true)['version'];$file=$root.'/.build/ibyte-minecraft-manager-v'.$version.'.zip';$zip=new ZipArchive;if($zip->open($file,ZipArchive::RDONLY)!==true){throw new RuntimeException('Candidate missing');}$count=0;
+for($i=0;$i<$zip->numFiles;$i++){$name=$zip->getNameIndex($i);$relative=substr($name,strlen('ibyte-minecraft-manager/'));$expected=$zip->getFromIndex($i);$actual=file_get_contents('/opt/imm-panel/plugins/ibyte-minecraft-manager/'.$relative);if($relative==='plugin.json'){$expected=json_decode($expected,true);$actual=json_decode($actual,true);unset($actual['meta']);if($actual!=$expected){throw new RuntimeException('Manifest mismatch');}}elseif(!hash_equals(hash('sha256',$expected),hash('sha256',$actual))){throw new RuntimeException('Installed candidate differs: '.$relative);}++$count;}
+$result=['version'=>$version,'sha256'=>hash_file('sha256',$file),'matched_files'=>$count,'manifest_meta_excluded'=>true,'recorded_at'=>gmdate('c')];file_put_contents(acceptanceEvidencePath('installed-candidate.json'),json_encode($result,JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES)."\n");echo json_encode($result),"\n";

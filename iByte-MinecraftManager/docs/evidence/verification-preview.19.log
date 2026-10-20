@@ -1,0 +1,17 @@
+PASS native HTTP uses four concurrent reads, preserves every file check and settles all requests
+PASS progress counts verified completions and reaches 100 percent only after every file
+PASS 102-file latency benchmark is substantially faster than immutable preview.18
+PASS verification streams larger than the in-memory threshold spill and still verify correctly
+PASS checksum fails without launching later batches or leaving in-flight verification reads
+PASS missing fails without launching later batches or leaving in-flight verification reads
+PASS truncated fails without launching later batches or leaving in-flight verification reads
+PASS oversized fails without launching later batches or leaving in-flight verification reads
+PASS chunked fails without launching later batches or leaving in-flight verification reads
+PASS disconnect fails without launching later batches or leaving in-flight verification reads
+PASS callback fails without launching later batches or leaving in-flight verification reads
+PASS empty verification performs no HTTP requests
+PASS empty pack configuration files verify successfully
+PASS request construction failure settles the already-started read before cleanup
+PASS retired paths are checked for absence while written paths retain full checksums
+PASS a retired path that still exists blocks completion
+RESULT 16 asynchronous verification checks passed.

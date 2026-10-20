@@ -1,0 +1,2 @@
+Repeated linux/amd64 daemon build hashes match: 22096b0118a2aa9c9a426d2c28bb0b1835930c558bd5405c732110b0b71e2c6e
+Flags: GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -mod=readonly -trimpath -buildvcs=false -ldflags='-s -w -X github.com/pelican/wings/system.Version=1.0.0-rc.1+ibyte.3.0.0-preview.1'

@@ -1,0 +1,7 @@
+{
+    "passed": 11,
+    "manifest_entries": 51,
+    "curseforge_requests": 4,
+    "modrinth_requests": 3,
+    "scope": "Small deterministic adapter contract checks using documented bulk endpoints; no live provider requests"
+}

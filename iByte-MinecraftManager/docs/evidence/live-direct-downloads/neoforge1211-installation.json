@@ -1,0 +1,47 @@
+{
+    "case": "neoforge1211",
+    "provider": "mcjars",
+    "project": "NEOFORGE",
+    "release": "1.21.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "683e6723-86e1-4639-803d-aa9a7a7fb3d1",
+    "started_at": "2026-10-17T17:39:21+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 102,
+    "runtime": {
+        "software": "NEOFORGE",
+        "version": "1.21.1",
+        "java": 21,
+        "launcher": "server.jar",
+        "loader": "neoforge",
+        "build": "31f56a9f-c090-48dc-a4a3-b3ad74621b91",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "ca5611220cbf3fd182c1a09664c987b7495509894814dcc67b34c79bab777184",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_21",
+    "transfer": {
+        "requests": {
+            "GET files/pull": 6,
+            "GET files/list-directory": 681,
+            "POST files/create-directory": 476,
+            "POST files/pull": 1,
+            "GET files/contents": 308,
+            "PUT files/rename": 205,
+            "POST files/decompress": 1,
+            "POST files/delete": 2,
+            "POST sync": 1
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 1,
+        "progress_samples": 6,
+        "fractional_progress_observed": true
+    },
+    "finished_at": "2026-10-17T17:39:30+00:00"
+}

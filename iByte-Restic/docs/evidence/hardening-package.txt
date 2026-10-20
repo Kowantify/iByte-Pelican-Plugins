@@ -1,0 +1,4 @@
+ibyte-restic-pelican-plugin-v3.0.0-preview.2.zip 59eb45b044fc928c952371f7deacfc1b296cc006c12534c78791109a657f863b
+Readable Wings bootstrap: 3944 bytes
+Bundled local files; no GitHub repository or network download is required.
+SHA256SUMS SHA256: 546049915d4938cbf30f2e3836376677f2f259976cbedb9593514affc2dec893

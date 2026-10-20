@@ -1,0 +1,1 @@
+@livewire('imm-activity', ['admin' => $admin ?? false, 'serverId' => isset($server) ? $server->id : null, 'serverUuid' => isset($server) ? $server->uuid : null], key('imm-activity-'.(($admin ?? false) ? 'admin' : $server->uuid)))

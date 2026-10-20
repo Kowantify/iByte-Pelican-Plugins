@@ -1,0 +1,18 @@
+{
+    "case": "odyssey",
+    "scope": "Exact preview.13 ZIP imported by published Panel RC.1; actual native background queue, direct Wings pulls, live providers, official Wings RC.1; reinstall onto an existing world",
+    "operation": "327e25f3-3e73-4303-82bb-8a262bf96350",
+    "started_at": "2026-10-17T21:00:21+00:00",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 378,
+    "source_resolutions": [
+        "VibrativeVoice-forge-1.20.1-1.2.0.jar",
+        "tetraextras-0.1.4-1.20.1.jar"
+    ],
+    "fractional_download_progress_observed": true,
+    "world_unchanged": true,
+    "reservation_released": true,
+    "finished_at": "2026-10-17T21:04:01+00:00"
+}

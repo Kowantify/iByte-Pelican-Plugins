@@ -1,0 +1,20 @@
+PASS 100 native HTTP publisher checks use four concurrent reads and verify every SHA-512 and SHA-256
+PASS initial verification is substantially faster and emits in-flight cancellation/progress heartbeats
+PASS 1000-file pack stays bounded at four reads and completes every file
+PASS inspection copies are independently readable and removed after callbacks
+PASS large checksum-only streams spill beyond the one MiB memory threshold
+PASS checksum stops subsequent batches, settles current reads and removes inspection copies
+PASS missing stops subsequent batches, settles current reads and removes inspection copies
+PASS truncated stops subsequent batches, settles current reads and removes inspection copies
+PASS oversized stops subsequent batches, settles current reads and removes inspection copies
+PASS chunked stops subsequent batches, settles current reads and removes inspection copies
+PASS disconnect stops subsequent batches, settles current reads and removes inspection copies
+PASS callback stops subsequent batches, settles current reads and removes inspection copies
+PASS heartbeat stops subsequent batches, settles current reads and removes inspection copies
+PASS invalid_hash is rejected before a request
+PASS weak_integrity_policy is rejected before a request
+PASS artifact_size_limit is rejected before a request
+PASS empty initial verification performs no work
+PASS inspection never overwrites an existing local path
+PASS monotonic phase timings accumulate recurring phases and preserve total processing time
+RESULT 19 initial verification checks passed.

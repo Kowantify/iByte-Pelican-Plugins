@@ -1,0 +1,38 @@
+PASS owner native page and honest unknown-runtime overview
+PASS exactly one client navigation entry
+PASS Minecraft Manager is below native server tools in the sidebar
+PASS native Livewire internal navigation
+PASS egg-only mapping exposes sidebar and automatically loads full mod catalog with empty filters
+PASS project thumbnails render in native Panel sections with the active theme
+PASS native catalog exposes popularity downloads and last-updated sorting
+PASS dropdown updates preserve document and control identity without scrolling or layout jumps
+PASS Next and numbered catalog buttons load distinct pages scroll to top and disable Next at the end without document navigation
+PASS numbered catalog pagination fits at 390px and a focused page button still scrolls to the top
+PASS client-only cards render clean labels and View keeps release browsing available while install actions are disabled
+PASS View exposes release options and Load more appends older releases without separate release page controls
+PASS plugin catalog remains available on a mapping with no loader or content type
+PASS native searchable software version and build dropdowns select exact provider results
+PASS server software uses one native Install action with no review dialog
+PASS Modrinth and CurseForge pack catalogs remain available independent of egg loader
+PASS release Search applies the typed Minecraft version and loader dropdown and clearing filters restores all releases
+PASS one Install click queues the exact release without review or confirmation and escapes provider HTML
+PASS main list Install dispatches the matching release directly without opening details
+PASS main list Add to queue collects compatible mods directly without opening project details
+PASS pending install queue survives a page reload and remains separate from dispatched progress
+PASS queue Install dispatches one durable batch with inline progress and preserves the catalog; no node execution
+PASS Activity polling updates only its child component and preserves the page controls
+PASS inline bar shows actual transfer fraction and file-apply counts without rerendering the catalog
+PASS completion is visible in place and clears the active progress bar
+PASS 390px mobile layout without horizontal overflow
+PASS mobile catalog and focus-trapped release drawer fit at 390px and close with Escape
+PASS keyboard Tab reaches a focusable control
+PASS installed Forge version supplies visible removable mod defaults without document navigation
+PASS cleared runtime filters survive tab changes and can be restored explicitly
+PASS Paper opens Plugins with its exact Minecraft version and Bukkit Spigot compatibility
+PASS active runtime filter controls fit the 390px native mobile layout
+PASS root admin settings and empty private credential input
+PASS native admin UI saves egg access using only the egg selector and enabled checkbox
+PASS saved mapping identifies the egg and affected server with a direct manager link
+PASS light and dark native pages captured
+PASS Minecraft Manager sidebar entry appears on the native server Console after mapping
+PASS unauthenticated direct page requires native login

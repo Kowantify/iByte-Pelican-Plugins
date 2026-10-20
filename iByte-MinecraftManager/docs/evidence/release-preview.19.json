@@ -1,0 +1,86 @@
+{
+    "version": "0.1.0-preview.19",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.19.zip",
+    "sha256": "21becfb2efa4c466123aabd9b6fbcf5fc72303b29897f1b7089e753715b8c343",
+    "bytes": 107113,
+    "packaged_files": 65,
+    "changed_files": [
+        "README.md",
+        "config/ibyte-minecraft-manager.php",
+        "plugin.json",
+        "src/Operations/InstallExecutor.php",
+        "src/Operations/NodeFiles.php",
+        "src/Support/ArtifactDownloader.php",
+        "src/Support/SafeHttp.php"
+    ],
+    "verification": {
+        "passed": 16,
+        "scope": "Production native NodeFiles HTTP against a real concurrent loopback HTTP server; 100ms response delay per file, not a mock transport or game boot",
+        "files": 102,
+        "baseline_seconds": 11.863,
+        "concurrent_seconds": 2.807,
+        "speedup": 4.23,
+        "baseline_stats": {
+            "active": 0,
+            "maximum": 1,
+            "requests": 102,
+            "completed": 102
+        },
+        "concurrent_stats": {
+            "active": 0,
+            "maximum": 4,
+            "requests": 102,
+            "completed": 102
+        },
+        "failures": {
+            "checksum": {
+                "failed": true,
+                "requests": 4,
+                "active": 0,
+                "progress": 3
+            },
+            "missing": {
+                "failed": true,
+                "requests": 4,
+                "active": 0,
+                "progress": 3
+            },
+            "truncated": {
+                "failed": true,
+                "requests": 4,
+                "active": 0,
+                "progress": 3
+            },
+            "oversized": {
+                "failed": true,
+                "requests": 4,
+                "active": 0,
+                "progress": 3
+            },
+            "chunked": {
+                "failed": true,
+                "requests": 4,
+                "active": 0,
+                "progress": 3
+            },
+            "disconnect": {
+                "failed": true,
+                "requests": 4,
+                "active": 0,
+                "progress": 3
+            },
+            "callback": {
+                "failed": true,
+                "requests": 4,
+                "active": 0,
+                "progress": 4
+            }
+        },
+        "recorded_at": "2026-10-18T04:19:34+00:00"
+    },
+    "fresh_game_boot": false,
+    "fresh_full_browser_or_ui_build": false,
+    "scope": "Focused final-verification patch; native lifecycle and install/recovery regression tests plus real delayed HTTP verification. Previous live game/UI evidence remains historical.",
+    "wings_modified": false,
+    "recorded_at": "2026-10-18T04:21:39+00:00"
+}

@@ -1,0 +1,12 @@
+{
+    "provider": "modrinth",
+    "project": "uXXizFIs",
+    "release": "sOzRw3CG",
+    "files": {
+        "mods/ferritecore-7.0.3-fabric.jar": {
+            "sha256": "98c3ab1d5aab8f14b5d082d3f1a467727fd335f02d124555c94339761c4c18f2",
+            "size": 123450
+        }
+    },
+    "scope": "Live compatible metadata, artifact streaming and publisher checksum verification; no node writes or execution"
+}

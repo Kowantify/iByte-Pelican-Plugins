@@ -1,0 +1,7 @@
+PASS: PHP syntax, 60 files
+PASS: PHP style
+PASS: isolated Go formatting
+PASS: Bash syntax, 13 files
+PASS: source secret scan, no leaks
+PASS: final Linux amd64/arm64 daemon/helper builds; protected-router tests cross-compiled only
+Upstream router registration patch unchanged; separate dependency lock patch retained

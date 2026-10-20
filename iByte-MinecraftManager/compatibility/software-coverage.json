@@ -1,0 +1,286 @@
+{
+    "observed_at":  "2026-10-16",
+    "api":  "/api/v2/types",
+    "types":  [
+                  {
+                      "id":  "VANILLA",
+                      "group":  "recommended",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  true
+                  },
+                  {
+                      "id":  "PAPER",
+                      "group":  "recommended",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  true
+                  },
+                  {
+                      "id":  "FABRIC",
+                      "group":  "recommended",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  true
+                  },
+                  {
+                      "id":  "FORGE",
+                      "group":  "recommended",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  true
+                  },
+                  {
+                      "id":  "NEOFORGE",
+                      "group":  "recommended",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  true
+                  },
+                  {
+                      "id":  "VELOCITY",
+                      "group":  "recommended",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  true
+                  },
+                  {
+                      "id":  "PURPUR",
+                      "group":  "established",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "PUFFERFISH",
+                      "group":  "established",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "FOLIA",
+                      "group":  "established",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "SPONGE",
+                      "group":  "established",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "SPIGOT",
+                      "group":  "established",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "BUNGEECORD",
+                      "group":  "established",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "WATERFALL",
+                      "group":  "established",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "QUILT",
+                      "group":  "experimental",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  true
+                  },
+                  {
+                      "id":  "VELOCITY_CTD",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "CANVAS",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "ARCLIGHT",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "MOHIST",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "YOUER",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "MAGMA",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "DIVINEMC",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "LEAF",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "LEAVES",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "ASPAPER",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "LEGACYFABRIC",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "PLUTO",
+                      "group":  "miscellaneous",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "LOOHPLIMBO",
+                      "group":  "limbos",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  },
+                  {
+                      "id":  "NANOLIMBO",
+                      "group":  "limbos",
+                      "catalog_observed":  true,
+                      "installation_enabled":  null,
+                      "startup_tested":  false,
+                      "reason":  "per_build_preflight_required",
+                      "installation_policy":  "prepared Java recipes only; exact-build preflight required",
+                      "live_artifact_preparation_passed":  false
+                  }
+              ]
+}

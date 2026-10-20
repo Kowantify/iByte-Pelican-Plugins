@@ -1,0 +1,1 @@
+{"tool":"pint","result":"fixed","files":[{"path":"scripts\\acceptance\\live-node.php","fixers":["fully_qualified_strict_types","unary_operator_spaces","no_multiple_statements_per_line","not_operator_with_successor_space","ordered_imports"]}]}

@@ -1,0 +1,16 @@
+﻿{
+    "stopped_pids":  [
+                         19048,
+                         57216,
+                         5060,
+                         46108,
+                         44744,
+                         48928,
+                         4176,
+                         46716,
+                         57056
+                     ],
+    "recorded_at":  "2026-10-18T15:54:12.6704258Z",
+    "owned_helpers_stopped":  true,
+    "profile":  "edge-profile-20"
+}

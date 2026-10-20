@@ -1,0 +1,74 @@
+{
+    "case": "forge1201",
+    "provider": "mcjars",
+    "project": "FORGE",
+    "release": "1.20.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "d1f3c50b-a326-4e23-9ecf-db8e34a80d5d",
+    "started_at": "2026-10-17T21:45:26+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 104,
+    "runtime": {
+        "software": "FORGE",
+        "version": "1.20.1",
+        "java": 17,
+        "launcher": "server.jar",
+        "loader": "forge",
+        "build": "b13be397-1c09-42c1-adcc-06c35585ea9d",
+        "build_version": "47.4.28",
+        "environment": {
+            "BUILDS": "47.4.28",
+            "SERVER_JARFILE": "server.jar",
+            "SERVER_TYPE": "forge",
+            "VERSION": "1.20.1"
+        },
+        "source": "installed",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "e91769a80dfdb367bba8bfc86dca6f978817b539929c0c552666fae906bf3251",
+    "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_17",
+    "runtime_variables_match": true,
+    "runtime_environment": {
+        "BUILDS": "47.4.28",
+        "SERVER_JARFILE": "server.jar",
+        "SERVER_TYPE": "forge",
+        "VERSION": "1.20.1"
+    },
+    "custom_variables_preserved": true,
+    "startup_preserved": true,
+    "previous_runtime_environment": {
+        "BUILDS": "21.1.244",
+        "SERVER_JARFILE": "old.jar",
+        "SERVER_TYPE": "neoforge",
+        "VERSION": "1.21.1"
+    },
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 2312,
+            "GET files/contents": 940,
+            "GET files/pull": 6,
+            "POST files/pull": 1,
+            "POST files/create-directory": 226,
+            "POST files/decompress": 1,
+            "PUT files/rename": 208,
+            "POST sync": 1,
+            "POST files/delete": 1
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 1,
+        "progress_samples": 6,
+        "fractional_progress_observed": true,
+        "download_directories": [
+            "."
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-17T21:45:37+00:00"
+}

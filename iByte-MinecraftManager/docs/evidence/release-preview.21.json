@@ -1,0 +1,20 @@
+{
+    "version": "0.1.0-preview.21",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.21.zip",
+    "sha256": "87207ca78648c9069888197d5a3307c300598c1cd8315f10872a9be40ae02173",
+    "files": 65,
+    "changed": [
+        "README.md",
+        "config/ibyte-minecraft-manager.php",
+        "plugin.json",
+        "resources/views/server.blade.php",
+        "src/Support/ArtifactDownloader.php",
+        "src/Support/SafeHttp.php"
+    ],
+    "native_lifecycle": 29,
+    "catalog_rendered_livewire": 46,
+    "fresh_browser": false,
+    "fresh_game_boot": false,
+    "production_access": false,
+    "installer_unchanged": true
+}

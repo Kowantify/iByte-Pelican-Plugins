@@ -1,0 +1,29 @@
+{
+    "case": "vanilla263",
+    "provider": "mcjars",
+    "project": "VANILLA",
+    "release": "26.3",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "f4763372-32b1-4999-9a84-d7ffe4d566cb",
+    "started_at": "2026-10-17T16:18:02+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 1,
+    "runtime": {
+        "software": "VANILLA",
+        "version": "26.3",
+        "java": 25,
+        "launcher": "server.jar",
+        "loader": "vanilla",
+        "build": "e88b5870-9f4d-4623-91a7-8c4717e7b375",
+        "content_type": "none"
+    },
+    "server_jar_sha256": "d052f14d7a173734fba553711e5b570162e2f2a313267ee31a21b975a679be64",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_25",
+    "finished_at": "2026-10-17T16:18:04+00:00"
+}

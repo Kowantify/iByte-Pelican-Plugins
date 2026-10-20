@@ -1,0 +1,29 @@
+{
+    "case": "cobblemon",
+    "provider": "modrinth",
+    "project": "5FFgwNNP",
+    "release": "BpTjgzL8",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "bdf497fc-6a57-4552-82a1-8340e30cd522",
+    "started_at": "2026-10-17T16:10:07+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 2471,
+    "runtime": {
+        "software": "FABRIC",
+        "version": "1.21.1",
+        "java": 21,
+        "launcher": "server.jar",
+        "loader": "fabric",
+        "build": "f262fa83-a46f-4377-9812-2b7139f0ae3b",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "809d99b16dd4d4b57384d128724ab0d6560f859aaba989dc6750d8437a447ed0",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_21",
+    "finished_at": "2026-10-17T16:12:39+00:00"
+}

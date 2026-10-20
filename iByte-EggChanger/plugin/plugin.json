@@ -1,0 +1,13 @@
+{
+    "id": "ibyte-egg-changer",
+    "name": "iByte Egg Changer",
+    "author": "iByte Hosting",
+    "version": "0.1.0",
+    "description": "Resource-gated egg switching: administrators define RAM/disk packages of approved eggs; owners run clean, backup-first reinstall switches",
+    "category": "plugin",
+    "namespace": "IByte\\EggChanger",
+    "class": "EggChangerPlugin",
+    "panels": ["admin", "server"],
+    "panel_version": "^1.0.0-rc.1",
+    "api_version": 1
+}

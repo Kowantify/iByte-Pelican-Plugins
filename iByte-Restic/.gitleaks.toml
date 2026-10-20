@@ -1,0 +1,8 @@
+title = "iByte source scan"
+[extend]
+useDefault = true
+[allowlist]
+description = "Disposable caches/generated copies and explicit non-secret integration fixtures"
+regexTarget = "line"
+paths = ['''(^|/)(\.upstream|\.build|\.tools|release)/''']
+regexes = ['''disposable-test-password''', '''highly-secret-wrong-password''', '''disposable-token''', '''(?m)^(?:[ +\-]|@@.*@@ )?[A-Za-z0-9./_-]+ v[0-9][^ ]* h1:[A-Za-z0-9+/=]+[ \t\r]*$''']

@@ -1,0 +1,13 @@
+PASS one minute background task is registered on the existing native scheduler
+PASS idle scheduler does not start an empty install worker
+PASS confirmed installation wakes the scheduled dedicated queue without an extra service
+PASS reproduced original failure: the normal Panel worker leaves the separate install queue untouched
+PASS global disable prevents new scheduled workers during maintenance
+PASS actual native background scheduler worker completes the serialized installation: succeeded
+PASS background worker verifies installed bytes and persists inventory in the isolated node fixture
+PASS worker start is recorded and completed installation releases its server
+PASS metadata checks share the drained queue and remain separate from installation
+PASS native short queue reservation is not used for long installs
+PASS a queued cancellation remains cancelled when the real worker receives its job
+PASS old queued installs are blocked and released instead of applying an expired review
+RESULT 12 native scheduler checks passed.

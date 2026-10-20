@@ -1,0 +1,31 @@
+{
+    "case": "paper1214",
+    "started_at": "2026-10-17T22:09:14+00:00",
+    "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+    "game_status": {
+        "version": {
+            "name": "Paper 1.21.4",
+            "protocol": 769
+        },
+        "players": {
+            "max": 2,
+            "online": 0
+        }
+    },
+    "expected_protocol_verified": true,
+    "fresh_done_log": true,
+    "runtime_variables_in_container_verified": true,
+    "container_runtime_environment": {
+        "BUILDS": "232",
+        "JVM_ARGS": "-Dimm.fixture=true",
+        "MAXIMUM_MEMORY": "85",
+        "SERVER_JARFILE": "server.jar",
+        "SERVER_TYPE": "paper",
+        "VERSION": "1.21.4"
+    },
+    "ready": true,
+    "ready_at": "2026-10-17T22:09:34+00:00",
+    "world_created": true,
+    "stopped": true,
+    "finished_at": "2026-10-17T22:09:36+00:00"
+}

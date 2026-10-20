@@ -1,0 +1,27 @@
+{
+    "case": "nexus",
+    "scope": "Exact preview.14 ZIP imported by published Panel RC.1; actual native background queue, direct Wings pulls, live providers, official Wings RC.1; reinstall onto an existing world",
+    "operation": "98237fef-39dd-40fa-87a8-754c30ce9c09",
+    "started_at": "2026-10-17T22:11:48+00:00",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 458,
+    "source_resolutions": [
+        "quark_delight_1.0.0_forge_1.20.1.jar",
+        "Compat_AlexsMobs-Naturalist.jar",
+        "VibrativeVoice-forge-1.20.1-1.2.0.jar",
+        "tetraextras-0.1.4-1.20.1.jar",
+        "aether_delight_1.0.0_forge_1.20.1.jar",
+        "aquaculturedelight-1.1.1-forge-1.20.1.jar",
+        "SilentCompat-forge-1.20.1-1.4.0.jar",
+        "fish_of_thieves-mc1.20.1-v3.1.2-forge.jar"
+    ],
+    "fractional_download_progress_observed": true,
+    "world_unchanged": true,
+    "reservation_released": true,
+    "finished_at": "2026-10-17T22:16:44+00:00",
+    "runtime_variables_match": true,
+    "custom_variables_preserved": true,
+    "startup_preserved": true
+}

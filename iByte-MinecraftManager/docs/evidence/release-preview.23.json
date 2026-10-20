@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0-preview.23",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.23.zip",
+    "sha256": "b83ed5c4741720dc0748d44805c8f270a8c243809303ee4a5adb799d69b3e149",
+    "files": 63,
+    "smoke": {
+        "passed": 7,
+        "native_pulls": 6,
+        "panel_reads": [
+            ".download-a4ce12a1-f580-49a5-8903-98b89adb8419-2.part/modrinth.index.json"
+        ],
+        "scope": "Small deterministic native Panel/Livewire/HTTP-contract smoke only; no real Wings, provider throughput, concurrency benchmark, browser or game boot"
+    },
+    "native_import": true,
+    "asset_build_stubbed": true,
+    "full_regression_suite": false,
+    "browser_test": false,
+    "real_wings": false,
+    "game_boot": false,
+    "user_requested_small_test": true
+}

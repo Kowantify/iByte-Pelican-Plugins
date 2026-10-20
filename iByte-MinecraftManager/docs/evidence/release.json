@@ -1,0 +1,20 @@
+{
+    "version": "0.1.0-preview.27",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.27.zip",
+    "sha256": "ade6723663464d83de854ba80f0ae3c728a5066ec76dcec680143abd2f9d160d",
+    "files": 55,
+    "changed": [
+        "README.md",
+        "plugin.json",
+        "src/Catalog/McJars.php",
+        "src/Support/SafeHttp.php"
+    ],
+    "layout": {
+        "passed": 3,
+        "scope": "Focused exact-metadata and operation-label fixtures; no install-engine or browser rerun"
+    },
+    "native_import": true,
+    "asset_build_stubbed": true,
+    "browser_visual": false,
+    "install_engine_rerun": false
+}

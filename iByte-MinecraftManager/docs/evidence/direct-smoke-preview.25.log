@@ -1,0 +1,12 @@
+PASS mod replaces its target using foreground native pulls with zero Panel payload reads
+PASS inventory distinguishes expected provider hashes from measured checksums
+PASS small pack installs exact runtime, preserves config/world and reads only manifest JSON on Panel: succeeded
+PASS download failure releases the slot without invoking rollback
+PASS cancellation settles current pulls, keeps applied files and releases the slot
+PASS shared worker failure cleanup drops only uncertain inventory and keeps files
+PASS late worker callbacks cannot invalidate a later installation
+PASS native Panel backup reminder opens without starting an installation
+PASS operation temporary files and extraction folders are cleaned up
+PASS native progress/history render the project name alongside its release title
+PASS real install records separate extraction, traversal, directories, moves, startup and size-check phases
+RESULT 11 direct-install smoke checks passed.

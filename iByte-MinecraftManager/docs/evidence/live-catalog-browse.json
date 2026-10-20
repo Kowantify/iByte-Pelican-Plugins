@@ -1,0 +1,35 @@
+{
+    "scope": "Public Modrinth catalogs and exact plugin release metadata; no node writes, downloads or game execution",
+    "results": {
+        "mod": {
+            "total_observed": 77369,
+            "first_page": 20,
+            "version_filter": "",
+            "loader_filter": ""
+        },
+        "plugin": {
+            "total_observed": 19151,
+            "first_page": 20,
+            "version_filter": "",
+            "loader_filter": "",
+            "selected_paper_release": {
+                "project": "OhduvhIc",
+                "release": "O12m3jOR",
+                "project_types": [
+                    "plugin"
+                ],
+                "loaders": [
+                    "folia",
+                    "paper",
+                    "purpur"
+                ]
+            }
+        },
+        "modpack": {
+            "total_observed": 18872,
+            "first_page": 20,
+            "version_filter": "",
+            "loader_filter": ""
+        }
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "passed": true,
+    "cases": {
+        "cobblemon": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "nexus": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "odyssey": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "fabric1211": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "vanilla1201": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "paper1214": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "forge1201": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "neoforge1211": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "quilt1201": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        },
+        "vanilla263": {
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true
+        }
+    },
+    "legacy_upgrade": {
+        "private_copy_verified": true,
+        "recorded_node_copy_removed": true,
+        "unrecorded_file_preserved": true,
+        "private_location_recorded": true,
+        "empty_legacy_tree_removed": true
+    },
+    "scope": "Actual server volumes after installs, stock Wings API legacy export with a recorded backup and an unrecorded sentinel",
+    "recorded_at": "2026-10-17T21:05:13+00:00"
+}

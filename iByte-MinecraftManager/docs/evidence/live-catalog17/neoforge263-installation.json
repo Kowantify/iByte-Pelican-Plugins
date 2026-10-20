@@ -1,0 +1,74 @@
+{
+    "case": "neoforge263",
+    "provider": "mcjars",
+    "project": "NEOFORGE",
+    "release": "26.3",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "8caaff6d-bfb3-4506-885b-3f8dfa511c92",
+    "started_at": "2026-10-18T03:18:10+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 73,
+    "runtime": {
+        "software": "NEOFORGE",
+        "version": "26.3",
+        "java": 25,
+        "launcher": "server.jar",
+        "loader": "neoforge",
+        "build": "fd4008cf-e9b1-4dad-b08f-ed5cb72ebb51",
+        "build_version": "26.3.0.88",
+        "environment": {
+            "BUILDS": "26.3.0.88",
+            "SERVER_JARFILE": "server.jar",
+            "SERVER_TYPE": "neoforge",
+            "VERSION": "26.3"
+        },
+        "source": "installed",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "11e84ff9e861252f90e8bf41cc4cb09aa1f5ea86ff1de0c1eb4ed1e95333937e",
+    "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_25",
+    "runtime_variables_match": true,
+    "runtime_environment": {
+        "BUILDS": "26.3.0.88",
+        "SERVER_JARFILE": "server.jar",
+        "SERVER_TYPE": "neoforge",
+        "VERSION": "26.3"
+    },
+    "custom_variables_preserved": true,
+    "startup_preserved": true,
+    "previous_runtime_environment": {
+        "BUILDS": "21.1.244",
+        "SERVER_JARFILE": "old.jar",
+        "SERVER_TYPE": "neoforge",
+        "VERSION": "1.21.1"
+    },
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 457,
+            "GET files/contents": 588,
+            "GET files/pull": 5,
+            "POST files/pull": 1,
+            "POST files/create-directory": 189,
+            "POST files/decompress": 1,
+            "PUT files/rename": 146,
+            "POST sync": 1,
+            "POST files/delete": 3
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 1,
+        "progress_samples": 5,
+        "fractional_progress_observed": true,
+        "download_directories": [
+            "."
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-18T03:18:18+00:00"
+}

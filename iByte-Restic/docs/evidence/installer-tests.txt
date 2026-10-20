@@ -1,0 +1,12 @@
+PASS: preflight failure preserves original binary
+PASS: unknown/custom binary refused
+Installed staging preview 3.0.0-preview.1; original Wings retained at /c/Users/kakow/OneDrive/Desktop/Production/Code/Pelican Extensions/iByte-Restic/.build/installer-test.pD8wTT/state/original.
+Already installed and healthy: 3.0.0-preview.1
+PASS: unattended installation twice is repeat-safe without a second restart
+Original Wings restored. Profiles, snapshots, data and state retained.
+PASS: rollback restores original and preserves game/config data
+PASS: failed new daemon startup automatically restores previous binary
+PASS: failed addon health automatically restores previous binary
+PASS: tampered release binary refused before daemon replacement
+Installer fixture suite passed: 7 cases (mock systemd/identity/helper; no Linux runtime claim)
+EXIT: 0

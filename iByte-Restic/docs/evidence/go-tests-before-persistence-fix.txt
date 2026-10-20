@@ -1,0 +1,41 @@
+=== RUN   TestRealResticLifecycle
+--- PASS: TestRealResticLifecycle (13.84s)
+=== RUN   TestMidRestoreFailureRollsBack
+--- PASS: TestMidRestoreFailureRollsBack (6.78s)
+=== RUN   TestRestartUnknownBlocksMutations
+--- PASS: TestRestartUnknownBlocksMutations (0.08s)
+=== RUN   TestIdentityAndInjectionRejected
+--- PASS: TestIdentityAndInjectionRejected (0.03s)
+=== RUN   TestExistingRepositoryNotAdoptedOrWiped
+    engine_test.go:207: job timed out
+--- FAIL: TestExistingRepositoryNotAdoptedOrWiped (60.05s)
+=== RUN   TestCancellationNeverCreatesSuccessMapping
+--- PASS: TestCancellationNeverCreatesSuccessMapping (0.05s)
+=== RUN   TestCorruptDurableStateFailsClosed
+--- PASS: TestCorruptDurableStateFailsClosed (0.06s)
+=== RUN   TestSymlinkRejected
+    engine_test.go:247: OS denied symlink privilege
+--- SKIP: TestSymlinkRejected (0.00s)
+=== RUN   TestArchiveLimit
+--- PASS: TestArchiveLimit (0.00s)
+=== RUN   TestWrongPasswordNoSecretLeak
+--- PASS: TestWrongPasswordNoSecretLeak (5.86s)
+=== RUN   TestConcurrentWorkRejected
+--- PASS: TestConcurrentWorkRejected (0.04s)
+FAIL
+FAIL	github.com/pelican/wings/ibyte/restic/engine	87.203s
+=== RUN   TestActualHelperHealthUsesBearerAndNativeResponseShape
+configuration and private credential files valid
+daemon and authenticated addon healthy
+--- PASS: TestActualHelperHealthUsesBearerAndNativeResponseShape (0.07s)
+=== RUN   TestHelperRejectsWrongVersion
+--- PASS: TestHelperRejectsWrongVersion (0.04s)
+=== RUN   TestHelperTLSFailsClosed
+2026/10/14 21:57:47 http: TLS handshake error from 127.0.0.1:58916: remote error: tls: bad certificate
+--- PASS: TestHelperTLSFailsClosed (0.06s)
+=== RUN   TestHelperDoesNotFollowRedirects
+--- PASS: TestHelperDoesNotFollowRedirects (0.04s)
+PASS
+ok  	github.com/pelican/wings/ibyte/cmd/node-tool	1.022s
+FAIL
+EXIT: 1

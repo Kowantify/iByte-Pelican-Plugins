@@ -1,0 +1,118 @@
+{
+    "version": "0.1.0-preview.25",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.25.zip",
+    "sha256": "de47b0415185d3e824ea023ce8abe29301d81bed0a5cd0a53d5aa6257a67323a",
+    "files": 55,
+    "source_metrics": {
+        "old": {
+            "src_php_files": 38,
+            "src_bytes": 185859
+        },
+        "new": {
+            "src_php_files": 38,
+            "src_bytes": 199406
+        }
+    },
+    "metadata": {
+        "passed": 10,
+        "serial_seconds": 0.845,
+        "parallel_seconds": 0.372,
+        "speedup": 2.27,
+        "serial": {
+            "active": 0,
+            "maximum": 1,
+            "requests": 12,
+            "paths": [
+                "config/d0",
+                "config/d1",
+                "config/d2",
+                "config/d3",
+                "config/d4",
+                "config/d5",
+                "config/d6",
+                "config/d7",
+                "config/d8",
+                "config/d9",
+                "config/d10",
+                "config/d11"
+            ]
+        },
+        "parallel": {
+            "active": 0,
+            "maximum": 4,
+            "requests": 14,
+            "paths": [
+                "",
+                "config",
+                "config/d0",
+                "config/d1",
+                "config/d2",
+                "config/d3",
+                "config/d4",
+                "config/d5",
+                "config/d6",
+                "config/d7",
+                "config/d8",
+                "config/d9",
+                "config/d10",
+                "config/d11"
+            ]
+        },
+        "tree": {
+            "active": 0,
+            "maximum": 4,
+            "requests": 13,
+            "paths": [
+                "archive",
+                "archive/d0",
+                "archive/d1",
+                "archive/d2",
+                "archive/d3",
+                "archive/d4",
+                "archive/d5",
+                "archive/d6",
+                "archive/d7",
+                "archive/d8",
+                "archive/d9",
+                "archive/d10",
+                "archive/d11"
+            ]
+        },
+        "failure": {
+            "active": 0,
+            "maximum": 4,
+            "requests": 6,
+            "paths": [
+                "",
+                "config",
+                "config/d0",
+                "config/d1",
+                "config/d2",
+                "config/d3"
+            ]
+        },
+        "scope": "Small production NodeFiles check against authenticated concurrent loopback HTTP with 60ms delay; not real Wings or a modpack benchmark"
+    },
+    "provider_batches": {
+        "passed": 11,
+        "manifest_entries": 51,
+        "curseforge_requests": 4,
+        "modrinth_requests": 3,
+        "scope": "Small deterministic adapter contract checks using documented bulk endpoints; no live provider requests"
+    },
+    "smoke": {
+        "passed": 11,
+        "native_pulls": 6,
+        "panel_reads": [
+            ".download-03a9482a-3f31-48ba-b93c-6b7273c235ba-2.part/modrinth.index.json"
+        ],
+        "scope": "Small deterministic native Panel/Livewire/HTTP-contract smoke only; no real Wings, provider throughput, concurrency benchmark, browser or game boot"
+    },
+    "native_import": true,
+    "asset_build_stubbed": true,
+    "full_regression_suite": false,
+    "browser_test": false,
+    "real_wings": false,
+    "game_boot": false,
+    "user_requested_small_test": true
+}

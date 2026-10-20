@@ -1,0 +1,47 @@
+# Build/dev toolchains and fixtures (never committed)
+/.tools/
+/.build/
+/.research/
+/.acceptance/
+/.upstream/
+/.validation/
+
+# One-off ops/session probe scripts (stay local; never committed)
+/tests/deploy-*.sh
+/tests/final-*.sh
+/tests/verify-install.sh
+/tests/verify-bootstrap.sh
+/tests/check-*.sh
+/tests/dump-*.sh
+/tests/find-*.sh
+
+# Release candidate artifacts (built reproducibly by scripts; keep README)
+/release/*.zip
+
+# Dependency/vendor dirs
+/vendor/
+/node_modules/
+
+# Local env + logs
+.env
+.env.*
+*.log
+!docs/evidence/*.log
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+
+# AI/agent working files (never published)
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+AGENTS.local.md
+FIRST_MESSAGE.md
+.claude/
+.cursor/
+.codex/
+.aider*
+.windsurfrules
+.clinerules
+copilot-instructions.md

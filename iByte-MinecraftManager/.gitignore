@@ -1,0 +1,26 @@
+.tools/
+.research/
+.build/
+vendor/
+node_modules/
+.env
+*.log
+!docs/evidence/*.log
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+
+# AI/agent working files (never published)
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+AGENTS.local.md
+FIRST_MESSAGE.md
+.claude/
+.cursor/
+.codex/
+.aider*
+.windsurfrules
+.clinerules
+copilot-instructions.md

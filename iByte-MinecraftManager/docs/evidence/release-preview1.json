@@ -1,0 +1,21 @@
+{
+    "version":  "0.1.0-preview.1",
+    "date":  "2026-10-16",
+    "artifact":  "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.1.zip",
+    "bytes":  46387,
+    "sha256":  "e4715b084e6d0edd3dbab97a1812171ce16eae80d9b45ff7d3b799ea074547db",
+    "reproducible_builds_match":  true,
+    "candidate_and_release_match":  true,
+    "packaged_files":  43,
+    "php_syntax_files":  51,
+    "unit_contract_tests":  41,
+    "native_tests":  24,
+    "browser_tests":  10,
+    "live_metadata_tests":  4,
+    "fresh_process_queue_checks":  2,
+    "server_mutations_enabled":  false,
+    "production_ready":  false,
+    "license":  "MIT (original plugin code)",
+    "dependency_audit":  "clean for patched disposable fixture; original upstream advisory retained",
+    "secret_scans":  "plugin, scripts and docs clean"
+}

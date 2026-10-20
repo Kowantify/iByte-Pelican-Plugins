@@ -1,0 +1,22 @@
+{
+    "case": "neoforge1211",
+    "started_at": "2026-10-17T17:42:05+00:00",
+    "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+    "game_status": {
+        "version": {
+            "name": "1.21.1",
+            "protocol": 767
+        },
+        "players": {
+            "max": 2,
+            "online": 0
+        }
+    },
+    "expected_protocol_verified": true,
+    "fresh_done_log": true,
+    "ready": true,
+    "ready_at": "2026-10-17T17:42:20+00:00",
+    "world_created": true,
+    "stopped": true,
+    "finished_at": "2026-10-17T17:42:22+00:00"
+}

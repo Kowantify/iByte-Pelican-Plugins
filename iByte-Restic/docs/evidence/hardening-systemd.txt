@@ -1,0 +1,22 @@
+configuration and private credential files valid
+preflight/health failed: daemon unreachable or TLS rejected
+daemon and authenticated addon healthy
+Installed staging preview 3.0.0-preview.1; original Wings retained at /opt/ibyte-acceptance/systemd-node/installer/original.
+PASS: preview.1 installs through the bundled operator script on real systemd
+configuration and private credential files valid
+Job for ibyte-acceptance-wings.service failed because the control process exited with error code.
+See "systemctl status ibyte-acceptance-wings.service" and "journalctl -xeu ibyte-acceptance-wings.service" for details.
+Deployment failed; previous Wings restored. Inspect service status.
+/opt/ibyte-acceptance/systemd-node/wings: OK
+PASS: failed preview.2 upgrade restores and restarts previous real Wings
+configuration and private credential files valid
+preflight/health failed: daemon unreachable or TLS rejected
+daemon and authenticated addon healthy
+Installed staging preview 3.0.0-preview.2; original Wings retained at /opt/ibyte-acceptance/systemd-node/installer/original.
+configuration and private credential files valid
+daemon and authenticated addon healthy
+Already installed and healthy: 3.0.0-preview.2
+PASS: preview.1 -> preview.2 upgrade and repeat installation pass real authenticated health checks
+Original Wings restored. Profiles, snapshots, data and state retained.
+wings: OK
+PASS: unauthenticated addon access refused; explicit rollback restores official stock Wings and preserves game data

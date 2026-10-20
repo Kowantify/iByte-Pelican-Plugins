@@ -1,0 +1,231 @@
+{
+    "version": "0.1.0-preview.11",
+    "source_date_epoch": 1792254300,
+    "sha256": "6c5d0f2cb3a726ccd97dc65e761659db0676b20acf6e2210c5cdd74da4870742",
+    "inputs": [
+        {
+            "path": "LICENSE",
+            "sha256": "cf7e67dff4f6121c4f78759e0af0b5838a7505ab2732784c2448d357bf5afaa9"
+        },
+        {
+            "path": "README.md",
+            "sha256": "69fa37cc29a2113747795bf5c79120f5d3bfe5451828b69c124e5adcccc392b4"
+        },
+        {
+            "path": "config/ibyte-minecraft-manager.php",
+            "sha256": "3b28a24fe9db3094ad251e58dd9d1615eb373ed8ae0065389e6aaf5694c86928"
+        },
+        {
+            "path": "database/migrations/2026_10_17_000001_create_minecraft_manager_tables.php",
+            "sha256": "e00032d3ecc995b7f1fef005bcbffbf4bdaacb6623ec7d5f6bafefc9045ca039"
+        },
+        {
+            "path": "database/migrations/2026_10_17_000002_expand_install_journals.php",
+            "sha256": "3994eafef1655c26fe50f0902236789bc288552d0a923a9f08888a52668db298"
+        },
+        {
+            "path": "database/schema.php",
+            "sha256": "858fa588cc9fcf97c6b57ba71d7d7ff473d069422c12a8c0c0866ac15fb41b28"
+        },
+        {
+            "path": "lang/en/messages.php",
+            "sha256": "811c611ce36440797e65b0c048e34df908163703794910f73bb3347491352a97"
+        },
+        {
+            "path": "lang/en/permissions.php",
+            "sha256": "3e0e54c537f0387785ed284f51b641db85f9690882e2fd40ffc18e066951f4ec"
+        },
+        {
+            "path": "plugin.json",
+            "sha256": "3bd0e48934b89176717bbff560baaf31cb8fb107a8c4eed196deb9766b10fbac"
+        },
+        {
+            "path": "resources/views/activity-feed.blade.php",
+            "sha256": "a70f9ebda9e80c89029fa0c5985ce9e949b6eb96da26985cb1c1b9c9ae960f46"
+        },
+        {
+            "path": "resources/views/activity.blade.php",
+            "sha256": "ab57f24175b4c18f5ccab3035da7ba9706f92ba672ef11a34236e5858c5fb00c"
+        },
+        {
+            "path": "resources/views/admin.blade.php",
+            "sha256": "64f83d2f4eaaadf4339943e337265312e352992c8bf2fe5e58b50dda76a8d83b"
+        },
+        {
+            "path": "resources/views/review.blade.php",
+            "sha256": "8dcf43ab6ac01bc25291b5f6f3d71c9b396b872b01e1506305f9253ff07c7893"
+        },
+        {
+            "path": "resources/views/server.blade.php",
+            "sha256": "2f5c0e934aaff5b59a74220e65a2e1f1ce1c27089a1ee9c5df987d4c7a95c564"
+        },
+        {
+            "path": "resources/views/styles.blade.php",
+            "sha256": "766e9185dd9bc76f84526a0d40d04b7db808a6cd2d8d14a8085732095528c491"
+        },
+        {
+            "path": "src/Catalog/Catalog.php",
+            "sha256": "8cffbcd286e75356446e83c62e92a56a3d2b3aec3309ac8d65a13ae2f82b28a0"
+        },
+        {
+            "path": "src/Catalog/CurseForge.php",
+            "sha256": "fea3e5b8ba7616b6681b44955669c5add5fb7efe06b0262a1e4b021d48ee906d"
+        },
+        {
+            "path": "src/Catalog/JsonTransport.php",
+            "sha256": "a70c52f3e669d8b4a93ea8389a69f483feadd8be457e3edb7e8d761a145a1558"
+        },
+        {
+            "path": "src/Catalog/McJars.php",
+            "sha256": "4b75cfcae0d3cec8b5ceed78c6e574992f6c8512a359bedd2328460d814c9757"
+        },
+        {
+            "path": "src/Catalog/Modrinth.php",
+            "sha256": "e5eca340eee1c602e7e51215497651a83d3a4f9b17054ef59960a04f6e52bb69"
+        },
+        {
+            "path": "src/Console/Commands/RepairSchema.php",
+            "sha256": "db81ec8eba57d0257ff0bb4ebc3b1655d752e6f757e040e98a4ab6a53019ac4b"
+        },
+        {
+            "path": "src/Console/ReconcileInstall.php",
+            "sha256": "ae94725ea5d944b449dfd8d8009172f34222248251494586b76ff8fdbe26bbc0"
+        },
+        {
+            "path": "src/Console/WorkInstalls.php",
+            "sha256": "4f842261369031bf58686249d87b0f27839d7cfcab3f7a69f087e1d9b8b416ab"
+        },
+        {
+            "path": "src/Filament/Admin/MinecraftManager.php",
+            "sha256": "627dd5a241a0ceef3523c645f5fd6c68512847072da6540e23a52c706a5340b1"
+        },
+        {
+            "path": "src/Filament/Server/MinecraftManager.php",
+            "sha256": "09183acb33ad30ca67ca8540bd8a21f3d57a1aec382239a00d10a2339a58903f"
+        },
+        {
+            "path": "src/Livewire/ActivityFeed.php",
+            "sha256": "f7a39531ddaa4a4e5a92df1931bb74fe1e77c3d6abc891225d19d47fb46d243e"
+        },
+        {
+            "path": "src/MinecraftManagerPlugin.php",
+            "sha256": "bb323e1548709d7aca952435590b89e82b48343a4c3c39e12f892e0f4d75ad7d"
+        },
+        {
+            "path": "src/Models/Operation.php",
+            "sha256": "bb3dc7cca4e1c78d72228902ba79a1e420219fce0f0cdb193c134d631620f6d6"
+        },
+        {
+            "path": "src/Models/Profile.php",
+            "sha256": "486c23e6601c547c57799baebccef234ea3b24c80b10c38bf981cf12cf5ea506"
+        },
+        {
+            "path": "src/Models/Setting.php",
+            "sha256": "5fd8c1af00a3f87b77b8e2ae56ebecb386600c0514fd6efd5e26a4df392fecfc"
+        },
+        {
+            "path": "src/Modpacks/ArchiveExtractor.php",
+            "sha256": "88bfeb9e5639d45b48b3664a5f7f89694eb6089fe4524e40d54c40f18f7ccf35"
+        },
+        {
+            "path": "src/Modpacks/ArchiveInspector.php",
+            "sha256": "1bf5f63de344729cdcd0cecac2c75a96b8ea7e7043aed7b9e4ed2603f7423481"
+        },
+        {
+            "path": "src/Modpacks/ManagedDiff.php",
+            "sha256": "89afcdbfa37a2695b85c17b70b100b31bafd238a8acc5e7d89f5b57afc83ffb2"
+        },
+        {
+            "path": "src/Modpacks/Mrpack.php",
+            "sha256": "f920c99e7cdbc125d1d581e6c00b263a9d5e78d8a1dc7db72a6d62e656a392c0"
+        },
+        {
+            "path": "src/Operations/CheckReview.php",
+            "sha256": "0c70bc2e7b3bd2b1c34ffdfa3db24916cce591e6d36dcc7036a98805a20c28af"
+        },
+        {
+            "path": "src/Operations/InstallExecutor.php",
+            "sha256": "c3234f24aa3019403e31877b85c6ed08067d17e3f4fe3391a90e553797f3ec29"
+        },
+        {
+            "path": "src/Operations/InstallPreparer.php",
+            "sha256": "477769ba4404e76b4673e208ef0809b792de1ba49fcf8ae0bf2845645ce24ec0"
+        },
+        {
+            "path": "src/Operations/NodeFiles.php",
+            "sha256": "c4d8b65501253b45e2f59a5e1f0456b9b22f007ca4d033868963abcf4d6da5b4"
+        },
+        {
+            "path": "src/Operations/PackageBatch.php",
+            "sha256": "707f72b39701673e145a66e58247e18261874f9ac0d87b84ac5c0c036c7de063"
+        },
+        {
+            "path": "src/Operations/PlanBuilder.php",
+            "sha256": "536a4008dfc9d7b7f63a8985af890a3c09092667521a0f4da80bde320927bd1a"
+        },
+        {
+            "path": "src/Operations/ReviewService.php",
+            "sha256": "6161bb3271b765932a120321f607619f24f0d4f760db8e89b3ebd91929648f0f"
+        },
+        {
+            "path": "src/Operations/Status.php",
+            "sha256": "dc2bc1224196636deb112dbf843ab46cd6cc6707180f207bc96cb5e33545abe8"
+        },
+        {
+            "path": "src/Packages/DependencyResolver.php",
+            "sha256": "d7d803b4bc0772dd9bcf36c26f82d79e0bbcadbb685f10e875e742b76cc2a728"
+        },
+        {
+            "path": "src/Packages/Inventory.php",
+            "sha256": "841bf26e27e6d4d5a7cf016d6cd50d8ed8ae9333b980f403b6c6b8852aadc102"
+        },
+        {
+            "path": "src/Providers/MinecraftManagerProvider.php",
+            "sha256": "f96d826cdf9e6e2cbcd748fcbe52c2433f7c2ecd598c008b2cbe1a8eedb65bf3"
+        },
+        {
+            "path": "src/Software/ProfileWizard.php",
+            "sha256": "565f2e1998b3dd8de4a8f0b9853aba405f096f85249a80278d56825c8923f525"
+        },
+        {
+            "path": "src/Support/Access.php",
+            "sha256": "dd72cf757a990539c84b768aeeae5499ad6f1eef2c1389d2b0fa8137f1b53df4"
+        },
+        {
+            "path": "src/Support/ArtifactDownloader.php",
+            "sha256": "bfd3a87a0fcb6ade1697076ddfd841d617311b9fc52c9d5cf39bcc38ea2db936"
+        },
+        {
+            "path": "src/Support/Failure.php",
+            "sha256": "eddb4fa0f49d25bde5ddf279afc427e4d0050240a9886abc4df7ed11662c480d"
+        },
+        {
+            "path": "src/Support/Input.php",
+            "sha256": "9cee15a2083730f38eae9dcc2283e9ba5733d2181d8762863c2430598987d0d3"
+        },
+        {
+            "path": "src/Support/Integrity.php",
+            "sha256": "121abd93602037cedaaae819bc5f0df02878e959f9ff1375b305d89996137095"
+        },
+        {
+            "path": "src/Support/SafeHttp.php",
+            "sha256": "52fef669a61c09b9275b1b083f83fe413b227e7fcb79f70dd5b852c0592fb2cd"
+        },
+        {
+            "path": "src/Support/SchemaInstaller.php",
+            "sha256": "83a9d4969371281bc4e7056cddbbfe64901a9c7222efb21aed85eeeaf2b39cb8"
+        },
+        {
+            "path": "src/Support/Settings.php",
+            "sha256": "05ec262989e5428ccbeec7f0edc626674dbd7f56553c4c5833aee973dd40adac"
+        },
+        {
+            "path": "src/Support/UrlPolicy.php",
+            "sha256": "d29620bb9889887f387061e369a912b84e63773d6765e0e42a3d955115c8c517"
+        },
+        {
+            "path": "src/Support/ViewCache.php",
+            "sha256": "481b34e6140e7e01a70e968311f1f3be2caefef823cf1fc8787271a2f6ec0d13"
+        }
+    ]
+}

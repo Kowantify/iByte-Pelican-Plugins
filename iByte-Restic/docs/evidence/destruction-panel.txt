@@ -1,0 +1,550 @@
+PASS: actual container registers third schema and preserves Wings/S3
+PASS: native restore dependency resolves plugin bridge
+PASS: real Filament Restic form fields
+PASS: official plugin ZIP import accepts package root and derives correct ID
+PASS: official plugin discovery finds provider and exact version
+PASS: official install lifecycle enables plugin and runs plugin migration (asset commands mocked)
+PASS: native plugin installer applies the new metric migration to the pre-existing operations table
+PASS: Panel-to-node TLS verification forced even in testing/local environment
+PASS: native InitiateBackupService queues Restic after quota and host selection
+PASS: durable operation stored
+PASS: native backup completion fields reflect verified node result
+PASS: duplicate completion does not duplicate native completion event
+PASS: actual native schedule task dispatches the same Restic provider
+PASS: native creation throttle remains effective
+PASS: native quota rejects all-locked scheduled replacement
+PASS: native deletion rejects locked backup
+PASS: cross-tenant native permission denied
+PASS: wrong user cannot restore
+PASS: host configuration cannot move existing repositories
+PASS: restore requires native destructive confirmation
+PASS: native restore fails closed without explicit isolated fixture opt-in
+PASS: actual native restore controller queues plugin restore and protects server
+PASS: verified restore success clears native protection
+PASS: failed native restore retains protection and is not reported healthy
+PASS: wrong daemon response identity rejected
+PASS: native framework validates generated short-lived download signature
+PASS: tampered download URL signature rejected
+PASS: native download proxy streams authenticated node body
+PASS: download authorization is one-use
+PASS: cross-tenant direct download rejected
+PASS: repository health rejected for non-admin
+PASS: late lock rejected after ambiguous daemon delete request
+PASS: synchronous queue refused before node work
+PASS: queue preflight failure rolls back native backup record
+PASS: forged completion never succeeds
+PASS: network ambiguity remains durable and pending
+PASS: new queue job instance reconciles persisted request after outage
+PASS: direct node changes blocked while Restic backups remain
+PASS: moved server cannot access original node repository
+PASS: native unlocked deletion removes one record and preserves other backups
+PASS: unlinked node rejected
+PASS: plugin migration blocks destructive uninstall with existing hosts/history
+PASS: official uninstall service preserves active Restic history
+PASS: failed uninstall preserves native and plugin tables
+PASS: Wings restore delegates to original repository
+PASS: S3 restore delegates to original repository
+PASS: native schema change initializes every Restic path before Alpine entanglement
+PASS: actual native create form validates and persists local/profile defaults with both opt-ins off
+PASS: native edit persists backend/profile while ignoring tampered hidden safety flags
+PASS: opening an existing host preserves saved configuration instead of applying create defaults
+PASS: native S3 schema remains untouched by Restic initialization
+PASS: switching into Restic discards unrelated provider configuration and credentials
+PASS: Restic-only controls disappear when switching back to Wings
+PASS: native form rejects backend required without creating a host
+PASS: native form rejects backend in without creating a host
+PASS: native form rejects profile required without creating a host
+PASS: native form rejects profile regex without creating a host
+PASS: native re-import preserves installed/enabled plugin metadata
+PASS: replacement ZIP installs the actual corrected form and transport code
+PASS: native re-import/reinstall preserves hosts, backup records and operation history
+PASS: disabled Restic host returns a handled native Livewire action response instead of HTTP 500
+PASS: native backup failure notification explains the exact administrator opt-in setting
+PASS: disabled host rolls back backup metadata and creates no daemon operation
+PASS: disabled host is rejected before any Wings request
+PASS: disabled host is a safe HTTP conflict for native API/service callers
+PASS: actual native Create Backup action queues an enabled Restic backup without claiming completion
+PASS: native backup action persists its correlated durable operation
+PASS: native backup action dispatches its queue job
+PASS: enabling backup preview does not enable restore
+PASS: native bytes records newly added compressed data, not full logical game files
+PASS: durable per-snapshot accounting preserves logical restore size and explains shared chunks
+PASS: negative/untrusted storage counters rejected
+PASS: fully deduplicated zero added bytes accepted
+PASS: admin report includes cached dedup/compression, actual local file bytes and measurement time
+PASS: admin/customer storage rendering performs no node calls
+PASS: stats refresh recovers historical snapshot additions for older backups
+PASS: legacy logical bytes are never displayed as added storage
+PASS: zero added bytes renders explicitly instead of an empty cell
+PASS: actual native customer table renders deduplicated size and explanatory tooltip
+PASS: native Wings backup size semantics remain unchanged
+PASS: native S3 backup size semantics remain unchanged
+PASS: node stats cannot overwrite sizes across server or backup-host identity
+PASS: malformed node metrics fail actual completion closed rather than marking success
+PASS: native server deletion resolves early Restic safety guard
+PASS: forced native server deletion blocked before daemon data removal
+PASS: blocked native deletion performs no daemon call and preserves server
+PASS: native transfer record blocked before notifications while Restic backups remain
+PASS: blocked transfer leaves no pending transfer record
+PASS: non-Restic server transfer model path remains available
+PASS: clear non-Restic server deletion delegates to original native service with mocked daemon
+PASS: orphaned unresolved operation blocks deletion/transfer until reconciled
+PASS: native admin Stats tab renders cached repository ratios and measurement dates
+PASS: native host offers one Restic Backups link and links to unified admin area without a manual key capture action
+PASS: actual native admin backup relation displays added storage including zero with logical size tooltip
+PASS: native ZIP installer creates durable recovery tables
+PASS: escrow refuses plaintext HTTP before requesting any key
+PASS: HTTP refusal never transmits repository credentials
+PASS: escrow is encrypted at rest and excluded from normal model JSON
+PASS: repository inventory records original username/ID and exact default-layout location
+PASS: verified completion preserves snapshot mapping and original owner independently of native backup row
+PASS: ownership change preserves former-owner history rather than overwriting identity
+PASS: external key change cannot silently overwrite historical escrow
+PASS: forged repository/server credential response rejected
+PASS: offline recovery endpoint returns redacted actionable failure
+PASS: ordinary owner cannot issue key reveal even knowing an admin password
+PASS: root key reveal requires current password
+PASS: plugin registers View Restic keys resource only in native admin panel
+PASS: actual native inventory list renders metadata without plaintext/base64 credentials
+PASS: Livewire action state never receives the revealed repository password
+PASS: key endpoint refuses plaintext Panel HTTP before consuming reveal grant
+PASS: password-confirmed native action reveals key in separate HTML response with escaped metadata
+PASS: secret reveal response forbids caching, referrer leakage and embedded scripts
+PASS: consumed reveal token cannot be replayed
+PASS: direct key endpoint rejects non-root server owner
+PASS: reveal grant is bound to the requesting root admin
+PASS: reveal grant expires after thirty seconds
+PASS: key views are audited without recording secret values
+PASS: native password-confirmed action downloads a usable noncached recovery JSON kit
+PASS: non-root cannot retain/delete server
+PASS: retain/delete requires exact server UUID confirmation
+PASS: failed retain/delete authorization makes no daemon calls
+PASS: retained deletion refuses unavailable fresh escrow before deleting server
+PASS: failed retained-delete preflight preserves server and closes scope
+PASS: native retained-delete failure is propagated without faking success
+PASS: native failure closes retention scope and preserves committed recovery escrow
+PASS: explicit retained deletion uses native cascade while preserving archived repository inventory
+PASS: retained deletion never sends Restic forget and keeps snapshot mapping
+PASS: retained deletion preserves locked snapshot metadata without unlocking or forgetting it
+PASS: retained deletion scope always closes
+PASS: former owner/server deletion and offline node do not prevent key and snapshot recovery
+PASS: password-confirmation brute force is rate limited even for authenticated root admin
+PASS: uninstall cannot discard retained recovery inventory
+PASS: snapshot escrow binds the exact credential profile when multiple repository histories coexist
+PASS: actual native recovery inventory page denies a non-root user
+PASS: native plugin install applies retention migration
+PASS: offline preflight refuses replacement before forget
+PASS: offline preflight preserves old backup metadata and snapshot
+PASS: throttling is checked before retention deletion
+PASS: throttled create never forgets existing snapshots
+PASS: invalid exclude is rejected before quota eviction
+PASS: overlong backup name is rejected before quota eviction
+PASS: invalid create payload never forgets an existing snapshot
+PASS: failed forget rejects new backup without claiming deletion
+PASS: failed forget preserves both native records and quota
+PASS: forged delete completion cannot release a quota slot
+PASS: wrong-identity delete completion preserves native metadata
+PASS: real native manual action at capacity replaces oldest unlocked backup and preserves locked copy
+PASS: quota includes new in-progress backup without exceeding limit
+PASS: confirmed forget queues durable prune independently of deleted backup row
+PASS: verified successful create queues calendar retention
+PASS: actual native schedule job replaces eligible backup and respects ignore rules and quota
+PASS: native schedule completion and task bookkeeping remain intact
+PASS: multiple confirmed forgets coalesce pending prune work per repository
+PASS: prune completion reconciles after its anchor backup was deleted
+PASS: all-locked scheduled replacement is a clear handled conflict
+PASS: all-locked quota never submits a delete
+PASS: zero backup quota cannot be bypassed
+PASS: pending backups are not evicted to make another slot
+PASS: failed creation marks failure and triggers no retention
+PASS: cross-tenant retention modification denied
+PASS: tier reservations cannot exhaust hourly/new backup slots
+PASS: invalid retention timezone rejected
+PASS: native Backups retention modal persists authorized daily/weekly/timezone settings
+PASS: uninstall cannot discard saved retention policies
+PASS: calendar planner keeps locked plus latest completed week/day and newest distinct hourly representatives
+PASS: locked copies consume all quota before any calendar reservation
+PASS: newest recovery point takes priority over older tiers when locks consume quota
+PASS: repeated DST hour keeps distinct UTC-offset buckets
+PASS: retention worker forgets one redundant snapshot per bounded queue turn without touching locks
+PASS: retention worker records successful maintenance time
+PASS: failed background retention remains retryable without fake completion
+PASS: background retention failure preserves metadata and reports a cached error
+PASS: repository prune control is root-admin only
+PASS: create-only subuser cannot cause quota deletion
+PASS: create-only subuser cannot change automatic deletion policy
+PASS: 21st backup automatically replaces oldest unlocked snapshot while total remains 20
+PASS: older queued retention work skips removal while a newer backup is pending
+PASS: native backup list renders successful backups with missing node link without node calls or HTTP 500
+PASS: unlinked download remains denied with actionable conflict instead of bypassing isolation
+PASS: rendering and denied download preserve every backup and make no daemon call
+PASS: restoring the original explicit host-node association preserves native backup records
+PASS: lowered quota below usage requires explicit excess removal
+PASS: over-limit refusal preserves every existing record
+PASS: Wings manual quota remains native with no automatic replacement
+PASS: retention settings cannot apply to a non-Restic server
+PASS: native in-place ZIP re-import and actual reinstall job preserve hosts/node links/backups/locks/operations/policies/encrypted recovery inventory
+PASS: missing-table reproduction uses disposable memory database
+PASS: schema check detects missing recovery table even with logged migration
+PASS: missing installation blocks delete before remote forget
+PASS: missing table cannot cause node deletion followed by SQL failure
+PASS: storage dialog reports incomplete installation without SQL error
+PASS: native delete action handles missing table with notification instead of generic HTTP 500
+PASS: keys page renders repair controls without missing-table query or node calls
+PASS: non-root cannot enter missing-schema repair page
+PASS: native password-free additive repair action recreates table even when migration was previously recorded
+PASS: table repair preserves backups and never contacts or wipes nodes
+PASS: recreating missing recovery table does not invent historical encryption keys
+PASS: CLI repair handler is repeat safe and preserves existing encrypted recovery rows
+PASS: repeated repair leaves every native backup unchanged
+PASS: after additive repair the actual native unlocked-backup delete action succeeds
+PASS: new backups automatically escrow encrypted keys before dispatch without a capture button
+PASS: native completion stores repository measurements supplied by successful backup
+PASS: host statistics use automatically captured create metrics without a manual stats operation
+PASS: customer storage reads the same persisted automatic statistics
+PASS: existing repositories are selected automatically for encrypted capture and statistics synchronization
+PASS: background synchronization refreshes escrow without an administrator action
+PASS: automatic synchronization queues bounded statistics refresh
+PASS: automatic synchronization coalesces pending statistics work
+PASS: native customer storage interface displays cached data without contacting a node
+PASS: keys, repository identity and storage share one Restic Backups admin area
+PASS: unified admin overview uses cached keys and statistics without node requests
+PASS: automatic repository maintenance uses the existing native scheduler
+PASS: pending newer backup does not block automatic statistics for the latest completed snapshot
+PASS: accounting failure preserves verified backup success and records an explicit maintenance warning
+PASS: unavailable repository measurements are never invented or saved as zero
+PASS: reproduces supplied log binding failure without bypassing normal compatibility safety
+PASS: customer cannot discard backup metadata
+PASS: cleanup requires full exact backup UUID confirmation
+PASS: cleanup requires explicit external deletion confirmation
+PASS: cleanup requires current root password
+PASS: additive local table repair works with unavailable node binding and performs no node request
+PASS: local repair does not disable normal node execution compatibility checks
+PASS: Restic Backups admin action removes external-deletion metadata despite missing node link and conflicting binding
+PASS: explicit metadata cleanup performs no readiness/recovery/delete/prune network calls
+PASS: cleanup preserves a durable UUID and actor audit instead of fabricating node deletion success
+PASS: record-only deletion cannot dispatch pruning through native deleted observers
+PASS: external-deletion cleanup preserves encrypted escrow and snapshot history with an absence annotation
+PASS: native row cleanup handles frozen old in-progress records and dismisses stale polling
+PASS: native backup count reflects admin removal of a stale pending row
+PASS: late queued polling or failed hook cannot resurrect a dismissed record or contact node
+PASS: metadata cleanup preserves locked backup protection
+PASS: metadata cleanup refuses recent in-progress backup work
+PASS: metadata cleanup never clears unresolved restore protection
+PASS: an old operation with a fresh running heartbeat is still protected
+PASS: unknown restore job protects the record even if native server status was cleared externally
+PASS: Restic cleanup cannot remove a Wings backup record
+PASS: customer sees no cleanup action and non-Restic metadata and node storage remain untouched
+PASS: capture automatically prepares unique server key without premature old-wrapper retirement
+PASS: active and previous server credentials are automatically versioned
+PASS: history contains encrypted credentials only
+PASS: uncommitted escrow cannot retire the original key
+PASS: old wrapper retirement receives committed matching escrow receipt
+PASS: successful committed escrow activates the unique credential
+PASS: repeated automatic capture does not duplicate key versions
+PASS: existing v3 shared-profile escrow upgrades only with matching authenticated previous credential history
+PASS: native password-confirmed history action reveals both generations and current server key
+PASS: current-key grant does not authorize historical-key disclosure
+PASS: actual mounted native Delete modal offers retention/destruction and password without a typed UUID
+PASS: older locked snapshot blocks destructive lifecycle retention
+PASS: older lock refusal occurs before key fetch or snapshot deletion
+PASS: missing or wrong latest node snapshot blocks deletion before any older snapshot is forgotten
+PASS: unverified latest snapshot leaves server and older backups intact
+PASS: older snapshots are forgotten before native daemon server deletion, latest locked snapshot remains
+PASS: native Delete handler completes confirmed latest-only retention through the original native service
+PASS: deleted server retains exactly its latest successful snapshot mapping
+PASS: lifecycle deletion never queues pruning against a server Wings has already removed
+PASS: deleted-server key history remains available without contacting its source node
+PASS: durable lifecycle reservation blocks concurrent native backup creation
+PASS: durable lifecycle reservation blocks competing maintenance dispatch
+PASS: native Transfer confirmation preserves native node form and adds latest-only warning and password
+PASS: native transfer notification occurs after native transfer row and archive detachment commit
+PASS: original native Transfer service starts transfer without prematurely moving server
+PASS: password-confirmed retry safely supersedes interrupted lifecycle reservation
+PASS: transfer forgets older source snapshot and archives latest outside destination native backup rows
+PASS: transfer keeps exactly latest source mapping and records source/destination recovery identity
+PASS: source node cannot forge native transfer completion
+PASS: authenticated destination native transfer callback completes with archived Restic source backup
+PASS: server moves to destination while retained repository stays on original node
+PASS: post-transfer backup escrows a separate destination repository instead of rebinding old snapshots
+PASS: source recovery inventory preserves former owner after destination ownership changes
+PASS: runtime diagnostic identifies the actual installed guarded service and source contract
+PASS: diagnostic exposes actual code path and loaded provider without guessing from version string
+PASS: binding-conflict diagnostic names the actual native class without silently rebinding it
+PASS: normal execution remains blocked and explains the resolved class
+PASS: read-only CLI emits machine-readable conflict and failing exit status
+PASS: root Restic Backups diagnostics works even while the execution safety binding is missing
+PASS: viewing diagnostics does not replace the displaced service
+PASS: CLI reports matching bindings after the test restores its own fixture binding
+PASS: diagnostic output contains no repository passwords, node tokens or host configuration
+PASS: runtime diagnostics performs no Wings requests or backup/recovery/audit writes
+PASS: repository controls precede a compact default table instead of overflowing behind path/history columns
+PASS: key viewing/history are direct leading controls and repository deletion is in the labelled More menu
+PASS: long repository paths remain available as optional detail columns
+PASS: customers cannot request repository deletion
+PASS: repository deletion requires the current administrator password
+PASS: repository deletion requires full exact server UUID
+PASS: invalid authorization/confirmation does not contact Wings
+PASS: old node capability refuses cleanup before forgetting any snapshot
+PASS: capability mismatch preserves all node snapshots
+PASS: locked snapshots protect the entire repository from cleanup
+PASS: unknown snapshots refuse cleanup before native forget
+PASS: unrecognized repository contents preserve backups and do not reserve destructive work
+PASS: physical repository cleanup is requested only after recognized snapshots are forgotten
+PASS: explicit repository deletion intent survives outside the snapshot-deletion transaction
+PASS: lost repository-delete response never claims confirmed deletion
+PASS: ambiguous completion retains native metadata and durable request for reconciliation
+PASS: uncertain repository deletion blocks competing maintenance/create dispatch
+PASS: automatic capture cannot overwrite a committed deletion intent
+PASS: deletion identity survives background synchronization attempts
+PASS: retry refuses a changed repository location before additional native forget calls
+PASS: location drift cannot redirect a pending destructive request to another repository
+PASS: physical repository cleanup is requested only after recognized snapshots are forgotten
+PASS: explicit repository deletion intent survives outside the snapshot-deletion transaction
+PASS: native root action retries the same request and records only confirmed repository deletion
+PASS: confirmed cleanup retains audit and does not queue prune against a removed repository
+PASS: repository removal retains encrypted credentials and key history
+PASS: removed repository does not display stale pre-deletion stored bytes
+PASS: retained source repository cannot bypass live-server authentication for cleanup
+PASS: archived cleanup refusal never contacts a different destination node
+PASS: old backup context stays on its original generation after repository deletion
+PASS: S3 cleanup is explicitly unsupported instead of a false successful delete
+PASS: even root admins use the admin area for forced cleanup; customer resource contains no cleanup actions
+PASS: customer native Backups exposes neither admin keys nor repository/record cleanup
+PASS: pre-update queued backup automatically captures current server credentials before finalization and completes
+PASS: actual leading control renders readable text with button_style=true: view-restic-keys
+PASS: actual leading control renders readable text with button_style=true: view-restic-key-history
+PASS: actual leading control renders readable text with button_style=true: remove-repository-records
+PASS: actual dropdown item renders readable text with button_style=true: download-recovery-kit
+PASS: actual dropdown item renders readable text with button_style=true: delete-repository
+PASS: actual leading control renders readable text with button_style=false: view-restic-keys
+PASS: actual leading control renders readable text with button_style=false: view-restic-key-history
+PASS: actual leading control renders readable text with button_style=false: remove-repository-records
+PASS: actual dropdown item renders readable text with button_style=false: download-recovery-kit
+PASS: actual dropdown item renders readable text with button_style=false: delete-repository
+PASS: wrong admin password preserves locked pending metadata
+PASS: admin password alone removes locked recent stuck records without node connectivity or mapping
+PASS: forced metadata cleanup retains native restore protection and unresolved restore evidence
+PASS: forced metadata cleanup preserves escrow even with a restore unresolved
+PASS: server owner cannot use repository metadata override
+PASS: global admin cleanup removes a locked recent record using only selection and password even during unresolved restore
+PASS: physical force deletion requires current root password
+PASS: wrong password never contacts Wings
+PASS: customers cannot call physical force deletion directly
+PASS: old Wings capability cannot receive a destructive force request
+PASS: old Wings leaves physical repository and Panel metadata intact
+PASS: force cleanup uses the daemon-authenticated retained-repository endpoint, never normal snapshot deletion
+PASS: force intent commits before physical deletion request
+PASS: lost force response remains unconfirmed
+PASS: HTTP ambiguity retains backup records and recovery information
+PASS: force cleanup uses the daemon-authenticated retained-repository endpoint, never normal snapshot deletion
+PASS: force intent commits before physical deletion request
+PASS: wrong node response cannot finalize physical deletion
+PASS: forged response leaves metadata intact
+PASS: force cleanup uses the daemon-authenticated retained-repository endpoint, never normal snapshot deletion
+PASS: force intent commits before physical deletion request
+PASS: root UI password-only force removes entire retained repository and locked pending Panel rows after verified node success
+PASS: lost and forged response retries keep one committed destructive request UUID
+PASS: physical force deletion retains keys/history and never schedules prune
+PASS: S3 force deletion is explicitly refused instead of claiming unsupported physical removal
+PASS: unsupported S3 force deletion makes no node request
+PASS: retained cleanup fixture has no live Panel server row
+PASS: force cleanup uses the daemon-authenticated retained-repository endpoint, never normal snapshot deletion
+PASS: force intent commits before physical deletion request
+PASS: physical force cleanup works from retained inventory with no live Panel server lookup
+PASS: key-history password errors bind to the actual modal field
+PASS: force cleanup is absent from the client area even for root administrators
+PASS: replacement create dispatch uses committed escrow for its exact generation
+PASS: fixture reproduces explicitly deleted and retired repository with no native backups
+PASS: old node receives an update instruction instead of permanent new-host requirement
+PASS: network errors cannot be interpreted as repository absence
+PASS: native offline generation failure returns a handled notification instead of HTTP500 or a phantom backup
+PASS: wrong-generation state cannot authorize new credentials
+PASS: failed rollover preserves original encrypted key and location
+PASS: fresh key preparation follows verified old-generation absence
+PASS: failed surrounding creation transaction retains the previously escrowed generation
+PASS: rollover and native metadata roll back together before dispatch
+PASS: fresh key preparation follows verified old-generation absence
+PASS: native create automatically replaces retired repository with a fresh key/location on the same host
+PASS: durable queued creation binds the replacement generation
+PASS: retry before first node initialization reuses the prepared generation
+PASS: pending first backup does not cause repeated key generations
+PASS: replacement create dispatch uses committed escrow for its exact generation
+PASS: replacement backup completes through native polling without duplicate old-generation dispatch
+PASS: native restore bridge/queue retain selected replacement generation
+PASS: fresh key preparation follows verified old-generation absence
+PASS: replacement create dispatch uses committed escrow for its exact generation
+PASS: native scheduled backup automatically renews a manually missing repository and respects ignore settings
+PASS: old backup metadata remains bound to its original generation after later renewal
+PASS: admin key history retains all three passwords with their distinct repository locations
+PASS: fresh generation cannot show an older generation storage measurement as current
+PASS: resource contributes exactly one Restic Backups sidebar entry
+PASS: the three tab pages are not separate sidebar resources
+PASS: native top tabs have the same order on IByte\Restic\Admin\ListRecoveryRepositories with button_style=true
+PASS: native tab markup renders on IByte\Restic\Admin\ListRecoveryRepositories
+PASS: key/destructive handlers cannot be mounted from IByte\Restic\Admin\ListRecoveryRepositories
+PASS: no credentials enter initial tab HTML or Livewire state: IByte\Restic\Admin\ListRecoveryRepositories
+PASS: native top tabs have the same order on IByte\Restic\Admin\RepositoryStatistics with button_style=true
+PASS: native tab markup renders on IByte\Restic\Admin\RepositoryStatistics
+PASS: key/destructive handlers cannot be mounted from IByte\Restic\Admin\RepositoryStatistics
+PASS: no credentials enter initial tab HTML or Livewire state: IByte\Restic\Admin\RepositoryStatistics
+PASS: native top tabs have the same order on IByte\Restic\Admin\RepositoryAdministration with button_style=true
+PASS: native tab markup renders on IByte\Restic\Admin\RepositoryAdministration
+PASS: no credentials enter initial tab HTML or Livewire state: IByte\Restic\Admin\RepositoryAdministration
+PASS: native top tabs have the same order on IByte\Restic\Admin\ListRecoveryRepositories with button_style=false
+PASS: native tab markup renders on IByte\Restic\Admin\ListRecoveryRepositories
+PASS: key/destructive handlers cannot be mounted from IByte\Restic\Admin\ListRecoveryRepositories
+PASS: no credentials enter initial tab HTML or Livewire state: IByte\Restic\Admin\ListRecoveryRepositories
+PASS: native top tabs have the same order on IByte\Restic\Admin\RepositoryStatistics with button_style=false
+PASS: native tab markup renders on IByte\Restic\Admin\RepositoryStatistics
+PASS: key/destructive handlers cannot be mounted from IByte\Restic\Admin\RepositoryStatistics
+PASS: no credentials enter initial tab HTML or Livewire state: IByte\Restic\Admin\RepositoryStatistics
+PASS: native top tabs have the same order on IByte\Restic\Admin\RepositoryAdministration with button_style=false
+PASS: native tab markup renders on IByte\Restic\Admin\RepositoryAdministration
+PASS: no credentials enter initial tab HTML or Livewire state: IByte\Restic\Admin\RepositoryAdministration
+PASS: all tab renders and rejected mounts perform zero node requests
+PASS: central host selector loads both saved false defaults
+PASS: Administrative saves only selected host safety flags and preserves backend/profile
+PASS: native basic edit preserves enabled safety settings without showing advanced toggles
+PASS: forged ordinary host selection cannot change Wings settings
+PASS: central settings cannot weaken host immutability while backups exist
+PASS: settings, invalid maintenance and empty maintenance do not contact nodes
+PASS: Administrative maintenance creates a durable operation for the selected linked host/server
+PASS: repeated central maintenance remains rate limited without queuing duplicate work
+PASS: Stats calculates separate deduplication and compression ratios from saved blob sizes
+PASS: newer prior-generation metrics cannot replace the current generation or its honest old timestamp
+PASS: missing repository measurement renders unavailable rather than fabricated zero
+PASS: deleted repositories do not show their historical bytes as current storage
+PASS: zero denominator and missing metrics never produce infinite or fabricated ratios
+PASS: an actual zero measurement remains visible as zero
+PASS: server details mounts a structured identity and operations modal
+PASS: cached stats and structured server details never execute Restic or contact nodes
+PASS: all three admin tab pages deny a server owner directly
+PASS: resource authorization is rechecked on Livewire hydration after administrator access is lost
+PASS: native customer backups never register admin keys or destructive overrides
+PASS: failed operation produces one persistent notification per root administrator despite replay
+PASS: failure alerts use native Filament format and never copy node payload/error secrets
+PASS: scheduler catch-up preserves acknowledgement instead of resurrecting read alerts
+PASS: server owners receive no cross-server root maintenance alerts
+PASS: retained maintenance fixture has no live server
+PASS: ordinary owner cannot queue retained maintenance
+PASS: maintenance cannot select or forget snapshots
+PASS: retained maintenance persists immutable source/generation/location context without inventing a native backup
+PASS: pending retained work is coalesced rather than submitted twice
+PASS: retained worker records pending execution without claiming success
+PASS: retained completion persists measured storage after original server deletion
+PASS: successful retained job replay performs no node requests
+PASS: wrong-generation retained reply is quarantined rather than accepted
+PASS: unverified retained work blocks subsequent maintenance
+PASS: retained maintenance is a readable labelled Administrative menu item
+PASS: same retained operation is rate limited after terminal completion
+PASS: opted-in retained repository queues only its due maintenance once through native scheduler service
+PASS: automatic retained maintenance never expires snapshots or deletes repository records
+PASS: wrong password cannot prepare a final backup
+PASS: failed final authorization leaves backups and server unchanged
+PASS: first lifecycle confirmation starts native backup and preserves server
+PASS: fresh final backup is locked, pending and includes all server files
+PASS: pending repeated confirmation does not create duplicate final backups
+PASS: final preparation persists no password or deferred destructive callback
+PASS: delete preparation cannot authorize transfer or another destination
+PASS: unverified final completion cannot authorize destruction
+PASS: failed final backup leaves source server in place
+PASS: failed preparation is terminal and server remains recoverable
+PASS: verified recent final backup permits second confirmation to enter snapshot-proof phase
+PASS: expired final backup cannot authorize deletion
+PASS: clearing obsolete preparation preserves snapshot locks and server
+PASS: preparation and all refusal paths issue no destructive daemon requests
+PASS: full quota requires a free final slot instead of evicting the existing recovery point
+PASS: full-quota final preparation preserves existing backup and server
+PASS: retained file export requires current administrator password
+PASS: ordinary owner cannot export retained repository files
+PASS: export refuses unknown or cross-repository snapshot UUID
+PASS: export refuses arbitrary archive format or filename
+PASS: retained export link is short-lived signed authorization without credentials
+PASS: changing export format invalidates signed authorization
+PASS: retained admin download streams original node response with safe filename and no-store headers
+PASS: retained export link cannot be replayed
+PASS: retained export is original-node and captured-location bound without requiring live Server
+PASS: old-generation snapshot cannot be exported from replacement repository
+PASS: deleted repository cannot issue file export authorization
+PASS: whole lockfile digest is replaced by an explicit tested production package inventory
+PASS: native plugin additions, lock metadata and dev package changes do not falsely disable unchanged tested runtime
+PASS: diagnostic identifies exact changed runtime package despite unchanged core files
+PASS: diagnostics distinguish changed lock metadata from the actually installed package
+PASS: read-only CLI exits unsuccessfully and names the specific incompatible runtime package
+PASS: source incompatibility is an actionable native HTTP conflict with a valid retry header
+PASS: actual native Create displays a useful notification instead of a Livewire HTTP 500
+PASS: incompatible native creation changes no backups, durable operations or node traffic
+PASS: same-version runtime source reference drift remains rejected
+PASS: diagnostics never echo credentials from a changed dependency source URL
+PASS: missing pinned runtime package remains rejected even when installed vendor code exists
+PASS: unreadable runtime package inventory fails closed without trusting the version label
+PASS: source-drift fixture restores exact upstream lock bytes and readiness
+PASS: a package in the lock but absent from Composer installed metadata is rejected
+PASS: installed runtime version drift cannot hide behind the original lock
+PASS: installed runtime reference drift remains rejected
+PASS: duplicate lock package entries cannot shadow the pinned identity
+PASS: read-only diagnostics retrieve the real saved failure category rather than a generic historical message
+PASS: readiness and job diagnostics never expose arbitrary node response fields
+PASS: node inspection does not change historical status, receipts or protection
+PASS: diagnostics only call readiness and read-only status routes, never jobs or key endpoints
+PASS: node diagnostics identify backend/profile mismatch
+PASS: authentication failure reports the HTTP category without leaking its body
+PASS: wrong node identity is rejected before accepting readiness
+PASS: saved result with forged server identity is rejected
+PASS: unknown node error remains redacted without inventing a failure reason
+PASS: unlinked node diagnostic is refused without network traffic
+PASS: HTTP node diagnostics are refused without fetching credentials
+PASS: actual root admin modal renders saved diagnostics and remains open for review
+PASS: non-root cannot access node diagnostic controls
+PASS: escrow failure names its exact stage and safe HTTP category without chaining a secret response
+PASS: failed escrow does not create a new vault entry or dispatch/mutate the diagnostic operation
+PASS: normal completion worker persists only the recognized safe failure category
+PASS: terminal failure notification and durable receipt are committed together
+PASS: notifications identify operation type and exact operation ID
+PASS: actual native close-notification action stays dismissed after scheduler replay
+PASS: clearing delivered notifications does not recreate them on direct replay or scheduler catch-up
+PASS: dismissed notification does not hide or resolve the actual failed operation
+PASS: Needs attention shows safe saved failure details instead of arbitrary historical error text
+PASS: forged canonical error prefixes cannot bypass failure-detail redaction
+PASS: retained diagnostics use the upstream-verified status handler rather than resubmitting maintenance
+PASS: rollback preserves atomic delivery receipt and notification semantics
+PASS: pre-upgrade generic notification receives operation labels without changing its date or read acknowledgement
+PASS: missing alert receipt column is detected without pretending installation is complete
+PASS: additive installation repair restores a missing receipt column despite logged migration and keeps failure history
+PASS: CLI read-only node diagnosis succeeds for matching node/profile without requesting keys
+PASS: native Delete defaults to retaining a final backup and has no UUID input
+PASS: native Delete renders the destructive alternative and current-password control
+PASS: wrong password cannot persist a destruction intent or contact the node
+PASS: server owner cannot invoke root repository destruction
+PASS: ordinary native force deletion still requires explicit Restic authorization
+PASS: both original repository targets commit before native force deletion contacts Wings
+PASS: destruction bypass is limited to the confirmed server and node
+PASS: password-only destructive native action force-deletes the server despite offline Wings and locked pending backups
+PASS: destructive mode fetches no escrow and creates no final backup or snapshot delete requests
+PASS: committed cleanup plan contains no administrator password
+PASS: native deletion scope is cleared and neighboring server remains
+PASS: cleanup job is durably serialized in the actual database queue after native server deletion
+PASS: offline cleanup remains visibly unverified without falsely marking repository deletion
+PASS: server force deletion does not erase the original unresolved restore journal evidence
+PASS: background destruction uses only the original daemon-authenticated repository-delete route
+PASS: forged background deletion reply cannot retire the repository
+PASS: background destruction uses only the original daemon-authenticated repository-delete route
+PASS: one queue invocation deletes only one verified original repository
+PASS: background destruction uses only the original daemon-authenticated repository-delete route
+PASS: next invocation advances past the completed target and removes the retained source repository too
+PASS: background retry reuses the persisted per-repository destructive request ID
+PASS: physical deletion preserves encrypted recovery history for repository 24
+PASS: physical deletion preserves encrypted recovery history for repository 26
+PASS: completed cleanup replay makes no request and never touches a neighboring repository
+PASS: cleanup refuses a repository outside the immutable confirmed plan
+PASS: unsupported remote physical deletion blocks before deleting the server
+PASS: unsupported cleanup preserves the native server
+PASS: native fatal interruption preserves cleanup intent without deleting repositories
+PASS: interrupted native call preserves reservation and clears in-process bypass
+PASS: background cleanup cannot run while the native server still exists
+PASS: reauthenticated native retry completes with the original immutable destruction intent
+PASS: changed repository generation cannot redirect an already authorized background destruction
+PASS: scheduler recovers the crash window after native deletion and before cleanup dispatch
+PASS: admin repository state distinguishes requested destruction from intentionally retained storage
+Panel source + SQLite/Livewire tests passed: 549

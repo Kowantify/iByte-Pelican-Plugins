@@ -1,0 +1,44 @@
+<?php
+
+use IByte\Restic\Nodes\Transport;
+use IByte\Restic\Recovery\RepositoryExport;
+use Illuminate\Http\Client\Factory;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Str;
+
+$exportRepo = $maintRepo->fresh();
+$exportBackup = (string) Str::uuid();
+DB::table('ibyte_restic_recovery_snapshots')->insert(['repository_id' => $exportRepo->id, 'backup_uuid' => $exportBackup, 'snapshot_id' => str_repeat('a', 64), 'backup_name' => 'Retained export', 'owner_id' => $formAdmin->id, 'owner_username' => $formAdmin->username, 'is_locked' => true, 'metrics' => '{}', 'backup_created_at' => now()]);
+RateLimiter::clear('ibyte-restic:recovery-confirm:'.$formAdmin->id);
+rejected(fn () => RepositoryExport::issue($formAdmin, $exportRepo, 'incorrect', $exportBackup, 'tar.gz'), 'retained file export requires current administrator password');
+rejected(fn () => RepositoryExport::issue($generationServer->user, $exportRepo, 'irrelevant', $exportBackup, 'tar.gz'), 'ordinary owner cannot export retained repository files');
+rejected(fn () => RepositoryExport::issue($formAdmin, $exportRepo, 'repository-fixture', (string) Str::uuid(), 'tar.gz'), 'export refuses unknown or cross-repository snapshot UUID');
+rejected(fn () => RepositoryExport::issue($formAdmin, $exportRepo, 'repository-fixture', $exportBackup, '../../zip'), 'export refuses arbitrary archive format or filename');
+URL::forceScheme('https');
+$exportUrl = RepositoryExport::issue($formAdmin, $exportRepo, 'repository-fixture', $exportBackup, 'tar.gz');
+$exportRequest = Request::create($exportUrl);
+$exportRequest->setUserResolver(fn () => $formAdmin);
+check(URL::hasValidSignature($exportRequest) && ! str_contains($exportUrl, 'repository-fixture') && ! str_contains($exportUrl, $maintNode->daemon_token), 'retained export link is short-lived signed authorization without credentials');
+$exportForged = Request::create(str_replace('format=tar.gz', 'format=tar', $exportUrl));
+check(! URL::hasValidSignature($exportForged), 'changing export format invalidates signed authorization');
+Http::swap(new Factory);
+Http::preventStrayRequests();
+Http::fake(fn ($request) => Http::response(str_ends_with($request->url(), '/readiness') ? ['version' => '3.0.0-preview.2', 'ready' => true, 'retained_export' => 'v1', 'profiles' => ['default' => 'local']] : 'bounded-archive-fixture', 200, ['User-Agent' => 'Pelican Wings/v1.0.0-rc.1+ibyte.3.0.0-preview.2 (id:'.$maintNode->daemon_token_id.')']));
+$exportResponse = (new RepositoryExport)($exportRequest, $exportRepo, app(Transport::class));
+ob_start();
+$exportResponse->sendContent();
+$exportBody = ob_get_clean();
+check($exportBody === 'bounded-archive-fixture' && str_contains($exportResponse->headers->get('content-disposition'), $exportBackup.'.tar.gz') && str_contains($exportResponse->headers->get('cache-control'), 'no-store'), 'retained admin download streams original node response with safe filename and no-store headers');
+rejected(fn () => (new RepositoryExport)($exportRequest, $exportRepo, app(Transport::class)), 'retained export link cannot be replayed');
+Http::assertSent(fn ($request) => str_ends_with($request->url(), '/api/restic/repository-export') && $request['server'] === $exportRepo->server_uuid && $request['repository_fingerprint'] === hash('sha256', $exportRepo->metadata['repository']) && $request['archive_format'] === 'tar.gz');
+check(true, 'retained export is original-node and captured-location bound without requiring live Server');
+RateLimiter::clear('ibyte-restic:recovery-confirm:'.$formAdmin->id);
+$exportRepo->update(['metadata' => array_merge($exportRepo->metadata, ['generation' => 1])]);
+rejected(fn () => RepositoryExport::issue($formAdmin, $exportRepo, 'repository-fixture', $exportBackup, 'tar'), 'old-generation snapshot cannot be exported from replacement repository');
+$exportRepo->update(['metadata' => array_merge($exportRepo->metadata, ['generation' => 0, 'repository_deleted_at' => now()->toIso8601String()])]);
+rejected(fn () => RepositoryExport::issue($formAdmin, $exportRepo, 'repository-fixture', $exportBackup, 'tar'), 'deleted repository cannot issue file export authorization');
+URL::forceScheme(null);

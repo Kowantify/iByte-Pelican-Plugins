@@ -1,0 +1,60 @@
+name: Pinned source and preview tests
+on:
+  push:
+  pull_request:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version: '1.27.2'
+          cache: false
+      - uses: shivammathur/setup-php@d52fc211a0436f8839a587b3b5b8efddab4744ea # v2
+        with:
+          php-version: '8.5.11'
+          extensions: intl, mbstring, pdo_sqlite, zip
+          tools: composer:2.10.3
+          coverage: none
+      - run: bash scripts/fetch-upstream.sh
+      - run: php scripts/set-release.php --check
+      - run: composer install --no-interaction --prefer-dist --no-scripts --working-dir=.upstream/panel
+      - run: bash scripts/fetch-restic.sh
+      - run: php scripts/package-panel-plugin.php && php scripts/test-panel.php
+      - name: Native plugin autoload and serialized queue across fresh processes
+        run: php scripts/test-panel-queue.php
+      - run: bash scripts/test-installer.sh
+      - run: php scripts/test-installer-package.php
+      - name: Secret scan
+        run: go run github.com/zricethezav/gitleaks/v8@v8.24.2 detect --no-git --source . --redact --config .gitleaks.toml
+      - name: Actual patched Wings middleware and real Restic, with race detector
+        run: RESTIC_TEST_BINARY="$PWD/.build/release-artifacts/restic-0.19.1-linux-amd64" bash wings-addon/scripts/build-wings-restic.sh
+      - name: Dependency audit
+        run: |
+          mkdir -p docs/evidence
+          failed=0
+          composer audit --locked --working-dir=.upstream/panel --format=json > docs/evidence/ci-composer-audit.json || failed=1
+          go install golang.org/x/vuln/cmd/govulncheck@v1.9.0
+          bash scripts/audit-dependencies.sh || failed=1
+          test "$failed" = 0
+      - name: Preserve security evidence even when publication is blocked
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: security-evidence
+          path: docs/evidence/ci-*
+          retention-days: 14
+      - run: php scripts/package-release.php && bash scripts/test-bootstrap-installer.sh && bash scripts/validate-release.sh
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: preview-release
+          path: |
+            release/
+            .build/release-artifacts/
+          include-hidden-files: true
+          retention-days: 14

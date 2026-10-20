@@ -1,0 +1,11 @@
+audit-dependencies.sh syntax passed
+build-restic-runtime.sh syntax passed
+fetch-restic.sh syntax passed
+fetch-upstream.sh syntax passed
+install-wings-restic.sh syntax passed
+package-panel-plugin.sh syntax passed
+smoke-test.sh syntax passed
+test-installer.sh syntax passed
+uninstall-wings-restic.sh syntax passed
+validate-release.sh syntax passed
+build-wings-restic.sh syntax passed

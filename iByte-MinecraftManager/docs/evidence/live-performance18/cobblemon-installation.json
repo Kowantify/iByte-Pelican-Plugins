@@ -1,0 +1,78 @@
+{
+    "case": "cobblemon",
+    "provider": "modrinth",
+    "project": "5FFgwNNP",
+    "release": "BpTjgzL8",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "d4aff424-7e9b-486e-923b-6e12ea133d38",
+    "started_at": "2026-10-18T04:05:52+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 2471,
+    "runtime": {
+        "software": "FABRIC",
+        "version": "1.21.1",
+        "java": 21,
+        "launcher": "server.jar",
+        "loader": "fabric",
+        "build": "f262fa83-a46f-4377-9812-2b7139f0ae3b",
+        "build_version": "0.19.5",
+        "environment": {
+            "BUILDS": "0.19.5",
+            "SERVER_JARFILE": "server.jar",
+            "SERVER_TYPE": "fabric",
+            "VERSION": "1.21.1"
+        },
+        "source": "installed",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "809d99b16dd4d4b57384d128724ab0d6560f859aaba989dc6750d8437a447ed0",
+    "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_21",
+    "runtime_variables_match": true,
+    "runtime_environment": {
+        "BUILDS": "0.19.5",
+        "SERVER_JARFILE": "server.jar",
+        "SERVER_TYPE": "fabric",
+        "VERSION": "1.21.1"
+    },
+    "custom_variables_preserved": true,
+    "startup_preserved": true,
+    "previous_runtime_environment": {
+        "BUILDS": "21.1.244",
+        "SERVER_JARFILE": "old.jar",
+        "SERVER_TYPE": "neoforge",
+        "VERSION": "1.21.1"
+    },
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 529,
+            "GET files/pull": 35,
+            "POST files/pull": 38,
+            "GET files/contents": 4948,
+            "POST files/create-directory": 57,
+            "POST files/decompress": 1,
+            "PUT files/rename": 50,
+            "POST files/delete": 57,
+            "POST sync": 1
+        },
+        "wings_pulls": 38,
+        "panel_uploads": 0,
+        "wings_extractions": 1,
+        "progress_samples": 35,
+        "fractional_progress_observed": true,
+        "download_directories": [
+            ".",
+            "mods",
+            "resourcepacks",
+            "shaderpacks"
+        ],
+        "recovery_uploads": 0,
+        "direct_pull_seconds": 8.806
+    },
+    "finished_at": "2026-10-18T04:06:32+00:00"
+}

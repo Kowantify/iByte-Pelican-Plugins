@@ -1,0 +1,16 @@
+PASS sibling metadata shares a directory request after validating its parent
+PASS only missing parent directories are treated as absent metadata
+PASS hash lookup distinguishes missing files from verified current bytes
+PASS node errors propagate instead of being treated as missing files
+PASS existing Wings directory is accepted with raw directory/file fields
+PASS a real file occupying a folder path is still refused
+PASS symbolic links cannot be used as install folders
+PASS inventory reads raw Wings file flags
+PASS real queue worker completes package installation through raw Wings HTTP contract: succeeded
+PASS Wings remote pull installs the selected JAR with zero Panel uploads and preserves existing files
+PASS verified native transfer persists inventory and releases reservation
+PASS preview.15 directory preparation and cleanup preserve all 102 runtime outputs
+PASS preview.18 directory preparation and cleanup preserve all 102 runtime outputs
+PASS rollback removes created runtime files and empty directory tree after successful cleanup
+PASS scoped parent preparation and cleanup reduce metadata requests by over half
+RESULT 15 native node-contract checks passed.

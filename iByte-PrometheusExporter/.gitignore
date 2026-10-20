@@ -1,0 +1,38 @@
+# Build/dev toolchains and fixtures (never committed)
+.tools/
+.acceptance/
+
+# Runtime-generated release config (setup.sh writes these; examples are committed instead)
+release/Monitoring Setup/.env
+release/Monitoring Setup/.setup.lock
+release/Monitoring Setup/prometheus.yml
+release/Monitoring Setup/secrets/
+release/Monitoring Setup/provisioning/
+release/Monitoring Setup/dashboards/
+
+# Dependency/vendor dirs
+vendor/
+node_modules/
+
+# Local env + logs
+.env
+.env.*
+*.log
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+
+# AI/agent working files (never published)
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+AGENTS.local.md
+FIRST_MESSAGE.md
+.claude/
+.cursor/
+.codex/
+.aider*
+.windsurfrules
+.clinerules
+copilot-instructions.md

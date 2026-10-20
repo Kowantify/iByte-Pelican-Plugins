@@ -1,0 +1,54 @@
+{
+    "case": "neoforge263",
+    "provider": "modrinth",
+    "type": "mod",
+    "minecraft": "26.3",
+    "loader": "neoforge",
+    "started_at": "2026-10-18T03:18:47+00:00",
+    "projects": [
+        {
+            "title": "Lithium",
+            "project": "gvQqBUqZ",
+            "release": "1rb9wI5K",
+            "release_title": "Lithium 0.26.2 for Neoforge",
+            "advertised_loaders": [
+                "neoforge"
+            ]
+        },
+        {
+            "title": "FerriteCore",
+            "project": "uXXizFIs",
+            "release": "LtVvw4uS",
+            "release_title": "ferritecore-9.0.0-neoforge",
+            "advertised_loaders": [
+                "neoforge"
+            ]
+        }
+    ],
+    "operation": "735bb792-9b90-422c-9e86-97c7c2c38d80",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 2,
+    "world_unchanged": true,
+    "readback_verified": true,
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 8,
+            "GET files/contents": 16,
+            "GET files/pull": 2,
+            "POST files/pull": 2,
+            "PUT files/rename": 2
+        },
+        "wings_pulls": 2,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 2,
+        "fractional_progress_observed": false,
+        "download_directories": [
+            "mods"
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-18T03:18:50+00:00"
+}

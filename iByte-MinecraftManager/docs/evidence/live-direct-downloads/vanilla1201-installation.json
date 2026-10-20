@@ -1,0 +1,46 @@
+{
+    "case": "vanilla1201",
+    "provider": "mcjars",
+    "project": "VANILLA",
+    "release": "1.20.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "bbd496ef-fe19-48ac-b383-87cf0a3c7347",
+    "started_at": "2026-10-17T17:37:32+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 1,
+    "runtime": {
+        "software": "VANILLA",
+        "version": "1.20.1",
+        "java": 17,
+        "launcher": "server.jar",
+        "loader": "vanilla",
+        "build": "45ff7f7d-f630-4b57-b8cf-bc622cd6235e",
+        "content_type": "none"
+    },
+    "server_jar_sha256": "3af73a9dc5a102e38147946360dd27d4d70bae7055bf91cf2151cd5d121b79e0",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_17",
+    "transfer": {
+        "requests": {
+            "GET files/pull": 4,
+            "GET files/list-directory": 9,
+            "POST files/create-directory": 6,
+            "POST files/pull": 1,
+            "GET files/contents": 5,
+            "PUT files/rename": 2,
+            "POST sync": 1,
+            "POST files/delete": 1
+        },
+        "wings_pulls": 1,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 4,
+        "fractional_progress_observed": true
+    },
+    "finished_at": "2026-10-17T17:37:34+00:00"
+}

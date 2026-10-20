@@ -1,0 +1,110 @@
+{
+    "date": "2026-10-16",
+    "components": {
+        "php": "8.5.11",
+        "os": "Windows",
+        "sqlite": "3.53.4",
+        "laravel/framework": "v13.35.0",
+        "filament/filament": "v5.10.1",
+        "livewire/livewire": "v4.4.7",
+        "symfony/http-foundation": "v8.1.9"
+    },
+    "inspected_eggs": {
+        "java/paper/egg-paper.yaml": {
+            "name": "Paper",
+            "startup": {
+                "Default": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}"
+            },
+            "images": {
+                "Java 25": "ghcr.io/pelican-eggs/yolks:java_25",
+                "Java 21": "ghcr.io/pelican-eggs/yolks:java_21",
+                "Java 17": "ghcr.io/pelican-eggs/yolks:java_17",
+                "Java 16": "ghcr.io/pelican-eggs/yolks:java_16",
+                "Java 11": "ghcr.io/pelican-eggs/yolks:java_11",
+                "Java 8": "ghcr.io/pelican-eggs/yolks:java_8"
+            },
+            "install_runtime_tested": false,
+            "install_container": "ghcr.io/pelican-eggs/installers:alpine"
+        },
+        "java/fabric/egg-fabric.yaml": {
+            "name": "Fabric",
+            "startup": {
+                "Default": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}"
+            },
+            "images": {
+                "Java 8": "ghcr.io/pelican-eggs/yolks:java_8",
+                "Java 11": "ghcr.io/pelican-eggs/yolks:java_11",
+                "Java 16": "ghcr.io/pelican-eggs/yolks:java_16",
+                "Java 17": "ghcr.io/pelican-eggs/yolks:java_17",
+                "Java 21": "ghcr.io/pelican-eggs/yolks:java_21",
+                "Java 25": "ghcr.io/pelican-eggs/yolks:java_25"
+            },
+            "install_runtime_tested": false,
+            "install_container": "ghcr.io/pelican-eggs/installers:java_11"
+        },
+        "java/forge/egg-forge-minecraft.yaml": {
+            "name": "Forge Minecraft",
+            "startup": {
+                "Default": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true $( [[  ! -f unix_args.txt ]] && printf %s \"-jar {{SERVER_JARFILE}}\" || printf %s \"@unix_args.txt\" )"
+            },
+            "images": {
+                "Java 25": "ghcr.io/pelican-eggs/yolks:java_25",
+                "Java 21": "ghcr.io/pelican-eggs/yolks:java_21",
+                "Java 17": "ghcr.io/pelican-eggs/yolks:java_17",
+                "Java 16": "ghcr.io/pelican-eggs/yolks:java_16",
+                "Java 11": "ghcr.io/pelican-eggs/yolks:java_11",
+                "Java 8": "ghcr.io/pelican-eggs/yolks:java_8"
+            },
+            "install_runtime_tested": false,
+            "install_container": "ghcr.io/pelican-eggs/installers:java_8"
+        },
+        "java/neoforge/egg-neo-forge.json": {
+            "name": "NeoForge",
+            "startup": {
+                "Default": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true @unix_args.txt"
+            },
+            "images": {
+                "Java 8": "ghcr.io/pelican-eggs/yolks:java_8",
+                "Java 11": "ghcr.io/pelican-eggs/yolks:java_11",
+                "Java 16": "ghcr.io/pelican-eggs/yolks:java_16",
+                "Java 17": "ghcr.io/pelican-eggs/yolks:java_17",
+                "Java 21": "ghcr.io/pelican-eggs/yolks:java_21",
+                "Java 25": "ghcr.io/pelican-eggs/yolks:java_25"
+            },
+            "install_runtime_tested": false,
+            "install_container": "ghcr.io/pelican-eggs/installers:debian"
+        },
+        "java/quilt/egg-quilt.yaml": {
+            "name": "Quilt",
+            "startup": {
+                "Default": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar {{SERVER_JARFILE}} nogui"
+            },
+            "images": {
+                "Java 8": "ghcr.io/pelican-eggs/yolks:java_8",
+                "Java 11": "ghcr.io/pelican-eggs/yolks:java_11",
+                "Java 16": "ghcr.io/pelican-eggs/yolks:java_16",
+                "Java 17": "ghcr.io/pelican-eggs/yolks:java_17",
+                "Java 21": "ghcr.io/pelican-eggs/yolks:java_21",
+                "Java 25": "ghcr.io/pelican-eggs/yolks:java_25"
+            },
+            "install_runtime_tested": false,
+            "install_container": "ghcr.io/pelican-eggs/installers:java_21"
+        },
+        "proxy/java/velocity/egg-velocity.json": {
+            "name": "Velocity",
+            "startup": {
+                "Default": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar {{SERVER_JARFILE}}"
+            },
+            "images": {
+                "Java 8": "ghcr.io/pelican-eggs/yolks:java_8",
+                "Java 11": "ghcr.io/pelican-eggs/yolks:java_11",
+                "Java 16": "ghcr.io/pelican-eggs/yolks:java_16",
+                "Java 17": "ghcr.io/pelican-eggs/yolks:java_17",
+                "Java 21": "ghcr.io/pelican-eggs/yolks:java_21",
+                "Java 25": "ghcr.io/pelican-eggs/yolks:java_25"
+            },
+            "install_runtime_tested": false,
+            "install_container": "ghcr.io/pelican-eggs/installers:alpine"
+        }
+    }
+}

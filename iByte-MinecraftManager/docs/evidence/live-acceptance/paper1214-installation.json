@@ -1,0 +1,29 @@
+{
+    "case": "paper1214",
+    "provider": "mcjars",
+    "project": "PAPER",
+    "release": "1.21.4",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "7006ae65-c4db-4e8a-84c9-1013177d0b3b",
+    "started_at": "2026-10-17T16:14:03+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 1,
+    "runtime": {
+        "software": "PAPER",
+        "version": "1.21.4",
+        "java": 21,
+        "launcher": "server.jar",
+        "loader": "paper",
+        "build": "e60f6fa0-ae4d-480b-b4dd-56af5afd48bf",
+        "content_type": "plugin"
+    },
+    "server_jar_sha256": "5ee4f542f628a14c644410b08c94ea42e772ef4d29fe92973636b6813d4eaffc",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_21",
+    "finished_at": "2026-10-17T16:14:05+00:00"
+}

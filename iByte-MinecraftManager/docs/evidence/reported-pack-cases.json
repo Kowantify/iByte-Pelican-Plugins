@@ -1,0 +1,34 @@
+{
+    "cobblemon": {
+        "provider": "modrinth",
+        "project": "5FFgwNNP",
+        "release": "BpTjgzL8",
+        "title": "Cobblemon Official Modpack [Fabric] 1.8.2",
+        "paths": {
+            "mods": 75,
+            "resourcepacks": 1,
+            "shaderpacks": 1
+        },
+        "dependencies": {
+            "minecraft": "1.21.1",
+            "fabric-loader": "0.19.5"
+        }
+    },
+    "nexus": {
+        "provider": "curseforge",
+        "project": "454095",
+        "release": "6765239",
+        "title": "iByte Nexus 1.20.1 - V1.6",
+        "paths": [],
+        "dependencies": {
+            "version": "1.20.1",
+            "modLoaders": [
+                {
+                    "id": "forge-47.4.3",
+                    "primary": true
+                }
+            ],
+            "recommendedRam": 12288
+        }
+    }
+}

@@ -1,0 +1,29 @@
+PASS: preflight failure preserves original binary
+PASS: unknown/custom binary refused
+Installed staging preview 3.0.0-preview.1; original Wings retained at /c/Users/kakow/OneDrive/Desktop/Production/Code/Pelican Extensions/iByte-Restic/.build/installer-test.VPHxH6/state/original.
+Already installed and healthy: 3.0.0-preview.1
+PASS: unattended installation twice is repeat-safe without a second restart
+Original Wings restored. Profiles, snapshots, data and state retained.
+PASS: rollback restores original and preserves game/config data
+PASS: failed new daemon startup automatically restores previous binary
+PASS: failed addon health automatically restores previous binary
+PASS: tampered release binary refused before daemon replacement
+Installed staging preview 3.0.0-preview.1; original Wings retained at /c/Users/kakow/OneDrive/Desktop/Production/Code/Pelican Extensions/iByte-Restic/.build/installer-test.VPHxH6/auto-state/original.
+PASS: bundled installer discovers adjacent files from another directory without hash arguments
+Already installed and healthy: 3.0.0-preview.1
+PASS: automatic verification preserves repeat-safe installation
+Original Wings restored. Profiles, snapshots, data and state retained.
+PASS: bundled rollback needs no manifest or hash arguments
+PASS: modified binaries rejected without operator-supplied digests
+PASS: changing both binary and manifest cannot bypass the embedded release pin
+Installed staging preview 3.0.0-preview.1; original Wings retained at /c/Users/kakow/OneDrive/Desktop/Production/Code/Pelican Extensions/iByte-Restic/.build/installer-test.VPHxH6/auto-state/original.
+PASS: standalone installer downloads pinned files without hash or URL arguments
+Original Wings restored. Profiles, snapshots, data and state retained.
+PASS: modified download manifest stops installation before downloading or running executable artifacts
+Installed staging preview 3.0.0-preview.1; original Wings retained at /c/Users/kakow/OneDrive/Desktop/Production/Code/Pelican Extensions/iByte-Restic/.build/installer-test.VPHxH6/auto-state/original.
+PASS: copied public Wings folder installs through the real inner installer without downloads or artifacts/hash flags
+Already installed and healthy: 3.0.0-preview.1
+PASS: copied public Wings folder repeat install is safe
+Original Wings restored. Profiles, snapshots, data and state retained.
+PASS: copied public Wings folder rolls back and preserves data/config
+Installer fixture suite passed: 17 cases (mock systemd/identity/helper/downloads; no Linux runtime claim)

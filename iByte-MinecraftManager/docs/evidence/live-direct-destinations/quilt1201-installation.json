@@ -1,0 +1,51 @@
+{
+    "case": "quilt1201",
+    "provider": "mcjars",
+    "project": "QUILT",
+    "release": "1.20.1",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "8f19d50b-ccff-48aa-b1a1-f81faec8e887",
+    "started_at": "2026-10-17T18:36:02+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 14,
+    "runtime": {
+        "software": "QUILT",
+        "version": "1.20.1",
+        "java": 17,
+        "launcher": "server.jar",
+        "loader": "quilt",
+        "build": "af7d7b17-e228-4fec-a7c8-194a5646038d",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "5e512e2ffc162428b35a28d2b929dffa7863f1855f148423d6c7f3994aff77e8",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_17",
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 420,
+            "GET files/pull": 6,
+            "POST files/pull": 2,
+            "GET files/contents": 59,
+            "POST files/create-directory": 29,
+            "POST files/decompress": 1,
+            "PUT files/rename": 27,
+            "POST sync": 1,
+            "POST files/delete": 1
+        },
+        "wings_pulls": 2,
+        "panel_uploads": 0,
+        "wings_extractions": 1,
+        "progress_samples": 6,
+        "fractional_progress_observed": true,
+        "download_directories": [
+            "."
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-17T18:36:05+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "version": "0.1.0-preview.13",
+  "artifact_sha256": "fbb74f04f929690d62a2fff80594a593e3085dfaca70ebd90ce93c1ea2ed7327",
+  "tests": [
+    {
+      "name": "native Admin Plugins page before ZIP import",
+      "status": "pass"
+    },
+    {
+      "name": "ZIP uploaded through native Filament file upload",
+      "status": "pass"
+    },
+    {
+      "name": "native ZIP import yields Not Installed row",
+      "status": "pass"
+    },
+    {
+      "name": "Install clicked through native table action; real queue worker started before import",
+      "status": "pass"
+    },
+    {
+      "name": "real native installer enables plugin and regenerates Vite manifest without helper autoload",
+      "status": "pass"
+    },
+    {
+      "name": "same pre-failed worker installs corrected migration paths without restart",
+      "status": "pass"
+    }
+  ],
+  "scope": "Native UI ZIP upload and Install action; actual pre-existing queue worker with no plugin autoload; real yarn install/build; Windows/SQLite fixture"
+}

@@ -1,0 +1,2 @@
+PHP syntax PASS: 75 files
+{"tool":"pint","result":"passed"}

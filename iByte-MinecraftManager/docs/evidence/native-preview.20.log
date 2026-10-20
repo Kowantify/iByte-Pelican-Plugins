@@ -1,0 +1,30 @@
+PASS native ZIP import and plugin installation
+PASS encrypted credential storage set replace remove without config cache
+PASS native owner permissions, tenant isolation and unknown egg hidden
+PASS native subuser browse and modification permissions separated
+PASS global disable denies access but image changes do not hide an enabled egg
+PASS double-click review is idempotent, exact and contains no URL authority
+PASS cross-tenant operation ID cannot be forged
+PASS operation scoping denies a different eligible tenant
+PASS queued review consumes one durable slot and rejects duplicate dispatch
+PASS metadata readiness succeeds without mutation, duplicate delivery is inert
+PASS acknowledgement persists after repeated job delivery
+PASS queued permission revocation is enforced
+PASS source node movement invalidates original review
+PASS expired and tampered plans fail before provider work
+PASS Blade templates compile using native component registry
+PASS reproducible ZIP mtimes cannot retain a stale plugin template
+PASS Livewire server page renders and switches internal areas
+PASS queued installation labels cancellation correctly and explains a delayed scheduler
+PASS sidebar follows Subdomains even when another plugin assigns a later position
+PASS independent Activity feed reauthorizes tenants and safely cancels owned queued work
+PASS active progress stays visible while more than thirty newer releases are reviewed
+PASS progress polling projects display fields without loading a large recovery journal
+PASS Livewire admin configuration denies ordinary owners
+PASS Livewire admin renders settings without a credential read-back
+PASS Livewire root admin credential input is cleared after save
+PASS additive missing-schema repair retains profiles and history
+PASS native reimport and reinstall retains settings and operation history
+PASS native disable and uninstall retain recovery metadata
+PASS prepare a real database queue job for fresh-worker revocation check
+RESULT 29 native tests passed. SQLite/Windows; optional native asset build mocked; provider responses deterministic; no Wings/game container.

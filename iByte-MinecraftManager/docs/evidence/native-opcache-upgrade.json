@@ -1,0 +1,19 @@
+{
+    "before_preview4":  {
+                            "mapping_hint":  "Discover software, select an installed egg, then approve one of its images and the content type. Unknown eggs stay hidden until explicitly mapped. These mappings do not alter global eggs or server startup.",
+                            "mapping_feedback":  false,
+                            "opcache":  true
+                        },
+    "after_preview5_same_mtime":  {
+                                      "mapping_hint":  "Discover software, select an installed egg, then approve one of its images and the content type. Unknown eggs stay hidden until explicitly mapped. These mappings do not alter global eggs or server startup.",
+                                      "mapping_feedback":  false,
+                                      "opcache":  true
+                                  },
+    "after_preview6_release_mtime":  {
+                                         "mapping_hint":  "Select an installed egg and enable its sidebar entry. This controls availability only: it does not restrict providers, mods, plugins, modpacks, software, versions, loaders or the current container image.",
+                                         "mapping_feedback":  true,
+                                         "opcache":  true
+                                     },
+    "web_server_restarted_between_imports":  false,
+    "scope":  "Actual installed plugin PHP/translation files across native ZIP imports with OPcache enabled; previous stale text matches supplied screenshot; production PHP settings unverified"
+}

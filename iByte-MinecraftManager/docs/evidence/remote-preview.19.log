@@ -1,0 +1,10 @@
+PASS three native downloads run concurrently; fractions come from Wings; no uploads
+PASS created directory chains are reused within the operation
+PASS disappearing failed downloads do not count as success; remaining owned requests are cancelled
+PASS authorization failure cancels owned downloads without cancelling another user download
+PASS unapproved remote URLs cannot reach Wings
+PASS one streamed read verifies publisher SHA-512 and produces the durable SHA-256
+PASS publisher checksum mismatch refuses downloaded bytes
+PASS truncated and oversized node responses refuse downloaded bytes
+PASS unknown and malformed publisher hashes cannot silently weaken integrity
+RESULT 9 remote-download checks passed.

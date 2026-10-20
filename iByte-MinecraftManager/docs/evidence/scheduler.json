@@ -1,0 +1,4 @@
+{
+    "passed": 12,
+    "scope": "Actual native scheduler background command and fresh PHP queue worker; copied Windows\/SQLite database; deterministic provider\/artifact and filesystem node fixture; no live Wings\/game startup"
+}

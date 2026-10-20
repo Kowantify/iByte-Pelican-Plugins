@@ -1,0 +1,195 @@
+=== Symbol Results ===
+
+Vulnerability #1: GO-2026-4887
+    Moby has AuthZ plugin bypass when provided oversized request bodies in
+    github.com/docker/docker
+  More info: https://pkg.go.dev/vuln/GO-2026-4887
+  Module: github.com/docker/docker
+    Found in: github.com/docker/docker@v28.5.2+incompatible
+    Fixed in: N/A
+    Example traces found:
+      #1: system/system.go:20:2: system.init calls client.init, which calls api.init
+      #2: server/install.go:17:2: server.init calls container.init, which calls blkiodev.init
+      #3: system/system.go:20:2: system.init calls client.init, which calls build.init
+      #4: system/system.go:20:2: system.init calls client.init, which calls checkpoint.init
+      #5: router/downloader/downloader.go:213:23: downloader.Download.Execute calls http.Client.Do, which eventually calls client.CheckRedirect
+      #6: system/system.go:397:2: system.GetDockerInfo calls client.Client.Close
+      #7: environment/docker/container.go:62:40: docker.Environment.Attach calls client.Client.ContainerAttach
+      #8: server/install.go:509:37: server.InstallationProcess.Execute calls client.Client.ContainerCreate
+      #9: environment/docker/api.go:60:35: docker.Environment.ContainerInspect calls client.Client.ContainerInspect
+      #10: environment/docker/power.go:300:34: docker.Environment.Terminate calls client.Client.ContainerKill
+      #11: server/install.go:551:40: server.InstallationProcess.StreamOutput calls client.Client.ContainerLogs
+      #12: environment/docker/container.go:304:33: docker.Environment.Destroy calls client.Client.ContainerRemove
+      #13: server/install.go:515:36: server.InstallationProcess.Execute calls client.Client.ContainerStart
+      #14: environment/docker/stats.go:44:39: docker.Environment.pollResources calls client.Client.ContainerStats
+      #15: environment/docker/power.go:188:34: docker.Environment.Stop calls client.Client.ContainerStop
+      #16: environment/docker/container.go:128:39: docker.Environment.InSituUpdate calls client.Client.ContainerUpdate
+      #17: server/install.go:531:41: server.InstallationProcess.Execute calls client.Client.ContainerWait
+      #18: system/system.go:343:23: system.GetDockerDiskUsage calls client.Client.DiskUsage
+      #19: environment/docker/api.go:76:33: docker.Environment.ContainerInspect calls client.Client.HTTPClient
+      #20: environment/docker/container.go:412:37: docker.Environment.ensureImageExists calls client.Client.ImageList
+      #21: environment/docker/container.go:410:32: docker.Environment.ensureImageExists calls client.Client.ImagePull
+      #22: system/system.go:384:29: system.PruneDockerImages calls client.Client.ImagesPrune
+      #23: system/system.go:404:27: system.GetDockerInfo calls client.Client.Info
+      #24: environment/docker/container.go:216:40: docker.Environment.Create calls client.Client.NetworkCreate
+      #25: environment/docker/container.go:211:40: docker.Environment.Create calls client.Client.NetworkInspect
+      #26: system/system.go:399:39: system.GetDockerInfo calls client.Client.ServerVersion
+      #27: server/install.go:356:40: server.InstallationProcess.AfterExecute calls client.IsErrNotFound
+      #28: system/system.go:393:36: system.GetDockerInfo calls client.NewClientWithOpts
+      #29: router/downloader/downloader.go:213:23: downloader.Download.Execute calls http.Client.Do, which eventually calls client.NewClientWithOpts
+      #30: system/system.go:393:85: system.GetDockerInfo calls client.WithAPIVersionNegotiation
+      #31: router/websocket/websocket.go:297:30: websocket.Handler.HandleInbound calls client.emptyIDError.Error
+      #32: router/websocket/websocket.go:297:30: websocket.Handler.HandleInbound calls client.errConnectionFailed.Error
+      #33: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls client.errConnectionFailed.Unwrap
+      #34: internal/ufs/quota_writer.go:106:25: ufs.CountedReader.Read calls client.hijackedConn.Read
+      #35: router/downloader/downloader.go:213:23: downloader.Download.Execute calls http.Client.Do, which eventually calls client.hijackedConn.RoundTrip
+      #36: router/websocket/websocket.go:297:30: websocket.Handler.HandleInbound calls client.httpError.Error
+      #37: internal/ufs/fs_unix.go:607:17: ufs.UnixFS.TouchPath calls errors.Is, which eventually calls client.httpError.Is
+      #38: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls client.httpError.Unwrap
+      #39: system/system.go:20:2: system.init calls client.init
+      #40: server/install.go:17:2: server.init calls container.init, which calls common.init
+      #41: server/install.go:17:2: server.init calls container.init
+      #42: environment/docker/api.go:82:36: docker.Environment.ContainerInspect calls errdefs.FromStatusCode
+      #43: environment/docker/api.go:79:30: docker.Environment.ContainerInspect calls errdefs.Unknown
+      #44: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errConflict.Unwrap
+      #45: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errForbidden.Unwrap
+      #46: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errInvalidParameter.Unwrap
+      #47: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errNotFound.Unwrap
+      #48: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errNotImplemented.Unwrap
+      #49: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errNotModified.Unwrap
+      #50: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errSystem.Unwrap
+      #51: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errUnauthorized.Unwrap
+      #52: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errUnavailable.Unwrap
+      #53: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errUnknown.Unwrap
+      #54: environment/docker/api.go:16:2: docker.init calls errdefs.init
+      #55: system/system.go:20:2: system.init calls client.init, which calls events.init
+      #56: environment/docker/container.go:412:37: docker.Environment.ensureImageExists calls client.Client.ImageList, which calls filters.Args.Del
+      #57: environment/docker/container.go:412:37: docker.Environment.ensureImageExists calls client.Client.ImageList, which calls filters.Args.Get
+      #58: system/system.go:384:29: system.PruneDockerImages calls client.Client.ImagesPrune, which eventually calls filters.Args.Len
+      #59: system/system.go:384:29: system.PruneDockerImages calls client.Client.ImagesPrune, which eventually calls filters.ToJSON
+      #60: environment/docker/container.go:412:37: docker.Environment.ensureImageExists calls client.Client.ImageList, which calls filters.ToParamWithVersion
+      #61: system/system.go:13:2: system.init calls filters.init
+      #62: system/system.go:14:2: system.init calls image.init
+      #63: server/install.go:361:35: server.InstallationProcess.AfterExecute calls kernel.GetKernelVersion
+      #64: server/install.go:407:32: server.InstallationProcess.AfterExecute calls kernel.VersionInfo.String
+      #65: system/system.go:21:2: system.init calls kernel.init
+      #66: server/install.go:20:2: server.init calls mount.init
+      #67: server/install.go:21:2: server.init calls network.init
+      #68: internal/diagnostics/logs.go:36:50: diagnostics.GenerateDiagnosticsReport calls operatingsystem.GetOperatingSystem
+      #69: internal/diagnostics/logs.go:16:2: diagnostics.init calls operatingsystem.init
+      #70: config/config_docker.go:11:2: config.init calls registry.init
+      #71: system/system.go:20:2: system.init calls client.init, which eventually calls runtime.init
+      #72: system/system.go:14:2: system.init calls image.init, which calls storage.init
+      #73: server/install.go:17:2: server.init calls container.init, which calls strslice.init
+      #74: system/system.go:20:2: system.init calls client.init, which calls swarm.init
+      #75: system/system.go:19:2: system.init calls system.init
+      #76: server/install.go:551:40: server.InstallationProcess.StreamOutput calls client.Client.ContainerLogs, which calls time.GetTimestamp
+      #77: system/system.go:20:2: system.init calls client.init, which calls time.init
+      #78: environment/docker/container.go:74:3: docker.Attach calls types.HijackedResponse.Close
+      #79: environment/docker/container.go:62:40: docker.Environment.Attach calls client.Client.ContainerAttach, which eventually calls types.NewHijackedResponse
+      #80: system/system.go:18:2: system.init calls types.init
+      #81: environment/docker/api.go:112:47: docker.parseErrorFromResponse calls versions.GreaterThan
+      #82: server/install.go:509:37: server.InstallationProcess.Execute calls client.Client.ContainerCreate, which calls versions.GreaterThanOrEqualTo
+      #83: server/install.go:531:41: server.InstallationProcess.Execute calls client.Client.ContainerWait, which calls versions.LessThan
+      #84: environment/docker/api.go:14:2: docker.init calls versions.init
+      #85: system/system.go:20:2: system.init calls client.init, which calls volume.init
+
+Vulnerability #2: GO-2026-4883
+    Moby has an Off-by-one error in its plugin privilege validation in
+    github.com/docker/docker
+  More info: https://pkg.go.dev/vuln/GO-2026-4883
+  Module: github.com/docker/docker
+    Found in: github.com/docker/docker@v28.5.2+incompatible
+    Fixed in: N/A
+    Example traces found:
+      #1: system/system.go:20:2: system.init calls client.init, which calls api.init
+      #2: server/install.go:17:2: server.init calls container.init, which calls blkiodev.init
+      #3: system/system.go:20:2: system.init calls client.init, which calls build.init
+      #4: system/system.go:20:2: system.init calls client.init, which calls checkpoint.init
+      #5: router/downloader/downloader.go:213:23: downloader.Download.Execute calls http.Client.Do, which eventually calls client.CheckRedirect
+      #6: system/system.go:397:2: system.GetDockerInfo calls client.Client.Close
+      #7: environment/docker/container.go:62:40: docker.Environment.Attach calls client.Client.ContainerAttach
+      #8: server/install.go:509:37: server.InstallationProcess.Execute calls client.Client.ContainerCreate
+      #9: environment/docker/api.go:60:35: docker.Environment.ContainerInspect calls client.Client.ContainerInspect
+      #10: environment/docker/power.go:300:34: docker.Environment.Terminate calls client.Client.ContainerKill
+      #11: server/install.go:551:40: server.InstallationProcess.StreamOutput calls client.Client.ContainerLogs
+      #12: environment/docker/container.go:304:33: docker.Environment.Destroy calls client.Client.ContainerRemove
+      #13: server/install.go:515:36: server.InstallationProcess.Execute calls client.Client.ContainerStart
+      #14: environment/docker/stats.go:44:39: docker.Environment.pollResources calls client.Client.ContainerStats
+      #15: environment/docker/power.go:188:34: docker.Environment.Stop calls client.Client.ContainerStop
+      #16: environment/docker/container.go:128:39: docker.Environment.InSituUpdate calls client.Client.ContainerUpdate
+      #17: server/install.go:531:41: server.InstallationProcess.Execute calls client.Client.ContainerWait
+      #18: system/system.go:343:23: system.GetDockerDiskUsage calls client.Client.DiskUsage
+      #19: environment/docker/api.go:76:33: docker.Environment.ContainerInspect calls client.Client.HTTPClient
+      #20: environment/docker/container.go:412:37: docker.Environment.ensureImageExists calls client.Client.ImageList
+      #21: environment/docker/container.go:410:32: docker.Environment.ensureImageExists calls client.Client.ImagePull
+      #22: system/system.go:384:29: system.PruneDockerImages calls client.Client.ImagesPrune
+      #23: system/system.go:404:27: system.GetDockerInfo calls client.Client.Info
+      #24: environment/docker/container.go:216:40: docker.Environment.Create calls client.Client.NetworkCreate
+      #25: environment/docker/container.go:211:40: docker.Environment.Create calls client.Client.NetworkInspect
+      #26: system/system.go:399:39: system.GetDockerInfo calls client.Client.ServerVersion
+      #27: server/install.go:356:40: server.InstallationProcess.AfterExecute calls client.IsErrNotFound
+      #28: router/downloader/downloader.go:213:23: downloader.Download.Execute calls http.Client.Do, which eventually calls client.NewClientWithOpts
+      #29: system/system.go:393:36: system.GetDockerInfo calls client.NewClientWithOpts
+      #30: system/system.go:393:85: system.GetDockerInfo calls client.WithAPIVersionNegotiation
+      #31: router/websocket/websocket.go:297:30: websocket.Handler.HandleInbound calls client.emptyIDError.Error
+      #32: router/websocket/websocket.go:297:30: websocket.Handler.HandleInbound calls client.errConnectionFailed.Error
+      #33: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls client.errConnectionFailed.Unwrap
+      #34: internal/ufs/quota_writer.go:106:25: ufs.CountedReader.Read calls client.hijackedConn.Read
+      #35: router/downloader/downloader.go:213:23: downloader.Download.Execute calls http.Client.Do, which eventually calls client.hijackedConn.RoundTrip
+      #36: router/websocket/websocket.go:297:30: websocket.Handler.HandleInbound calls client.httpError.Error
+      #37: internal/ufs/fs_unix.go:607:17: ufs.UnixFS.TouchPath calls errors.Is, which eventually calls client.httpError.Is
+      #38: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls client.httpError.Unwrap
+      #39: system/system.go:20:2: system.init calls client.init
+      #40: server/install.go:17:2: server.init calls container.init, which calls common.init
+      #41: server/install.go:17:2: server.init calls container.init
+      #42: environment/docker/api.go:82:36: docker.Environment.ContainerInspect calls errdefs.FromStatusCode
+      #43: environment/docker/api.go:79:30: docker.Environment.ContainerInspect calls errdefs.Unknown
+      #44: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errConflict.Unwrap
+      #45: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errForbidden.Unwrap
+      #46: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errInvalidParameter.Unwrap
+      #47: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errNotFound.Unwrap
+      #48: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errNotImplemented.Unwrap
+      #49: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errNotModified.Unwrap
+      #50: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errSystem.Unwrap
+      #51: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errUnauthorized.Unwrap
+      #52: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errUnavailable.Unwrap
+      #53: internal/ufs/fs_unix.go:612:15: ufs.UnixFS.TouchPath calls errors.As, which eventually calls errdefs.errUnknown.Unwrap
+      #54: environment/docker/api.go:16:2: docker.init calls errdefs.init
+      #55: system/system.go:20:2: system.init calls client.init, which calls events.init
+      #56: environment/docker/container.go:412:37: docker.Environment.ensureImageExists calls client.Client.ImageList, which calls filters.Args.Del
+      #57: environment/docker/container.go:412:37: docker.Environment.ensureImageExists calls client.Client.ImageList, which calls filters.Args.Get
+      #58: system/system.go:384:29: system.PruneDockerImages calls client.Client.ImagesPrune, which eventually calls filters.Args.Len
+      #59: system/system.go:384:29: system.PruneDockerImages calls client.Client.ImagesPrune, which eventually calls filters.ToJSON
+      #60: environment/docker/container.go:412:37: docker.Environment.ensureImageExists calls client.Client.ImageList, which calls filters.ToParamWithVersion
+      #61: system/system.go:13:2: system.init calls filters.init
+      #62: system/system.go:14:2: system.init calls image.init
+      #63: server/install.go:361:35: server.InstallationProcess.AfterExecute calls kernel.GetKernelVersion
+      #64: server/install.go:407:32: server.InstallationProcess.AfterExecute calls kernel.VersionInfo.String
+      #65: system/system.go:21:2: system.init calls kernel.init
+      #66: server/install.go:20:2: server.init calls mount.init
+      #67: server/install.go:21:2: server.init calls network.init
+      #68: internal/diagnostics/logs.go:36:50: diagnostics.GenerateDiagnosticsReport calls operatingsystem.GetOperatingSystem
+      #69: internal/diagnostics/logs.go:16:2: diagnostics.init calls operatingsystem.init
+      #70: config/config_docker.go:11:2: config.init calls registry.init
+      #71: system/system.go:20:2: system.init calls client.init, which eventually calls runtime.init
+      #72: system/system.go:14:2: system.init calls image.init, which calls storage.init
+      #73: server/install.go:17:2: server.init calls container.init, which calls strslice.init
+      #74: system/system.go:20:2: system.init calls client.init, which calls swarm.init
+      #75: system/system.go:19:2: system.init calls system.init
+      #76: server/install.go:551:40: server.InstallationProcess.StreamOutput calls client.Client.ContainerLogs, which calls time.GetTimestamp
+      #77: system/system.go:20:2: system.init calls client.init, which calls time.init
+      #78: environment/docker/container.go:74:3: docker.Attach calls types.HijackedResponse.Close
+      #79: environment/docker/container.go:62:40: docker.Environment.Attach calls client.Client.ContainerAttach, which eventually calls types.NewHijackedResponse
+      #80: system/system.go:18:2: system.init calls types.init
+      #81: environment/docker/api.go:112:47: docker.parseErrorFromResponse calls versions.GreaterThan
+      #82: server/install.go:509:37: server.InstallationProcess.Execute calls client.Client.ContainerCreate, which calls versions.GreaterThanOrEqualTo
+      #83: server/install.go:531:41: server.InstallationProcess.Execute calls client.Client.ContainerWait, which calls versions.LessThan
+      #84: environment/docker/api.go:14:2: docker.init calls versions.init
+      #85: system/system.go:20:2: system.init calls client.init, which calls volume.init
+
+Your code is affected by 2 vulnerabilities from 1 module.
+This scan also found 0 vulnerabilities in packages you import and 4
+vulnerabilities in modules you require, but your code doesn't appear to call
+these vulnerabilities.
+Use '-show verbose' for more details.

@@ -1,0 +1,27 @@
+{
+    "case": "nexus",
+    "started_at": "2026-10-17T17:05:20+00:00",
+    "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+    "rejected_status_response": {
+        "text": "Server is still starting! Please wait before reconnecting."
+    },
+    "game_status": {
+        "version": {
+            "name": "1.20.1",
+            "protocol": 763
+        },
+        "players": {
+            "max": 2,
+            "online": 0
+        }
+    },
+    "expected_protocol_verified": true,
+    "fresh_done_log": true,
+    "ready": true,
+    "ready_at": "2026-10-17T17:06:35+00:00",
+    "world_created": true,
+    "stopped": true,
+    "finished_at": "2026-10-17T17:08:11+00:00",
+    "post_install_recheck": true,
+    "operation": "9a469c97-42f9-4501-b598-eed15b56a83b"
+}

@@ -1,0 +1,35 @@
+{
+    "scope": "The test removes only the second operation-owned temporary source immediately before the real native rename. Stock Wings returns success for a missing source; destination verification detects it after the first promotion and second original removal. Production rollback restores the private recovery copy; no HTTP/node/provider response is mocked.",
+    "operation": "f58f9727-bf78-4748-bb06-20d2dcde1f04",
+    "status": "failed",
+    "error": "file_changed_during_install",
+    "fault_injected": true,
+    "promotion_requests": 2,
+    "original_mod_hashes_preserved": true,
+    "world_unchanged": true,
+    "reservation_released": true,
+    "temporary_files_remaining": [],
+    "manager_directory_present": false,
+    "transfer": {
+        "requests": {
+            "GET files/contents": 21,
+            "GET files/list-directory": 18,
+            "GET files/pull": 2,
+            "POST files/pull": 2,
+            "POST files/delete": 2,
+            "PUT files/rename": 2,
+            "POST files/write": 1
+        },
+        "wings_pulls": 2,
+        "panel_uploads": 1,
+        "wings_extractions": 0,
+        "progress_samples": 2,
+        "fractional_progress_observed": false,
+        "download_directories": [
+            "mods"
+        ],
+        "recovery_uploads": 1
+    },
+    "recorded_at": "2026-10-18T03:24:10+00:00",
+    "passed": true
+}

@@ -1,0 +1,19 @@
+docker.io/library/busybox@sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e: Pulling from library/busybox
+Digest: sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e
+Status: Image is up to date for busybox@sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e
+docker.io/library/busybox:1.37.0@sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e
+["busybox@sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e"]
+Disposable container exists and is stopped; no game process was started.
+configuration and private credential files valid
+daemon and authenticated addon healthy
+Already installed and healthy: 3.0.0-preview.2
+PASS: fresh disposable native database uses expected node identity
+PASS: disposable actual Wings server root is present
+PASS: real native database queue creates a locked Restic snapshot
+PASS: captured repository is real and outside game data
+PASS: native force deletion removes the Panel server and actual Wings game root
+PASS: repository destruction remains a committed queued action after native deletion
+PASS: destructive mode never prepares a retained final backup
+PASS: actual authenticated Wings force deletion removes the complete real Restic repository and confirms it
+PASS: encrypted key history and neighboring backup data remain intact
+Real local native server/repository destruction passed; only Panel bootstrap inventory and backup broadcasting were mocked.

@@ -1,0 +1,56 @@
+PASS required dependency and package install, durable hash inventory, duplicate job inert
+PASS package update retires unchanged old filename without a manager folder or leftover downloads
+PASS incompatibility with a later dependency fails before node staging
+PASS native file permissions are required in addition to plugin install permission
+PASS modified managed jar blocks update before live changes
+PASS running server refuses installation before download and upload
+PASS corrupt node staging refuses live replacement
+PASS rename failure restores prior file from verified backup
+PASS concurrent edit during failure is retained and blocks slot for manual recovery
+PASS manual reconciliation retains reservation until original files and startup verify
+PASS admin read-only reconciliation cannot release an install; stopped-worker stale pre-apply recovery can
+PASS plugin release from legacy mod metadata installs into plugins without egg content mapping
+PASS native startup transaction failure restores staged runtime without requiring manual recovery
+PASS runtime install changes only native startup and approved Java image then syncs
+PASS Modrinth pack installs server files, exact loader, preserves existing configuration
+PASS CurseForge mod installs with provider SHA-1 and MD5 metadata retained
+PASS CurseForge exact public CDN fallback completes a verified installation and records resolution
+PASS CurseForge manifest pack resolves exact authorized mod files and loader
+PASS CurseForge manifest skips reported client shader and resource packs without downloading them
+PASS unknown required non-JAR mods still fail with the exact filename
+PASS exact hash metadata identifies client-only Forge mods without restricted downloads
+PASS mismatched hash or size cannot classify a required mod as client-only
+PASS CurseForge linked dedicated server pack uses safe content and ignores startup scripts
+PASS stock Wings streamed binary write/read uses native authenticated HTTP client
+PASS native node-state contract accepts only offline and rejects missing or running nodes
+PASS prepared Fabric and Quilt launchers become server.jar with their properties and libraries retained
+PASS multiple reviewed mods share one reservation, dependency graph and verified install
+PASS batch rejects expired, foreign, duplicate and incompatible selections
+PASS changed exact metadata in any batch item blocks before node writes
+PASS batch dependency conflict is detected before live file replacement
+PASS later batch file failure restores earlier promoted mods and original files
+PASS mod downloads stay in mods with temporary sibling files and no manager path
+PASS native archive extraction restores existing raw entries and routes selected files to correct directories
+PASS partial native extraction restores old entries from private Panel recovery copies
+PASS durable recovery survives a fresh workspace instance with no node backup directory
+PASS runtime archive writes final paths directly and preserves omitted operator files
+PASS partial direct runtime extraction restores old bytes and preserves the world
+PASS missing private recovery bytes prevent any rollback mutation
+PASS worker timeout during preparation retains its reservation when direct writes have a journal
+PASS archive entries cannot recreate the removed manager directory
+PASS Modrinth pack replaces configured Minecraft and loader variables while preserving JVM settings and custom server.jar startup
+PASS CurseForge pack automatically installs its declared runtime and synchronizes startup variables
+PASS Paper runtime writes a numeric build value instead of its display prefix or UUID
+PASS incompatible egg variable validation fails a pack before content downloads and preserves the original runtime
+PASS native sync failure restores runtime variables and original files while preserving an unrelated operator edit
+PASS a concurrent runtime variable edit retains recovery and reconciliation requires the original variables
+PASS runtime variable changes invalidate a queued review before any download
+PASS ambiguous CurseForge primary loaders cannot silently choose a runtime
+PASS a missing exact pack loader never falls back to another build
+PASS plugin entry-point Java requirements fail before replacing any server file
+PASS a Java 21 plugin with an optional Java 25 multi-release entry installs on Paper 21
+PASS entry-point checks use the selected platform descriptor and reject preview or unsafe metadata
+PASS one-click Install dispatches and executes the normal installer without a review screen
+PASS Add to queue retains two mods across reload and one Install executes their batch
+PASS direct Install still rejects a running server before any file mutation
+RESULT 55 install contract tests passed; no live Wings/game startup.

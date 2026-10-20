@@ -1,0 +1,291 @@
+{
+    "case": "odyssey",
+    "provider": "curseforge",
+    "project": "434113",
+    "release": "6709034",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "ce6a80d6-36c0-4aad-8d05-9d7179eedb3c",
+    "started_at": "2026-10-17T16:22:56+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [
+        {
+            "skip": "client_mod",
+            "title": "Light Overlay (Rift/Forge/Fabric)",
+            "project": "325492",
+            "id": "4573178"
+        },
+        {
+            "skip": "client_asset",
+            "title": "Complementary Shaders - Unbound",
+            "project": "385587",
+            "id": "6515579"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Create Better FPS",
+            "project": "1217518",
+            "id": "6671045"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Constant Music",
+            "project": "949032",
+            "id": "5748142"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Entity Culling Fabric/Forge",
+            "project": "448233",
+            "id": "6675248"
+        },
+        {
+            "skip": "client_mod",
+            "title": "UniLib",
+            "project": "1056812",
+            "id": "6509566"
+        },
+        {
+            "skip": "client_asset",
+            "title": "Faithful 32x",
+            "project": "436482",
+            "id": "6691971"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Embeddium (Rubidium) Extra",
+            "project": "654373",
+            "id": "6101745"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Immersive UI",
+            "project": "1021685",
+            "id": "6023593"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Game Menu Mod Option [Forge]",
+            "project": "353051",
+            "id": "4658132"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Sodium/Embeddium Extras",
+            "project": "558905",
+            "id": "6041697"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Falling Leaves (NeoForge/Forge)",
+            "project": "463155",
+            "id": "6241090"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Drippy Loading Screen",
+            "project": "511770",
+            "id": "6412211"
+        },
+        {
+            "skip": "client_mod",
+            "title": "BetterF3",
+            "project": "401648",
+            "id": "4863626"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Sound\u200bs",
+            "project": "925889",
+            "id": "5940443"
+        },
+        {
+            "skip": "client_asset",
+            "title": "Sildur's Enhanced Default Shaders",
+            "project": "544140",
+            "id": "4688998"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Embeddium",
+            "project": "908741",
+            "id": "5681725"
+        },
+        {
+            "skip": "client_mod",
+            "title": "[ESF] Entity Sound Features",
+            "project": "1060324",
+            "id": "5516016"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Traveler's Titles (Forge/NeoForge)",
+            "project": "504908",
+            "id": "5065825"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Overflowing Bars",
+            "project": "852662",
+            "id": "5763974"
+        },
+        {
+            "skip": "client_mod",
+            "title": "[ETF] Entity Texture Features - [Fabric & Forge]",
+            "project": "568563",
+            "id": "5982136"
+        },
+        {
+            "skip": "client_asset",
+            "title": "Complementary Shaders - Reimagined",
+            "project": "627557",
+            "id": "6515577"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Sodium/Embeddium Dynamic Lights",
+            "project": "551736",
+            "id": "6044481"
+        },
+        {
+            "skip": "client_mod",
+            "title": "CraftPresence",
+            "project": "297038",
+            "id": "6511328"
+        },
+        {
+            "skip": "client_asset",
+            "title": "BSL Shaders - Classic",
+            "project": "1085570",
+            "id": "5905132"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Not Enough Animations",
+            "project": "433760",
+            "id": "6688512"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Oculus",
+            "project": "581495",
+            "id": "6020952"
+        },
+        {
+            "skip": "client_mod",
+            "title": "AmbientSounds 6",
+            "project": "254284",
+            "id": "6570130"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Camera Overhaul Reforged",
+            "project": "1011593",
+            "id": "5359800"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Iris/Oculus & GeckoLib Compat (Deprecated)",
+            "project": "959388",
+            "id": "5018199"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Advancement Plaques [Neo/Forge]",
+            "project": "499826",
+            "id": "6186385"
+        },
+        {
+            "skip": "client_mod",
+            "title": "[EMF] Entity Model Features [Fabric & Forge]",
+            "project": "844662",
+            "id": "6001134"
+        },
+        {
+            "skip": "client_asset",
+            "title": "MakeUp - Ultra Fast | Shaders",
+            "project": "431203",
+            "id": "6441661"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Spyglass Improvements: Zoom, Quick Access... [Fabric/NeoForge]",
+            "project": "571264",
+            "id": "5071983"
+        },
+        {
+            "skip": "client_mod",
+            "title": "ImmediatelyFast",
+            "project": "686911",
+            "id": "6312293"
+        },
+        {
+            "skip": "client_asset",
+            "title": "Sildur's Vibrant shaders",
+            "project": "544096",
+            "id": "4688989"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Current Game Music Track",
+            "project": "933960",
+            "id": "6225091"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Sodium/Embeddium Options API",
+            "project": "1103431",
+            "id": "6100812"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Sodium/Embeddium Options Mod Compat",
+            "project": "1146393",
+            "id": "6041603"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Better Ping Display",
+            "project": "292038",
+            "id": "4594106"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Visuality: Reforged",
+            "project": "704256",
+            "id": "4684840"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Mouse Tweaks",
+            "project": "60089",
+            "id": "5338457"
+        },
+        {
+            "skip": "client_mod",
+            "title": "Chat Heads",
+            "project": "407206",
+            "id": "6483021"
+        }
+    ],
+    "source_resolutions": [
+        "VibrativeVoice-forge-1.20.1-1.2.0.jar",
+        "tetraextras-0.1.4-1.20.1.jar"
+    ],
+    "files": 1464,
+    "runtime": {
+        "software": "FORGE",
+        "version": "1.20.1",
+        "java": 17,
+        "launcher": "server.jar",
+        "loader": "forge",
+        "build": "8592fd00-8f52-4d10-8687-2a1e3ea70b53",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "71d321013ea31e378e8ae52a6f3ec7336a0770d18e1b2374fc63700876e5f06b",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_17",
+    "finished_at": "2026-10-17T16:27:33+00:00"
+}

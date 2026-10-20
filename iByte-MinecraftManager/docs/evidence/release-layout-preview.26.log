@@ -1,0 +1,3 @@
+PASS large support list uses a compact option and complete wrapping details
+PASS changing release updates supported version/platform details
+RESULT 2 release layout checks passed.

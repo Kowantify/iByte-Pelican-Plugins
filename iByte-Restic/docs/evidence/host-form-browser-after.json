@@ -1,0 +1,19 @@
+{
+    "checks":  "defaults, local/S3 selection, preview and restore toggle binding passed",
+    "errors":  [
+
+               ],
+    "state":  {
+                  "name":  "Browser fixed local",
+                  "schema":  "restic",
+                  "node_ids":  [
+
+                               ],
+                  "configuration":  {
+                                        "backend":  "local",
+                                        "profile":  "default",
+                                        "staging_enabled":  true,
+                                        "restore_fixture_enabled":  false
+                                    }
+              }
+}

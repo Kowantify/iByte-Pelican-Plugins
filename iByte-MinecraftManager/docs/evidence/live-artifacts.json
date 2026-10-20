@@ -1,0 +1,75 @@
+{
+    "scope": "Live metadata, streamed disk downloads and safe runtime preparation only; no JAR execution, node writes or startup",
+    "results": {
+        "VANILLA": {
+            "passed": true,
+            "version": "26.3",
+            "build": "e88b5870-9f4d-4623-91a7-8c4717e7b375",
+            "java": 25,
+            "files": 1,
+            "bytes": 62294556,
+            "launcher_sha256": "d052f14d7a173734fba553711e5b570162e2f2a313267ee31a21b975a679be64",
+            "source_integrity": "MCJars HTTPS recipe and size; local SHA-256 and archive CRC; no publisher hash supplied by recipe"
+        },
+        "PAPER": {
+            "passed": true,
+            "version": "26.3",
+            "build": "1801bc0c-1b96-4bb7-926e-a8a3ff41d041",
+            "java": 25,
+            "files": 1,
+            "bytes": 55151927,
+            "launcher_sha256": "5fac0b6937b7aecea1b5b40e6a992f7b0802e4271413be35a6913d30df960784",
+            "source_integrity": "MCJars HTTPS recipe and size; local SHA-256 and archive CRC; no publisher hash supplied by recipe"
+        },
+        "FABRIC": {
+            "passed": true,
+            "version": "26.3",
+            "build": "5af56afa-5862-4731-aa90-0b9f6e6eb6a8",
+            "java": 25,
+            "files": 1,
+            "bytes": 181838,
+            "launcher_sha256": "271c1d584bdb0310643d7ea537878eb4f220de8196e73807df3013a39e333c75",
+            "source_integrity": "MCJars HTTPS recipe and size; local SHA-256 and archive CRC; no publisher hash supplied by recipe"
+        },
+        "FORGE": {
+            "passed": true,
+            "version": "26.3",
+            "build": "75243833-1d5d-4faf-8b72-020a8f7ab9e4",
+            "java": 25,
+            "files": 92,
+            "bytes": 112592045,
+            "launcher_sha256": "8c86c80279fc127a8136668aec51f76971303ebfc509645339c53da5fd7abe0c",
+            "source_integrity": "MCJars HTTPS recipe and size; local SHA-256 and archive CRC; no publisher hash supplied by recipe"
+        },
+        "NEOFORGE": {
+            "passed": true,
+            "version": "26.3",
+            "build": "1fa63617-54f1-45f2-a5d6-62f64a3ebdb2",
+            "java": 25,
+            "files": 73,
+            "bytes": 81747161,
+            "launcher_sha256": "b1c12f690d9154bf302bd7ec7a5bfbc885b86df415cd849b2b3eb985eb7d04f5",
+            "source_integrity": "MCJars HTTPS recipe and size; local SHA-256 and archive CRC; no publisher hash supplied by recipe"
+        },
+        "QUILT": {
+            "passed": true,
+            "version": "26.3",
+            "build": "4f4648b1-015d-4a48-bf5b-6ba020302860",
+            "java": 25,
+            "files": 12,
+            "bytes": 67619199,
+            "launcher_sha256": "86a71d245cc31ba38b4f65aeda145275b80cfe5614aa4f8a5dac6a14be1ecd81",
+            "source_integrity": "MCJars HTTPS recipe and size; local SHA-256 and archive CRC; no publisher hash supplied by recipe"
+        },
+        "VELOCITY": {
+            "passed": true,
+            "version": "4.2.1-SNAPSHOT",
+            "build": "d4e9a68a-5658-4cf2-abc6-7213939e625e",
+            "java": 25,
+            "files": 1,
+            "bytes": 42275614,
+            "launcher_sha256": "aab3cc7e60ee758ea8cfff3cb0ab88e92aececfd0025061c90f00d6aa9f1aa1e",
+            "source_integrity": "MCJars HTTPS recipe and size; local SHA-256 and archive CRC; no publisher hash supplied by recipe"
+        }
+    }
+}

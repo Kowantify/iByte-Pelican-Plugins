@@ -1,0 +1,269 @@
+{
+    "scope": "Actual native Livewire page, View handler, Search handler and dialog output using replayed public metadata captured by live-catalog-matrix.php; no network, node or install in this test",
+    "tests": [
+        {
+            "provider": "modrinth",
+            "project": "AANobbMI",
+            "title": "Sodium",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": true
+        },
+        {
+            "provider": "modrinth",
+            "project": "YL57xq9U",
+            "title": "Iris Shaders",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": true
+        },
+        {
+            "provider": "modrinth",
+            "project": "gvQqBUqZ",
+            "title": "Lithium",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "uXXizFIs",
+            "title": "FerriteCore",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "nmDcB62a",
+            "title": "ModernFix",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "P7dR8mSH",
+            "title": "Fabric API",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "9s6osm5g",
+            "title": "Cloth Config API",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "lhGA9TYQ",
+            "title": "Architectury API",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "EsAfCjCV",
+            "title": "AppleSkin",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "fQEb0iXm",
+            "title": "Krypton",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "l6YH9Als",
+            "title": "spark",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "1bokaNcj",
+            "title": "Xaero's Minimap",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "lfHFW1mp",
+            "title": "JourneyMap",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "u6dRKJwZ",
+            "title": "Just Enough Items (JEI)",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "nvQzSEkH",
+            "title": "Jade \ud83d\udd0d",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "qQyHxfxd",
+            "title": "No Chat Reports",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "8BmcQJ2H",
+            "title": "Geckolib",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "modrinth",
+            "project": "LNytGWDc",
+            "title": "Create",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "394468",
+            "title": "Sodium",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "360438",
+            "title": "Lithium (Fabric/NeoForge)",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "429235",
+            "title": "FerriteCore ((Neo)Forge)",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "790626",
+            "title": "ModernFix",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "306612",
+            "title": "Fabric API",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "348521",
+            "title": "Cloth Config API (Fabric/Forge/NeoForge)",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "419699",
+            "title": "Architectury API",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "248787",
+            "title": "AppleSkin",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "361579",
+            "title": "spark",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "263420",
+            "title": "Xaero's Minimap",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "32274",
+            "title": "JourneyMap",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "238222",
+            "title": "Just Enough Items (JEI)",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "324717",
+            "title": "Jade \ud83d\udd0d",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "388172",
+            "title": "GeckoLib",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        },
+        {
+            "provider": "curseforge",
+            "project": "328085",
+            "title": "Create",
+            "status": "pass",
+            "filtered_and_unfiltered_dialog": true,
+            "client_only": false
+        }
+    ]
+}

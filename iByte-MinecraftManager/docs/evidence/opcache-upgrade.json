@@ -1,0 +1,9 @@
+{
+    "php": "8.5.11",
+    "opcache_enabled": true,
+    "baseline": "old",
+    "updated_source_same_mtime": "old",
+    "updated_source_new_mtime": "new",
+    "checks": 3,
+    "scope": "Real persistent PHP HTTP server with OPcache enabled and separate requests; default timestamp validation, revalidate_freq=0; isolated test files, not production host"
+}

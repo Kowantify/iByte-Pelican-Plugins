@@ -1,0 +1,45 @@
+{
+    "version": "0.1.0-preview.18",
+    "artifact": "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.18.zip",
+    "sha256": "8943065c77a1ff5018d77351895ab90df3fc530d07eeb2d78f6a828d38b5d958",
+    "bytes": 105754,
+    "packaged_files": 65,
+    "unit_checks": 52,
+    "native_checks": 29,
+    "installer_checks": 55,
+    "catalog_checks": 42,
+    "node_checks": 15,
+    "remote_checks": 9,
+    "scheduler_checks": 12,
+    "browser_checks": 38,
+    "native_ui_install_checks": 6,
+    "native_ui_probe_checks": 5,
+    "javascript_exceptions": 0,
+    "live_game_cases": [
+        "neoforge1211fast",
+        "fabric1211",
+        "forge1201",
+        "paper1214",
+        "cobblemon"
+    ],
+    "bulk_rename_recovery_verified": true,
+    "normal_panel_payload_uploads": 0,
+    "wings_modified": false,
+    "neoforge_build": "21.1.262",
+    "comparison": {
+        "scope": "Execution after metadata planning; identical 50ms added to each file/sync request, real Wings/provider/artifact",
+        "old_seconds": 103,
+        "new_seconds": 11,
+        "old_requests": 1831,
+        "new_requests": 121
+    },
+    "without_added_latency_seconds": 5,
+    "native_direct_pull_seconds": 1.31,
+    "remaining_limits": [
+        "Production host was not accessed; these timings are test observations, not bandwidth guarantees",
+        "Catalog planning, scheduler waiting and game boot are separate from the execution timing",
+        "No live non-SQLite or hundreds-of-servers load test; provider availability and arbitrary releases cannot be guaranteed",
+        "Stock Wings cannot exclude every concurrent Files/SFTP/power writer; ambiguous recovery retains the reservation"
+    ],
+    "recorded_at": "2026-10-18T04:09:11+00:00"
+}

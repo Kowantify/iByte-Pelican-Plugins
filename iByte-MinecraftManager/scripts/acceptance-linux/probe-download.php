@@ -1,0 +1,2 @@
+<?php
+$url='https://versions.mcjars.app/download/fabric/1.21.1/0.19.5/1.1.2.jar';$curl=curl_init($url);curl_setopt_array($curl,[CURLOPT_NOBODY=>true,CURLOPT_RETURNTRANSFER=>true,CURLOPT_PROXY=>'',CURLOPT_TIMEOUT=>20,CURLOPT_CONNECTTIMEOUT=>5]);curl_exec($curl);echo json_encode(['code'=>curl_getinfo($curl,CURLINFO_RESPONSE_CODE),'errno'=>curl_errno($curl),'error'=>curl_error($curl),'ip'=>curl_getinfo($curl,CURLINFO_PRIMARY_IP),'time'=>curl_getinfo($curl,CURLINFO_TOTAL_TIME)]),"\n";

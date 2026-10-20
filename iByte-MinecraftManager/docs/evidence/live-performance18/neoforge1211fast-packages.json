@@ -1,0 +1,54 @@
+{
+    "case": "neoforge1211fast",
+    "provider": "modrinth",
+    "type": "mod",
+    "minecraft": "1.21.1",
+    "loader": "neoforge",
+    "started_at": "2026-10-18T04:02:23+00:00",
+    "projects": [
+        {
+            "title": "FerriteCore",
+            "project": "uXXizFIs",
+            "release": "x7kQWVju",
+            "release_title": "ferritecore-7.0.3-neoforge",
+            "advertised_loaders": [
+                "neoforge"
+            ]
+        },
+        {
+            "title": "ModernFix",
+            "project": "nmDcB62a",
+            "release": "7Jy58lnT",
+            "release_title": "modernfix-neoforge-5.27.26+mc1.21.1.jar",
+            "advertised_loaders": [
+                "neoforge"
+            ]
+        }
+    ],
+    "operation": "9077a365-59e4-484f-ba6a-7cb0e7023966",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 2,
+    "world_unchanged": true,
+    "readback_verified": true,
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 17,
+            "GET files/pull": 2,
+            "POST files/pull": 2,
+            "GET files/contents": 6,
+            "PUT files/rename": 1
+        },
+        "wings_pulls": 2,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 2,
+        "fractional_progress_observed": false,
+        "download_directories": [
+            "mods"
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-18T04:02:25+00:00"
+}

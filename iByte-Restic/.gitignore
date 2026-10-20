@@ -1,0 +1,34 @@
+# Upstream source research checkouts (re-fetchable via scripts/fetch-upstream.sh)
+.upstream/
+# Build/dev toolchains and compiled artifacts
+.tools/
+.build/
+# Release artifacts are built reproducibly by CI/scripts and attached to GitHub releases
+release/*
+!release/.gitkeep
+
+# Dependency/vendor dirs
+vendor/
+
+# Local env + logs
+.env
+.env.*
+*.log
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+
+# AI/agent working files (never published)
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+AGENTS.local.md
+FIRST_MESSAGE.md
+.claude/
+.cursor/
+.codex/
+.aider*
+.windsurfrules
+.clinerules
+copilot-instructions.md

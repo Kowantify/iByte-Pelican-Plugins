@@ -1,0 +1,18 @@
+{
+    "scope": "Actual official Wings rename failure after new batch mod files are promoted; no node/transport/provider mocks. A test-owned directory blocks retirement backup, then the production rollback restores original state.",
+    "operation": "24a5e5cc-d426-4108-b9f8-1e751ab5b8e6",
+    "status": "failed",
+    "error": "installation_failed",
+    "journal_files": 4,
+    "new_promoted_paths": [
+        "mods/modernfix-forge-5.27.87+mc1.20.1.jar",
+        "mods/ferritecore-6.0.0-forge.jar"
+    ],
+    "new_paths_removed": true,
+    "original_mod_hashes_preserved": true,
+    "world_unchanged": true,
+    "reservation_released": true,
+    "recorded_at": "2026-10-17T17:53:03+00:00",
+    "expected_operation_status": "failed",
+    "passed": true
+}

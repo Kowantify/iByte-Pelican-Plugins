@@ -1,0 +1,56 @@
+{
+    "source": "https://github.com/pelican/panel/tree/v1.0.0-rc.1",
+    "scope": "Source identity comparison, not a separate RC.1 full runtime test",
+    "files": [
+        {
+            "path": "composer.json",
+            "official_rc1_sha256": "cb96c146619cb9aec904ebb59e94d30ebaace527cf5d93fc4bf1e91bdb329451",
+            "matches_fixture_ignoring_crlf": false
+        },
+        {
+            "path": "composer.lock",
+            "official_rc1_sha256": "089035cd90ae3d2dcef119d45ade14823a5e4e73acc287b9823c50eb3cddd90f",
+            "matches_fixture_ignoring_crlf": false
+        },
+        {
+            "path": "app/Repositories/Daemon/DaemonRepository.php",
+            "official_rc1_sha256": "fb20c90e8c074a5801672e5559a47d8a62e5024392900c6ba2f28c6aef0a4ff5",
+            "matches_fixture_ignoring_crlf": true
+        },
+        {
+            "path": "app/Repositories/Daemon/DaemonFileRepository.php",
+            "official_rc1_sha256": "f211c374b46f6b5d366a26b017f023a035237952bbe2f2807333904dea6886d2",
+            "matches_fixture_ignoring_crlf": true
+        },
+        {
+            "path": "app/Repositories/Daemon/DaemonServerRepository.php",
+            "official_rc1_sha256": "3970533daeecd06e7679ab47e6d5103284bcbfa9d3cd138a102a3fdcfe80b776",
+            "matches_fixture_ignoring_crlf": true
+        },
+        {
+            "path": "app/Services/Servers/StartupModificationService.php",
+            "official_rc1_sha256": "efc96ee1dc518fde2fc683b202fd7df921024b9902a6ddf79b203d7406a8cf0a",
+            "matches_fixture_ignoring_crlf": true
+        },
+        {
+            "path": "app/Models/User.php",
+            "official_rc1_sha256": "4f3117d1d4b6f7d70d70a81e762054f48f344fd4ab26e6fdfdad337dcf21a045",
+            "matches_fixture_ignoring_crlf": true
+        },
+        {
+            "path": "app/Models/Subuser.php",
+            "official_rc1_sha256": "fc026e1a1374bdfd48f88d900b3b46ea5e524718cec675c0ed11e27b3c8eab36",
+            "matches_fixture_ignoring_crlf": true
+        },
+        {
+            "path": "app/Services/Helpers/PluginService.php",
+            "official_rc1_sha256": "6855429b645e2ebc54c6d52876e50828777e474bd8082da7457e739c98a96ab3",
+            "matches_fixture_ignoring_crlf": true
+        },
+        {
+            "path": "app/Providers/Filament/ServerPanelProvider.php",
+            "official_rc1_sha256": "f33031fd996c0a46388085ab838c6f6aa3efaf97e1f7d39cfbff9ddf7e0920c4",
+            "matches_fixture_ignoring_crlf": true
+        }
+    ]
+}

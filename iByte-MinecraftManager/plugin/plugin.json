@@ -1,0 +1,14 @@
+{
+    "id": "ibyte-minecraft-manager",
+    "name": "iByte Minecraft Manager",
+    "author": "iByte Hosting",
+    "version": "0.1.0",
+    "description": "Install exact Minecraft server versions, mods, plugins and supported modpacks through stock Wings streaming.",
+    "category": "plugin",
+    "namespace": "IByte\\MinecraftManager",
+    "class": "MinecraftManagerPlugin",
+    "panels": ["server", "admin"],
+    "api_version": 1,
+    "panel_version": "^1.0.0-rc.1",
+    "composer_packages": []
+}

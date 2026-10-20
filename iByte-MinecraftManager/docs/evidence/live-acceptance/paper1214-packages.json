@@ -1,0 +1,23 @@
+{
+    "case": "paper1214",
+    "provider": "modrinth",
+    "type": "plugin",
+    "minecraft": "1.21.4",
+    "loader": "paper",
+    "started_at": "2026-10-17T16:18:41+00:00",
+    "projects": [
+        {
+            "title": "LuckPerms",
+            "project": "Vebnzrzj",
+            "release": "b0mk8uS6"
+        }
+    ],
+    "operation": "4ee31844-52bd-4e04-b681-c283dd1c9f39",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 1,
+    "world_unchanged": true,
+    "readback_verified": true,
+    "finished_at": "2026-10-17T16:18:43+00:00"
+}

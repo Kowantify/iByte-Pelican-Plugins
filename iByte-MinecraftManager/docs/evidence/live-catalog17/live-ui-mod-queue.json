@@ -1,0 +1,33 @@
+{
+    "scope": "Actual native Livewire queueProject/installQueued actions with live providers, database queue delivery through minecraft-manager:work and official Wings; no provider/node/process mock",
+    "case": "neoforge263",
+    "started_at": "2026-10-18T03:23:43+00:00",
+    "operation": "db7a7de7-a936-4228-b04d-fecdc60ba919",
+    "queued_before_worker": true,
+    "status": "succeeded",
+    "error": null,
+    "reservation_released": true,
+    "world_unchanged": true,
+    "file_hashes_verified": true,
+    "passed": true,
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 8,
+            "GET files/contents": 18,
+            "GET files/pull": 2,
+            "POST files/pull": 2,
+            "POST files/delete": 2,
+            "PUT files/rename": 2
+        },
+        "wings_pulls": 2,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 2,
+        "fractional_progress_observed": false,
+        "download_directories": [
+            "mods"
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-18T03:23:50+00:00"
+}

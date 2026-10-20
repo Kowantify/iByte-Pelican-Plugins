@@ -1,0 +1,15 @@
+{
+    "scope": "Official Panel RC.1 core, actual native background scheduler and fresh queue worker, real Modrinth artifact and official Wings RC.1; no provider/download/node mocks",
+    "operation": "79516ec7-73ed-4467-a5b7-24359f9045f2",
+    "started_at": "2026-10-17T21:05:07+00:00",
+    "plugin_version": "0.1.0-preview.13",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "worker_started": "2026-10-17T21:05:07+00:00",
+    "reservation_released": true,
+    "world_unchanged": true,
+    "scheduler_mutex_released": true,
+    "readback_verified": true,
+    "finished_at": "2026-10-17T21:05:12+00:00"
+}

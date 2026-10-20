@@ -1,0 +1,15 @@
+{
+    "case": "odyssey",
+    "started_at": "2026-10-17T16:56:31+00:00",
+    "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+    "game_status": {
+        "version": null,
+        "players": null
+    },
+    "ready": true,
+    "ready_at": "2026-10-17T16:57:11+00:00",
+    "world_created": true,
+    "stopped": true,
+    "finished_at": "2026-10-17T16:57:21+00:00",
+    "note": "Initial recorded reply lacked version/players; superseded by fresh-log and expected-protocol recheck. Not counted as final readiness evidence."
+}

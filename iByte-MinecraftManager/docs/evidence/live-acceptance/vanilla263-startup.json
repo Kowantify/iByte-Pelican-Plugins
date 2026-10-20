@@ -1,0 +1,20 @@
+{
+    "case": "vanilla263",
+    "started_at": "2026-10-17T16:18:04+00:00",
+    "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+    "game_status": {
+        "version": {
+            "name": "26.3",
+            "protocol": 777
+        },
+        "players": {
+            "max": 2,
+            "online": 0
+        }
+    },
+    "ready": true,
+    "ready_at": "2026-10-17T16:18:14+00:00",
+    "world_created": true,
+    "stopped": true,
+    "finished_at": "2026-10-17T16:18:16+00:00"
+}

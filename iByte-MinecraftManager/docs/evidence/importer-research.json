@@ -1,0 +1,54 @@
+{
+    "artifact_sha256": "a2afa2f6a46b1aa62877158176eb37424fcc67850c305b29961cbcddee0e7a4c",
+    "upstream_sources": [
+        {
+            "tag": "v1.0.0-rc.1",
+            "url": "https://raw.githubusercontent.com/pelican/panel/v1.0.0-rc.1/app/Services/Helpers/PluginService.php",
+            "sha256": "6855429b645e2ebc54c6d52876e50828777e474bd8082da7457e739c98a96ab3"
+        },
+        {
+            "tag": "v1.0.0-beta35",
+            "url": "https://raw.githubusercontent.com/pelican/panel/v1.0.0-beta35/app/Services/Helpers/PluginService.php",
+            "sha256": "9cf0fcc1711138de5c0e24fec3a9c65bb1e575d05f5c88f0810a0c9f9e48214d"
+        }
+    ],
+    "checks": [
+        {
+            "name": "original helper failure reproduced before import in same process",
+            "status": "pass"
+        },
+        {
+            "name": "published RC.1 importer resolves the versioned ZIP to the correct plugin id",
+            "status": "pass"
+        },
+        {
+            "name": "published RC.1 directory replacement removes the original migration",
+            "status": "pass"
+        },
+        {
+            "name": "published RC.1 runs preview.5 migrations in the previously failed process without helper autoload",
+            "status": "pass"
+        },
+        {
+            "name": "published beta35 nests a versioned ZIP under its filename instead of replacing the original plugin",
+            "status": "pass"
+        },
+        {
+            "name": "versioned import on beta35 leaves the original broken migration active",
+            "status": "pass"
+        },
+        {
+            "name": "beta35 merge can show preview.5 while retaining the original broken migration",
+            "status": "pass"
+        },
+        {
+            "name": "beta35 retained migration reproduces reported class error despite preview.5 manifest",
+            "status": "pass"
+        },
+        {
+            "name": "no manual helper registration or plugin boot masked the investigation",
+            "status": "pass"
+        }
+    ],
+    "scope": "Published upstream service bodies with namespace isolation; native Laravel fixture dependencies, disposable directories, in-memory SQLite; no UI or Yarn build in this research script; production importer not identified."
+}

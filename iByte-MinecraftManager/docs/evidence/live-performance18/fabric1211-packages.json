@@ -1,0 +1,55 @@
+{
+    "case": "fabric1211",
+    "provider": "modrinth",
+    "type": "mod",
+    "minecraft": "1.21.1",
+    "loader": "fabric",
+    "started_at": "2026-10-18T04:03:05+00:00",
+    "projects": [
+        {
+            "title": "FerriteCore",
+            "project": "uXXizFIs",
+            "release": "sOzRw3CG",
+            "release_title": "ferritecore-7.0.3-fabric",
+            "advertised_loaders": [
+                "fabric"
+            ]
+        },
+        {
+            "title": "Lithium",
+            "project": "gvQqBUqZ",
+            "release": "N08Z8wog",
+            "release_title": "Lithium 0.15.4 for Fabric",
+            "advertised_loaders": [
+                "fabric",
+                "quilt"
+            ]
+        }
+    ],
+    "operation": "3f159285-86d7-41f2-a20f-0379998c14d2",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 2,
+    "world_unchanged": true,
+    "readback_verified": true,
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 17,
+            "GET files/pull": 2,
+            "POST files/pull": 2,
+            "GET files/contents": 6,
+            "PUT files/rename": 1
+        },
+        "wings_pulls": 2,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 2,
+        "fractional_progress_observed": false,
+        "download_directories": [
+            "mods"
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-18T04:03:08+00:00"
+}

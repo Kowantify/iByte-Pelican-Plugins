@@ -1,0 +1,21 @@
+{
+    "version":  "0.1.0-preview.4",
+    "artifact":  "release/Panel Plugin/ibyte-minecraft-manager-v0.1.0-preview.4.zip",
+    "sha256":  "87cfd9de07a3ab3ab8468975dc594b64912eda571d26bfa07c34c3bf30f3258f",
+    "bytes":  67920,
+    "packaged_files":  51,
+    "php_syntax_files":  69,
+    "unit_contract_tests":  41,
+    "native_tests":  24,
+    "install_contract_tests":  18,
+    "isolated_migration_checks":  5,
+    "same_process_cached_migration_checks":  3,
+    "native_ui_install_checks":  6,
+    "native_ui_post_install_checks":  5,
+    "native_ui_cached_old_failure":  true,
+    "native_ui_worker_restart_between_failure_and_success":  false,
+    "native_ui_real_yarn_build":  true,
+    "wings_modified":  false,
+    "production_host_tested":  false,
+    "real_wings_game_startup_tested":  false
+}

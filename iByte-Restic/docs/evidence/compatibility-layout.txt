@@ -1,0 +1,14 @@
+Readable Wings bootstrap: 3944 bytes
+Bundled local files; no GitHub repository or network download is required.
+PASS: unconfigured package contains script, instructions/licenses and exactly eight local payload files
+PASS: every bundled binary, installer and manifest matches its build artifact
+Readable Wings bootstrap: 3944 bytes
+Bundled local files; no GitHub repository or network download is required.
+PASS: repeat local packaging preserves deterministic installer pins
+Readable Wings bootstrap: 4011 bytes
+GitHub download mode; release assets are fetched and verified automatically.
+PASS: configured GitHub package is small and removes only generated local payload
+Readable Wings bootstrap: 3944 bytes
+Bundled local files; no GitHub repository or network download is required.
+PASS: switching back to unpublished mode restores self-contained packaging
+PASS: mode switching refuses unexpected files without deleting them

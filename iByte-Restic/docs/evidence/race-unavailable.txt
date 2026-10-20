@@ -1,0 +1,3 @@
+go: -race requires cgo; enable cgo by setting CGO_ENABLED=1
+EXIT: 2
+No CGO C compiler or Linux runtime is installed; no race pass is claimed.

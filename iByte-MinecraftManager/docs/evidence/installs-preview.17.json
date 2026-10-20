@@ -1,0 +1,4 @@
+{
+    "passed": 53,
+    "scope": "Real native Panel DB, permissions, queue dispatch, Livewire Install\/queue actions and startup services; deterministic providers\/artifacts, in-memory node, native HTTP fake for binary transfer; no live Wings or game startup"
+}

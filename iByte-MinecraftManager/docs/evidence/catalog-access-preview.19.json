@@ -1,0 +1,4 @@
+{
+    "passed": 42,
+    "scope": "Native tenant\/image access, minimal admin mapping, real Livewire catalog actions, deterministic provider filters, review\/queue compatibility; no node execution"
+}

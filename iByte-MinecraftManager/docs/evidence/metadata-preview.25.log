@@ -1,0 +1,11 @@
+PASS size checks use four native concurrent metadata requests with shared parent listings
+PASS small delayed-HTTP size check is faster despite two extra ancestor listings
+PASS size-check progress reports completed files during directory batches
+PASS archive traversal lists sibling directories concurrently
+PASS symlink ancestors are rejected before requesting descendants
+PASS size mismatch remains a hard failure
+PASS missing final files remain a hard failure
+PASS failed metadata batch settles and prevents later requests
+PASS scan cancellation settles the current batch and stops subsequent work
+PASS directory creation runs independent siblings together after their parents
+RESULT 10 metadata checks passed.

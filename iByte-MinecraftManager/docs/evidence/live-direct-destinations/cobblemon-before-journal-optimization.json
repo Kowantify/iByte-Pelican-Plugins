@@ -1,0 +1,54 @@
+{
+    "case": "cobblemon",
+    "provider": "modrinth",
+    "project": "5FFgwNNP",
+    "release": "BpTjgzL8",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "1ff67ecd-1a8a-43b8-a950-76e6d119cf7b",
+    "started_at": "2026-10-17T19:10:14+00:00",
+    "status": "succeeded",
+    "step": "installed",
+    "error": null,
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 2471,
+    "runtime": {
+        "software": "FABRIC",
+        "version": "1.21.1",
+        "java": 21,
+        "launcher": "server.jar",
+        "loader": "fabric",
+        "build": "f262fa83-a46f-4377-9812-2b7139f0ae3b",
+        "content_type": "mod"
+    },
+    "server_jar_sha256": "809d99b16dd4d4b57384d128724ab0d6560f859aaba989dc6750d8437a447ed0",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar \"server.jar\" nogui",
+    "image": "ghcr.io/pelican-eggs/yolks:java_21",
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 32813,
+            "GET files/pull": 31,
+            "POST files/pull": 38,
+            "GET files/contents": 9890,
+            "POST files/create-directory": 112,
+            "POST files/decompress": 1,
+            "POST files/delete": 59,
+            "PUT files/rename": 4905,
+            "POST sync": 1
+        },
+        "wings_pulls": 38,
+        "panel_uploads": 0,
+        "wings_extractions": 1,
+        "progress_samples": 31,
+        "fractional_progress_observed": true,
+        "download_directories": [
+            ".",
+            "mods",
+            "resourcepacks",
+            "shaderpacks"
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-17T19:24:40+00:00"
+}

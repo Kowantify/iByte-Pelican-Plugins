@@ -1,0 +1,18 @@
+{
+    "os": "13.7",
+    "php": "8.4.26",
+    "wings": "wings v1.0.0-rc.1\nCopyright \u00a9 2018 - 2026 Dane Everitt & Contributors",
+    "wings_sha256": "19dda386e02041da1f1fbcc73f34e4bb01c1fbc2d499aac79a6be3a51ba7f0e8",
+    "docker": "26.1.5+dfsg1",
+    "images": {
+        "java_17": [
+            "ghcr.io/pelican-eggs/yolks@sha256:142977d12a8c8097ae87e8eb25eb9606c84a39a608da5dba88dad4a9abd72c09"
+        ],
+        "java_21": [
+            "ghcr.io/pelican-eggs/yolks@sha256:655c18d175ba5d31cd1bb91f20084c2e22d007af5305f42e14cccbfa778b57c1"
+        ],
+        "java_25": [
+            "ghcr.io/pelican-eggs/yolks@sha256:04789d6917a837e6046610718690f88c1fb2836d3ee1705a9928998213e44d39"
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "case": "paper1214",
+    "provider": "modrinth",
+    "type": "plugin",
+    "minecraft": "1.21.4",
+    "loader": "paper",
+    "started_at": "2026-10-17T21:50:35+00:00",
+    "projects": [
+        {
+            "title": "LuckPerms",
+            "project": "Vebnzrzj",
+            "release": "b0mk8uS6",
+            "advertised_loaders": [
+                "bukkit",
+                "folia",
+                "paper",
+                "spigot"
+            ]
+        },
+        {
+            "title": "WorldEdit",
+            "project": "1u6JkXh5",
+            "release": "YFnqiUlL",
+            "advertised_loaders": [
+                "bukkit",
+                "folia",
+                "paper",
+                "spigot"
+            ]
+        }
+    ],
+    "operation": "1d1f02a9-2d1c-4172-bc86-5bdf4d24216f",
+    "status": "succeeded",
+    "error": null,
+    "failure": null,
+    "files": 2,
+    "world_unchanged": true,
+    "readback_verified": true,
+    "transfer": {
+        "requests": {
+            "GET files/list-directory": 8,
+            "GET files/contents": 19,
+            "GET files/pull": 4,
+            "POST files/pull": 2,
+            "PUT files/rename": 2,
+            "POST files/delete": 1
+        },
+        "wings_pulls": 2,
+        "panel_uploads": 0,
+        "wings_extractions": 0,
+        "progress_samples": 4,
+        "fractional_progress_observed": true,
+        "download_directories": [
+            "plugins"
+        ],
+        "recovery_uploads": 0
+    },
+    "finished_at": "2026-10-17T21:50:39+00:00"
+}

@@ -1,0 +1,40 @@
+{
+    "case": "cobblemon",
+    "provider": "modrinth",
+    "project": "5FFgwNNP",
+    "release": "BpTjgzL8",
+    "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+    "operation": "aea36747-327e-4551-8e36-638d56c108f8",
+    "started_at": "2026-10-17T17:43:03+00:00",
+    "status": "failed",
+    "step": "restored-or-unchanged",
+    "error": "unsafe_path",
+    "failure": null,
+    "skipped": [],
+    "source_resolutions": [],
+    "files": 0,
+    "runtime": {
+        "software": "UNKNOWN",
+        "content_type": "none",
+        "loader": "",
+        "version": "unknown"
+    },
+    "transfer": {
+        "requests": {
+            "GET files/pull": 24,
+            "GET files/list-directory": 783,
+            "POST files/create-directory": 57,
+            "POST files/pull": 38,
+            "GET files/contents": 363,
+            "PUT files/rename": 362,
+            "POST files/decompress": 1,
+            "POST files/delete": 2
+        },
+        "wings_pulls": 38,
+        "panel_uploads": 0,
+        "wings_extractions": 1,
+        "progress_samples": 24,
+        "fractional_progress_observed": true
+    },
+    "finished_at": "2026-10-17T17:43:19+00:00"
+}

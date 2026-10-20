@@ -1,0 +1,1034 @@
+{
+    "scope": "Native Panel and official Wings RC.1 on isolated Debian 13, real Docker Java runtime, provider downloads and node readback. CLI invokes the production queued handler; automatic scheduler and UI are tested separately.",
+    "cases": {
+        "cobblemon": {
+            "installation": {
+                "case": "cobblemon",
+                "provider": "modrinth",
+                "project": "5FFgwNNP",
+                "release": "BpTjgzL8",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "d4aff424-7e9b-486e-923b-6e12ea133d38",
+                "started_at": "2026-10-18T04:05:52+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 2471,
+                "runtime": {
+                    "software": "FABRIC",
+                    "version": "1.21.1",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "fabric",
+                    "build": "f262fa83-a46f-4377-9812-2b7139f0ae3b",
+                    "build_version": "0.19.5",
+                    "environment": {
+                        "BUILDS": "0.19.5",
+                        "SERVER_JARFILE": "server.jar",
+                        "SERVER_TYPE": "fabric",
+                        "VERSION": "1.21.1"
+                    },
+                    "source": "installed",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "809d99b16dd4d4b57384d128724ab0d6560f859aaba989dc6750d8437a447ed0",
+                "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "runtime_variables_match": true,
+                "runtime_environment": {
+                    "BUILDS": "0.19.5",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "fabric",
+                    "VERSION": "1.21.1"
+                },
+                "custom_variables_preserved": true,
+                "startup_preserved": true,
+                "previous_runtime_environment": {
+                    "BUILDS": "21.1.244",
+                    "SERVER_JARFILE": "old.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 529,
+                        "GET files/pull": 35,
+                        "POST files/pull": 38,
+                        "GET files/contents": 4948,
+                        "POST files/create-directory": 57,
+                        "POST files/decompress": 1,
+                        "PUT files/rename": 50,
+                        "POST files/delete": 57,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 38,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 35,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        ".",
+                        "mods",
+                        "resourcepacks",
+                        "shaderpacks"
+                    ],
+                    "recovery_uploads": 0,
+                    "direct_pull_seconds": 8.806
+                },
+                "finished_at": "2026-10-18T04:06:32+00:00"
+            },
+            "startup": {
+                "case": "cobblemon",
+                "started_at": "2026-10-18T04:06:33+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "0.19.5",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "fabric",
+                    "VERSION": "1.21.1"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:07:03+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:07:07+00:00"
+            }
+        },
+        "fabric1211": {
+            "installation": {
+                "case": "fabric1211",
+                "provider": "mcjars",
+                "project": "FABRIC",
+                "release": "1.21.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "352bc0b2-d14a-4ecd-adc2-cd282ffc72a0",
+                "started_at": "2026-10-18T04:02:39+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 1,
+                "runtime": {
+                    "software": "FABRIC",
+                    "version": "1.21.1",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "fabric",
+                    "build": "1595450e-3136-40ab-8f17-23b7811e4e99",
+                    "build_version": "0.20.0",
+                    "environment": {
+                        "BUILDS": "0.20.0",
+                        "SERVER_JARFILE": "server.jar",
+                        "SERVER_TYPE": "fabric",
+                        "VERSION": "1.21.1"
+                    },
+                    "source": "installed",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "426abc85c12b3e6d304b95c50fb2958efc6bb84c6731950a4f97c6ffd3f44592",
+                "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "runtime_variables_match": true,
+                "runtime_environment": {
+                    "BUILDS": "0.20.0",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "fabric",
+                    "VERSION": "1.21.1"
+                },
+                "custom_variables_preserved": true,
+                "startup_preserved": true,
+                "previous_runtime_environment": {
+                    "BUILDS": "21.1.244",
+                    "SERVER_JARFILE": "old.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 8,
+                        "GET files/pull": 2,
+                        "POST files/pull": 1,
+                        "GET files/contents": 3,
+                        "PUT files/rename": 1,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 2,
+                    "fractional_progress_observed": false,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T04:02:40+00:00"
+            },
+            "startup": {
+                "case": "fabric1211",
+                "started_at": "2026-10-18T04:03:08+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "0.20.0",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "fabric",
+                    "VERSION": "1.21.1"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:03:18+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:03:20+00:00"
+            },
+            "packages": {
+                "case": "fabric1211",
+                "provider": "modrinth",
+                "type": "mod",
+                "minecraft": "1.21.1",
+                "loader": "fabric",
+                "started_at": "2026-10-18T04:03:05+00:00",
+                "projects": [
+                    {
+                        "title": "FerriteCore",
+                        "project": "uXXizFIs",
+                        "release": "sOzRw3CG",
+                        "release_title": "ferritecore-7.0.3-fabric",
+                        "advertised_loaders": [
+                            "fabric"
+                        ]
+                    },
+                    {
+                        "title": "Lithium",
+                        "project": "gvQqBUqZ",
+                        "release": "N08Z8wog",
+                        "release_title": "Lithium 0.15.4 for Fabric",
+                        "advertised_loaders": [
+                            "fabric",
+                            "quilt"
+                        ]
+                    }
+                ],
+                "operation": "3f159285-86d7-41f2-a20f-0379998c14d2",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 2,
+                "world_unchanged": true,
+                "readback_verified": true,
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 17,
+                        "GET files/pull": 2,
+                        "POST files/pull": 2,
+                        "GET files/contents": 6,
+                        "PUT files/rename": 1
+                    },
+                    "wings_pulls": 2,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 2,
+                    "fractional_progress_observed": false,
+                    "download_directories": [
+                        "mods"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T04:03:08+00:00"
+            },
+            "packages-startup": {
+                "case": "fabric1211",
+                "started_at": "2026-10-18T04:03:08+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "0.20.0",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "fabric",
+                    "VERSION": "1.21.1"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:03:18+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:03:20+00:00"
+            }
+        },
+        "paper1214": {
+            "installation": {
+                "case": "paper1214",
+                "provider": "mcjars",
+                "project": "PAPER",
+                "release": "1.21.4",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "5b70f5a0-475b-403e-9b9e-a11b62003dbe",
+                "started_at": "2026-10-18T04:04:35+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 1,
+                "runtime": {
+                    "software": "PAPER",
+                    "version": "1.21.4",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "paper",
+                    "build": "e60f6fa0-ae4d-480b-b4dd-56af5afd48bf",
+                    "build_version": "232",
+                    "environment": {
+                        "BUILDS": "232",
+                        "SERVER_JARFILE": "server.jar",
+                        "SERVER_TYPE": "paper",
+                        "VERSION": "1.21.4"
+                    },
+                    "source": "installed",
+                    "content_type": "plugin"
+                },
+                "server_jar_sha256": "5ee4f542f628a14c644410b08c94ea42e772ef4d29fe92973636b6813d4eaffc",
+                "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "runtime_variables_match": true,
+                "runtime_environment": {
+                    "BUILDS": "232",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "paper",
+                    "VERSION": "1.21.4"
+                },
+                "custom_variables_preserved": true,
+                "startup_preserved": true,
+                "previous_runtime_environment": {
+                    "BUILDS": "21.1.244",
+                    "SERVER_JARFILE": "old.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 8,
+                        "GET files/pull": 4,
+                        "POST files/pull": 1,
+                        "GET files/contents": 3,
+                        "PUT files/rename": 1,
+                        "POST sync": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 4,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T04:04:37+00:00"
+            },
+            "startup": {
+                "case": "paper1214",
+                "started_at": "2026-10-18T04:05:03+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "Paper 1.21.4",
+                        "protocol": 769
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "232",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "paper",
+                    "VERSION": "1.21.4"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:05:23+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:05:26+00:00"
+            },
+            "packages": {
+                "case": "paper1214",
+                "provider": "modrinth",
+                "type": "plugin",
+                "minecraft": "1.21.4",
+                "loader": "paper",
+                "started_at": "2026-10-18T04:05:00+00:00",
+                "projects": [
+                    {
+                        "title": "LuckPerms",
+                        "project": "Vebnzrzj",
+                        "release": "b0mk8uS6",
+                        "release_title": "v5.5.71 (Bukkit)",
+                        "advertised_loaders": [
+                            "bukkit",
+                            "folia",
+                            "paper",
+                            "spigot"
+                        ]
+                    },
+                    {
+                        "title": "WorldEdit",
+                        "project": "1u6JkXh5",
+                        "release": "4jRlujfz",
+                        "release_title": "WorldEdit 7.3.10 (Bukkit for 1.21.3/1.21.4)",
+                        "advertised_loaders": [
+                            "bukkit",
+                            "paper",
+                            "spigot"
+                        ]
+                    }
+                ],
+                "operation": "6a3393ea-3c2c-42b0-aee3-3ace83286d75",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 2,
+                "world_unchanged": true,
+                "readback_verified": true,
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 17,
+                        "GET files/pull": 3,
+                        "POST files/pull": 2,
+                        "GET files/contents": 6,
+                        "PUT files/rename": 1
+                    },
+                    "wings_pulls": 2,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 3,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "plugins"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T04:05:03+00:00"
+            },
+            "packages-startup": {
+                "case": "paper1214",
+                "started_at": "2026-10-18T04:05:03+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "Paper 1.21.4",
+                        "protocol": 769
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "232",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "paper",
+                    "VERSION": "1.21.4"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:05:23+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:05:26+00:00"
+            }
+        },
+        "forge1201": {
+            "installation": {
+                "case": "forge1201",
+                "provider": "mcjars",
+                "project": "FORGE",
+                "release": "1.20.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "5daf9a27-102d-4b76-aee4-071aeaefc9ca",
+                "started_at": "2026-10-18T04:03:23+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 104,
+                "runtime": {
+                    "software": "FORGE",
+                    "version": "1.20.1",
+                    "java": 17,
+                    "launcher": "server.jar",
+                    "loader": "forge",
+                    "build": "b13be397-1c09-42c1-adcc-06c35585ea9d",
+                    "build_version": "47.4.28",
+                    "environment": {
+                        "BUILDS": "47.4.28",
+                        "SERVER_JARFILE": "server.jar",
+                        "SERVER_TYPE": "forge",
+                        "VERSION": "1.20.1"
+                    },
+                    "source": "installed",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "e91769a80dfdb367bba8bfc86dca6f978817b539929c0c552666fae906bf3251",
+                "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_17",
+                "runtime_variables_match": true,
+                "runtime_environment": {
+                    "BUILDS": "47.4.28",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "forge",
+                    "VERSION": "1.20.1"
+                },
+                "custom_variables_preserved": true,
+                "startup_preserved": true,
+                "previous_runtime_environment": {
+                    "BUILDS": "21.1.244",
+                    "SERVER_JARFILE": "old.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 7,
+                        "GET files/pull": 6,
+                        "POST files/pull": 1,
+                        "GET files/contents": 107,
+                        "POST files/decompress": 1,
+                        "POST sync": 1,
+                        "POST files/delete": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 6,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T04:03:28+00:00"
+            },
+            "startup": {
+                "case": "forge1201",
+                "started_at": "2026-10-18T04:04:14+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "47.4.28",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "forge",
+                    "VERSION": "1.20.1"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:04:30+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:04:32+00:00"
+            },
+            "packages": {
+                "case": "forge1201",
+                "provider": "modrinth",
+                "type": "mod",
+                "minecraft": "1.20.1",
+                "loader": "forge",
+                "started_at": "2026-10-18T04:04:12+00:00",
+                "projects": [
+                    {
+                        "title": "FerriteCore",
+                        "project": "uXXizFIs",
+                        "release": "DG5Fn9Sz",
+                        "release_title": "6.0.1 (Forge)",
+                        "advertised_loaders": [
+                            "forge",
+                            "neoforge"
+                        ]
+                    },
+                    {
+                        "title": "ModernFix",
+                        "project": "nmDcB62a",
+                        "release": "bDP3S7Vh",
+                        "release_title": "modernfix-forge-5.27.88+mc1.20.1.jar",
+                        "advertised_loaders": [
+                            "forge"
+                        ]
+                    }
+                ],
+                "operation": "d37995e2-381f-4432-85cb-90651c947817",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 2,
+                "world_unchanged": true,
+                "readback_verified": true,
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 17,
+                        "GET files/pull": 2,
+                        "POST files/pull": 2,
+                        "GET files/contents": 6,
+                        "PUT files/rename": 1
+                    },
+                    "wings_pulls": 2,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 2,
+                    "fractional_progress_observed": false,
+                    "download_directories": [
+                        "mods"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T04:04:14+00:00"
+            },
+            "packages-startup": {
+                "case": "forge1201",
+                "started_at": "2026-10-18T04:04:14+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.20.1",
+                        "protocol": 763
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "47.4.28",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "forge",
+                    "VERSION": "1.20.1"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:04:30+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:04:32+00:00"
+            }
+        },
+        "neoforge1211": {
+            "installation": {
+                "case": "neoforge1211",
+                "provider": "mcjars",
+                "project": "NEOFORGE",
+                "release": "1.21.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "b913479b-f892-458b-94fa-30276258dcfc",
+                "started_at": "2026-10-18T03:57:22+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 102,
+                "runtime": {
+                    "software": "NEOFORGE",
+                    "version": "1.21.1",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "neoforge",
+                    "build": "31f56a9f-c090-48dc-a4a3-b3ad74621b91",
+                    "build_version": "21.1.262",
+                    "environment": {
+                        "BUILDS": "21.1.262",
+                        "SERVER_JARFILE": "server.jar",
+                        "SERVER_TYPE": "neoforge",
+                        "VERSION": "1.21.1"
+                    },
+                    "source": "installed",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "ca5611220cbf3fd182c1a09664c987b7495509894814dcc67b34c79bab777184",
+                "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "runtime_variables_match": true,
+                "runtime_environment": {
+                    "BUILDS": "21.1.262",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "custom_variables_preserved": true,
+                "startup_preserved": true,
+                "previous_runtime_environment": {
+                    "BUILDS": "21.1.244",
+                    "SERVER_JARFILE": "old.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 564,
+                        "GET files/contents": 820,
+                        "GET files/pull": 5,
+                        "POST files/pull": 1,
+                        "POST files/create-directory": 234,
+                        "POST files/decompress": 1,
+                        "PUT files/rename": 204,
+                        "POST sync": 1,
+                        "POST files/delete": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 5,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T03:59:05+00:00"
+            }
+        },
+        "neoforge1211fast": {
+            "installation": {
+                "case": "neoforge1211fast",
+                "provider": "mcjars",
+                "project": "NEOFORGE",
+                "release": "1.21.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "bdc97649-b82a-4377-89b8-1f2074400468",
+                "started_at": "2026-10-18T04:00:40+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 102,
+                "runtime": {
+                    "software": "NEOFORGE",
+                    "version": "1.21.1",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "neoforge",
+                    "build": "31f56a9f-c090-48dc-a4a3-b3ad74621b91",
+                    "build_version": "21.1.262",
+                    "environment": {
+                        "BUILDS": "21.1.262",
+                        "SERVER_JARFILE": "server.jar",
+                        "SERVER_TYPE": "neoforge",
+                        "VERSION": "1.21.1"
+                    },
+                    "source": "installed",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "ca5611220cbf3fd182c1a09664c987b7495509894814dcc67b34c79bab777184",
+                "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "runtime_variables_match": true,
+                "runtime_environment": {
+                    "BUILDS": "21.1.262",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "custom_variables_preserved": true,
+                "startup_preserved": true,
+                "previous_runtime_environment": {
+                    "BUILDS": "21.1.244",
+                    "SERVER_JARFILE": "old.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 7,
+                        "GET files/pull": 5,
+                        "POST files/pull": 1,
+                        "GET files/contents": 105,
+                        "POST files/decompress": 1,
+                        "POST sync": 1,
+                        "POST files/delete": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 5,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T04:00:51+00:00"
+            },
+            "startup": {
+                "case": "neoforge1211fast",
+                "started_at": "2026-10-18T04:02:26+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "21.1.262",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:02:36+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:02:38+00:00"
+            },
+            "packages": {
+                "case": "neoforge1211fast",
+                "provider": "modrinth",
+                "type": "mod",
+                "minecraft": "1.21.1",
+                "loader": "neoforge",
+                "started_at": "2026-10-18T04:02:23+00:00",
+                "projects": [
+                    {
+                        "title": "FerriteCore",
+                        "project": "uXXizFIs",
+                        "release": "x7kQWVju",
+                        "release_title": "ferritecore-7.0.3-neoforge",
+                        "advertised_loaders": [
+                            "neoforge"
+                        ]
+                    },
+                    {
+                        "title": "ModernFix",
+                        "project": "nmDcB62a",
+                        "release": "7Jy58lnT",
+                        "release_title": "modernfix-neoforge-5.27.26+mc1.21.1.jar",
+                        "advertised_loaders": [
+                            "neoforge"
+                        ]
+                    }
+                ],
+                "operation": "9077a365-59e4-484f-ba6a-7cb0e7023966",
+                "status": "succeeded",
+                "error": null,
+                "failure": null,
+                "files": 2,
+                "world_unchanged": true,
+                "readback_verified": true,
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 17,
+                        "GET files/pull": 2,
+                        "POST files/pull": 2,
+                        "GET files/contents": 6,
+                        "PUT files/rename": 1
+                    },
+                    "wings_pulls": 2,
+                    "panel_uploads": 0,
+                    "wings_extractions": 0,
+                    "progress_samples": 2,
+                    "fractional_progress_observed": false,
+                    "download_directories": [
+                        "mods"
+                    ],
+                    "recovery_uploads": 0
+                },
+                "finished_at": "2026-10-18T04:02:25+00:00"
+            },
+            "packages-startup": {
+                "case": "neoforge1211fast",
+                "started_at": "2026-10-18T04:02:26+00:00",
+                "scope": "Actual Wings power, Docker game runtime, Done log and Minecraft TCP status protocol",
+                "game_status": {
+                    "version": {
+                        "name": "1.21.1",
+                        "protocol": 767
+                    },
+                    "players": {
+                        "max": 2,
+                        "online": 0
+                    }
+                },
+                "expected_protocol_verified": true,
+                "fresh_done_log": true,
+                "runtime_variables_in_container_verified": true,
+                "container_runtime_environment": {
+                    "BUILDS": "21.1.262",
+                    "JVM_ARGS": "-Dimm.fixture=true",
+                    "MAXIMUM_MEMORY": "85",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "ready": true,
+                "ready_at": "2026-10-18T04:02:36+00:00",
+                "world_created": true,
+                "stopped": true,
+                "finished_at": "2026-10-18T04:02:38+00:00"
+            }
+        },
+        "neoforge1211direct": {
+            "installation": {
+                "case": "neoforge1211direct",
+                "provider": "mcjars",
+                "project": "NEOFORGE",
+                "release": "1.21.1",
+                "node": "Official unmodified Wings v1.0.0-rc.1, private Docker daemon, Linux",
+                "operation": "add78386-d6d4-4abd-ae6e-7901cd7b1257",
+                "started_at": "2026-10-18T04:05:46+00:00",
+                "status": "succeeded",
+                "step": "installed",
+                "error": null,
+                "failure": null,
+                "skipped": [],
+                "source_resolutions": [],
+                "files": 102,
+                "runtime": {
+                    "software": "NEOFORGE",
+                    "version": "1.21.1",
+                    "java": 21,
+                    "launcher": "server.jar",
+                    "loader": "neoforge",
+                    "build": "31f56a9f-c090-48dc-a4a3-b3ad74621b91",
+                    "build_version": "21.1.262",
+                    "environment": {
+                        "BUILDS": "21.1.262",
+                        "SERVER_JARFILE": "server.jar",
+                        "SERVER_TYPE": "neoforge",
+                        "VERSION": "1.21.1"
+                    },
+                    "source": "installed",
+                    "content_type": "mod"
+                },
+                "server_jar_sha256": "ca5611220cbf3fd182c1a09664c987b7495509894814dcc67b34c79bab777184",
+                "startup": "java -Xms128M -Xmx$(({{SERVER_MEMORY}}*{{MAXIMUM_MEMORY}}/100))M {{JVM_ARGS}} -jar {{SERVER_JARFILE}} nogui",
+                "image": "ghcr.io/pelican-eggs/yolks:java_21",
+                "runtime_variables_match": true,
+                "runtime_environment": {
+                    "BUILDS": "21.1.262",
+                    "SERVER_JARFILE": "server.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "custom_variables_preserved": true,
+                "startup_preserved": true,
+                "previous_runtime_environment": {
+                    "BUILDS": "21.1.244",
+                    "SERVER_JARFILE": "old.jar",
+                    "SERVER_TYPE": "neoforge",
+                    "VERSION": "1.21.1"
+                },
+                "transfer": {
+                    "requests": {
+                        "GET files/list-directory": 7,
+                        "GET files/pull": 6,
+                        "POST files/pull": 1,
+                        "GET files/contents": 105,
+                        "POST files/decompress": 1,
+                        "POST sync": 1,
+                        "POST files/delete": 1
+                    },
+                    "wings_pulls": 1,
+                    "panel_uploads": 0,
+                    "wings_extractions": 1,
+                    "progress_samples": 6,
+                    "fractional_progress_observed": true,
+                    "download_directories": [
+                        "."
+                    ],
+                    "recovery_uploads": 0,
+                    "direct_pull_seconds": 1.31
+                },
+                "finished_at": "2026-10-18T04:05:51+00:00"
+            }
+        }
+    },
+    "startup_report_scope": "startup is the latest recorded boot on each server, including subsequent mod or pack installs. packages-startup and queued-pack-startup retain their phase-specific probes. case logs retain initial runtime command output where available.",
+    "recorded_at": "2026-10-18T04:07:14+00:00"
+}

@@ -1,0 +1,52 @@
+<?php
+
+use App\Models\Backup;
+use App\Models\BackupHost;
+use App\Models\Server;
+use IByte\Restic\Recovery\FinalBackupPreparation;
+use Illuminate\Http\Client\Factory;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\RateLimiter;
+
+$finalServer = Server::factory()->withNode()->create(['backup_limit' => 3]);
+$finalHost = BackupHost::create(['name' => 'Final backup fixture', 'schema' => 'restic', 'configuration' => ['backend' => 'local', 'profile' => 'default', 'staging_enabled' => true, 'restore_fixture_enabled' => false]]);
+$finalHost->nodes()->attach($finalServer->node_id);
+config(['queue.default' => 'database', 'backups.throttles.period' => 0]);
+Http::swap(new Factory);
+Http::preventStrayRequests();
+Http::fake(fn ($request) => Http::response(str_ends_with($request->url(), '/recovery') ? fixtureRecovery($request->data()) : ['ready' => true, 'version' => '3.0.0-preview.2', 'protocol' => 1, 'profiles' => ['default' => 'local']], 200, ['User-Agent' => 'Pelican Wings/v1.0.0-rc.1+ibyte.3.0.0-preview.2 (id:'.$finalServer->node->daemon_token_id.')']));
+RateLimiter::clear('ibyte-restic:recovery-confirm:'.$formAdmin->id);
+rejected(fn () => FinalBackupPreparation::ready($formAdmin, $finalServer, 'incorrect', $finalServer->uuid, 'delete'), 'wrong password cannot prepare a final backup');
+check($finalServer->backups()->count() === 0, 'failed final authorization leaves backups and server unchanged');
+check(FinalBackupPreparation::ready($formAdmin, $finalServer, 'repository-fixture', $finalServer->uuid, 'delete') === false, 'first lifecycle confirmation starts native backup and preserves server');
+$finalBackup = $finalServer->backups()->sole();
+check($finalBackup->is_locked && ! $finalBackup->completed_at && $finalBackup->ignored_files === [], 'fresh final backup is locked, pending and includes all server files');
+check(FinalBackupPreparation::ready($formAdmin, $finalServer, 'repository-fixture', $finalServer->uuid, 'delete') === false && $finalServer->backups()->count() === 1, 'pending repeated confirmation does not create duplicate final backups');
+$finalIntent = DB::table('ibyte_restic_operations')->where('server_uuid', $finalServer->uuid)->where('operation', 'final-backup')->sole();
+check(! str_contains($finalIntent->payload, 'repository-fixture') && Server::whereKey($finalServer->id)->exists(), 'final preparation persists no password or deferred destructive callback');
+RateLimiter::clear('ibyte-restic:recovery-confirm:'.$formAdmin->id);
+rejected(fn () => FinalBackupPreparation::ready($formAdmin, $finalServer, 'repository-fixture', $finalServer->uuid, 'transfer', 999), 'delete preparation cannot authorize transfer or another destination');
+DB::table('ibyte_restic_operations')->where('request_uuid', $finalBackup->uuid)->update(['status' => 'unknown']);
+rejected(fn () => FinalBackupPreparation::ready($formAdmin, $finalServer, 'repository-fixture', $finalServer->uuid, 'delete'), 'unverified final completion cannot authorize destruction');
+DB::table('ibyte_restic_operations')->where('request_uuid', $finalBackup->uuid)->update(['status' => 'failed']);
+$finalBackup->update(['completed_at' => now(), 'is_successful' => false]);
+rejected(fn () => FinalBackupPreparation::ready($formAdmin, $finalServer, 'repository-fixture', $finalServer->uuid, 'delete'), 'failed final backup leaves source server in place');
+check(Server::whereKey($finalServer->id)->exists() && DB::table('ibyte_restic_operations')->where('request_uuid', $finalIntent->request_uuid)->value('status') === 'failed', 'failed preparation is terminal and server remains recoverable');
+// Model the verified completion boundary; node response identity tests are separate.
+DB::table('ibyte_restic_operations')->where('request_uuid', $finalIntent->request_uuid)->update(['status' => 'prepared']);
+DB::table('ibyte_restic_operations')->where('request_uuid', $finalBackup->uuid)->update(['status' => 'succeeded']);
+$finalBackup->update(['completed_at' => now(), 'is_successful' => true]);
+RateLimiter::clear('ibyte-restic:recovery-confirm:'.$formAdmin->id);
+check(FinalBackupPreparation::ready($formAdmin, $finalServer, 'repository-fixture', $finalServer->uuid, 'delete') === true, 'verified recent final backup permits second confirmation to enter snapshot-proof phase');
+$finalBackup->update(['completed_at' => now()->subMinutes(16)]);
+rejected(fn () => FinalBackupPreparation::ready($formAdmin, $finalServer, 'repository-fixture', $finalServer->uuid, 'delete'), 'expired final backup cannot authorize deletion');
+FinalBackupPreparation::cancel($formAdmin, $finalServer, 'repository-fixture');
+check($finalBackup->fresh()->is_locked && Server::whereKey($finalServer->id)->exists() && DB::table('ibyte_restic_operations')->where('request_uuid', $finalIntent->request_uuid)->value('status') === 'dismissed', 'clearing obsolete preparation preserves snapshot locks and server');
+Http::assertNotSent(fn ($request) => str_ends_with($request->url(), '/transfer') || $request->method() === 'DELETE');
+check(true, 'preparation and all refusal paths issue no destructive daemon requests');
+$fullFinalServer = Server::factory()->create(['node_id' => $finalServer->node_id, 'backup_limit' => 1]);
+$fullFinalBackup = Backup::factory()->create(['server_id' => $fullFinalServer->id, 'backup_host_id' => $finalHost->id, 'is_successful' => true, 'is_locked' => false, 'completed_at' => now()]);
+RateLimiter::clear('ibyte-restic:recovery-confirm:'.$formAdmin->id);
+rejected(fn () => FinalBackupPreparation::ready($formAdmin, $fullFinalServer, 'repository-fixture', $fullFinalServer->uuid, 'delete'), 'full quota requires a free final slot instead of evicting the existing recovery point');
+check($fullFinalBackup->fresh()->is_successful && $fullFinalServer->backups()->count() === 1 && Server::whereKey($fullFinalServer->id)->exists(), 'full-quota final preparation preserves existing backup and server');

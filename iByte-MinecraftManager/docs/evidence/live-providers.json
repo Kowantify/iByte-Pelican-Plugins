@@ -1,0 +1,21 @@
+{
+    "date": "2026-10-16",
+    "tests": {
+        "Modrinth v2 search": {
+            "status": "pass",
+            "detail": "public search schema observed; one project"
+        },
+        "MCJars full type discovery": {
+            "status": "pass",
+            "detail": "28 types observed; zero installation claims"
+        },
+        "MCJars v3 versions and exact build": {
+            "status": "pass",
+            "detail": "version 26.4-snapshot-4; exact build identity and recipe metadata observed"
+        },
+        "CurseForge authorized categories and search": {
+            "status": "pass",
+            "detail": "authorized metadata only; class IDs 5/6/4471 confirmed; one project"
+        }
+    }
+}

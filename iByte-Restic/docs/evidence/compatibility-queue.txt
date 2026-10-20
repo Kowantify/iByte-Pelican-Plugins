@@ -1,0 +1,12 @@
+PASS: native plugin boot, real after-commit job dispatch and SQLite persistence in producer process
+PASS: unloaded job class resolves during native unserialize from installed plugin in a fresh consumer
+PASS: real queue deserializes installed retention worker after successful backup
+PASS: real queue handler reconciles mocked node result, persists native completion and removes its job
+PASS: replay of the original serialized payload is idempotent with one completion event
+PASS: delayed prune runs through real queue after the last native backup row is deleted
+PASS: fresh native CLI auto-registers additive repair command without manual provider or command registration
+PASS: fresh native CLI auto-registers read-only runtime diagnostics with matching safety bindings
+PASS: native schedule processor does not run a future backup schedule early
+PASS: real due-time selection queues the native backup task with its delay
+PASS: delayed native task creates and completes one scheduled Restic backup through the real queue without duplicate dispatch (node responses mocked)
+Fresh-process native plugin loader + serialized database queue roundtrip passed.

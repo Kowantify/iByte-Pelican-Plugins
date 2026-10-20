@@ -1,0 +1,8 @@
+{
+    "passed": 11,
+    "native_pulls": 6,
+    "panel_reads": [
+        ".download-03a9482a-3f31-48ba-b93c-6b7273c235ba-2.part/modrinth.index.json"
+    ],
+    "scope": "Small deterministic native Panel/Livewire/HTTP-contract smoke only; no real Wings, provider throughput, concurrency benchmark, browser or game boot"
+}

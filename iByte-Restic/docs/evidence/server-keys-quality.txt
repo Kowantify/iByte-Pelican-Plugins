@@ -1,0 +1,7 @@
+PASS: PHP syntax, 54 files
+PASS: PHP style
+PASS: isolated Go formatting
+PASS: Bash syntax, 13 files
+PASS: source gitleaks scan, no leaks
+PASS: both Linux daemon/helper architectures rebuilt; protected-route tests cross-compiled only
+Upstream tracked diff: router/router.go 3 added lines including whitespace; go.mod/go.sum separate dependency patch

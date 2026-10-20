@@ -1,0 +1,9 @@
+{
+    "passed": 15,
+    "live_provider": false,
+    "provider": "modrinth",
+    "project": "protocolmod",
+    "release": "protocol-v1",
+    "sha256": "c08b5e6b82d0f0dbcf83aad1e1d4ac4cfbd9644aaed537618391eaba32eb570a",
+    "scope": "Actual queue worker and native NodeFiles\/DaemonFileRepository; raw Wings-shaped HTTP responses; no live Wings\/game startup"
+}

@@ -1,0 +1,9 @@
+PASS: native plugin boot, real after-commit job dispatch and SQLite persistence in producer process
+PASS: unloaded job class resolves during native unserialize from installed plugin in a fresh consumer
+PASS: real queue deserializes installed retention worker after successful backup
+PASS: real queue handler reconciles mocked node result, persists native completion and removes its job
+PASS: replay of the original serialized payload is idempotent with one completion event
+PASS: delayed prune runs through real queue after the last native backup row is deleted
+PASS: fresh native CLI auto-registers additive repair command without manual provider or command registration
+PASS: fresh native CLI auto-registers read-only runtime diagnostics with matching safety bindings
+Fresh-process native plugin loader + serialized database queue roundtrip passed.

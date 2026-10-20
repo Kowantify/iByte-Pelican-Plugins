@@ -1,0 +1,476 @@
+{
+    "version": "0.1.0-preview.17",
+    "scope": "Real provider catalog/release/exact metadata, production row rendering with real Livewire and optional checksum-verified artifacts; no live Wings or game startup",
+    "cases": [
+        {
+            "provider": "curseforge",
+            "project": "394468",
+            "title": "Sodium",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "8888038",
+                    "title": "Sodium 0.9.2 for NeoForge 26.3",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "8756581",
+                    "title": "Sodium 0.8.13 for Fabric 1.21.1",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "360438",
+            "title": "Lithium (Fabric/NeoForge)",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "8996663",
+                    "title": "Lithium mc26.3.x-0.26.2 for Neoforge",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "8330364",
+                    "title": "Lithium mc1.21.1-0.15.4 for Fabric",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "429235",
+            "title": "FerriteCore ((Neo)Forge)",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "7806039",
+                    "title": "ferritecore-9.0.0-neoforge",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "4810975",
+                    "title": "ferritecore-6.0.1-forge.jar",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "790626",
+            "title": "ModernFix",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "7200210",
+                    "title": "modernfix-fabric-5.25.1+mc1.21.1.jar",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "9124107",
+                    "title": "modernfix-forge-5.27.88+mc1.20.1.jar",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "306612",
+            "title": "Fabric API",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "8786256",
+                    "title": "[1.21.1] Fabric API 0.116.17+1.21.1",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "348521",
+            "title": "Cloth Config API (Fabric/Forge/NeoForge)",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "5729125",
+                    "title": "[Fabric 1.21] v15.0.140",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "5729105",
+                    "title": "[Forge 1.20(.1)] v11.1.136",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "419699",
+            "title": "Architectury API",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "9111315",
+                    "title": "[NeoForge 26.3] v22.0.5",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "8492725",
+                    "title": "[Fabric 1.21] v13.0.11",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "5137938",
+                    "title": "[Forge 1.20(.1)] v9.2.14",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "248787",
+            "title": "AppleSkin",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "8907904",
+                    "title": "appleskin-neoforge-mc26.3-3.0.10.jar",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "4770828",
+                    "title": "appleskin-forge-mc1.20.1-2.5.1.jar",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "361579",
+            "title": "spark",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "8918574",
+                    "title": "1.10.187 (NeoForge 26.x)",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "4738952",
+                    "title": "1.10.53 (Forge 1.20.1)",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "263420",
+            "title": "Xaero's Minimap",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "9067208",
+                    "title": "xaerominimap-neoforge-26.3-26.6.0.jar",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "9067178",
+                    "title": "xaerominimap-fabric-1.21.1-26.6.0.jar",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "9067172",
+                    "title": "xaerominimap-forge-1.20.1-26.6.0.jar",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "32274",
+            "title": "JourneyMap",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "9049822",
+                    "title": "journeymap-26.3-6.0.10+neoforge",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "8923666",
+                    "title": "journeymap-1.21.1-6.0.9+fabric",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "9049826",
+                    "title": "journeymap-1.20.1-6.0.7+forge",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "238222",
+            "title": "Just Enough Items (JEI)",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "9207610",
+                    "title": "31.14.0.72 for NeoForge 26.3",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "9205120",
+                    "title": "19.64.0.455 for Fabric 1.21.1",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "8778011",
+                    "title": "15.56.0.205 for Forge 1.20.1",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "324717",
+            "title": "Jade \ud83d\udd0d",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "9042207",
+                    "title": "[NeoForge 26.3.X] 26.3.5",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "8591528",
+                    "title": "[Fabric 1.21.1] 15.10.6",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "8479276",
+                    "title": "[Forge 1.20.1] 11.13.3",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "388172",
+            "title": "GeckoLib",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": "8945638",
+                    "title": "NeoForge 5.5.7",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": "8893481",
+                    "title": "Fabric 1.21.1 4.9.3",
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "8285794",
+                    "title": "geckolib-forge-1.20.1-4.8.4.jar",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        },
+        {
+            "provider": "curseforge",
+            "project": "328085",
+            "title": "Create",
+            "client_only": false,
+            "contexts": [
+                {
+                    "version": "26.3",
+                    "loader": "neoforge",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.21.1",
+                    "loader": "fabric",
+                    "latest": null,
+                    "title": null,
+                    "row_rendered": true
+                },
+                {
+                    "version": "1.20.1",
+                    "loader": "forge",
+                    "latest": "7178761",
+                    "title": "Create 6.0.8 for mc1.20.1",
+                    "row_rendered": true
+                }
+            ],
+            "unfiltered_first_page": 50,
+            "more_available": true
+        }
+    ],
+    "failures": [],
+    "artifact_checks": [],
+    "credential_cleared": true,
+    "requests": 154,
+    "recorded_at": "2026-10-18T03:10:08+00:00"
+}

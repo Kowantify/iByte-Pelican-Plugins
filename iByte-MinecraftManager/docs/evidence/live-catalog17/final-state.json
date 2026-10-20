@@ -1,0 +1,49 @@
+{
+    "passed": true,
+    "scope": "Three actual tested game containers, verified final layouts, no active installer reservations, drained real queue and no CurseForge credential",
+    "php": "8.4.26",
+    "debian": "13.7",
+    "wings_sha256": "19dda386e02041da1f1fbcc73f34e4bb01c1fbc2d499aac79a6be3a51ba7f0e8",
+    "containers": [
+        {
+            "case": "neoforge263",
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true,
+            "world_present": true,
+            "container_running": false,
+            "exit_code": 0,
+            "oom_killed": false,
+            "image": "ghcr.io/pelican-eggs/yolks:java_25",
+            "image_id": "sha256:9982955a5ead65637c267ab35116ecbde4a9228004f0124f2d14c93dd015cd0a"
+        },
+        {
+            "case": "fabric1211",
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true,
+            "world_present": true,
+            "container_running": false,
+            "exit_code": 0,
+            "oom_killed": false,
+            "image": "ghcr.io/pelican-eggs/yolks:java_21",
+            "image_id": "sha256:53baa671e12a0419af950eee2d3cdd0a70521c29c2ef0384ce3963aa41289f1a"
+        },
+        {
+            "case": "forge1201",
+            "manager_directory_present": false,
+            "temporary_files_remaining": [],
+            "server_jar_present": true,
+            "world_present": true,
+            "container_running": false,
+            "exit_code": 0,
+            "oom_killed": false,
+            "image": "ghcr.io/pelican-eggs/yolks:java_17",
+            "image_id": "sha256:e62873abd4975b8dd9b87ebc1fc4f139ceb0eec3b1da485a7181cbb5f99a18ad"
+        }
+    ],
+    "active_reservations": 0,
+    "pending_jobs": 0,
+    "credential_absent": true,
+    "recorded_at": "2026-10-18T03:24:14+00:00"
+}

@@ -1,0 +1,121 @@
+# Progress
+
+## 2026-10-15: incomplete installation repair and two-folder delivery
+
+- [x] Re-read binding AGENTS and inspected exact native ZIP import/reinstall and plugin migrator. User's screenshot confirms missing `ibyte_restic_repositories`, superseding the earlier node-link diagnosis; generic delete/health toasts do not independently identify their cause. User permits removal of these test backups, but no live access or wiping is needed to repair installation.
+- [x] Added root-only native Finish installation / Repair tables action and registered `restic:repair-installation` CLI command. Runs only additive idempotent plugin migrations, including a missing table whose migration is already recorded; never rolls back/edits history, contacts nodes or recreates historical keys. Keys page can render a clear missing-schema repair prompt.
+- [x] Preflight all required plugin tables before node operations; scoped recovery observers away from Wings/S3 and wrapped native Restic delete failures into a handled notification. Cached stats and retention settings tolerate incomplete installation for rendering.
+- [x] Native Panel/SQLite/Livewire suite passes 200 checks, including missing-table reproduction, pre-forget refusal/no node calls, handled delete notification, renderable keys repair page, root-only repair, recorded-migration recovery and repeat-safe existing escrow preservation. Fresh native-process queue/CLI suite passes seven assertions, including automatic command registration. Early fixture mistakes (locked delete target and manually late-registered provider's console command) were corrected without runtime bypasses.
+- [x] Moved loose build/audit artifacts and old extracted delivery outside release, preserving originals. Release contains exactly Panel Plugin (ZIP + README) and Wings Installer (only install.sh). The self-contained script embeds both architectures, fixed-metadata USTAR/gzip payload and automatic hash verification; local real payload/version plus extraction/literal-argument/tamper fixtures pass. CI build/audit/upload/publication paths follow the new layout.
+- [x] Complete two-folder/distribution/source/plugin/archive/manifest/six-ELF validation passes; self-contained payload verification and extraction/literal-argument/tamper fixtures pass. Existing installer fourteen cases pass, PHP syntax (45 files)/style and source secret scan pass. Native unlocked backup deletion succeeds after repair. Runtime Go sources/dependencies unchanged; existing eighteen-engine/four-helper and Linux cross-build evidence remains applicable. Linux/browser/systemd/restore API/distributed DB/S3/security/publication gates remain blocked. No production access, cleanup or deployment occurred.
+
+## 2026-10-15: automatic quota replacement, calendar retention and pruning
+
+- [x] Re-read AGENTS completely and traced exact pinned InitiateBackupService, BackupResource, DeleteBackupService, CreateBackupSchema and RunTaskJob. Native schedules already override the quota; manual action disables at capacity. Added a source-pinned Restic-only initiation bridge and native table modification; no Panel source edit or independent scheduler.
+- [x] Manual/scheduled creates replace one oldest eligible unlocked completed backup at capacity. Locked/pending backups count toward quota; zero/all-protected/over-limit quotas fail closed. Delete permission required for manual replacement. Native throttle, readiness and encrypted escrow preflight precede forgetting.
+- [x] Native Backups retention modal supports completed daily/weekly bucket reservations and remaining hourly slots, IANA timezone/DST, audited authorization and plugin migration. Post-success queue worker recomputes live locks/policy before each bounded native deletion; failed creates trigger no cleanup.
+- [x] Separate delayed/coalesced durable prune reclaims only unreferenced data; no Restic keep/forget flags in prune. Node serialization, timeouts, provisioning markers and restart quarantine apply. Completion works after deleting the last backup row. Root admin host maintenance control and cached history retained.
+- [x] Local native Panel/SQLite/Livewire suite passes 186 assertions; real Restic engine 18 passes/one Windows symlink privilege skip, including storage reclamation, retained/deduplicated backup recovery and prune-persistence quarantine across restart. Fresh-process queue six assertions, helper four, installer fourteen. Initial fixture stale-state/readiness errors were corrected; child exceptions explicitly exit nonzero.
+- [x] User reported missing host-node link causing native list HTTP 500 and believed uninstall was necessary to update. Removed mapping checks only from render-time signed URL creation; all operations retain isolation. Unlinked native list/denied download/no-daemon/no-data-loss/link-restoration regressions pass. Native in-place ZIP import plus real reinstall job preserves complete host/node/backup/lock/operation/policy/encrypted recovery inventory. Documented original-link repair and update without uninstall. Added uninstall protection for saved retention policies.
+- [x] Both Linux daemon/helper architectures and actual protected-route tests cross-compile, PHP syntax/style and source secret scan pass; no Linux execution inferred.
+- [x] Plugin/source/node ZIPs rebuilt; full SHA256 manifest, embedded node pin, archive contents/new retention classes/migration/tests/docs, and all six ELF architectures validate. Source scan passes (an initial parallel scan raced a disposable SQLite journal; rerun after queue completion passed fully). Exact tested pins remain unchanged; newly relied-on native initiation/delete/task/plugin-update contracts are hash-pinned. Installer requires no operator hash entry. Linux/systemd/browser/distributed database/S3/restore public API/security/publication gates remain blocked. No production access or deployment.
+
+## 2026-10-15: retained repository recovery inventory and admin key access
+
+- [x] Re-read AGENTS completely. User explicitly requests admin key visibility and durable former-owner/repository information, superseding the earlier no-reveal/no-inventory scope. Keep UUID storage paths and non-Restic behavior unchanged.
+- [x] Added Laravel-encrypted recovery escrow and non-cascading owner/repository/snapshot/audit tables. Capture precedes new backup dispatch; an explicit native host action queues active-repository backfill. Stable UUID paths are mapped to owner username/ID/UUID/history and actual node/profile/root/repository locations.
+- [x] Added admin-only native View Restic keys resource, local password reauthentication/rate limiting, thirty-second user/repository-bound one-use reveal and kit download, noncached escaped output and secret-free audit/Livewire/list data. Capture requires trusted HTTPS; external key/location changes preserve old escrow and fail closed.
+- [x] Explicit root/password/full-UUID retain-and-delete action commits escrow before native destruction, rechecks under server row lock, scopes the Restic forget bypass with finally cleanup, and preserves locked snapshot/owner/key mappings through native cascade. Ordinary deletion/transfer guards remain. New local path-overlap checks reject native game/backup deletion roots. No automatic wipe or live/new-server restore.
+- [x] Native Panel/SQLite/Livewire suite passes 134 checks; fresh-process real database queue four assertions; real Restic engine 16 passed/one Windows symlink privilege skip; helper four passed; mocked installer fourteen passed. Initial whole-snapshot Windows ancestor ACL test failure is retained; exact recorded server-subfolder recovery passes without weakening runtime ACL handling. PHP syntax/style and source secret scan pass. Both Linux daemon/helper architectures and new protected-route middleware tests cross-compile; no Linux execution claimed.
+- [x] Plugin/source/installer/node bundles rebuilt and complete manifests/ZIP contents/pins/six ELF validation pass. RECOVERY.md ships in both node bundles and release files. Existing native browser/Linux/systemd/distributed races/S3 runtime/restore API/write-fence and dependency/publication gates remain blocked. No production access, key reads or deployment occurred.
+
+## 2026-10-15: storage accounting and server lifecycle
+
+- [x] Read binding specification; inspected pinned native backup table, deletion and transfer source plus Restic snapshot summary/raw-data statistics. Downloads decrypt on node; credentials are not exposed to Panel.
+- [x] Persist per-snapshot newly added compressed bytes separately from logical restore bytes; show added storage and logical-size tooltip in native customer and admin backup tables, including zero. Unknown historical additions require stats refresh; Wings/S3 behavior is preserved. Logical daemon limits remain independent.
+- [x] Native admin host actions show cached repository statistics, dedup/compression explanations, local file lengths and timestamps, plus encryption/download/escrow guidance without key disclosure. S3 physical billing size is explicitly unavailable.
+- [x] Early source-pinned deletion service binding and transfer/node-change/model-delete guards reject servers with Restic backups or unresolved work before daemon destruction/transfer notification. Force cannot bypass this guard. Documented explicit export/removal and unsupported retained access/relocation in STORAGE_AND_LIFECYCLE.md.
+- [x] Real Restic accounting/recovery/dedup tests and the full engine suite pass (12 passed, one Windows symlink skip); four helper tests pass with real Restic and mocked HTTP. Native Panel/SQLite/Livewire suite passes 94 checks, including malformed metrics and cross-server/host accounting rejection; fresh-process database queue roundtrip passes four assertions. A Windows sharing-violation poll failure occurred in a repeated run; the bounded test poll now retries only Windows error 32, matching caller retry semantics, and the full suite passed afterward. No runtime state error suppression added.
+- [x] Updated plugin, both Linux Wings/helper builds, installer embedded node pin, both node ZIPs, source and manifests packaged; all release file/digest/content/pin/ELF checks pass. Native installer migration is explicitly verified on the existing operations table. All 14 installer fixtures, PHP syntax/style and source secret scan pass. Packaging first caught a stale duplicate compatibility mirror; packager now generates it from canonical versions.json and the expanded contract tests/validation pass. Linux/systemd/concurrent lifecycle and production gates remain unverified/blocked; no publication or remote deployment performed.
+
+## 2026-10-15: installation without manual checksum entry
+
+- [x] User explicitly requested removing manual hash matching/entry. Preserve automatic verification, stock-binary checks, preview acknowledgement, preflight and rollback.
+- [x] Installer packaging now embeds a digest of a separate six-binary NODE-SHA256SUMS manifest. It discovers adjacent artifacts; normal invocation needs no hash/manifest/artifacts arguments. Separate node ZIPs include the matching architecture's binaries and installer.
+- [x] CI packaging embeds its exact versioned GitHub release location for standalone download mode; local unpublished builds use adjacent bundle files and do not invent a hosted URL. No download-and-execute pipes.
+- [x] All 14 installer fixture cases pass, including automatic local/download verification, binary+manifest tamper rejection, repeat installation and rollback. Shell syntax, PHP syntax/style, and both complete node ZIP/content/pin/ELF checks pass. Updated operator instructions and packaged both architecture bundles. Evidence: `docs/evidence/automatic-installer-tests.txt`. Linux/systemd acceptance remains unverified; service, identity, helper and downloads are mocked.
+
+## 2026-10-15: queue worker class loading and recovery
+
+- [x] Reviewed supplied logs without connecting to production. The failure precedes PollOperation::handle: the worker cannot deserialize its plugin job class. A user-run fresh CLI probe resolves the enabled plugin and readable class; the service points at the correct Panel path/account.
+- [x] A real systemd worker restart changed the PID; the operator subsequently reported a newer backup successful. The older pending record still needs its specific failed polling job retried; no blanket queue retry, database completion edit or record deletion is recommended.
+- [x] Added a fresh-process native-loader/database-queue regression. Separate PHP producer/consumer boots use official plugin discovery, no manual plugin PSR-4 mapping or provider registration, and no bus/queue fake. Actual after-commit dispatch, serialized queue handler loading, completion persistence and replay idempotence pass (four assertions). Node HTTP remains mocked; Windows SQLite execution is not a Linux daemon/systemd acceptance test.
+- [x] CI runs the new queue roundtrip after the existing 67-check Panel suite. Runtime plugin/Wings code is unchanged by this investigation; no new plugin installation is required to restart/retry a stale worker.
+- [ ] Operator recovery of the older failed polling job remains unconfirmed. Existing production/readiness gates are unchanged.
+
+## 2026-10-15: disabled preview backup action
+
+- [x] User-provided exception identifies the host's disabled preview acknowledgement; no production connection made. CSP report-only warnings and a blocked analytics beacon are separate from this exception.
+- [x] Reproduced the exact guard through the real native server Backups Create action against disposable SQLite. It raises an uncaught RuntimeException and rolls back its backup row before any node request. Enabled create succeeds with a mocked ready node.
+- [x] Preserve the opt-in guard and its false default. Return a safe HTTP 409 with an actionable setting name, handled by the existing native action rather than a generic HTTP 500; no Panel core edit or bypass. The pinned action expects a Retry-After key, so use zero (no timed retry).
+- [x] Native action notification/no-node-call/rollback, service HTTP conflict and enabled native queue submission tests pass: 67 Panel checks. PHP lint (19 files), Pint and source secret scan pass. No completion on the user's node is claimed. The operator must explicitly enable the option only on a disposable staging host; restore remains off and production gates remain blocked.
+- [x] Replacement unpublished plugin ZIP, source ZIP and manifest packaged; all archive/content/digest/ELF checks pass. Node binaries and installer are unchanged. Re-import is optional for improved error reporting; it does not change the host's opt-in setting.
+
+## 2026-10-15: native backup-host form correction
+
+- [x] Reproduced the reported selected-but-required backend error in a loopback-only Edge browser using the pinned native CreateBackupHost page and disposable SQLite database.
+- [x] Confirmed native dynamic provider fields do not initialize their state paths. Livewire logs missing-property entanglement errors for backend and both toggles; selecting Local filesystem changes only the widget, not submitted state.
+- [x] Added a Restic-only native form modification that initializes configuration in the schema-change response; local/profile defaults are `local`/`default`, both opt-ins remain false. Switching from another schema drops unrelated credentials. No Panel core edits or Wings changes.
+- [x] Browser controls now bind local/S3 selection and both toggles without entanglement errors. Actual native Create persisted local/default/preview-on/restore-off in the separate SQLite fixture; before/after and saved-state evidence retained. A loopback-only reproducible browser fixture is included.
+- [x] Actual native create/edit/provider-switching/invalid-value and ZIP re-import/reinstall regressions pass: 58 total Panel checks. Re-import retains enabled status, hosts, backups and operation history. Required validation remains enforced; no security toggle defaults enabled.
+- [x] PHP lint (18 files) and Pint pass. Source secret scan flagged a dummy prior-provider credential value in the regression; replaced it with an obvious low-entropy fixture value without adding suppression. Corrected scan passes.
+- [x] Rebuilt replacement unpublished ZIP/source/checksums with 58 passing Panel regressions, clean lint/style/source-secret scan and bounded browser evidence. Full release archive/content/digest validation is recorded in the replacement package handoff. Existing node binaries and installer remain unchanged. No remote deployment or GitHub publication.
+
+## Discovery in progress
+
+- [x] Read AGENTS.md completely before implementation.
+- [x] Fetch legacy, official Panel, Wings, docs and plugin examples into ignored `.upstream`.
+- [x] Resolve official newest tags: Panel and Wings v1.0.0-rc.1. Neither project currently offers a final 1.0 stable tag.
+- [x] Inspect BackupAdapterSchemaInterface, registry, initiation/quota, delete and download services.
+- [ ] Trace native restore, callbacks, schedule and plugin lifecycle to a supported integration.
+- [ ] Implement and test plugin, isolated Wings engine and installer.
+- [ ] Package staging artifacts and write exact evidence and remaining gates.
+
+## Implementation and first validation
+
+- [x] Source trace proves UI and API restore bypass the adapter and resolve `DaemonBackupRepository`; native schedule invokes `CreateBackupSchema -> InitiateBackupService`.
+- [x] Implement isolated engine, fresh local repo initialization, explicit remote provisioning, local/HTTPS S3 profiles, durable state, exact snapshot mappings, bounded jobs, check/stats, forget without prune, staged tar export and journaled restore with rollback.
+- [x] Implement actual plugin manifest/provider, conditional native host form, explicit node linkage, queue completion, native restore repository binding, protected download route, admin health actions and guarded migration uninstall.
+- [x] Portable Go 1.27.2, PHP 8.5.11 and Restic 0.19.1 downloaded from official sources with SHA verification. Composer installer verified with SHA384; pinned Panel lock installed without scripts.
+- [x] Real Restic integration: 7 pass, 1 skip (Windows symlink privilege). First runs exposed Windows-only `--one-file-system` and parent timestamp restore problems; corrected with Linux-only device restriction and exact snapshot-subfolder restore. Re-run passed.
+- [x] `php scripts/test-panel.php`: 19 assertions against real upstream Laravel container, native services/controller/schedule, Filament classes and in-memory SQLite; daemon HTTP mocked. Initial test found route-name cache needed refresh after late test-only provider registration; corrected harness; re-run passed.
+- [x] Minimal Wings router patch applies with `git apply --check` against pinned source.
+- [x] First Linux amd64 cross-build successful. Initial Google module storage DNS failures resolved via checksum-verified Go proxy; no module pins changed.
+- [x] Installer and helper implemented; shell syntax passes. Functional fixture tests and release packaging still in progress.
+
+No Linux runtime is available: Docker absent, WSL has no installed distributions. Native Linux filesystem/auth integration, race runtime, real systemd, browser UI import and full Panel-Wings end-to-end remain unverified and block production readiness. Windows core engine tests are not Linux daemon integration evidence.
+
+## Release hardening
+
+- [x] PHP suite expanded to 43 passing checks, including real framework signed-URL validation/tamper rejection, one-use proxy, forged response identity, queue outage/replay, failed restore protection and exact transport TLS verification.
+- [x] Official plugin ZIP import/install service and migration uninstall protection executed; asset build processes explicitly mocked. No Panel core code changed.
+- [x] Seven installer fixture cases pass: preflight failure, unknown binary, twice-idempotent install, rollback, failed startup, failed health and tampered artifact. Test caught and fixed standard checksum `*filename` parsing. Systemd/helper/identity/flock are mocked; Windows install modes mocked.
+- [x] Four actual node helper HTTP/TLS tests pass: real bearer/native nested UUID shape, wrong version, self-signed TLS rejection and redirect rejection.
+- [x] Source vulnerability scan completed using pinned govulncheck v1.9.0 (old v1.1.4 failed on newer syntax). Narrow x/net v0.60.0 security lock patch addresses HTTP/2 findings; two module-wide upstream Docker findings remain. Publication gate remains failed; no suppressions.
+- [x] Concrete review-only Panel optional restore capability/dispatcher patch generated and `git apply --check` + PHP lint pass; never applied to Panel or deployed.
+- [x] Go static vet and actual protected-router test cross-compilation pass. Both Linux architectures build; final rebuild follows all engine fixes.
+- [x] Added restart quarantine of known uncertain servers at router registration; implementation remains Linux-runtime-unverified.
+- [x] Final no-adoption test exposed stale running status; inspection found completion-save failure was not quarantined. Added bounded Windows rename retry plus unknown/quarantine on failed completion persistence; deterministic fault-injection regression added. Earlier failing output retained under evidence; final rerun passes (11 engine passes, 1 Windows symlink skip; 4 helper passes).
+- [x] PHP formatting exposed test-harness import declarations below their first use; moved imports to the top. Native 43-check rerun passes; lint/style pass.
+- [x] Source-confirmed restore write-fence gap documented with exact HTTP upload/pull/admin API paths. Native restore now fails closed by default; separate explicit isolated-fixture toggle is tested. PHP suite now has 44 passing checks.
+- [x] Pinned gitleaks source scan passes with zero findings after correcting global allowlist syntax; disposable caches and fixture dummy strings excluded. Composer audit clean; full Go source audit still blocked on two upstream Docker findings.
+- [x] Final amd64/arm64 binaries rebuilt; actual router test cross-compiled; vet passes. Repeated amd64 daemon build and repeated plugin ZIP build yield identical hashes.
+- [x] Standalone local Git repository initialized without remote publication; caches/binaries ignored.
+- [x] Scanning all executables found 34 conservative matches in the old official Restic runtime. Replaced shipped Linux runtimes with exact-source Go 1.27.2 builds plus a separate locked dependency security patch; self-update omitted. Rebuilt Windows runtime reruns all engine/helper tests successfully. Final Restic source scan exits 0; binary scan retains one OpenPGP module match. Node helper scan exits 0; Wings source still flags two Docker advisories (binary scan six conservative matches). No security waiver or publication.
+- [x] Final test/evidence capture complete: 44 Panel checks; 11 engine + 4 helper tests pass, one Windows symlink skip; 7 installer fixtures; lint/style/vet/shell/patch and six ELF architecture/content checks pass. Both official-baseline and rebuilt-Restic test outputs are retained.
+- [x] Plugin ZIP, source ZIP, six precompiled Linux binaries, scripts, licenses, inventories and SHA256 manifest packaged and verified. External exact artifact digests generated after the final package. Detailed handoff is `docs/DELIVERY.md`.
+- [x] Production gates remain explicitly blocked: supported Panel restore contract, complete Wings write fence, Linux/browser/full native queue/multi-node/S3/systemd validation and unresolved source/conservative binary security findings. Native restore defaults to blocked; no production deployment or GitHub publication.
+
+Environment: Windows PowerShell; Git and Node available. Go, PHP, Docker absent from PATH; WSL enumeration denied. Public network fetching works under sandbox escalation. No production endpoints accessed.
+
+Commands: `git clone` for sources; `git ls-remote --tags` for official releases; source reads with `Get-Content` / `rg`. Initial sandbox fetch failed due to blocked proxy, retried with permitted network access. Panel checkout recovered at the release SHA after interrupted clone.

@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Browser fixed local",
+        "schema": "restic",
+        "configuration": {
+            "backend": "local",
+            "profile": "default",
+            "staging_enabled": true,
+            "restore_fixture_enabled": false
+        }
+    }
+]

@@ -1,0 +1,24 @@
+Official Panel tracked changes:
+ artisan                                 | 0
+ bootstrap/cache/.gitignore              | 0
+ storage/app/.gitignore                  | 0
+ storage/debugbar/.gitignore             | 0
+ storage/framework/.gitignore            | 0
+ storage/framework/cache/.gitignore      | 0
+ storage/framework/cache/data/.gitignore | 0
+ storage/framework/sessions/.gitignore   | 0
+ storage/framework/testing/.gitignore    | 0
+ storage/framework/views/.gitignore      | 0
+ storage/logs/.gitignore                 | 0
+ 11 files changed, 0 insertions(+), 0 deletions(-)
+Official Wings reference tracked changes:
+Prepared Wings tracked changes (addon files are isolated untracked overlay):
+ go.mod           | 2 +-
+ go.sum           | 2 ++
+ router/router.go | 3 +++
+ 3 files changed, 6 insertions(+), 1 deletion(-)
+go version go1.27.2 windows/amd64
+8.5.11
+PASS: built Linux amd64/arm64 daemon + helper; router tests cross-compiled only
+
+Panel diff entries above are Windows executable-bit differences only (100755 to100644); git diff --numstat is0/0 for each. No Panel source content changes.
