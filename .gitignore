@@ -42,3 +42,15 @@ Thumbs.db
 **/.env
 **/.env.*
 **/*.log
+
+# Local ops/session probe scripts (never published)
+iByte-EggChanger/tests/deploy-*.sh
+iByte-EggChanger/tests/final-*.sh
+iByte-EggChanger/tests/verify-*.sh
+iByte-EggChanger/tests/check-*.sh
+iByte-EggChanger/tests/dump-*.sh
+iByte-EggChanger/tests/find-*.sh
+iByte-EggChanger/tests/restic-tables.sh
+iByte-EggChanger/tests/recent-errors.sh
+iByte-EggChanger/tests/check-paymenter-block.sh
+iByte-EggChanger/tests/deploy-restic-api-retention.sh

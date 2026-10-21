@@ -1,5 +1,9 @@
 # Changelog
 
+## Panel 3.0.1 / Wings 3.0.0 (production release)
+
+- Application API deletions (e.g. Paymenter cancellation) no longer require an interactive password. When a server with Restic backups is deleted through a root-admin Application API key, the plugin automatically creates a fresh locked final backup, verifies it completed successfully (waits up to 30 minutes, aborting deletion on failure), retains the latest snapshot, then allows the native deletion and its subsequent repository cleanup. The web UI delete/transfer/destroy flows keep their existing retention choice and password confirmation unchanged.
+
 ## Panel 3.0.0 / Wings 3.0.0 (production release)
 
 - Remove typed UUID confirmation from native admin lifecycle forms; keep current Panel password and bound server authorization.

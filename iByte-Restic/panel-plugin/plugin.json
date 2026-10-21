@@ -2,7 +2,7 @@
     "id": "ibyte-restic",
     "name": "iByte Restic Backups for Pelican",
     "author": "iByte Hosting",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Native Restic backup-host schema for Pelican with restore-safe lifecycle controls.",
     "category": "plugin",
     "namespace": "IByte\\Restic",

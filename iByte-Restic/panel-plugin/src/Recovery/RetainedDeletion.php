@@ -30,6 +30,29 @@ final class RetainedDeletion
         return $this->active($backup->server) && $this->retainedBackup === $backup->uuid;
     }
 
+    /**
+     * Automatic latest-only retention for an Application-API deletion
+     * (external billing systems). Marks the same scoped state the confirmed
+     * UI action sets; no password is involved because the actor authenticated
+     * with a root-admin Application API key upstream.
+     */
+    public function retainForApiDeletion(Server $server, Backup $retained, \App\Models\User $actor): void
+    {
+        RecoveryVault::authorize($actor);
+        $this->server = $server->uuid;
+        $this->retainedBackup = $retained->uuid;
+        RecoveryVault::audit('api-delete-automatic-retention', actor: $actor->id);
+    }
+
+    /** Clear the API-retention scope after the deletion finished or failed. */
+    public function clearApiRetention(Server $server): void
+    {
+        if ($this->active($server)) {
+            $this->server = null;
+            $this->retainedBackup = null;
+        }
+    }
+
     public function detachForTransfer(Server $server): void
     {
         if (! $this->active($server)) {
