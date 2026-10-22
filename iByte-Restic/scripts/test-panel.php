@@ -54,7 +54,7 @@ use Illuminate\Support\Facades\URL;
 
 $root = dirname(__DIR__);
 $releasePins = json_decode(file_get_contents($root.'/compatibility/versions.json'), true, flags: JSON_THROW_ON_ERROR);
-$panelZipName = 'ibyte-restic-pelican-plugin-v'.($releasePins['panel_release'] ?? $releasePins['release']).'.zip';
+$panelZipName = 'ibyte-restic-v'.($releasePins['panel_release'] ?? $releasePins['release']).'.zip';
 require $root.'/scripts/fixtures/recovery-response.php';
 require $root.'/scripts/fixtures/prepared-final.php';
 $panel = realpath($root.'/.upstream/panel');

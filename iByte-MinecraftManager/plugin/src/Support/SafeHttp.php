@@ -60,7 +60,7 @@ final class SafeHttp implements JsonTransport
         curl_setopt_array($curl, [
             CURLOPT_URL => $url,
             CURLOPT_HTTPHEADER => $headers,
-            CURLOPT_USERAGENT => 'iByte-Minecraft-Manager/0.1.0-preview.27',
+            CURLOPT_USERAGENT => 'iByte-Minecraft-Manager/2.0.0',
             CURLOPT_CONNECTTIMEOUT => 4,
             CURLOPT_TIMEOUT => 15,
             CURLOPT_FOLLOWLOCATION => false,

@@ -57,5 +57,5 @@ The Restic add-on under `iByte-PrometheusExporterAddon-Restic/` is the reference
 
 - Bump each plugin's own `plugin.json` version independently; base releases stay additive with respect to add-ons (the event is append-only by contract).
 - Package with `scripts/package.ps1`-style forward-slash ZIP entries — `Compress-Archive` produces entry names Pelican's importer cannot parse.
-- After any repackage: update the project's `compatibility/versions.json` (base) and the add-on's `release/INSTALL.md` (hash), plus the maintained agent-guidance file if behavior changes (that file is intentionally kept out of the published repo).
+- After any repackage: update the project's `compatibility/versions.json` (base) and the add-on's `release/Panel Plugin/INSTALL.md` (hash), plus the maintained agent-guidance file if behavior changes (that file is intentionally kept out of the published repo).
 - **Never import an unlinted plugin**: run `php -l` on every packaged PHP file (remotely is fine: `find . -name "*.php" -exec php -l {} \;`) before import — a provider whose parent class fails to resolve takes the whole panel down with a 500.

@@ -5,7 +5,7 @@ declare(strict_types=1);
 $root = dirname(__DIR__);
 $pins = json_decode(file_get_contents($root.'/compatibility/versions.json'), true, flags: JSON_THROW_ON_ERROR);
 $panelRelease = $pins['panel_release'] ?? $pins['release'];
-$panelZipName = 'ibyte-restic-pelican-plugin-v'.$panelRelease.'.zip';
+$panelZipName = 'ibyte-restic-v'.$panelRelease.'.zip';
 $release = $root.'/.build/release-artifacts';
 $folders = array_values(array_diff(scandir($root.'/release'), ['.', '..']));
 sort($folders);
@@ -109,10 +109,9 @@ for ($i = 0; $i < $zip->numFiles; $i++) {
         throw new RuntimeException('Unexpected plugin ZIP path');
     }
 }
-$embedded = json_decode($zip->getFromName('ibyte-restic/compatibility.json'), true, flags: JSON_THROW_ON_ERROR);
 $pins = json_decode(file_get_contents($root.'/compatibility/versions.json'), true, flags: JSON_THROW_ON_ERROR);
-if ($embedded !== $pins) {
-    throw new RuntimeException('Embedded compatibility pins differ');
+if ($zip->locateName('ibyte-restic/compatibility.json') !== false) {
+    throw new RuntimeException('Runtime plugin must not depend on an embedded compatibility JSON file');
 }
 foreach (['src/Recovery/ServerDestruction.php', 'src/Jobs/DestroyServerRepositories.php', 'tests/server-destruction.php'] as $entry) {
     if ($zip->locateName('ibyte-restic/'.$entry) === false) {

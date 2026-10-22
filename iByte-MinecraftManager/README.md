@@ -1,4 +1,4 @@
-# iByte Minecraft Manager 0.1.0
+# iByte Minecraft Manager 2.0.0
 
 Install Minecraft server software, mods, plugins and supported modpacks through Pelican Panel and stock Wings.
 

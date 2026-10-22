@@ -2,7 +2,7 @@
     "id": "ibyte-egg-changer",
     "name": "iByte Egg Changer",
     "author": "iByte Hosting",
-    "version": "0.3.2",
+    "version": "2.0.0",
     "description": "Resource-gated game switching with searchable customer catalog, admin workspaces, local entitlements and optional recommendations",
     "category": "plugin",
     "namespace": "IByte\\EggChanger",

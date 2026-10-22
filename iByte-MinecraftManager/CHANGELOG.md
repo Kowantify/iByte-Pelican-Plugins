@@ -115,3 +115,8 @@
 - Bounded security/planning utilities and deterministic, native, live-metadata and browser tests.
 - Reproducible plugin ZIP and compatibility/evidence records.
 - Server installation/modification/recovery execution and unattended updates remain disabled. No production or universal runtime support claim.
+## 2.0.0 - 2026-10-22
+
+- Published the unified v2.0.0 Panel package name and version.
+- Updated the plugin manifest, user agent and release metadata together.
+- Package creation was verified; import, runtime and browser acceptance were not rerun for this version.

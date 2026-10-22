@@ -5,7 +5,7 @@ the production panel through the native installer.
 
 ## What shipped
 
-- Manifest `plugin/plugin.json` — id `ibyte-egg-changer`, panels `admin` +
+- Manifest `plugin.json` — id `ibyte-egg-changer`, panels `admin` +
   `server`, target `^1.0.0-rc.1` (verified against the panel's own caret math
   on the live host: current `1.0.0-rc.1` passes both comparator gates).
 - Eligibility engine (`src/Packages/`): pure decision rules in
@@ -69,3 +69,9 @@ the production panel through the native installer.
   preview → confirm) is the operator's manual test.
 - Late-callback reconciliation beyond the 60-minute window,
   cooldown/rate limits, delegated subuser policy — documented future work.
+## 2.0.0 package — 2026-10-22
+
+- Unified both manifests and the archive name to version `2.0.0` and `ibyte-egg-changer-v2.0.0.zip`.
+- Packaged from the maintained root source tree; removed the stale nested `plugin/` snapshot.
+- Recorded the package SHA-256 in `compatibility/versions.json`.
+- Packaging and archive metadata were checked. Runtime install/switch acceptance was not rerun.

@@ -5,7 +5,7 @@ $project = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $source = Join-Path $project 'panel-plugin'
 $manifest = Get-Content (Join-Path $source 'plugin.json') -Raw | ConvertFrom-Json
 if ($manifest.version -notmatch '^[0-9]+\.[0-9]+\.[0-9]+(?:-[a-z0-9.]+)?$') { throw 'Invalid package version' }
-$output = Join-Path $project ('release/Panel Plugin/ibyte-prometheus-exporter-' + $manifest.version + '.zip')
+$output = Join-Path $project ('release/Panel Plugin/ibyte-prometheus-exporter-v' + $manifest.version + '.zip')
 if (Test-Path -LiteralPath $output) { Remove-Item -LiteralPath $output -Force }
 $archive = [System.IO.Compression.ZipFile]::Open($output, [System.IO.Compression.ZipArchiveMode]::Create)
 try {

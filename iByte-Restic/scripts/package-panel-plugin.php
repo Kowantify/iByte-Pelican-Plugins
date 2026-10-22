@@ -4,10 +4,7 @@ declare(strict_types=1);
 $root = dirname(__DIR__);
 $pins = json_decode(file_get_contents($root.'/compatibility/versions.json'), true, flags: JSON_THROW_ON_ERROR);
 $panelRelease = $pins['panel_release'] ?? $pins['release'];
-// compatibility/versions.json is authoritative. Generate the embedded mirror
-// before packaging so new source contracts cannot silently ship stale pins.
-file_put_contents($root.'/panel-plugin/compatibility.json', str_replace("\r\n", "\n", file_get_contents($root.'/compatibility/versions.json')));
-$out = $root.'/release/Panel Plugin/ibyte-restic-pelican-plugin-v'.$panelRelease.'.zip';
+$out = $root.'/release/Panel Plugin/ibyte-restic-v'.$panelRelease.'.zip';
 if (! is_dir(dirname($out))) {
     mkdir(dirname($out), 0755, true);
 }

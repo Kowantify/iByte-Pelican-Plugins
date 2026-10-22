@@ -2,17 +2,18 @@
 
 Official plugins for the [Pelican Panel](https://pelican.dev) by **iByte Hosting**.
 
-Five native panel plugins, one repository. Each subfolder is a self-contained
-plugin installable through **Admin > Plugins > Import > Install** with a single
-ZIP; each contains its own README, license notice (MIT), and compatibility pins.
+Five native panel plugins, one repository. Every current Panel package is
+version 2.0.0 and uses `ibyte-<plugin-id>-v2.0.0.zip`. Install through
+**Admin > Plugins > Import > Install**; each project carries its own README,
+license and compatibility metadata.
 
 | Folder | Plugin | Version | What it does |
 |---|---|---|---|
-| [`iByte-PrometheusExporter`](iByte-PrometheusExporter/) | iByte Prometheus Exporter | 0.3.2 | One bearer-key `/metrics` endpoint with CPU, memory, disk, state, backup and panel metrics for every node and game server; Grafana dashboard included |
-| [`iByte-PrometheusExporterAddon-Restic`](iByte-PrometheusExporterAddon-Restic/) | Restic Add-on | 0.1.2 | Appends iByte-Restic repository storage metrics to the exporter's scrape automatically |
-| [`iByte-Restic`](iByte-Restic/) | iByte Restic Backups | 3.0.2 | Native Restic backup-host schema for panel + Wings: retention, export, recovery vault, guarded deletion |
-| [`iByte-MinecraftManager`](iByte-MinecraftManager/) | iByte Minecraft Manager | 0.1.0 | Install Minecraft software, mods, plugins and modpacks from Modrinth/CurseForge/MCJars through stock Wings |
-| [`iByte-EggChanger`](iByte-EggChanger/) | iByte Egg Changer | 0.3.2 | Resource-gated egg switching: admins define RAM/disk packages, owners run backup-first clean reinstall switches |
+| [`iByte-PrometheusExporter`](iByte-PrometheusExporter/) | iByte Prometheus Exporter | 2.0.0 | One bearer-key `/metrics` endpoint with CPU, memory, disk, state, backup and panel metrics for every node and game server; Grafana dashboard included |
+| [`iByte-PrometheusExporterAddon-Restic`](iByte-PrometheusExporterAddon-Restic/) | Restic Add-on | 2.0.0 | Appends iByte-Restic repository storage metrics to the exporter's scrape automatically |
+| [`iByte-Restic`](iByte-Restic/) | iByte Restic Backups | 2.0.0 (Panel) | Native Restic backup-host schema for panel + Wings: retention, export, recovery vault, guarded deletion |
+| [`iByte-MinecraftManager`](iByte-MinecraftManager/) | iByte Minecraft Manager | 2.0.0 | Install Minecraft software, mods, plugins and modpacks from Modrinth/CurseForge/MCJars through stock Wings |
+| [`iByte-EggChanger`](iByte-EggChanger/) | iByte Egg Changer | 2.0.0 | Resource-gated egg switching: admins define RAM/disk packages, owners run backup-first clean reinstall switches |
 
 ## Install (any plugin)
 
@@ -23,7 +24,7 @@ ZIP; each contains its own README, license notice (MIT), and compatibility pins.
 
 ## Requirements (all plugins)
 
-- Pelican Panel `1.0.0-rc.2` (pinned contract; see each folder's `compatibility/versions.json`)
+- Pelican Panel version and compatibility details are recorded separately for each plugin in its manifest and `compatibility/versions.json`.
 - PHP 8.4+ (8.5 used in production), Laravel 13
 - A running queue worker (`php artisan queue:work`) for background jobs
 

@@ -2,7 +2,7 @@
   "id": "ibyte-prometheus-exporter-addon-restic",
   "name": "iByte Prometheus Exporter - Restic Add-on",
   "author": "iByte Hosting",
-  "version": "0.1.2",
+  "version": "2.0.0",
   "description": "Exposes iByte Restic repository storage measurements as extra Prometheus metrics. Requires the iByte Prometheus Exporter.",
   "category": "plugin",
   "namespace": "IByte\\PrometheusExporterAddonRestic",

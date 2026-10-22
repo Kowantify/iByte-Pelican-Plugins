@@ -1,9 +1,9 @@
 # Install or update the Panel plugin
 
-Use a disposable Panel matching compatibility/versions.json. This preview remains blocked for production; see RELEASE_CHECKLIST.md.
+Use a disposable Panel and verify the runtime API checks before enabling Restic on production. Package 2.0.0 detects required service methods instead of reading embedded source hashes; see RELEASE_CHECKLIST.md for the remaining acceptance gates.
 
 1. For a new node, install Wings preview.2 first (INSTALL_WINGS.md). Keep profiles, keys and rollback state. Existing preview.2 nodes need no reinstall for this Panel-only preview.5 update.
-2. In **Admin > Plugins > Import from file**, upload `Panel Plugin/ibyte-restic-pelican-plugin-v3.0.0-preview.5.zip`, then use Install if offered. Update over the existing plugin ID; do not uninstall, unlink nodes or delete backups.
+2. In **Admin > Plugins > Import from file**, upload `Panel Plugin/ibyte-restic-v2.0.0.zip`, then use Install if offered. Update over the existing plugin ID; do not uninstall, unlink nodes or delete backups.
 3. Wait for native installation success. Upload alone does not prove dependencies, assets or migrations completed; keep the existing queue worker and Panel scheduler running.
 4. Restart the actual long-lived Panel worker after installation so it loads the new code. For a service named pelican-queue: `sudo systemctl restart pelican-queue`.
 

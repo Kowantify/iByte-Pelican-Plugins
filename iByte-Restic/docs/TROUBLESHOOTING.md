@@ -62,7 +62,7 @@ Panel preview.3 uses unchanged Wings preview.2. Upload the preview.3 Panel ZIP o
 
 `panel_contract.file_mismatches` identifies changed checked core/vendor files. `dependency_mismatches` identifies changed, missing or inconsistent locked/installed runtime packages by name and safe version fields. A whole composer.lock digest change alone no longer rejects a matching runtime: metadata, dev entries and added plugin packages are allowed. Plugin dependency management can also change runtime dependencies; the new report distinguishes these cases.
 
-Do not edit compatibility.json, disable guards or downgrade a security-fixed dependency to silence the check. Real runtime drift requires testing/supporting that package set. Existing backups and escrow are preserved. A fresh ready CLI process cannot prove an older PHP-FPM/queue process loaded the same code.
+Restic detects the Panel service methods it uses at runtime and does not require a generated compatibility JSON file or exact composer.lock pins. If the diagnostic reports a missing contract, update Restic for the changed Panel API and run the release acceptance checks. Existing backups and escrow are preserved. A fresh ready CLI process cannot prove an older PHP-FPM/queue process loaded the same code.
 
 The reported smtp.example.com connection failure is separate: it is a placeholder mail host, not a storage error. Configure actual mail through normal Panel administration if needed. Historical failure notifications can remain after the underlying fault is fixed; they do not prove a new backup was attempted.
 

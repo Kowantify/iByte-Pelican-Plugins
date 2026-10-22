@@ -1,10 +1,10 @@
 # Install the plugin
 
-1. In Panel Admin > Plugins > Import, import `ibyte-prometheus-exporter-0.3.2.zip`
-   (SHA-256 `C3F6B2309A494C3EAF773F9271B38AAF0878C82C2D43D07DF167B93359723737`),
+1. In Panel Admin > Plugins > Import, import `ibyte-prometheus-exporter-v2.0.0.zip`
+   (SHA-256 `96616CD1AB938F6A5BA363F3913E6B1DCD5DAEFE2D394CB57786E8BC3C7156A3`),
    then install and enable it. Nothing else is installed on the Panel: no core edits,
-   no migrations, no commands beyond the plugin's own scheduled collector. 0.3.2 is the
-   same code as 0.3.1 retargeted to Panel 1.0.0-rc.2 — nothing else changed.
+   no migrations, no commands beyond the plugin's own scheduled collector. 2.0.0 is the
+   same behavior as 0.3.2 retargeted to the common 2.0.0 package version and filename.
 2. Open **Prometheus Exporter** in the administrator sidebar and create a scrape key.
    Store that key once in a private file on your Prometheus host and point the scrape
    job's `authorization.credentials_file` at it. Creating or rotating a key enables

@@ -18,7 +18,7 @@ Current admin UI evidence: evidence/admin-tabs-*.txt and admin-tabs-browser-*.js
 | Legacy audit | 4ce6c042086f8e359ce5910422e02823b500ec12 | Full tracked file/route inventory; no legacy runtime claim |
 | Installer | Linux/systemd amd64/arm64 target | Git Bash filesystem/HTTP/service/helper fixtures; not real systemd |
 
-compatibility/versions.json is authoritative for source contract hashes and dependency locks. Other Panel/Wings versions are unsupported. Tool binaries/caches and upstream checkouts are ignored developer state, not operator installation prerequisites.
+compatibility/versions.json records the source baselines used for release engineering. Runtime readiness does not read that file, an embedded JSON copy, or exact composer.lock pins; it checks the required Panel services and methods. The release acceptance fixtures below still cover only their recorded Panel/Wings targets. Tool binaries/caches and upstream checkouts are ignored developer state, not operator installation prerequisites.
 
 ## Current outcomes and commands
 

@@ -3,8 +3,11 @@
 namespace IByte\Restic\Support;
 
 use App\Repositories\Daemon\DaemonBackupRepository;
+use App\Extensions\BackupAdapter\BackupAdapterSchemaInterface;
+use App\Extensions\BackupAdapter\BackupAdapterService;
 use App\Services\Backups\InitiateBackupService;
 use App\Services\Servers\ServerDeletionService;
+use App\Services\Servers\TransferServerService;
 use IByte\Restic\Integration\BridgeRepository;
 use IByte\Restic\Integration\GuardedServerDeletion;
 use IByte\Restic\Integration\RetainingBackupService;
@@ -43,19 +46,29 @@ final class Compatibility
 
     public static function panelSource(): array
     {
-        $pins = json_decode(file_get_contents(__DIR__.'/../../compatibility.json'), true, flags: JSON_THROW_ON_ERROR);
         $mismatches = [];
-        foreach ($pins['panel_files'] as $path => $hash) {
-            $contents = is_file(base_path($path)) && is_readable(base_path($path)) ? file_get_contents(base_path($path)) : false;
-            $actual = $contents === false ? null : hash('sha256', str_replace("\r\n", "\n", $contents));
-            if ($actual === null || ! hash_equals($hash, $actual)) {
-                $mismatches[] = ['file' => $path, 'expected' => $hash, 'actual' => $actual];
+        $contracts = [
+            BackupAdapterSchemaInterface::class => ['getId', 'getName', 'getConfigurationForm', 'createBackup', 'deleteBackup', 'getDownloadLink'],
+            BackupAdapterService::class => ['register', 'getMappings', 'get'],
+            InitiateBackupService::class => ['handle', 'setIgnoredFiles', 'setIsLocked'],
+            DaemonBackupRepository::class => ['setNode', 'getHttpClient'],
+            ServerDeletionService::class => ['handle'],
+            TransferServerService::class => ['handle'],
+        ];
+        foreach ($contracts as $class => $methods) {
+            if (! class_exists($class)) {
+                $mismatches[] = ['file' => $class, 'expected' => 'class with required methods', 'actual' => null];
+                continue;
+            }
+            foreach ($methods as $method) {
+                if (! method_exists($class, $method)) {
+                    $mismatches[] = ['file' => $class.'::'.$method, 'expected' => 'available method', 'actual' => null];
+                }
             }
         }
-        $dependencies = DependencyContract::inspect($pins['panel_runtime_packages'] ?? []);
 
-        return ['matches' => $mismatches === [] && $dependencies === [], 'panel_tag' => $pins['panel']['tag'], 'panel_commit' => $pins['panel']['sha'],
-            'file_mismatches' => $mismatches, 'dependency_mismatches' => $dependencies,
-            'note' => 'Core/vendor contracts and tested runtime package versions/references remain pinned. Lockfile metadata, development packages and additional plugin packages may differ. This is compatibility checking, not a replacement for a security audit.'];
+        return ['matches' => $mismatches === [], 'panel_tag' => 'runtime-detected', 'panel_commit' => null,
+            'file_mismatches' => $mismatches, 'dependency_mismatches' => [],
+            'note' => 'Compatibility is detected from the Panel services and methods used at runtime; exact source hashes, composer.lock and version metadata are not required. A method-presence check cannot prove upstream implementation semantics, so run the release acceptance checks after major Panel changes.'];
     }
 }

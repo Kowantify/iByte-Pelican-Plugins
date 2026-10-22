@@ -55,3 +55,9 @@ Update both node and Panel to preview.2. Copy the whole Wings Installer folder a
 Demonstrated: actual Linux real-Restic race tests, native SQLite/Livewire, serialized queue and wall-clock native schedule selection, protected upstream router/helper, 16 real HTTPS Panel-to-Wings/Restic checks including timed backup/isolated restore/final deletion/retained export, and real amd64 systemd/Docker install/upgrade/repeat/failed-start rollback/stock rollback with mocked Panel inventory. Two-folder packaging includes precompiled amd64/arm64 binaries; arm64 runtime is unverified.
 
 Still blocked: supported restore API/full writer fence; fresh Symfony/Docker/OpenPGP audit findings; full browser installation/restore and distributed MariaDB/Redis/S3/multinode acceptance. Relocation remains unimplemented; file exports/recovery kits are not automatic relocation. No production deployment or GitHub publication occurred.
+# Panel 2.0.0
+
+- Standardized the installable ZIP name to `ibyte-restic-v2.0.0.zip`.
+- Replaced exact Panel source and composer lockfile pins with runtime service/method checks.
+- Kept the Wings addon at 3.0.0; this Panel-only package does not require a node update.
+- Packaging the plugin does not constitute a fresh end-to-end acceptance run.

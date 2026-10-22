@@ -37,3 +37,8 @@ Current test status: native ZIP import/install/update/disable/uninstall, PHP run
 Outstanding security/reliability issues before production: DNS rebinding control, runtime validation of bounded Wings streaming and scheduler behavior, and full acceptance gates from `AGENTS.md`. The collector enforces a 2 MiB response bound while streaming, but this has not been exercised against a real Wings node.
 
 Packaged `release/Panel Plugin/ibyte-prometheus-exporter-0.1.0-preview.1.zip` with SHA-256 `081B3E2EC12D81A846F4EDE77AD33EFA9F4212EA9326E67366AA48266ED6D619`. Only `Panel Plugin` and `Monitoring Setup` exist under `release/`.
+## 2.0.0 package — 2026-10-22
+
+- Standardized the manifest version, archive name, and compatibility checksum to 2.0.0.
+- Rebuilt `release/Panel Plugin/ibyte-prometheus-exporter-v2.0.0.zip`.
+- Package metadata was checked. Panel import and live scrape acceptance were not rerun for this package.

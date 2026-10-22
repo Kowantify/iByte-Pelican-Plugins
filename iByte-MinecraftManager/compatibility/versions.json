@@ -1,7 +1,11 @@
 {
-    "date":  "2026-10-17",
-    "plugin":  "0.1.0-preview.15",
-    "release_status":  "Verified direct Install and session queue: exact-ZIP native UI/build, 32 browser checks and action-to-executor tests; preview.14 backend identity preserved",
+    "date":  "2026-10-22",
+    "plugin":  "2.0.0",
+    "package":  {
+                    "file":  "release/Panel Plugin/ibyte-minecraft-manager-v2.0.0.zip",
+                    "sha256":  "4E33F48550B060D7C861D75710EC392E5432E6AC47BF9EBCC416913A52D99B22"
+                },
+    "release_status":  "2.0.0 ZIP packaged from current plugin source; import/runtime revalidation not run in this release turn",
     "panel":  {
                   "repository":  "https://github.com/pelican/panel",
                   "sha":  "46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00",

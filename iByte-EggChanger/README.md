@@ -1,4 +1,4 @@
-# iByte Egg Changer — v0.3.2 (Pelican plugin)
+# iByte Egg Changer — v2.0.0 (Pelican plugin)
 
 This release simplifies the administrator and customer screens while **preserving the existing Egg Changer package gates, recommendations, local switching entitlements, API, database migrations, and backup-first switching code from v0.3.1**.
 
@@ -19,7 +19,7 @@ php artisan optimize:clear
 php artisan queue:restart
 ```
 
-No database migration is introduced in v0.3.2; **older installations still need all prior migrations**, including the entitlement and recommendation tables.
+No database migration is introduced in v2.0.0; **older installations still need all prior migrations**, including the entitlement and recommendation tables.
 
 ## Test before enabling broadly
 

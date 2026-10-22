@@ -1,9 +1,9 @@
-# Install — iByte Prometheus Exporter Restic Add-on
+# Install â€” iByte Prometheus Exporter Restic Add-on
 
-**Artifact:** `ibyte-prometheus-exporter-addon-restic-0.1.2.zip`
-**SHA-256:** `65E75E8A5B294B9CB8AE9865A2350F3BAEC257949D5700B40100D5EED5712AF0`
+**Artifact:** `ibyte-prometheus-exporter-addon-restic-v2.0.0.zip`
+**SHA-256:** `B5CA08B9CEF2155A2B6627359BDDCE2028D5C1A4131DB1612F05507A46FE88FC`
 
-> This build appends the Restic families to the base exporter's existing `/ibyte-prometheus-exporter/metrics` scrape — no extra Prometheus job needed. The standalone `/ibyte-prometheus-exporter-addon-restic/metrics` endpoint also still answers with the same data. Requires base exporter ≥ 0.3.1 (the rc.2-retargeted 0.3.2 works identically).
+> This build appends the Restic families to the base exporter's existing `/ibyte-prometheus-exporter/metrics` scrape â€” no extra Prometheus job needed. The standalone `/ibyte-prometheus-exporter-addon-restic/metrics` endpoint also still answers with the same data. Requires base exporter 2.0.0 or newer because it reads settings through the exporter's public API.
 
 ## Pre-checks (all must be true)
 
@@ -13,7 +13,7 @@
 
 ## Install
 
-Admin > Plugins > Import > upload `ibyte-prometheus-exporter-addon-restic-0.1.2.zip` > Install. Then re-enable if importer leaves it disabled.
+Admin > Plugins > Import > upload `ibyte-prometheus-exporter-addon-restic-v2.0.0.zip` > Install. Then re-enable if importer leaves it disabled.
 
 ## Verify (one minute)
 
@@ -25,8 +25,8 @@ curl -sS -H "Authorization: Bearer $TOKEN" \
 
 Expect: 200, `ibyte_pelican_restic_addon_success 1`, one `repo_info` line per current repository, byte/ratio families matching the Stats page.
 
-401 → base exporter key mismatch or base exporter disabled.
-`addon_success 0` → collection round failed (check Panel log `storage/logs/laravel.log` for `ibyte:prometheus-collect-restic`).
+401 â†’ base exporter key mismatch or base exporter disabled.
+`addon_success 0` â†’ collection round failed (check Panel log `storage/logs/laravel.log` for `ibyte:prometheus-collect-restic`).
 
 ## Second scrape job (operator Prometheus)
 

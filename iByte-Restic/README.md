@@ -1,8 +1,8 @@
 # iByte Restic Backups for Pelican
 
-Native Restic backup-host provider for Pelican. **Panel 3.0.0 / Wings 3.0.0 (production release).** The restore bridge, write fencing and dependency findings listed in earlier previews have been accepted for the operator's own production deployment; see docs/RELEASE_HARDENING.md for the accepted risk register.
+Native Restic backup-host provider for Pelican. **Panel package 2.0.0 / Wings addon 3.0.0.** The installed production deployment is still Panel 3.0.2 / Wings addon 3.0.0 until the operator imports this package. See docs/RELEASE_HARDENING.md for the accepted risk register.
 
-Panel 3.0.0 adds password-only lifecycle confirmation and explicit server-plus-repository destruction. It includes the earlier runtime compatibility diagnostics and notification fixes. Existing 3.0.0 nodes need no reinstall. See [troubleshooting](docs/TROUBLESHOOTING.md).
+Panel 2.0.0 uses runtime feature detection for the Panel APIs it needs. The Wings addon remains version 3.0.0, so existing nodes need no reinstall. See [troubleshooting](docs/TROUBLESHOOTING.md).
 
 It also keeps cleared failure alerts dismissed, labels checks by operation ID, and adds root-only **Administrative > Node diagnostics** to read readiness and saved failures without retrying work or fetching keys. Escrow errors identify the failed stage and safe HTTP category. Existing failure history and recovery protection remain intact.
 
@@ -13,7 +13,7 @@ The installation directory has only two folders:
 ```text
 release/
   Panel Plugin/
-    ibyte-restic-pelican-plugin-v3.0.0-preview.5.zip
+    ibyte-restic-v2.0.0.zip
     README.md
   Wings Installer/
     install.sh
@@ -47,7 +47,7 @@ Admin navigation has one **Restic Backups** sidebar entry containing **Servers**
 | Legacy gaps and production gates | [FEATURE_PARITY](docs/FEATURE_PARITY.md), [RELEASE_CHECKLIST](docs/RELEASE_CHECKLIST.md) |
 | Reproduce verification | [TESTING](docs/TESTING.md) |
 
-Exact source targets and contract hashes live in [compatibility/versions.json](compatibility/versions.json). Panel/Wings v1.0.0-rc.1 only; Linux amd64/arm64 artifacts are built, not proven Linux runtime support. Source, SBOMs, manifests and loose binaries live under ignored `.build/release-artifacts`, outside the operator installation folders. No production access or deployment occurred.
+Upstream source targets and release hashes live in [compatibility/versions.json](compatibility/versions.json) as build metadata. The Panel manifest targets v1.0.0-rc.2; Wings remains v1.0.0-rc.1. The plugin checks runtime service/method availability and does not load those JSON pins. Linux amd64/arm64 artifacts are built, not proven Linux runtime support. Source, SBOMs, manifests and loose binaries live under ignored `.build/release-artifacts`, outside the operator installation folders.
 
 Native admin Delete offers two choices with current Panel password confirmation only: keep a fresh final backup (the default), or force delete the server and queue destruction of all captured local Restic repositories. Destruction skips final-backup preparation and individual snapshot deletion; unavailable nodes stay pending until storage removal is verified. Encrypted key/owner history remains. Transfer keeps the final-backup policy; snapshots do not transfer. See [recovery and lifecycle](docs/RECOVERY.md).
 

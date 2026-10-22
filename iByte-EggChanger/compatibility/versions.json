@@ -1,51 +1,54 @@
 {
-  "plugin": {
-    "id": "ibyte-egg-changer",
-    "version": "0.1.0",
-    "date": "2026-10-20",
-    "zip": "release/Panel Plugin/ibyte-egg-changer-0.1.0.zip",
-    "zip_sha256": "262A90649AD93646C3D2D3727616DE4CBAE347C8223F9E0B96E66C2932D7F6F9"
-  },
-  "targets": {
-    "panel": {
-      "tested_source": "pelican/panel v1.0.0-rc.1",
-      "commit_sha": "46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00",
-      "manifest_panel_version": "^1.0.0-rc.1",
-      "contract_checks": [
-        "App.Services.Eggs.EggChangerService",
-        "App.Services.Servers.ReinstallServerService",
-        "App.Services.Backups.InitiateBackupService",
-        "App.Repositories.Daemon.DaemonFileRepository",
-        "App.Repositories.Daemon.DaemonServerRepository",
-        "App.Models.Plugin.getProviders scanning src/Providers",
-        "App.Services.Helpers.PluginService.loadPanelPlugins (admin+server panel plugin classes)",
-        "Panel Plugin.runPluginMigrations (plugin database/migrations auto-run on install)"
-      ]
-    },
-    "wings": {
-      "tested_source": "pelican/wings v1.0.0-rc.1",
-      "commit_sha": "7b489da7b8196d0b4baef3e2db062c06d743e2f9",
-      "semantics_used": [
-        "memory_limit and disk space build limits are MiB (environment/settings.go comments, configuration.go DiskSpace() x1024x1024)",
-        "zero stored limit = unlimited (internal/ufs/fs_quota.go CanFit: limit 0 always fits; power.go DiskSpace() <= 0 skips check)"
-      ]
-    },
-    "php": { "required": ">=8.4", "production": "8.5.10 (cli, panel host)" },
-    "panel_runtime": {
-      "queue": "redis (verified production: QUEUE_CONNECTION=redis, pelican-queue.service runs php artisan queue:work --tries=3)",
-      "cache_locks": "cache store must support locks (file/redis/database all do)"
-    }
-  },
-  "verified_source_facts": [
-    "EggChangerService::handle(Server, Egg|int, keepOldVariables=true): same-egg early return; forceFill egg_id/image=first docker_images/startup=first startup_commands; recreates ServerVariables carrying old values by env_variable",
-    "ReinstallServerService::handle: transaction sets ServerState::Installing then DaemonServerRepository::reinstall()",
-    "ServerInstallController::store: node-gated callback records InstallFailed/ReinstallFailed or clears status, keeps Suspended, sets installed_at, dispatches App.Events.Server.Installed; NO plugin operation token - completion correlation is status-poll based by design",
-    "Server.model: memory/disk unsigned integer MiB columns; isInstalled/isFailedInstall/isInConflictState helpers used by the switch precheck",
-    "Plugin manifest: id must equal top-level folder name; Plugin::getProviders() auto-scans src/Providers; PluginService registers panel classes via Filament Panel->plugin() for ids in manifest 'panels'"
-  ],
-  "preview_gates": [
-    "No runtime install/switch fixture run yet (unit + contract checks only, 2026-10-20)",
-    "Client UI manually exercised by the operator after install",
-    "Callback correlation is polling-based; late native reinstalls outside the 60-minute wait window reconcile in admin Operations"
-  ]
+    "plugin":  {
+                   "id":  "ibyte-egg-changer",
+                   "version":  "2.0.0",
+                   "date":  "2026-10-22",
+                   "zip":  "release/Panel Plugin/ibyte-egg-changer-v2.0.0.zip",
+                   "zip_sha256":  "C6CE4C426C46747A6BAB0167A8FD3335B96589C2BE4F430C6E98AA02AFB2BE06"
+               },
+    "targets":  {
+                    "panel":  {
+                                  "tested_source":  "pelican/panel v1.0.0-rc.1",
+                                  "commit_sha":  "46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00",
+                                  "manifest_panel_version":  "^1.0.0-rc.1",
+                                  "contract_checks":  [
+                                                          "App.Services.Eggs.EggChangerService",
+                                                          "App.Services.Servers.ReinstallServerService",
+                                                          "App.Services.Backups.InitiateBackupService",
+                                                          "App.Repositories.Daemon.DaemonFileRepository",
+                                                          "App.Repositories.Daemon.DaemonServerRepository",
+                                                          "App.Models.Plugin.getProviders scanning src/Providers",
+                                                          "App.Services.Helpers.PluginService.loadPanelPlugins (admin+server panel plugin classes)",
+                                                          "Panel Plugin.runPluginMigrations (plugin database/migrations auto-run on install)"
+                                                      ]
+                              },
+                    "wings":  {
+                                  "tested_source":  "pelican/wings v1.0.0-rc.1",
+                                  "commit_sha":  "7b489da7b8196d0b4baef3e2db062c06d743e2f9",
+                                  "semantics_used":  [
+                                                         "memory_limit and disk space build limits are MiB (environment/settings.go comments, configuration.go DiskSpace() x1024x1024)",
+                                                         "zero stored limit = unlimited (internal/ufs/fs_quota.go CanFit: limit 0 always fits; power.go DiskSpace() \u003c= 0 skips check)"
+                                                     ]
+                              },
+                    "php":  {
+                                "required":  "\u003e=8.4",
+                                "production":  "8.5.10 (cli, panel host)"
+                            },
+                    "panel_runtime":  {
+                                          "queue":  "redis (verified production: QUEUE_CONNECTION=redis, pelican-queue.service runs php artisan queue:work --tries=3)",
+                                          "cache_locks":  "cache store must support locks (file/redis/database all do)"
+                                      }
+                },
+    "verified_source_facts":  [
+                                  "EggChangerService::handle(Server, Egg|int, keepOldVariables=true): same-egg early return; forceFill egg_id/image=first docker_images/startup=first startup_commands; recreates ServerVariables carrying old values by env_variable",
+                                  "ReinstallServerService::handle: transaction sets ServerState::Installing then DaemonServerRepository::reinstall()",
+                                  "ServerInstallController::store: node-gated callback records InstallFailed/ReinstallFailed or clears status, keeps Suspended, sets installed_at, dispatches App.Events.Server.Installed; NO plugin operation token - completion correlation is status-poll based by design",
+                                  "Server.model: memory/disk unsigned integer MiB columns; isInstalled/isFailedInstall/isInConflictState helpers used by the switch precheck",
+                                  "Plugin manifest: id must equal top-level folder name; Plugin::getProviders() auto-scans src/Providers; PluginService registers panel classes via Filament Panel-\u003eplugin() for ids in manifest \u0027panels\u0027"
+                              ],
+    "preview_gates":  [
+                          "No runtime install/switch fixture run yet (unit + contract checks only, 2026-10-20)",
+                          "Client UI manually exercised by the operator after install",
+                          "Callback correlation is polling-based; late native reinstalls outside the 60-minute wait window reconcile in admin Operations"
+                      ]
 }

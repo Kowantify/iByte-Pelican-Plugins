@@ -1,8 +1,8 @@
 # iByte Egg Changer — release
 
-## 0.1.0 (2026-10-20)
+## 2.0.0 (2026-10-22)
 
-Production release. Import `ibyte-egg-changer-0.1.0.zip` through
+Version 2.0.0 package. Import `ibyte-egg-changer-v2.0.0.zip` through
 Admin > Plugins > Import and press Install.
 
 - Native plugin for Panel `^1.0.0-rc.1` (tested against source `46fc1cf0…`).
@@ -15,4 +15,4 @@ Admin > Plugins > Import and press Install.
 - SHA-256 of the ZIP is recorded in `compatibility/versions.json` after packaging.
 
 See the project `README.md` for the customer flow, and keep
-`compatibility/versions.json` updated with every package change.
+The archive uses `ibyte-egg-changer-v<version>.zip`; its SHA-256 is recorded in `compatibility/versions.json` after packaging.

@@ -17,8 +17,13 @@ if ($next === '--check') {
     echo 'Release identities agree: Panel '.$currentPanel.', Wings '.$current.PHP_EOL;
     exit;
 }
-if (! preg_match('/^3\.\d+\.\d+(?:-preview\.[1-9]\d*)?$/D', $next) || version_compare($next, $current, '<=') || version_compare($next, $currentPanel, '<=')) {
-    throw new RuntimeException('Supply a newer 3.x semantic version, optionally -preview.N');
+if ($panelOnly) {
+    if (! preg_match('/^2\.\d+\.\d+(?:-preview\.[1-9]\d*)?$/D', $next) || version_compare($next, $currentPanel, '<=')) {
+        throw new RuntimeException('Supply a newer 2.x Panel semantic version, optionally -preview.N');
+    }
+} elseif (! preg_match('/^3\.\d+\.\d+(?:-preview\.[1-9]\d*)?$/D', $next)
+    || version_compare($next, $current, '<=') || version_compare($next, $currentPanel, '<=')) {
+    throw new RuntimeException('Supply a newer 3.x coordinated Wings semantic version, optionally -preview.N');
 }
 if (! str_contains($next, '-preview.') && ! $pins['production_ready']) {
     throw new RuntimeException('Stable release refused: production acceptance is blocked');

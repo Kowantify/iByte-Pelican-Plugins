@@ -1098,5 +1098,6 @@
         }
     },
     "panel_lock_baseline_sha256": "4b14037d1623dea9d6fe8f3226f86af3e9f04a91cf379cdf855a99231bcf14fd",
-    "panel_release": "3.0.2"
+    "panel_release": "2.0.0",
+    "panel_zip_sha256": "A9A32A930DE3935FD11A0FA578650403138AF479377DEA2EEC075D7216E92347"
 }

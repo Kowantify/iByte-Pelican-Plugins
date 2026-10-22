@@ -4,6 +4,7 @@ namespace IByte\PrometheusExporterAddonRestic\Support;
 
 use App\Enums\PluginStatus;
 use App\Models\Plugin;
+use IByte\PrometheusExporter\Support\Settings as ExporterSettings;
 
 /**
  * Single dependency checkpoint. The add-on is only meaningful while the base
@@ -13,8 +14,6 @@ use App\Models\Plugin;
 final class ParentExporter
 {
     public const ID = 'ibyte-prometheus-exporter';
-    private const SETTINGS = 'ibyte-prometheus-exporter/settings.json';
-
     /** Base exporter installed AND enabled (Pelican plugin status, as tests use). */
     public static function active(): bool
     {
@@ -32,8 +31,14 @@ final class ParentExporter
      */
     public static function settings(): array
     {
-        $path = storage_path('app/'.self::SETTINGS);
-        $data = is_file($path) ? json_decode((string) file_get_contents($path), true) : null;
+        // Read through the base exporter's public API. Its storage format and
+        // location are private implementation details and can change in an
+        // exporter update without requiring an add-on release.
+        if (! class_exists(ExporterSettings::class) || ! is_callable([ExporterSettings::class, 'read'])) {
+            return ['token_hash' => '', 'panel_id' => ''];
+        }
+
+        $data = ExporterSettings::read();
 
         return [
             'token_hash' => is_array($data) ? (string) ($data['token_hash'] ?? '') : '',

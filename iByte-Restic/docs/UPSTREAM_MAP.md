@@ -4,7 +4,7 @@ Retention extension trace (same pinned Panel SHA): InitiateBackupService::handle
 
 Panel SHA: `46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00` (v1.0.0-rc.1). Wings SHA: `7b489da7b8196d0b4baef3e2db062c06d743e2f9` (v1.0.0-rc.1). Official docs SHA: `0159e424b9c84b104012e58570dfe711f4e0a8f6`. Plugin examples SHA: `194c1a39b8158b55c92cb1638e75cff51bdd4236`. Latest tag lists contained release candidates and betas, not a final 1.0 stable release. Earlier betas were not runtime-evaluated and have no support claim.
 
-Every Panel path below is relative to [the pinned official tree](https://github.com/pelican/panel/tree/46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00). Every Wings path is relative to [its pinned official tree](https://github.com/pelican/wings/tree/7b489da7b8196d0b4baef3e2db062c06d743e2f9). Core contract hashes normalized to LF are shipped in `compatibility/versions.json` and the plugin. Internals remain unstable even when a class is public.
+Every Panel path below is relative to [the pinned official tree](https://github.com/pelican/panel/tree/46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00). Every Wings path is relative to [its pinned official tree](https://github.com/pelican/wings/tree/7b489da7b8196d0b4baef3e2db062c06d743e2f9). Core contract hashes normalized to LF remain in `compatibility/versions.json` as engineering provenance; they are not shipped in the plugin or used as runtime gates. Internals remain unstable even when a class is public.
 
 | Panel path / symbol | Verified behavior | Plugin strategy / risk |
 |---|---|---|
