@@ -1,3 +1,13 @@
+# Panel 3.0.2: Pelican rc.2 compatibility retarget
+
+Update only the Panel plugin to 3.0.2 on a Pelican **1.0.0-rc.2** panel; Wings remains preview.2/3.0.0. Import the new ZIP over the installed plugin in Admin > Plugins, choose Install when offered, wait for native installation success, restart the real queue worker (`sudo systemctl restart pelican-queue` or your equivalent) and run `php artisan restic:diagnose`. It must report zero source-file and zero runtime-dependency mismatches: this build re-records the 35 core/vendor file pins and 168 runtime package identities against the operator's actual rc.2 panel, which previously failed the compatibility fence after the panel update.
+
+No plugin behavior changed: no migrations, no new tables, no key, repository or backup operations. Existing Restic repositories, encrypted keys, alert history and migration history are untouched — update over the installed plugin, never uninstall. If the panel still runs the temporary startup guard in `SoftwareVersionService::currentPanelVersion()`, keep it: the early cache-resolution failure is an upstream rc.2 issue (see UPSTREAM report), not something a plugin can or should work around.
+
+The 3.0.1 Application-API deletion flow ships again in this ZIP unchanged (auto final backup + retention + 409-on-failure for API-key server deletions such as Paymenter termination). If your panel had been downgraded to a 3.0.0-preview.5 file set, this update restores it.
+
+---
+
 # Panel preview.5: password-only confirmation and server/repository destruction
 
 Update only the Panel plugin to preview.5; Wings remains preview.2. No new migration, node rebuild or Panel core edit. Wait for native installation success and restart the actual queue worker.

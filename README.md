@@ -8,11 +8,11 @@ ZIP; each contains its own README, license notice (MIT), and compatibility pins.
 
 | Folder | Plugin | Version | What it does |
 |---|---|---|---|
-| [`iByte-PrometheusExporter`](iByte-PrometheusExporter/) | iByte Prometheus Exporter | 0.3.1 | One bearer-key `/metrics` endpoint with CPU, memory, disk, state, backup and panel metrics for every node and game server; Grafana dashboard included |
-| [`iByte-PrometheusExporterAddon-Restic`](iByte-PrometheusExporterAddon-Restic/) | Restic Add-on | 0.1.1 | Appends iByte-Restic repository storage metrics to the exporter's scrape automatically |
-| [`iByte-Restic`](iByte-Restic/) | iByte Restic Backups | 3.0.0 | Native Restic backup-host schema for panel + Wings: retention, export, recovery vault, guarded deletion |
+| [`iByte-PrometheusExporter`](iByte-PrometheusExporter/) | iByte Prometheus Exporter | 0.3.2 | One bearer-key `/metrics` endpoint with CPU, memory, disk, state, backup and panel metrics for every node and game server; Grafana dashboard included |
+| [`iByte-PrometheusExporterAddon-Restic`](iByte-PrometheusExporterAddon-Restic/) | Restic Add-on | 0.1.2 | Appends iByte-Restic repository storage metrics to the exporter's scrape automatically |
+| [`iByte-Restic`](iByte-Restic/) | iByte Restic Backups | 3.0.2 | Native Restic backup-host schema for panel + Wings: retention, export, recovery vault, guarded deletion |
 | [`iByte-MinecraftManager`](iByte-MinecraftManager/) | iByte Minecraft Manager | 0.1.0 | Install Minecraft software, mods, plugins and modpacks from Modrinth/CurseForge/MCJars through stock Wings |
-| [`iByte-EggChanger`](iByte-EggChanger/) | iByte Egg Changer | 0.1.0 | Resource-gated egg switching: admins define RAM/disk packages, owners run backup-first clean reinstall switches |
+| [`iByte-EggChanger`](iByte-EggChanger/) | iByte Egg Changer | 0.3.2 | Resource-gated egg switching: admins define RAM/disk packages, owners run backup-first clean reinstall switches |
 
 ## Install (any plugin)
 
@@ -23,7 +23,7 @@ ZIP; each contains its own README, license notice (MIT), and compatibility pins.
 
 ## Requirements (all plugins)
 
-- Pelican Panel `1.0.0-rc.1` (pinned contract; see each folder's `compatibility/versions.json`)
+- Pelican Panel `1.0.0-rc.2` (pinned contract; see each folder's `compatibility/versions.json`)
 - PHP 8.4+ (8.5 used in production), Laravel 13
 - A running queue worker (`php artisan queue:work`) for background jobs
 

@@ -1,9 +1,9 @@
 {
-    "release": "3.0.0-preview.2",
-    "production_ready": false,
+    "release": "3.0.0",
+    "production_ready": true,
     "panel": {
-        "sha": "46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00",
-        "tag": "v1.0.0-rc.1"
+        "sha": "f64a167eea349bfbb89cda8732eacf682a82a4b3",
+        "tag": "v1.0.0-rc.2"
     },
     "wings": {
         "stock_amd64_sha256": "19dda386e02041da1f1fbcc73f34e4bb01c1fbc2d499aac79a6be3a51ba7f0e8",
@@ -52,7 +52,7 @@
         "app/Models/Backup.php": "16b6b7d2d6ce21a3049c0823243ccdb44e10d2ed430cabfc415f1671f7dcc4d3",
         "app/Filament/Admin/Resources/Plugins/PluginResource.php": "8c1dbafb28cd2f9c3afdafe9fc8914f6bf13c8fe52bdfc8028db0a7357e2efab",
         "app/Jobs/Plugin/InstallPlugin.php": "262e1a9e71901bc36b91ebb9c1e2ff4c0934d62e3ea57a9858084fb2e54755f1",
-        "app/Services/Helpers/PluginService.php": "6855429b645e2ebc54c6d52876e50828777e474bd8082da7457e739c98a96ab3",
+        "app/Services/Helpers/PluginService.php": "53036144a1987160292edbf1b39ac3728d735d8a71e7361d2bae2934c71cfc93",
         "app/Filament/Admin/Resources/Servers/ServerResource.php": "fc0519c4b1ccdcf4c21109fdd125c74cd474af06bf8b946e9167e78348e710a1",
         "vendor/filament/schemas/src/Components/Actions.php": "21f4f249c315c4f28e40d1402a2ecaee6c442bdbbf3b3798b92046e2089c599d",
         "vendor/filament/schemas/src/Components/Concerns/HasChildComponents.php": "daef64d7fbd9527b017b307d5099536bf05a0d948c86380a550a34018980e021",
@@ -101,9 +101,9 @@
             "source_url": "https://github.com/awslabs/aws-crt-php.git"
         },
         "aws/aws-sdk-php": {
-            "version": "3.400.0",
-            "source_reference": "dc874b220df5ec8861fe826b436c19f919d27328",
-            "dist_reference": "dc874b220df5ec8861fe826b436c19f919d27328",
+            "version": "3.401.3",
+            "source_reference": "7b8541e8a4f09cf4375eeef4de6c638dfb2dadbb",
+            "dist_reference": "7b8541e8a4f09cf4375eeef4de6c638dfb2dadbb",
             "source_url": "https://github.com/aws/aws-sdk-php.git"
         },
         "blade-ui-kit/blade-heroicons": {
@@ -179,9 +179,9 @@
             "source_url": "https://github.com/danharrin/livewire-rate-limiting.git"
         },
         "dedoc/scramble": {
-            "version": "v0.13.47",
-            "source_reference": "d1597812fa8ce40a257d83c527bec28cb60de7a5",
-            "dist_reference": "d1597812fa8ce40a257d83c527bec28cb60de7a5",
+            "version": "v0.13.49",
+            "source_reference": "6c10396675a34c46a034b6ed3545485867cc836c",
+            "dist_reference": "6c10396675a34c46a034b6ed3545485867cc836c",
             "source_url": "https://github.com/dedoc/scramble.git"
         },
         "dflydev/dot-access-data": {
@@ -209,9 +209,9 @@
             "source_url": "https://github.com/doctrine/lexer.git"
         },
         "dragonmantank/cron-expression": {
-            "version": "v3.6.0",
-            "source_reference": "d61a8a9604ec1f8c3d150d09db6ce98b32675013",
-            "dist_reference": "d61a8a9604ec1f8c3d150d09db6ce98b32675013",
+            "version": "v3.6.1",
+            "source_reference": "4189372ffeff09bf14f731f67a9de90c7b413ebe",
+            "dist_reference": "4189372ffeff09bf14f731f67a9de90c7b413ebe",
             "source_url": "https://github.com/dragonmantank/cron-expression.git"
         },
         "egulias/email-validator": {
@@ -221,63 +221,63 @@
             "source_url": "https://github.com/egulias/EmailValidator.git"
         },
         "filament/actions": {
-            "version": "v5.10.1",
-            "source_reference": "8955db05154dde548e5d8ccaa0b0fdb5a3cedab5",
-            "dist_reference": "8955db05154dde548e5d8ccaa0b0fdb5a3cedab5",
+            "version": "v5.10.2",
+            "source_reference": "48e29611aee424b66277e9f51e1d88c85be0887c",
+            "dist_reference": "48e29611aee424b66277e9f51e1d88c85be0887c",
             "source_url": "https://github.com/filamentphp/actions.git"
         },
         "filament/filament": {
-            "version": "v5.10.1",
-            "source_reference": "15d2478ebb2eeb70bd321daa0e2a721754e67001",
-            "dist_reference": "15d2478ebb2eeb70bd321daa0e2a721754e67001",
+            "version": "v5.10.2",
+            "source_reference": "aaa2a4fc6c03e5dc2eaeac098d026b776291951a",
+            "dist_reference": "aaa2a4fc6c03e5dc2eaeac098d026b776291951a",
             "source_url": "https://github.com/filamentphp/panels.git"
         },
         "filament/forms": {
-            "version": "v5.10.1",
-            "source_reference": "643d4f63dc7975832c07e3c12d206a7126375c47",
-            "dist_reference": "643d4f63dc7975832c07e3c12d206a7126375c47",
+            "version": "v5.10.2",
+            "source_reference": "5844d590f6f9df4a95cc1bca1b0584e8dea9c459",
+            "dist_reference": "5844d590f6f9df4a95cc1bca1b0584e8dea9c459",
             "source_url": "https://github.com/filamentphp/forms.git"
         },
         "filament/infolists": {
-            "version": "v5.10.1",
-            "source_reference": "fca1a820cbb600f0670911d0b1ceb0d0b4cc4918",
-            "dist_reference": "fca1a820cbb600f0670911d0b1ceb0d0b4cc4918",
+            "version": "v5.10.2",
+            "source_reference": "31519c686b14800b63cbdfa2e152fea3b0173f1f",
+            "dist_reference": "31519c686b14800b63cbdfa2e152fea3b0173f1f",
             "source_url": "https://github.com/filamentphp/infolists.git"
         },
         "filament/notifications": {
-            "version": "v5.10.1",
-            "source_reference": "dfeac53a9efe2148e7a2c64c1de25057e1f7ec08",
-            "dist_reference": "dfeac53a9efe2148e7a2c64c1de25057e1f7ec08",
+            "version": "v5.10.2",
+            "source_reference": "814a681af512a9e4ea8ca2b76eb45304ec8629a1",
+            "dist_reference": "814a681af512a9e4ea8ca2b76eb45304ec8629a1",
             "source_url": "https://github.com/filamentphp/notifications.git"
         },
         "filament/query-builder": {
-            "version": "v5.10.1",
-            "source_reference": "699dd609f7c2d286bdc956abffb33cba8f6538ef",
-            "dist_reference": "699dd609f7c2d286bdc956abffb33cba8f6538ef",
+            "version": "v5.10.2",
+            "source_reference": "8c53f99bf967ffd1f434975aa4094a58d462e37b",
+            "dist_reference": "8c53f99bf967ffd1f434975aa4094a58d462e37b",
             "source_url": "https://github.com/filamentphp/query-builder.git"
         },
         "filament/schemas": {
-            "version": "v5.10.1",
-            "source_reference": "afd4b0d9be71dfbac83e100416f8704c8253a78b",
-            "dist_reference": "afd4b0d9be71dfbac83e100416f8704c8253a78b",
+            "version": "v5.10.2",
+            "source_reference": "c0dcdf9b81092a7ee3f1631634224b5316431a49",
+            "dist_reference": "c0dcdf9b81092a7ee3f1631634224b5316431a49",
             "source_url": "https://github.com/filamentphp/schemas.git"
         },
         "filament/support": {
-            "version": "v5.10.1",
-            "source_reference": "586a70360bf4e20f2f5f31af42b4a62cb3697518",
-            "dist_reference": "586a70360bf4e20f2f5f31af42b4a62cb3697518",
+            "version": "v5.10.2",
+            "source_reference": "012f8ea6cba350167395e08b261ba205e3a3c8aa",
+            "dist_reference": "012f8ea6cba350167395e08b261ba205e3a3c8aa",
             "source_url": "https://github.com/filamentphp/support.git"
         },
         "filament/tables": {
-            "version": "v5.10.1",
-            "source_reference": "97c8ce63e8eb1d226be68e9b22360d6c7f3f8db2",
-            "dist_reference": "97c8ce63e8eb1d226be68e9b22360d6c7f3f8db2",
+            "version": "v5.10.2",
+            "source_reference": "4eb168dd947936c5606fd56bc0175245a2b173d6",
+            "dist_reference": "4eb168dd947936c5606fd56bc0175245a2b173d6",
             "source_url": "https://github.com/filamentphp/tables.git"
         },
         "filament/widgets": {
-            "version": "v5.10.1",
-            "source_reference": "8d81b9b61a5e9280b169bf0f3c526465e8e675bd",
-            "dist_reference": "8d81b9b61a5e9280b169bf0f3c526465e8e675bd",
+            "version": "v5.10.2",
+            "source_reference": "289a91f1fec8219ff9681315db1064ebe07d0c09",
+            "dist_reference": "289a91f1fec8219ff9681315db1064ebe07d0c09",
             "source_url": "https://github.com/filamentphp/widgets.git"
         },
         "firebase/php-jwt": {
@@ -305,21 +305,21 @@
             "source_url": "https://github.com/GrahamCampbell/Result-Type.git"
         },
         "guzzlehttp/guzzle": {
-            "version": "8.2.0",
-            "source_reference": "93939470950a9b11e2e84204166ef5e048c55fe4",
-            "dist_reference": "93939470950a9b11e2e84204166ef5e048c55fe4",
+            "version": "8.3.0",
+            "source_reference": "b920e5fcaf81d761b8fabe600ca90999beaefdb7",
+            "dist_reference": "b920e5fcaf81d761b8fabe600ca90999beaefdb7",
             "source_url": "https://github.com/guzzle/guzzle.git"
         },
         "guzzlehttp/promises": {
-            "version": "3.0.2",
-            "source_reference": "42118e66a53c492effaf92bc357e931985d5c6f9",
-            "dist_reference": "42118e66a53c492effaf92bc357e931985d5c6f9",
+            "version": "3.1.0",
+            "source_reference": "094d0ec418eb3b1411ea271a180ec95cae6ae933",
+            "dist_reference": "094d0ec418eb3b1411ea271a180ec95cae6ae933",
             "source_url": "https://github.com/guzzle/promises.git"
         },
         "guzzlehttp/psr7": {
-            "version": "3.1.0",
-            "source_reference": "a3059ba1a84c9139c4ae03cf0f45bea276c97c74",
-            "dist_reference": "a3059ba1a84c9139c4ae03cf0f45bea276c97c74",
+            "version": "3.2.0",
+            "source_reference": "cdc139396207a5eba10c242d241fb014cb098390",
+            "dist_reference": "cdc139396207a5eba10c242d241fb014cb098390",
             "source_url": "https://github.com/guzzle/psr7.git"
         },
         "guzzlehttp/uri-template": {
@@ -329,15 +329,15 @@
             "source_url": "https://github.com/guzzle/uri-template.git"
         },
         "kirschbaum-development/eloquent-power-joins": {
-            "version": "4.3.4",
-            "source_reference": "a0e6c0420c381861e1830693c4b74bdac7f7fb5f",
-            "dist_reference": "a0e6c0420c381861e1830693c4b74bdac7f7fb5f",
+            "version": "4.3.5",
+            "source_reference": "679582af39ca8caefd142046804a8e25f07aa155",
+            "dist_reference": "679582af39ca8caefd142046804a8e25f07aa155",
             "source_url": "https://github.com/kirschbaum-development/eloquent-power-joins.git"
         },
         "laravel/framework": {
-            "version": "v13.35.0",
-            "source_reference": "a413a9da94884e5e9d58f4e6612884f712827804",
-            "dist_reference": "a413a9da94884e5e9d58f4e6612884f712827804",
+            "version": "v13.38.0",
+            "source_reference": "c42f9abd4a3d2f9a3cd6be109255ddce8092ceb8",
+            "dist_reference": "c42f9abd4a3d2f9a3cd6be109255ddce8092ceb8",
             "source_url": "https://github.com/laravel/framework.git"
         },
         "laravel/helpers": {
@@ -353,9 +353,9 @@
             "source_url": "https://github.com/laravel/passkeys-server.git"
         },
         "laravel/prompts": {
-            "version": "v0.3.25",
-            "source_reference": "21b7b49d60fcb700016dd27b582ae739c75de816",
-            "dist_reference": "21b7b49d60fcb700016dd27b582ae739c75de816",
+            "version": "v0.3.26",
+            "source_reference": "2d1e9bf6bab8d3f383c254db7f2b4ea8816d55e0",
+            "dist_reference": "2d1e9bf6bab8d3f383c254db7f2b4ea8816d55e0",
             "source_url": "https://github.com/laravel/prompts.git"
         },
         "laravel/sanctum": {
@@ -389,15 +389,15 @@
             "source_url": "https://github.com/laravel/ui.git"
         },
         "lcobucci/jwt": {
-            "version": "5.6.0",
-            "source_reference": "bb3e9f21e4196e8afc41def81ef649c164bca25e",
-            "dist_reference": "bb3e9f21e4196e8afc41def81ef649c164bca25e",
+            "version": "5.6.1",
+            "source_reference": "482760068e5a55a9045feddb3e2fc3f878cbd577",
+            "dist_reference": "482760068e5a55a9045feddb3e2fc3f878cbd577",
             "source_url": "https://github.com/lcobucci/jwt.git"
         },
         "league/commonmark": {
-            "version": "2.10.3",
-            "source_reference": "6efbd9c472b91db0a3350fcd601c8332c2382e1f",
-            "dist_reference": "6efbd9c472b91db0a3350fcd601c8332c2382e1f",
+            "version": "2.10.4",
+            "source_reference": "40821b7606d8d946bac57dbd2290076c722e3a65",
+            "dist_reference": "40821b7606d8d946bac57dbd2290076c722e3a65",
             "source_url": "https://github.com/thephpleague/commonmark.git"
         },
         "league/config": {
@@ -449,21 +449,21 @@
             "source_url": "https://github.com/thephpleague/oauth1-client.git"
         },
         "league/uri": {
-            "version": "7.8.1",
-            "source_reference": "08cf38e3924d4f56238125547b5720496fac8fd4",
-            "dist_reference": "08cf38e3924d4f56238125547b5720496fac8fd4",
+            "version": "7.9.0",
+            "source_reference": "fcc872a3d872aa13f935e0cd1887b9abb06da07f",
+            "dist_reference": "fcc872a3d872aa13f935e0cd1887b9abb06da07f",
             "source_url": "https://github.com/thephpleague/uri.git"
         },
         "league/uri-components": {
-            "version": "7.8.1",
-            "source_reference": "848ff9db2f0be06229d6034b7c2e33d41b4fd675",
-            "dist_reference": "848ff9db2f0be06229d6034b7c2e33d41b4fd675",
+            "version": "7.9.0",
+            "source_reference": "4e37c1663f7d0daebbab6b3d947631b0835b3943",
+            "dist_reference": "4e37c1663f7d0daebbab6b3d947631b0835b3943",
             "source_url": "https://github.com/thephpleague/uri-components.git"
         },
         "league/uri-interfaces": {
-            "version": "7.8.1",
-            "source_reference": "85d5c77c5d6d3af6c54db4a78246364908f3c928",
-            "dist_reference": "85d5c77c5d6d3af6c54db4a78246364908f3c928",
+            "version": "7.9.0",
+            "source_reference": "eb5f6d24e6a4fe0a8e9c78ded4eb1dfff1404f58",
+            "dist_reference": "eb5f6d24e6a4fe0a8e9c78ded4eb1dfff1404f58",
             "source_url": "https://github.com/thephpleague/uri-interfaces.git"
         },
         "livewire/livewire": {
@@ -491,9 +491,9 @@
             "source_url": "https://github.com/myclabs/DeepCopy.git"
         },
         "nesbot/carbon": {
-            "version": "3.14.2",
-            "source_reference": "94cfc34887f07ab5c0efa07914c8f527544e3224",
-            "dist_reference": "94cfc34887f07ab5c0efa07914c8f527544e3224",
+            "version": "3.15.0",
+            "source_reference": "217d38553209bdb44e01590d9e9a2e4df8354cce",
+            "dist_reference": "217d38553209bdb44e01590d9e9a2e4df8354cce",
             "source_url": "https://github.com/CarbonPHP/carbon.git"
         },
         "nette/php-generator": {
@@ -719,9 +719,9 @@
             "source_url": "https://github.com/spatie/enum.git"
         },
         "spatie/invade": {
-            "version": "2.1.1",
-            "source_reference": "f929c7b6e75fceeefa7b41a491e91274bafb17af",
-            "dist_reference": "f929c7b6e75fceeefa7b41a491e91274bafb17af",
+            "version": "2.2.0",
+            "source_reference": "10eb682c480bc5f677a6f9f5c5a64da12590dd97",
+            "dist_reference": "10eb682c480bc5f677a6f9f5c5a64da12590dd97",
             "source_url": "https://github.com/spatie/invade.git"
         },
         "spatie/laravel-data": {
@@ -731,9 +731,9 @@
             "source_url": "https://github.com/spatie/laravel-data.git"
         },
         "spatie/laravel-health": {
-            "version": "1.40.2",
-            "source_reference": "45651079657bf723223a9ffc546449503816aef5",
-            "dist_reference": "45651079657bf723223a9ffc546449503816aef5",
+            "version": "1.40.3",
+            "source_reference": "78a7beabd943f8e22b8f2cbd99f68737f5969731",
+            "dist_reference": "78a7beabd943f8e22b8f2cbd99f68737f5969731",
             "source_url": "https://github.com/spatie/laravel-health.git"
         },
         "spatie/laravel-package-tools": {
@@ -743,15 +743,15 @@
             "source_url": "https://github.com/spatie/laravel-package-tools.git"
         },
         "spatie/laravel-permission": {
-            "version": "8.3.0",
-            "source_reference": "60e8ed5b2fbf043c2264433fc2680c76b8b66aa6",
-            "dist_reference": "60e8ed5b2fbf043c2264433fc2680c76b8b66aa6",
+            "version": "8.3.2",
+            "source_reference": "e4e906f8ca5fe10fbe4b6a81f6c4e544a01d8053",
+            "dist_reference": "e4e906f8ca5fe10fbe4b6a81f6c4e544a01d8053",
             "source_url": "https://github.com/spatie/laravel-permission.git"
         },
         "spatie/laravel-query-builder": {
-            "version": "7.3.5",
-            "source_reference": "595523f861caf751ebd29fc377ddc525cd2e3fb1",
-            "dist_reference": "595523f861caf751ebd29fc377ddc525cd2e3fb1",
+            "version": "7.3.6",
+            "source_reference": "af3155714b1b7abe20508754ce08664e1aea5bac",
+            "dist_reference": "af3155714b1b7abe20508754ce08664e1aea5bac",
             "source_url": "https://github.com/spatie/laravel-query-builder.git"
         },
         "spatie/php-structure-discoverer": {
@@ -797,9 +797,9 @@
             "source_url": "https://github.com/symfony/clock.git"
         },
         "symfony/console": {
-            "version": "v7.4.20",
-            "source_reference": "d7bca2fe05241dc7732d0c8b6d551b879f5d0a7d",
-            "dist_reference": "d7bca2fe05241dc7732d0c8b6d551b879f5d0a7d",
+            "version": "v7.4.21",
+            "source_reference": "21f1bc2296f7ff6043241a8dcbc09559b3732820",
+            "dist_reference": "21f1bc2296f7ff6043241a8dcbc09559b3732820",
             "source_url": "https://github.com/symfony/console.git"
         },
         "symfony/css-selector": {
@@ -851,9 +851,9 @@
             "source_url": "https://github.com/symfony/html-sanitizer.git"
         },
         "symfony/http-client": {
-            "version": "v7.4.20",
-            "source_reference": "750a420b8dd0af3d6e1c6c1412802abf2cdd2b6c",
-            "dist_reference": "750a420b8dd0af3d6e1c6c1412802abf2cdd2b6c",
+            "version": "v7.4.21",
+            "source_reference": "121bf3a973bfd852db85ec32d0d64e9fbed4449b",
+            "dist_reference": "121bf3a973bfd852db85ec32d0d64e9fbed4449b",
             "source_url": "https://github.com/symfony/http-client.git"
         },
         "symfony/http-client-contracts": {
@@ -863,9 +863,9 @@
             "source_url": "https://github.com/symfony/http-client-contracts.git"
         },
         "symfony/http-foundation": {
-            "version": "v8.0.15",
-            "source_reference": "a608e3fa15c5b9f4f53fde9ebf5e1f0edae8c93d",
-            "dist_reference": "a608e3fa15c5b9f4f53fde9ebf5e1f0edae8c93d",
+            "version": "v7.4.21",
+            "source_reference": "58c89144c7a36dd89c3d01917e9fa3a72d8aaf31",
+            "dist_reference": "58c89144c7a36dd89c3d01917e9fa3a72d8aaf31",
             "source_url": "https://github.com/symfony/http-foundation.git"
         },
         "symfony/http-kernel": {
@@ -977,9 +977,9 @@
             "source_url": "https://github.com/symfony/postmark-mailer.git"
         },
         "symfony/process": {
-            "version": "v7.4.19",
-            "source_reference": "ed0ae095b86994d370d5791612e55984f15aa30e",
-            "dist_reference": "ed0ae095b86994d370d5791612e55984f15aa30e",
+            "version": "v7.4.21",
+            "source_reference": "e5247f4a5e0797d232ad8e8e6803aeb341843c83",
+            "dist_reference": "e5247f4a5e0797d232ad8e8e6803aeb341843c83",
             "source_url": "https://github.com/symfony/process.git"
         },
         "symfony/property-access": {
@@ -1049,9 +1049,9 @@
             "source_url": "https://github.com/symfony/var-dumper.git"
         },
         "symfony/yaml": {
-            "version": "v7.4.20",
-            "source_reference": "0222bf4dfaa1e3ceb8fff579635d655f2950d5a7",
-            "dist_reference": "0222bf4dfaa1e3ceb8fff579635d655f2950d5a7",
+            "version": "v7.4.21",
+            "source_reference": "044907929c7999814378be22da34722c7a86bad4",
+            "dist_reference": "044907929c7999814378be22da34722c7a86bad4",
             "source_url": "https://github.com/symfony/yaml.git"
         },
         "tijsverkoyen/css-to-inline-styles": {
@@ -1061,16 +1061,16 @@
             "source_url": "https://github.com/tijsverkoyen/CssToInlineStyles.git"
         },
         "ueberdosis/tiptap-php": {
-            "version": "2.2.0",
-            "source_reference": "5a2e8155c5b09c9ad4efd480550270a6924865b9",
-            "dist_reference": "5a2e8155c5b09c9ad4efd480550270a6924865b9",
+            "version": "2.2.1",
+            "source_reference": "242a7a150c1233a01622e050152699382fb20bea",
+            "dist_reference": "242a7a150c1233a01622e050152699382fb20bea",
             "source_url": "https://github.com/ueberdosis/tiptap-php.git"
         },
         "vlucas/phpdotenv": {
             "version": "v5.7.0",
             "source_reference": "301c07936b16d88628b126b01d082ba153cf4c40",
             "dist_reference": "301c07936b16d88628b126b01d082ba153cf4c40",
-            "source_url": "https://github.com/vlucas/phpdotenv.git"
+            "source_url": "https://github.com/phpdotenv/phpdotenv.git"
         },
         "voku/portable-ascii": {
             "version": "2.1.1",
@@ -1097,6 +1097,6 @@
             "source_url": "https://github.com/webmozarts/assert.git"
         }
     },
-    "panel_lock_baseline_sha256": "089035cd90ae3d2dcef119d45ade14823a5e4e73acc287b9823c50eb3cddd90f",
-    "panel_release": "3.0.0-preview.5"
+    "panel_lock_baseline_sha256": "4b14037d1623dea9d6fe8f3226f86af3e9f04a91cf379cdf855a99231bcf14fd",
+    "panel_release": "3.0.2"
 }

@@ -2,12 +2,12 @@
   "id": "ibyte-prometheus-exporter",
   "name": "iByte Prometheus Exporter",
   "author": "iByte Hosting",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Read-only Pelican node, game server and backup metrics for Prometheus",
   "category": "plugin",
   "namespace": "IByte\\PrometheusExporter",
   "class": "PrometheusPlugin",
   "panels": ["admin"],
-  "panel_version": "1.0.0-rc.1",
+  "panel_version": "1.0.0-rc.2",
   "api_version": 1
 }

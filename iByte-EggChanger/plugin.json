@@ -1,0 +1,13 @@
+{
+    "id": "ibyte-egg-changer",
+    "name": "iByte Egg Changer",
+    "author": "iByte Hosting",
+    "version": "0.3.2",
+    "description": "Resource-gated game switching with searchable customer catalog, admin workspaces, local entitlements and optional recommendations",
+    "category": "plugin",
+    "namespace": "IByte\\EggChanger",
+    "class": "EggChangerPlugin",
+    "panels": ["admin", "server"],
+    "panel_version": "^1.0.0-rc.1",
+    "api_version": 1
+}

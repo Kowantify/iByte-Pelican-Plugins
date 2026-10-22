@@ -1,9 +1,10 @@
 # Install the plugin
 
-1. In Panel Admin > Plugins > Import, import `ibyte-prometheus-exporter-0.3.1.zip`
-   (SHA-256 `947B7A3912D67AD89F496E20B612AADFB9B86EE6943612C80349D6BB42707B0F`),
+1. In Panel Admin > Plugins > Import, import `ibyte-prometheus-exporter-0.3.2.zip`
+   (SHA-256 `C3F6B2309A494C3EAF773F9271B38AAF0878C82C2D43D07DF167B93359723737`),
    then install and enable it. Nothing else is installed on the Panel: no core edits,
-   no migrations, no commands beyond the plugin's own scheduled collector.
+   no migrations, no commands beyond the plugin's own scheduled collector. 0.3.2 is the
+   same code as 0.3.1 retargeted to Panel 1.0.0-rc.2 — nothing else changed.
 2. Open **Prometheus Exporter** in the administrator sidebar and create a scrape key.
    Store that key once in a private file on your Prometheus host and point the scrape
    job's `authorization.credentials_file` at it. Creating or rotating a key enables
@@ -31,3 +32,9 @@ Updating from 0.1.x/preview: import the new ZIP and re-enable. Backup metrics we
 (`ibyte_pelican_node_backups_stored`/`_bytes` replace `..._backup_count`/`..._backup_bytes`),
 `ibyte_pelican_exporter_enabled` became `ibyte_pelican_exporter_key_active`, and a `server_info`
 series now adds `name`/`owner` labels. Re-import the bundled dashboard.
+
+Updating from 0.3.1 (Panel rc.1): import over the installed plugin and reinstall (same ID,
+nothing deleted). On Panel 1.0.0-rc.2, note the panel-side startup issue: rc.2 evaluates
+plugin manifests during provider registration while Laravel's cache manager is still
+unresolvable; until upstream Pelican fixes it, that is handled by a Panel-side guard, not by
+this plugin.

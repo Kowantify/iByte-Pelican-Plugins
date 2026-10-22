@@ -1,0 +1,8 @@
+{
+  "plugin": "0.1.2",
+  "panel": {"version": "1.0.0-rc.2", "commit": "f64a167eea349bfbb89cda8732eacf682a82a4b3", "tested_runtime": false},
+  "wings": {"version": "1.0.0-rc.1", "commit": "7b489da7b8196d0b4baef3e2db062c06d743e2f9", "tested_runtime": true},
+  "laravel": "13.38.0",
+  "production_ready": false,
+  "zip_sha256": "65E75E8A5B294B9CB8AE9865A2350F3BAEC257949D5700B40100D5EED5712AF0"
+}

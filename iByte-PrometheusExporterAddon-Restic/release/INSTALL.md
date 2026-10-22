@@ -1,19 +1,19 @@
 # Install — iByte Prometheus Exporter Restic Add-on
 
-**Artifact:** `ibyte-prometheus-exporter-addon-restic-0.1.1.zip`
-**SHA-256:** `F17B37C82BA0F7B0AE960EFD8E5A2B272080FF9B82FAC1C1C96A6FB0AE905CD5`
+**Artifact:** `ibyte-prometheus-exporter-addon-restic-0.1.2.zip`
+**SHA-256:** `65E75E8A5B294B9CB8AE9865A2350F3BAEC257949D5700B40100D5EED5712AF0`
 
-> This build appends the Restic families to the base exporter's existing `/ibyte-prometheus-exporter/metrics` scrape — no extra Prometheus job needed. The standalone `/ibyte-prometheus-exporter-addon-restic/metrics` endpoint also still answers with the same data. Requires base exporter ≥ 0.3.1.
+> This build appends the Restic families to the base exporter's existing `/ibyte-prometheus-exporter/metrics` scrape — no extra Prometheus job needed. The standalone `/ibyte-prometheus-exporter-addon-restic/metrics` endpoint also still answers with the same data. Requires base exporter ≥ 0.3.1 (the rc.2-retargeted 0.3.2 works identically).
 
 ## Pre-checks (all must be true)
 
 1. Base plugin `ibyte-prometheus-exporter` **installed and Enabled**, with a working scrape key (its own metrics endpoint already returns 200 for your Prometheus).
 2. Plugin `ibyte-restic` (3.0.0) installed with tables finished, and at least one repository with a saved storage measurement (visible in **Admin > Restic Backups > Stats**).
-3. Same Pelican Panel version as the base exporter targets (1.0.0-rc.1).
+3. Same Pelican Panel version as the base exporter targets (1.0.0-rc.2).
 
 ## Install
 
-Admin > Plugins > Import > upload `ibyte-prometheus-exporter-addon-restic-0.1.0.zip` > Install. Then re-enable if importer leaves it disabled.
+Admin > Plugins > Import > upload `ibyte-prometheus-exporter-addon-restic-0.1.2.zip` > Install. Then re-enable if importer leaves it disabled.
 
 ## Verify (one minute)
 

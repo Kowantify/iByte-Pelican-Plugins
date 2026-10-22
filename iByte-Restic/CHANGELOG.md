@@ -1,5 +1,12 @@
 # Changelog
 
+## Panel 3.0.2 / Wings 3.0.0 (Panel-only compatibility release)
+
+- Retarget the Panel plugin from Pelican rc.1 to **1.0.0-rc.2** (commit `f64a167eea349bfbb89cda8732eacf682a82a4b3`). The manifest `panel_version` and the embedded source/dependency contract pins (35 core/vendor files, 168 runtime package identities) were re-recorded against the operator's actual rc.2 panel. All 203 pin checks verify with zero mismatches against that live panel; previously `restic:diagnose` reported the rc.2 `PluginService.php` change and 24 drifted runtime packages (Laravel 13.35→13.38, Filament 5.10.1→5.10.2, guzzle 8.2→8.3, aws-sdk 3.400→3.401.3 and more).
+- No plugin source behavior changed in this release beyond the compatibility gate data. The rc.2 startup interruption (rc.2 evaluates plugin manifests from `AppServiceProvider::register()` while Laravel's cache manager is still unresolvable) is an upstream Panel issue; the operator applied a separate temporary Panel-side guard. Plugin code does not touch cache/Redis during registration and needed no workaround.
+- Update by importing this ZIP over the installed plugin and reinstalling (same ID: safe, additive). Existing Restic repositories, keys, tables and migration history are untouched. Restart the real Panel queue worker afterwards and run `php artisan restic:diagnose` — it must report zero file and zero dependency mismatches. Wings remains 3.0.0; no node rebuild, no uninstall, no reinstall of nodes, no repository operations.
+- The 3.0.1 Application-API deletion flow (`ApplicationApiCall`, `GuardedServerDeletion::autoRetainAndDelete()`, `RetainedDeletion` API scope helpers) ships unchanged in this ZIP, restoring them where a rc.1-era build had been deployed.
+
 ## Panel 3.0.1 / Wings 3.0.0 (production release)
 
 - Application API deletions (e.g. Paymenter cancellation) no longer require an interactive password. When a server with Restic backups is deleted through a root-admin Application API key, the plugin automatically creates a fresh locked final backup, verifies it completed successfully (waits up to 30 minutes, aborting deletion on failure), retains the latest snapshot, then allows the native deletion and its subsequent repository cleanup. The web UI delete/transfer/destroy flows keep their existing retention choice and password confirmation unchanged.

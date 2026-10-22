@@ -1,49 +1,42 @@
-# iByte Egg Changer
+# iByte Egg Changer — v0.3.2 (Pelican plugin)
 
-Resource-gated egg switching for Pelican Panel: administrators define packages
-(minimum RAM, minimum disk, approved eggs); server owners see a simple eligible
-list and run an explicit clean reinstall switch with a verified backup first.
+This release simplifies the administrator and customer screens while **preserving the existing Egg Changer package gates, recommendations, local switching entitlements, API, database migrations, and backup-first switching code from v0.3.1**.
 
-Native Pelican plugin — no Blueprint, no panel core edits, no custom Wings.
+## Changes
+
+- Theme-consistent Filament sections, inputs, badges, and buttons; bare white inner borders replaced by quiet, dark-mode-aware row separators.
+- Customer server view: search eligible games, show the current egg first, render ten at a time, and progressively show ten more. Recommendations are collapsed under each game. Destructive preview remains explicit and is positioned above the catalog when opened. Empty operation history no longer occupies a large panel.
+- Admin view: Servers / Game gates / Recommendations / Operations / Diagnostics workspaces. Server permissions remain searchable/paginated. Approved eggs within each gate are collapsed. The gate and recommendation forms open on Add/Edit instead of staying on screen. Recommendations can be filtered by game, with a maximum of fifty results per view.
+- No new migrations, API routes, permissions, tokens, or Paymenter changes.
 
 ## Install
 
-1. Admin > Plugins > Import the ZIP `ibyte-egg-changer-0.1.0.zip`.
-2. Install it (migrations run automatically; the panel requires a running queue
-   worker — `pelican-queue.service` in the standard install).
-3. Admin > **Egg Changer**: confirm Diagnostics shows `ready`, then create
-   packages (name, RAM/disk minimums in MiB, approved eggs). Enable packages
-   when you are done — disabled packages expose nothing.
+Update the **existing** `ibyte-egg-changer` plugin to this build. Do not uninstall it or delete tables. Back up the plugin directory and the Pelican database first. After updating, verify the plugin version and clear caches on the Pelican VPS:
 
-## Customer flow
+```bash
+cd /var/www/pelican
+php artisan optimize:clear
+php artisan queue:restart
+```
 
-Server area > **Egg Changer** (owner only in this preview):
+No database migration is introduced in v0.3.2; **older installations still need all prior migrations**, including the entitlement and recommendation tables.
 
-1. See current egg, allocated RAM/disk (Unlimited shown when the allocation is 0).
-2. Pick from the flat eligible-egg list; preview the clean install scope.
-3. Confirm once on the destructive acknowledgement screen.
-4. Progress survives refresh; the operation is journal-backed.
-   A verified native backup is created before anything is deleted.
+## Test before enabling broadly
 
-## What it never does
+1. In Pelican Admin → Egg Changer, visit each of the five admin tabs; edit and cancel an existing gate and recommendation, then verify the data is unchanged.
+2. Search server permissions by UUID/name, toggle a disposable server, refresh, and confirm it persisted. Non-root admins must remain blocked.
+3. On an entitled test server, search for a game, open use-case recommendations, show more results, and open/cancel a clean-install preview.
+4. On a disposable test server only, verify the actual queued switch/backup/reinstall workflow separately before using production worlds.
+5. Confirm switching still works when Paymenter is inaccessible.
 
-- Never wipes or reinstalls without the owner's explicit confirmation and a
-  **verified completed recovery backup** (unless the admin releases each).
-- Never grants subusers egg selection (delegated switching is a later feature).
-- Never edits panel core, runs manual SQL, or auto-imports eggs.
-- Deleting a package deletes only the policy mapping — never servers or eggs.
+## Rollback
 
-## Update / Remove
+Restore the backed-up v0.3.1 plugin files, clear caches and restart queue workers. No database rollback is required or recommended for this **UI-only** update.
 
-Update by importing a newer ZIP over the same plugin id; packages and history
-are preserved (migrations are additive). Removing the plugin keeps the history
-tables by design.
+## Important existing behavior
 
-## Status
+Administrator entitlement changes use last-write-wins: a later Paymenter entitlement synchronization can overwrite an administrator's grant/revocation. This behavior is **unchanged**. Switching uses Pelican's local entitlement database; Paymenter availability is not required at switch time.
 
-**Production release** (`0.1.0`). Native plugin for Panel `^1.0.0-rc.1`
-(tested against source `46fc1cf0…`, installed and running in production).
-Verified: unit tests for eligibility, source contract checks against Panel
-v1.0.0-rc.1 (`46fc1cf0…`) and Wings (`7b489da…`), php -l on every packaged
-file, and a production install through the native importer. The operator
-exercises real switches per-server; failures/reconciliation are journaled.
+## Test scope
+
+PHP syntax and automated source/structure checks run locally. This build has **not** been exercised against the live Pelican/Filament instance and should be tested on a disposable server before production rollout.

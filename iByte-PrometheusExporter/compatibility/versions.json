@@ -1,11 +1,11 @@
 {
-  "plugin": "0.3.1",
-  "panel": {"version": "1.0.0-rc.1", "commit": "46fc1cf0ebce3f43a5dd38bb2c4a89ad0f668e00", "tested_runtime": true},
+  "plugin": "0.3.2",
+  "panel": {"version": "1.0.0-rc.2", "commit": "f64a167eea349bfbb89cda8732eacf682a82a4b3", "tested_runtime": false},
   "wings": {"version": "1.0.0-rc.1", "commit": "7b489da7b8196d0b4baef3e2db062c06d743e2f9", "tested_runtime": true},
-  "laravel": "13.35.0",
+  "laravel": "13.38.0",
   "prometheus_image": "prom/prometheus:v3.5.0@sha256:63805ebb8d2b3920190daf1cb14a60871b16fd38bed42b857a3182bc621f4996",
   "grafana_image": "grafana/grafana:12.0.2@sha256:b5b59bfc7561634c2d7b136c4543d702ebcc94a3da477f21ff26f89ffd4214fa",
   "images_digest_pinned": true,
   "production_ready": false,
-  "zip_sha256": "947B7A3912D67AD89F496E20B612AADFB9B86EE6943612C80349D6BB42707B0F"
+  "zip_sha256": "C3F6B2309A494C3EAF773F9271B38AAF0878C82C2D43D07DF167B93359723737"
 }
