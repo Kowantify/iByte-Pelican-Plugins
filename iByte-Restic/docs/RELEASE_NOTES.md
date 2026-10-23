@@ -1,3 +1,11 @@
+# Panel 2.0.2: queue-process binding diagnostics
+
+Import Panel Plugin `ibyte-restic-v2.0.2.zip` over the existing plugin ID and restart the queue. It logs the expected and resolved service implementation, source file, PID and SAPI when a binding is wrong. The guard remains fail-closed; this does not bypass conflicting providers or dispatch work to Wings. Use the new queue-process error to identify the provider/load-state conflict, then correct it before retrying the pending backup. No migrations, Wings changes, key changes or repository operations.
+
+# Panel 2.0.1: interface-aware compatibility check
+
+Import Panel Plugin `ibyte-restic-v2.0.1.zip` over the existing plugin ID. The previous runtime detector used `class_exists()` for the native backup schema interface, which PHP correctly reports as false even when the interface is declared and autoloadable. The updated detector checks both interfaces and classes. No migration, dependency, Panel core, key, repository, backup or Wings changes are included. Restart the queue after plugin installation and confirm `panel_source_matches: true` using `php artisan restic:diagnose`.
+
 # Panel 3.0.2: Pelican rc.2 compatibility retarget
 
 Update only the Panel plugin to 3.0.2 on a Pelican **1.0.0-rc.2** panel; Wings remains preview.2/3.0.0. Import the new ZIP over the installed plugin in Admin > Plugins, choose Install when offered, wait for native installation success, restart the real queue worker (`sudo systemctl restart pelican-queue` or your equivalent) and run `php artisan restic:diagnose`. It must report zero source-file and zero runtime-dependency mismatches: this build re-records the 35 core/vendor file pins and 168 runtime package identities against the operator's actual rc.2 panel, which previously failed the compatibility fence after the panel update.

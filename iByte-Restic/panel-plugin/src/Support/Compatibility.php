@@ -18,17 +18,28 @@ final class Compatibility
 {
     public static function assertSupported(): void
     {
-        if (! (app(InitiateBackupService::class) instanceof RetainingBackupService)) {
-            throw new RuntimeException('Restic disabled: another plugin replaced the backup retention compatibility binding.');
-        }
-        if (! (app(DaemonBackupRepository::class) instanceof BridgeRepository)) {
-            throw new RuntimeException('Restic disabled: another plugin replaced the native restore compatibility binding.');
-        }
-        $deletion = app(ServerDeletionService::class);
-        if (! ($deletion instanceof GuardedServerDeletion)) {
-            throw new RuntimeException('Restic disabled: the server deletion safety binding is unavailable. Resolved '.$deletion::class.'; expected '.GuardedServerDeletion::class.' (PID '.getmypid().'). Run php artisan restic:diagnose and compare a fresh process after restarting the actual queue service. A missing binding alone does not identify another plugin as its cause. Root admins can remove externally deleted records through Restic Backups > Remove stale Panel record without node access.');
-        }
+        self::assertBinding(InitiateBackupService::class, RetainingBackupService::class, 'backup retention');
+        self::assertBinding(DaemonBackupRepository::class, BridgeRepository::class, 'native restore');
+        self::assertBinding(ServerDeletionService::class, GuardedServerDeletion::class, 'server deletion safety');
         self::assertPanelSource();
+    }
+
+    private static function assertBinding(string $service, string $expected, string $purpose): void
+    {
+        $resolved = app($service);
+        if ($resolved instanceof $expected) {
+            return;
+        }
+
+        try {
+            $file = (new \ReflectionClass($resolved))->getFileName() ?: '[internal]';
+        } catch (\Throwable) {
+            $file = '[unavailable]';
+        }
+        $details = ['service' => $service, 'expected' => $expected, 'actual' => $resolved::class,
+            'actual_file' => $file, 'pid' => getmypid(), 'sapi' => PHP_SAPI];
+        logger()->error('Restic compatibility binding mismatch', $details);
+        throw new RuntimeException('Restic disabled: '.$purpose.' binding mismatch in this process. Resolved '.$resolved::class.' from '.$file.' (PID '.getmypid().', '.PHP_SAPI.'). Compare the protected error from this queue/web process with `php artisan restic:diagnose`; do not retry backups until the binding is resolved.');
     }
 
     public static function assertPanelSource(): void
@@ -56,7 +67,10 @@ final class Compatibility
             TransferServerService::class => ['handle'],
         ];
         foreach ($contracts as $class => $methods) {
-            if (! class_exists($class)) {
+            // Some entries in this inventory are interfaces, notably the
+            // native backup schema contract. PHP class_exists() deliberately
+            // returns false for interfaces; check both kinds of contract.
+            if (! interface_exists($class) && ! class_exists($class)) {
                 $mismatches[] = ['file' => $class, 'expected' => 'class with required methods', 'actual' => null];
                 continue;
             }

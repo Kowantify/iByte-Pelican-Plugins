@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-10-23: queue-only service binding mismatch
+
+- [x] Operator log proves `CaptureRecovery` reaches `Compatibility::assertSupported()` and is blocked by the `InitiateBackupService` binding check; queue service is active and executing PollOperation. No node backup request is established by this evidence. A fresh CLI ready result is process-local.
+- [x] Search of installed plugin source found no competing service binding; Egg Changer only resolves the service. Keep the fail-closed guard; do not alter provider load order blindly. Panel 2.0.2 adds sanitized expected/resolved class, source file, PID and SAPI to protected logs/errors so the queue-only binding source can be identified.
+- [x] Operator reports backups began working again after pushing the update. The exact resolved queue binding and whether the previously queued operation completed were not reported, so the underlying process-specific cause is not proven. No production settings or backup data changed by this agent.
+- [x] Pre-push review: `git diff --check` is clean; a high-confidence credential-pattern scan found no private-key/cloud/API tokens across 484 tracked text entries and the Panel ZIP; the patch contains none of the known production server ID, name, owner or domain. Gitleaks is unavailable locally; the repository's pinned CI secret scan will run on push.
+
+## 2026-10-23: compatibility diagnostic false negative
+
+- [x] Read the operator's rc.2 diagnostic and source lookup. The interface file and declaration exist. Root cause: Compatibility used PHP `class_exists()` for every contract, which returns false for interfaces. Runtime bindings and actual Panel contract were otherwise reported as expected.
+- [x] Check interfaces using `interface_exists()`; bump Panel package only to 2.0.1; update the import guide and package. No Wings, Panel, composer dependencies, migration, key, backup or repository changes.
+- [x] Operator reports 2.0.1 enabled, all three service bindings matching, `panel_source_matches: true`, empty mismatch lists, and `ready: true` on PHP 8.5.12 / Pelican rc.2. Earlier `restic:diagnose` invocations returned NamespaceNotFound before a later invocation registered and ran successfully; exact cause of that transient CLI behavior is not established. No backup creation result has been reported yet.
+- [x] No automated test suite was run for this narrow patch; no deployment was performed by this agent.
+
 ## 2026-10-18: password-only lifecycle confirmation and destructive server deletion
 
 - [x] Read all AGENTS and inspect exact native deletion/force-delete handlers, scoped retention guard, repository force deletion and callbacks. Existing Panel preview.4 / Wings preview.2 remain the baseline.

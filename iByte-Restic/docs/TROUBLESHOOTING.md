@@ -66,6 +66,10 @@ Restic detects the Panel service methods it uses at runtime and does not require
 
 The reported smtp.example.com connection failure is separate: it is a placeholder mail host, not a storage error. Configure actual mail through normal Panel administration if needed. Historical failure notifications can remain after the underlying fault is fixed; they do not prove a new backup was attempted.
 
+## Queue worker reports a Restic service-binding mismatch
+
+A `Restic disabled: another plugin replaced the backup retention compatibility binding` error means this process resolved a different `InitiateBackupService` than Restic's guarded adapter. In a queue job this check runs before the Wings request. The persisted create stays queued and is retried with the same request ID; it is not proof the node is backing up. A successful `restic:diagnose` from a new CLI process only describes that CLI container and does not override the queue's error. Plugin 2.0.2 logs the actual resolved class, source file, PID and SAPI in the protected Panel log. Compare that queue-process record with **Admin > Plugins** and runtime diagnostics before changing provider order or disabling another plugin. Do not delete/recreate the pending backup or bypass the guard; once the binding is resolved, let the same queued operation retry.
+
 ## Failed checks, recurring notifications or escrow rejection (preview.4)
 
 Update the existing Panel plugin to preview.4, wait for native migration/install success, and restart the actual queue service. Wings remains preview.2. Use Administrative > Node diagnostics, select the original host and node, and optionally enter an operation ID from Needs attention. The result distinguishes readiness/profile/version problems and reads a saved job result without retrying work or fetching keys. The CLI equivalent is:

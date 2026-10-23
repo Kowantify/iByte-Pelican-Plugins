@@ -1,4 +1,4 @@
-# iByte Restic 2.0.0
+# iByte Restic 2.0.2
 
 Import and install this folder's ZIP with Pelican's Admin Plugins UI. The plugin discovers required Panel service classes and methods at runtime; it does not load an embedded compatibility JSON or require exact source hashes. No Panel core files are modified. Read the source release's README, native restore API limitations, SECURITY and acceptance checklist before enabling a host.
 

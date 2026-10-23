@@ -1,5 +1,15 @@
 # Changelog
 
+## Panel package 2.0.2 (queue-process binding diagnostics)
+
+- When a required Panel service resolves to the wrong implementation, log the expected and resolved classes, resolved source file, PID and SAPI. The handled exception includes the same process-specific details, allowing queue/web conflicts to be diagnosed against a fresh CLI report.
+- No binding policy changed. A mismatch still blocks Restic before node I/O; no new backup is dispatched. No migration, Wings, dependency, key or repository changes.
+
+## Panel package 2.0.1 (compatibility diagnostic fix)
+
+- Check native PHP interfaces with `interface_exists()` as well as classes with `class_exists()`. PHP intentionally returns false from `class_exists()` for an existing interface; this caused the rc.2 Panel diagnostic to falsely report `BackupAdapterSchemaInterface` missing even though its file and declaration are present.
+- No schema migration, dependency change, backup/key/repository operation, Wings change or Panel source change. Import this ZIP over the existing plugin ID, then restart the queue and rerun `php artisan restic:diagnose`.
+
 ## Panel 3.0.2 / Wings 3.0.0 (Panel-only compatibility release)
 
 - Retarget the Panel plugin from Pelican rc.1 to **1.0.0-rc.2** (commit `f64a167eea349bfbb89cda8732eacf682a82a4b3`). The manifest `panel_version` and the embedded source/dependency contract pins (35 core/vendor files, 168 runtime package identities) were re-recorded against the operator's actual rc.2 panel. All 203 pin checks verify with zero mismatches against that live panel; previously `restic:diagnose` reported the rc.2 `PluginService.php` change and 24 drifted runtime packages (Laravel 13.35→13.38, Filament 5.10.1→5.10.2, guzzle 8.2→8.3, aws-sdk 3.400→3.401.3 and more).

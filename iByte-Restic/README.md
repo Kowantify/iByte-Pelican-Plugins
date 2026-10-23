@@ -1,8 +1,8 @@
 # iByte Restic Backups for Pelican
 
-Native Restic backup-host provider for Pelican. **Panel package 2.0.0 / Wings addon 3.0.0.** The installed production deployment is still Panel 3.0.2 / Wings addon 3.0.0 until the operator imports this package. See docs/RELEASE_HARDENING.md for the accepted risk register.
+Native Restic backup-host provider for Pelican. **Panel package 2.0.2 / Wings addon 3.0.0.** See docs/RELEASE_HARDENING.md for the accepted risk register.
 
-Panel 2.0.0 uses runtime feature detection for the Panel APIs it needs. The Wings addon remains version 3.0.0, so existing nodes need no reinstall. See [troubleshooting](docs/TROUBLESHOOTING.md).
+Panel 2.0.2 reports the resolved class and source file when a compatibility binding differs in a queue or web process. Panel 2.0.1 fixed interface detection. The Wings addon remains version 3.0.0, so existing nodes need no reinstall. See [troubleshooting](docs/TROUBLESHOOTING.md).
 
 It also keeps cleared failure alerts dismissed, labels checks by operation ID, and adds root-only **Administrative > Node diagnostics** to read readiness and saved failures without retrying work or fetching keys. Escrow errors identify the failed stage and safe HTTP category. Existing failure history and recovery protection remain intact.
 
@@ -13,7 +13,7 @@ The installation directory has only two folders:
 ```text
 release/
   Panel Plugin/
-    ibyte-restic-v2.0.0.zip
+    ibyte-restic-v2.0.2.zip
     README.md
   Wings Installer/
     install.sh
